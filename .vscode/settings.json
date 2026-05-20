@@ -1,0 +1,8 @@
+{
+    "C_Cpp.default.compilerPath": "/home/ivan/testing/c-tests/wasi-sdk-33.0-x86_64-linux/bin/wasm32-wasip2-clang++",
+    "C_Cpp.default.includePath": [
+        "/home/ivan/testing/c-tests/wasi-sdk-33.0-x86_64-linux/share/wasi-sysroot/include/wasm32-wasip2/c++/v1",
+        "/home/ivan/testing/c-tests/wasi-sdk-33.0-x86_64-linux/share/wasi-sysroot/include/wasm32-wasip2",
+        "expected"
+    ],
+}
