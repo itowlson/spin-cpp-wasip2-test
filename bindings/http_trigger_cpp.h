@@ -13,7 +13,6 @@
 namespace spin {
   namespace postgres3_0_0 {
     namespace postgres {
-      class Connection;
       /// Errors related to interacting with a database.
       struct Error {
         struct ConnectionFailed { wit::string value; };
@@ -118,7 +117,6 @@ namespace spin {
   }
   namespace postgres4_0_0 {
     namespace postgres {
-      class Connection;
       struct DbError {
         /// Stringised version of the error. This is primarily to facilitate migration of older code.
         wit::string as_text;
@@ -286,31 +284,6 @@ namespace spin {
   }
   namespace sqlite {
     namespace sqlite {
-      class Connection;
-      class Connection : public wit::ResourceImportBase{
-
-        public:
-
-        ~Connection();
-        /// Open a connection to a named database instance.
-        /// 
-        /// If `database` is "default", the default instance is opened.
-        /// 
-        /// `error::no-such-database` will be raised if the `name` is not recognized.
-        static std::expected<Connection, Error> Open(std::string_view database);
-        /// Execute a statement returning back data if there is any
-        std::expected<QueryResult, Error> Execute(std::string_view statement, std::span<sqlite::Value const> parameters) const;
-        /// The SQLite rowid of the most recent successful INSERT on the connection, or 0 if
-        /// there has not yet been an INSERT on the connection.
-        int64_t LastInsertRowid() const;
-        /// The number of rows modified, inserted or deleted by the most recently completed
-        /// INSERT, UPDATE or DELETE statement on the connection.
-        uint64_t Changes() const;
-        Connection(wit::ResourceImportBase &&);
-        Connection(Connection&&) = default;
-        Connection& operator=(Connection&&) = default;
-      };
-
       /// The set of errors which may be raised by functions in this interface
       struct Error {
         /// The host does not recognize the database name requested.
@@ -345,6 +318,30 @@ namespace spin {
         /// the row results each containing the values for all the columns for a given row
         wit::vector<RowResult> rows;
       };
+      class Connection : public wit::ResourceImportBase{
+
+        public:
+
+        ~Connection();
+        /// Open a connection to a named database instance.
+        /// 
+        /// If `database` is "default", the default instance is opened.
+        /// 
+        /// `error::no-such-database` will be raised if the `name` is not recognized.
+        static std::expected<Connection, Error> Open(std::string_view database);
+        /// Execute a statement returning back data if there is any
+        std::expected<QueryResult, Error> Execute(std::string_view statement, std::span<sqlite::Value const> parameters) const;
+        /// The SQLite rowid of the most recent successful INSERT on the connection, or 0 if
+        /// there has not yet been an INSERT on the connection.
+        int64_t LastInsertRowid() const;
+        /// The number of rows modified, inserted or deleted by the most recently completed
+        /// INSERT, UPDATE or DELETE statement on the connection.
+        uint64_t Changes() const;
+        Connection(wit::ResourceImportBase &&);
+        Connection(Connection&&) = default;
+        Connection& operator=(Connection&&) = default;
+      };
+
     }
   }
 }
@@ -381,7 +378,6 @@ namespace wasi {
   /// at once.
   namespace io0_2_0 {
     namespace poll {
-      class Pollable;
       class Pollable : public wit::ResourceImportBase{
 
         public:
@@ -461,7 +457,6 @@ namespace wasi {
   }
   namespace io0_2_0 {
     namespace error {
-      class Error;
       class Error : public wit::ResourceImportBase{
 
         public:
@@ -487,8 +482,6 @@ namespace wasi {
     /// In the future, the component model is expected to add built-in stream types;
     /// when it does, they are expected to subsume this API.
     namespace streams {
-      class InputStream;
-      class OutputStream;
       using Error = error::Error;
       using Pollable = poll::Pollable;
       /// An error for input-stream and output-stream operations.
@@ -701,17 +694,6 @@ namespace wasi {
   /// their headers, trailers, and bodies.
   namespace http0_2_0 {
     namespace types {
-      class Fields;
-      class IncomingRequest;
-      class OutgoingRequest;
-      class RequestOptions;
-      class ResponseOutparam;
-      class IncomingResponse;
-      class IncomingBody;
-      class FutureTrailers;
-      class OutgoingResponse;
-      class OutgoingBody;
-      class FutureIncomingResponse;
       using Duration = uint64_t;
       using InputStream = io0_2_0::streams::InputStream;
       using OutputStream = io0_2_0::streams::OutputStream;
@@ -887,6 +869,69 @@ namespace wasi {
       using Headers = Fields;
       /// Trailers is an alias for Fields.
       using Trailers = Fields;
+      class FutureTrailers : public wit::ResourceImportBase{
+
+        public:
+
+        ~FutureTrailers();
+        /// Returns a pollable which becomes ready when either the trailers have
+        /// been received, or an error has occured. When this pollable is ready,
+        /// the `get` method will return `some`.
+        io0_2_0::poll::Pollable Subscribe() const;
+        /// Returns the contents of the trailers, or an error which occured,
+        /// once the future is ready.
+        /// 
+        /// The outer `option` represents future readiness. Users can wait on this
+        /// `option` to become `some` using the `subscribe` method.
+        /// 
+        /// The outer `result` is used to retrieve the trailers or error at most
+        /// once. It will be success on the first call in which the outer option
+        /// is `some`, and error on subsequent calls.
+        /// 
+        /// The inner `result` represents that either the HTTP Request or Response
+        /// body, as well as any trailers, were received successfully, or that an
+        /// error occured receiving them. The optional `trailers` indicates whether
+        /// or not trailers were present in the body.
+        /// 
+        /// When some `trailers` are returned by this method, the `trailers`
+        /// resource is immutable, and a child. Use of the `set`, `append`, or
+        /// `delete` methods will return an error, and the resource must be
+        /// dropped before the parent `future-trailers` is dropped.
+        std::optional<std::expected<std::expected<std::optional<Fields>, ErrorCode>, wit::Void>> Get() const;
+        FutureTrailers(wit::ResourceImportBase &&);
+        FutureTrailers(FutureTrailers&&) = default;
+        FutureTrailers& operator=(FutureTrailers&&) = default;
+      };
+
+      class IncomingBody : public wit::ResourceImportBase{
+
+        public:
+
+        ~IncomingBody();
+        /// Returns the contents of the body, as a stream of bytes.
+        /// 
+        /// Returns success on first call: the stream representing the contents
+        /// can be retrieved at most once. Subsequent calls will return error.
+        /// 
+        /// The returned `input-stream` resource is a child: it must be dropped
+        /// before the parent `incoming-body` is dropped, or consumed by
+        /// `incoming-body.finish`.
+        /// 
+        /// This invariant ensures that the implementation can determine whether
+        /// the user is consuming the contents of the body, waiting on the
+        /// `future-trailers` to be ready, or neither. This allows for network
+        /// backpressure is to be applied when the user is consuming the body,
+        /// and for that backpressure to not inhibit delivery of the trailers if
+        /// the user does not read the entire body.
+        std::expected<io0_2_0::streams::InputStream, wit::Void> Stream() const;
+        /// Takes ownership of `incoming-body`, and returns a `future-trailers`.
+        /// This function will trap if the `input-stream` child is still alive.
+        static FutureTrailers Finish(types::IncomingBody&& this_);
+        IncomingBody(wit::ResourceImportBase &&);
+        IncomingBody(IncomingBody&&) = default;
+        IncomingBody& operator=(IncomingBody&&) = default;
+      };
+
       class IncomingRequest : public wit::ResourceImportBase{
 
         public:
@@ -915,6 +960,36 @@ namespace wasi {
         IncomingRequest(wit::ResourceImportBase &&);
         IncomingRequest(IncomingRequest&&) = default;
         IncomingRequest& operator=(IncomingRequest&&) = default;
+      };
+
+      class OutgoingBody : public wit::ResourceImportBase{
+
+        public:
+
+        ~OutgoingBody();
+        /// Returns a stream for writing the body contents.
+        /// 
+        /// The returned `output-stream` is a child resource: it must be dropped
+        /// before the parent `outgoing-body` resource is dropped (or finished),
+        /// otherwise the `outgoing-body` drop or `finish` will trap.
+        /// 
+        /// Returns success on the first call: the `output-stream` resource for
+        /// this `outgoing-body` may be retrieved at most once. Subsequent calls
+        /// will return error.
+        std::expected<io0_2_0::streams::OutputStream, wit::Void> Write() const;
+        /// Finalize an outgoing body, optionally providing trailers. This must be
+        /// called to signal that the response is complete. If the `outgoing-body`
+        /// is dropped without calling `outgoing-body.finalize`, the implementation
+        /// should treat the body as corrupted.
+        /// 
+        /// Fails if the body's `outgoing-request` or `outgoing-response` was
+        /// constructed with a Content-Length header, and the contents written
+        /// to the body (via `write`) does not match the value given in the
+        /// Content-Length.
+        static std::expected<void, ErrorCode> Finish(types::OutgoingBody&& this_, std::optional<types::Fields> trailers);
+        OutgoingBody(wit::ResourceImportBase &&);
+        OutgoingBody(OutgoingBody&&) = default;
+        OutgoingBody& operator=(OutgoingBody&&) = default;
       };
 
       class OutgoingRequest : public wit::ResourceImportBase{
@@ -1011,114 +1086,8 @@ namespace wasi {
         RequestOptions& operator=(RequestOptions&&) = default;
       };
 
-      class ResponseOutparam : public wit::ResourceImportBase{
-
-        public:
-
-        ~ResponseOutparam();
-        /// Set the value of the `response-outparam` to either send a response,
-        /// or indicate an error.
-        /// 
-        /// This method consumes the `response-outparam` to ensure that it is
-        /// called at most once. If it is never called, the implementation
-        /// will respond with an error.
-        /// 
-        /// The user may provide an `error` to `response` to allow the
-        /// implementation determine how to respond with an HTTP error response.
-        static void Set(types::ResponseOutparam&& param, std::expected<types::OutgoingResponse, types::ErrorCode> response);
-        ResponseOutparam(wit::ResourceImportBase &&);
-        ResponseOutparam(ResponseOutparam&&) = default;
-        ResponseOutparam& operator=(ResponseOutparam&&) = default;
-      };
-
       /// This type corresponds to the HTTP standard Status Code.
       using StatusCode = uint16_t;
-      class IncomingResponse : public wit::ResourceImportBase{
-
-        public:
-
-        ~IncomingResponse();
-        /// Returns the status code from the incoming response.
-        uint16_t Status() const;
-        /// Returns the headers from the incoming response.
-        /// 
-        /// The returned `headers` resource is immutable: `set`, `append`, and
-        /// `delete` operations will fail with `header-error.immutable`.
-        /// 
-        /// This headers resource is a child: it must be dropped before the parent
-        /// `incoming-response` is dropped.
-        Fields Headers() const;
-        /// Returns the incoming body. May be called at most once. Returns error
-        /// if called additional times.
-        std::expected<IncomingBody, wit::Void> Consume() const;
-        IncomingResponse(wit::ResourceImportBase &&);
-        IncomingResponse(IncomingResponse&&) = default;
-        IncomingResponse& operator=(IncomingResponse&&) = default;
-      };
-
-      class IncomingBody : public wit::ResourceImportBase{
-
-        public:
-
-        ~IncomingBody();
-        /// Returns the contents of the body, as a stream of bytes.
-        /// 
-        /// Returns success on first call: the stream representing the contents
-        /// can be retrieved at most once. Subsequent calls will return error.
-        /// 
-        /// The returned `input-stream` resource is a child: it must be dropped
-        /// before the parent `incoming-body` is dropped, or consumed by
-        /// `incoming-body.finish`.
-        /// 
-        /// This invariant ensures that the implementation can determine whether
-        /// the user is consuming the contents of the body, waiting on the
-        /// `future-trailers` to be ready, or neither. This allows for network
-        /// backpressure is to be applied when the user is consuming the body,
-        /// and for that backpressure to not inhibit delivery of the trailers if
-        /// the user does not read the entire body.
-        std::expected<io0_2_0::streams::InputStream, wit::Void> Stream() const;
-        /// Takes ownership of `incoming-body`, and returns a `future-trailers`.
-        /// This function will trap if the `input-stream` child is still alive.
-        static FutureTrailers Finish(types::IncomingBody&& this_);
-        IncomingBody(wit::ResourceImportBase &&);
-        IncomingBody(IncomingBody&&) = default;
-        IncomingBody& operator=(IncomingBody&&) = default;
-      };
-
-      class FutureTrailers : public wit::ResourceImportBase{
-
-        public:
-
-        ~FutureTrailers();
-        /// Returns a pollable which becomes ready when either the trailers have
-        /// been received, or an error has occured. When this pollable is ready,
-        /// the `get` method will return `some`.
-        io0_2_0::poll::Pollable Subscribe() const;
-        /// Returns the contents of the trailers, or an error which occured,
-        /// once the future is ready.
-        /// 
-        /// The outer `option` represents future readiness. Users can wait on this
-        /// `option` to become `some` using the `subscribe` method.
-        /// 
-        /// The outer `result` is used to retrieve the trailers or error at most
-        /// once. It will be success on the first call in which the outer option
-        /// is `some`, and error on subsequent calls.
-        /// 
-        /// The inner `result` represents that either the HTTP Request or Response
-        /// body, as well as any trailers, were received successfully, or that an
-        /// error occured receiving them. The optional `trailers` indicates whether
-        /// or not trailers were present in the body.
-        /// 
-        /// When some `trailers` are returned by this method, the `trailers`
-        /// resource is immutable, and a child. Use of the `set`, `append`, or
-        /// `delete` methods will return an error, and the resource must be
-        /// dropped before the parent `future-trailers` is dropped.
-        std::optional<std::expected<std::expected<std::optional<Fields>, ErrorCode>, wit::Void>> Get() const;
-        FutureTrailers(wit::ResourceImportBase &&);
-        FutureTrailers(FutureTrailers&&) = default;
-        FutureTrailers& operator=(FutureTrailers&&) = default;
-      };
-
       class OutgoingResponse : public wit::ResourceImportBase{
 
         public:
@@ -1155,34 +1124,47 @@ namespace wasi {
         OutgoingResponse& operator=(OutgoingResponse&&) = default;
       };
 
-      class OutgoingBody : public wit::ResourceImportBase{
+      class ResponseOutparam : public wit::ResourceImportBase{
 
         public:
 
-        ~OutgoingBody();
-        /// Returns a stream for writing the body contents.
+        ~ResponseOutparam();
+        /// Set the value of the `response-outparam` to either send a response,
+        /// or indicate an error.
         /// 
-        /// The returned `output-stream` is a child resource: it must be dropped
-        /// before the parent `outgoing-body` resource is dropped (or finished),
-        /// otherwise the `outgoing-body` drop or `finish` will trap.
+        /// This method consumes the `response-outparam` to ensure that it is
+        /// called at most once. If it is never called, the implementation
+        /// will respond with an error.
         /// 
-        /// Returns success on the first call: the `output-stream` resource for
-        /// this `outgoing-body` may be retrieved at most once. Subsequent calls
-        /// will return error.
-        std::expected<io0_2_0::streams::OutputStream, wit::Void> Write() const;
-        /// Finalize an outgoing body, optionally providing trailers. This must be
-        /// called to signal that the response is complete. If the `outgoing-body`
-        /// is dropped without calling `outgoing-body.finalize`, the implementation
-        /// should treat the body as corrupted.
+        /// The user may provide an `error` to `response` to allow the
+        /// implementation determine how to respond with an HTTP error response.
+        static void Set(types::ResponseOutparam&& param, std::expected<types::OutgoingResponse, types::ErrorCode> response);
+        ResponseOutparam(wit::ResourceImportBase &&);
+        ResponseOutparam(ResponseOutparam&&) = default;
+        ResponseOutparam& operator=(ResponseOutparam&&) = default;
+      };
+
+      class IncomingResponse : public wit::ResourceImportBase{
+
+        public:
+
+        ~IncomingResponse();
+        /// Returns the status code from the incoming response.
+        uint16_t Status() const;
+        /// Returns the headers from the incoming response.
         /// 
-        /// Fails if the body's `outgoing-request` or `outgoing-response` was
-        /// constructed with a Content-Length header, and the contents written
-        /// to the body (via `write`) does not match the value given in the
-        /// Content-Length.
-        static std::expected<void, ErrorCode> Finish(types::OutgoingBody&& this_, std::optional<types::Fields> trailers);
-        OutgoingBody(wit::ResourceImportBase &&);
-        OutgoingBody(OutgoingBody&&) = default;
-        OutgoingBody& operator=(OutgoingBody&&) = default;
+        /// The returned `headers` resource is immutable: `set`, `append`, and
+        /// `delete` operations will fail with `header-error.immutable`.
+        /// 
+        /// This headers resource is a child: it must be dropped before the parent
+        /// `incoming-response` is dropped.
+        Fields Headers() const;
+        /// Returns the incoming body. May be called at most once. Returns error
+        /// if called additional times.
+        std::expected<IncomingBody, wit::Void> Consume() const;
+        IncomingResponse(wit::ResourceImportBase &&);
+        IncomingResponse(IncomingResponse&&) = default;
+        IncomingResponse& operator=(IncomingResponse&&) = default;
       };
 
       class FutureIncomingResponse : public wit::ResourceImportBase{
@@ -1313,7 +1295,6 @@ namespace fermyon {
       std::expected<EmbeddingsResult, Error> GenerateEmbeddings(std::string_view model, std::span<std::string_view const> text);
     }
     namespace redis {
-      class Connection;
       /// Errors related to interacting with Redis
       struct Error {
         /// An invalid address string
@@ -1325,6 +1306,20 @@ namespace fermyon {
         /// Some other error occurred
         struct Other { wit::string value; };
         std::variant<InvalidAddress, TooManyConnections, TypeError, Other> variants;
+      };
+      /// A parameter type for the general-purpose `execute` function.
+      struct RedisParameter {
+        struct Int64 { int64_t value; };
+        struct Binary { wit::vector<uint8_t> value; };
+        std::variant<Int64, Binary> variants;
+      };
+      /// A return type for the general-purpose `execute` function.
+      struct RedisResult {
+        struct Nil {};
+        struct Status { wit::string value; };
+        struct Int64 { int64_t value; };
+        struct Binary { wit::vector<uint8_t> value; };
+        std::variant<Nil, Status, Int64, Binary> variants;
       };
       class Connection : public wit::ResourceImportBase{
 
@@ -1364,23 +1359,8 @@ namespace fermyon {
         Connection& operator=(Connection&&) = default;
       };
 
-      /// A parameter type for the general-purpose `execute` function.
-      struct RedisParameter {
-        struct Int64 { int64_t value; };
-        struct Binary { wit::vector<uint8_t> value; };
-        std::variant<Int64, Binary> variants;
-      };
-      /// A return type for the general-purpose `execute` function.
-      struct RedisResult {
-        struct Nil {};
-        struct Status { wit::string value; };
-        struct Int64 { int64_t value; };
-        struct Binary { wit::vector<uint8_t> value; };
-        std::variant<Nil, Status, Int64, Binary> variants;
-      };
     }
     namespace mqtt {
-      class Connection;
       /// Errors related to interacting with Mqtt
       struct Error {
         /// An invalid address string
@@ -1492,7 +1472,6 @@ namespace fermyon {
       };
     }
     namespace postgres {
-      class Connection;
       using ParameterValue = rdbms_types::ParameterValue;
       using RowSet = rdbms_types::RowSet;
       using Error = rdbms_types::Error;
@@ -1514,7 +1493,6 @@ namespace fermyon {
 
     }
     namespace mysql {
-      class Connection;
       using ParameterValue = rdbms_types::ParameterValue;
       using RowSet = rdbms_types::RowSet;
       using Error = rdbms_types::Error;
@@ -1536,25 +1514,6 @@ namespace fermyon {
 
     }
     namespace sqlite {
-      class Connection;
-      class Connection : public wit::ResourceImportBase{
-
-        public:
-
-        ~Connection();
-        /// Open a connection to a named database instance.
-        /// 
-        /// If `database` is "default", the default instance is opened.
-        /// 
-        /// `error::no-such-database` will be raised if the `name` is not recognized.
-        static std::expected<Connection, Error> Open(std::string_view database);
-        /// Execute a statement returning back data if there is any
-        std::expected<QueryResult, Error> Execute(std::string_view statement, std::span<sqlite::Value const> parameters) const;
-        Connection(wit::ResourceImportBase &&);
-        Connection(Connection&&) = default;
-        Connection& operator=(Connection&&) = default;
-      };
-
       /// The set of errors which may be raised by functions in this interface
       struct Error {
         /// The host does not recognize the database name requested.
@@ -1589,9 +1548,40 @@ namespace fermyon {
         /// the row results each containing the values for all the columns for a given row
         wit::vector<RowResult> rows;
       };
+      class Connection : public wit::ResourceImportBase{
+
+        public:
+
+        ~Connection();
+        /// Open a connection to a named database instance.
+        /// 
+        /// If `database` is "default", the default instance is opened.
+        /// 
+        /// `error::no-such-database` will be raised if the `name` is not recognized.
+        static std::expected<Connection, Error> Open(std::string_view database);
+        /// Execute a statement returning back data if there is any
+        std::expected<QueryResult, Error> Execute(std::string_view statement, std::span<sqlite::Value const> parameters) const;
+        Connection(wit::ResourceImportBase &&);
+        Connection(Connection&&) = default;
+        Connection& operator=(Connection&&) = default;
+      };
+
     }
     namespace key_value {
-      class Store;
+      /// The set of errors which may be raised by functions in this interface
+      struct Error {
+        /// Too many stores have been opened simultaneously. Closing one or more
+        /// stores prior to retrying may address this.
+        struct StoreTableFull {};
+        /// The host does not recognize the store label requested.
+        struct NoSuchStore {};
+        /// The requesting component does not have access to the specified store
+        /// (which may or may not exist).
+        struct AccessDenied {};
+        /// Some implementation-specific error has occurred (e.g. I/O)
+        struct Other { wit::string value; };
+        std::variant<StoreTableFull, NoSuchStore, AccessDenied, Other> variants;
+      };
       class Store : public wit::ResourceImportBase{
 
         public:
@@ -1622,20 +1612,6 @@ namespace fermyon {
         Store& operator=(Store&&) = default;
       };
 
-      /// The set of errors which may be raised by functions in this interface
-      struct Error {
-        /// Too many stores have been opened simultaneously. Closing one or more
-        /// stores prior to retrying may address this.
-        struct StoreTableFull {};
-        /// The host does not recognize the store label requested.
-        struct NoSuchStore {};
-        /// The requesting component does not have access to the specified store
-        /// (which may or may not exist).
-        struct AccessDenied {};
-        /// Some implementation-specific error has occurred (e.g. I/O)
-        struct Other { wit::string value; };
-        std::variant<StoreTableFull, NoSuchStore, AccessDenied, Other> variants;
-      };
     }
     namespace variables {
       /// The set of errors which may be raised by functions in this interface.
@@ -1697,7 +1673,6 @@ namespace wasi {
     /// disabling input buffering so that keyboard events are sent through
     /// immediately, querying supported features, and so on.
     namespace terminal_input {
-      class TerminalInput;
       class TerminalInput : public wit::ResourceImportBase{
 
         public:
@@ -1715,7 +1690,6 @@ namespace wasi {
     /// size, being notified of terminal size changes, querying supported
     /// features, and so on.
     namespace terminal_output {
-      class TerminalOutput;
       class TerminalOutput : public wit::ResourceImportBase{
 
         public:
@@ -1819,8 +1793,6 @@ namespace wasi {
   /// [WASI filesystem path resolution]: https://github.com/WebAssembly/wasi-filesystem/blob/main/path-resolution.md
   namespace filesystem0_2_0 {
     namespace types {
-      class Descriptor;
-      class DirectoryEntryStream;
       using InputStream = io0_2_0::streams::InputStream;
       using OutputStream = io0_2_0::streams::OutputStream;
       using Error = io0_2_0::error::Error;
@@ -2076,6 +2048,18 @@ namespace wasi {
         /// Another 64 bits of a 128-bit hash value.
         uint64_t upper;
       };
+      class DirectoryEntryStream : public wit::ResourceImportBase{
+
+        public:
+
+        ~DirectoryEntryStream();
+        /// Read a single directory entry from a `directory-entry-stream`.
+        std::expected<std::optional<DirectoryEntry>, ErrorCode> ReadDirectoryEntry() const;
+        DirectoryEntryStream(wit::ResourceImportBase &&);
+        DirectoryEntryStream(DirectoryEntryStream&&) = default;
+        DirectoryEntryStream& operator=(DirectoryEntryStream&&) = default;
+      };
+
       class Descriptor : public wit::ResourceImportBase{
 
         public:
@@ -2301,18 +2285,6 @@ namespace wasi {
         Descriptor& operator=(Descriptor&&) = default;
       };
 
-      class DirectoryEntryStream : public wit::ResourceImportBase{
-
-        public:
-
-        ~DirectoryEntryStream();
-        /// Read a single directory entry from a `directory-entry-stream`.
-        std::expected<std::optional<DirectoryEntry>, ErrorCode> ReadDirectoryEntry() const;
-        DirectoryEntryStream(wit::ResourceImportBase &&);
-        DirectoryEntryStream(DirectoryEntryStream&&) = default;
-        DirectoryEntryStream& operator=(DirectoryEntryStream&&) = default;
-      };
-
       /// Attempts to extract a filesystem-related `error-code` from the stream
       /// `error` provided.
       /// 
@@ -2333,7 +2305,6 @@ namespace wasi {
   }
   namespace sockets0_2_0 {
     namespace network {
-      class Network;
       class Network : public wit::ResourceImportBase{
 
         public:
@@ -2459,9 +2430,6 @@ namespace wasi {
       network::Network InstanceNetwork();
     }
     namespace udp {
-      class UdpSocket;
-      class IncomingDatagramStream;
-      class OutgoingDatagramStream;
       using Pollable = io0_2_0::poll::Pollable;
       using Network = network::Network;
       using ErrorCode = network::ErrorCode;
@@ -2493,6 +2461,107 @@ namespace wasi {
         /// If this value is None, the send operation is equivalent to `send` in POSIX. Otherwise it is equivalent to `sendto`.
         std::optional<network::IpSocketAddress> remote_address;
       };
+      class IncomingDatagramStream : public wit::ResourceImportBase{
+
+        public:
+
+        ~IncomingDatagramStream();
+        /// Receive messages on the socket.
+        /// 
+        /// This function attempts to receive up to `max-results` datagrams on the socket without blocking.
+        /// The returned list may contain fewer elements than requested, but never more.
+        /// 
+        /// This function returns successfully with an empty list when either:
+        /// - `max-results` is 0, or:
+        /// - `max-results` is greater than 0, but no results are immediately available.
+        /// This function never returns `error(would-block)`.
+        /// 
+        /// # Typical errors
+        /// - `remote-unreachable`: The remote address is not reachable. (ECONNRESET, ENETRESET on Windows, EHOSTUNREACH, EHOSTDOWN, ENETUNREACH, ENETDOWN, ENONET)
+        /// - `connection-refused`: The connection was refused. (ECONNREFUSED)
+        /// 
+        /// # References
+        /// - <https://pubs.opengroup.org/onlinepubs/9699919799/functions/recvfrom.html>
+        /// - <https://pubs.opengroup.org/onlinepubs/9699919799/functions/recvmsg.html>
+        /// - <https://man7.org/linux/man-pages/man2/recv.2.html>
+        /// - <https://man7.org/linux/man-pages/man2/recvmmsg.2.html>
+        /// - <https://learn.microsoft.com/en-us/windows/win32/api/winsock/nf-winsock-recv>
+        /// - <https://learn.microsoft.com/en-us/windows/win32/api/winsock/nf-winsock-recvfrom>
+        /// - <https://learn.microsoft.com/en-us/previous-versions/windows/desktop/legacy/ms741687(v=vs.85)>
+        /// - <https://man.freebsd.org/cgi/man.cgi?query=recv&sektion=2>
+        std::expected<wit::vector<IncomingDatagram>, network::ErrorCode> Receive(uint64_t max_results) const;
+        /// Create a `pollable` which will resolve once the stream is ready to receive again.
+        /// 
+        /// Note: this function is here for WASI Preview2 only.
+        /// It's planned to be removed when `future` is natively supported in Preview3.
+        io0_2_0::poll::Pollable Subscribe() const;
+        IncomingDatagramStream(wit::ResourceImportBase &&);
+        IncomingDatagramStream(IncomingDatagramStream&&) = default;
+        IncomingDatagramStream& operator=(IncomingDatagramStream&&) = default;
+      };
+
+      class OutgoingDatagramStream : public wit::ResourceImportBase{
+
+        public:
+
+        ~OutgoingDatagramStream();
+        /// Check readiness for sending. This function never blocks.
+        /// 
+        /// Returns the number of datagrams permitted for the next call to `send`,
+        /// or an error. Calling `send` with more datagrams than this function has
+        /// permitted will trap.
+        /// 
+        /// When this function returns ok(0), the `subscribe` pollable will
+        /// become ready when this function will report at least ok(1), or an
+        /// error.
+        /// 
+        /// Never returns `would-block`.
+        std::expected<uint64_t, network::ErrorCode> CheckSend() const;
+        /// Send messages on the socket.
+        /// 
+        /// This function attempts to send all provided `datagrams` on the socket without blocking and
+        /// returns how many messages were actually sent (or queued for sending). This function never
+        /// returns `error(would-block)`. If none of the datagrams were able to be sent, `ok(0)` is returned.
+        /// 
+        /// This function semantically behaves the same as iterating the `datagrams` list and sequentially
+        /// sending each individual datagram until either the end of the list has been reached or the first error occurred.
+        /// If at least one datagram has been sent successfully, this function never returns an error.
+        /// 
+        /// If the input list is empty, the function returns `ok(0)`.
+        /// 
+        /// Each call to `send` must be permitted by a preceding `check-send`. Implementations must trap if
+        /// either `check-send` was not called or `datagrams` contains more items than `check-send` permitted.
+        /// 
+        /// # Typical errors
+        /// - `invalid-argument`:        The `remote-address` has the wrong address family. (EAFNOSUPPORT)
+        /// - `invalid-argument`:        The IP address in `remote-address` is set to INADDR_ANY (`0.0.0.0` / `::`). (EDESTADDRREQ, EADDRNOTAVAIL)
+        /// - `invalid-argument`:        The port in `remote-address` is set to 0. (EDESTADDRREQ, EADDRNOTAVAIL)
+        /// - `invalid-argument`:        The socket is in "connected" mode and `remote-address` is `some` value that does not match the address passed to `stream`. (EISCONN)
+        /// - `invalid-argument`:        The socket is not "connected" and no value for `remote-address` was provided. (EDESTADDRREQ)
+        /// - `remote-unreachable`:      The remote address is not reachable. (ECONNRESET, ENETRESET on Windows, EHOSTUNREACH, EHOSTDOWN, ENETUNREACH, ENETDOWN, ENONET)
+        /// - `connection-refused`:      The connection was refused. (ECONNREFUSED)
+        /// - `datagram-too-large`:      The datagram is too large. (EMSGSIZE)
+        /// 
+        /// # References
+        /// - <https://pubs.opengroup.org/onlinepubs/9699919799/functions/sendto.html>
+        /// - <https://pubs.opengroup.org/onlinepubs/9699919799/functions/sendmsg.html>
+        /// - <https://man7.org/linux/man-pages/man2/send.2.html>
+        /// - <https://man7.org/linux/man-pages/man2/sendmmsg.2.html>
+        /// - <https://learn.microsoft.com/en-us/windows/win32/api/winsock2/nf-winsock2-send>
+        /// - <https://learn.microsoft.com/en-us/windows/win32/api/winsock2/nf-winsock2-sendto>
+        /// - <https://learn.microsoft.com/en-us/windows/win32/api/winsock2/nf-winsock2-wsasendmsg>
+        /// - <https://man.freebsd.org/cgi/man.cgi?query=send&sektion=2>
+        std::expected<uint64_t, network::ErrorCode> Send(std::span<udp::OutgoingDatagram const> datagrams) const;
+        /// Create a `pollable` which will resolve once the stream is ready to send again.
+        /// 
+        /// Note: this function is here for WASI Preview2 only.
+        /// It's planned to be removed when `future` is natively supported in Preview3.
+        io0_2_0::poll::Pollable Subscribe() const;
+        OutgoingDatagramStream(wit::ResourceImportBase &&);
+        OutgoingDatagramStream(OutgoingDatagramStream&&) = default;
+        OutgoingDatagramStream& operator=(OutgoingDatagramStream&&) = default;
+      };
+
       class UdpSocket : public wit::ResourceImportBase{
 
         public:
@@ -2631,107 +2700,6 @@ namespace wasi {
         UdpSocket& operator=(UdpSocket&&) = default;
       };
 
-      class IncomingDatagramStream : public wit::ResourceImportBase{
-
-        public:
-
-        ~IncomingDatagramStream();
-        /// Receive messages on the socket.
-        /// 
-        /// This function attempts to receive up to `max-results` datagrams on the socket without blocking.
-        /// The returned list may contain fewer elements than requested, but never more.
-        /// 
-        /// This function returns successfully with an empty list when either:
-        /// - `max-results` is 0, or:
-        /// - `max-results` is greater than 0, but no results are immediately available.
-        /// This function never returns `error(would-block)`.
-        /// 
-        /// # Typical errors
-        /// - `remote-unreachable`: The remote address is not reachable. (ECONNRESET, ENETRESET on Windows, EHOSTUNREACH, EHOSTDOWN, ENETUNREACH, ENETDOWN, ENONET)
-        /// - `connection-refused`: The connection was refused. (ECONNREFUSED)
-        /// 
-        /// # References
-        /// - <https://pubs.opengroup.org/onlinepubs/9699919799/functions/recvfrom.html>
-        /// - <https://pubs.opengroup.org/onlinepubs/9699919799/functions/recvmsg.html>
-        /// - <https://man7.org/linux/man-pages/man2/recv.2.html>
-        /// - <https://man7.org/linux/man-pages/man2/recvmmsg.2.html>
-        /// - <https://learn.microsoft.com/en-us/windows/win32/api/winsock/nf-winsock-recv>
-        /// - <https://learn.microsoft.com/en-us/windows/win32/api/winsock/nf-winsock-recvfrom>
-        /// - <https://learn.microsoft.com/en-us/previous-versions/windows/desktop/legacy/ms741687(v=vs.85)>
-        /// - <https://man.freebsd.org/cgi/man.cgi?query=recv&sektion=2>
-        std::expected<wit::vector<IncomingDatagram>, network::ErrorCode> Receive(uint64_t max_results) const;
-        /// Create a `pollable` which will resolve once the stream is ready to receive again.
-        /// 
-        /// Note: this function is here for WASI Preview2 only.
-        /// It's planned to be removed when `future` is natively supported in Preview3.
-        io0_2_0::poll::Pollable Subscribe() const;
-        IncomingDatagramStream(wit::ResourceImportBase &&);
-        IncomingDatagramStream(IncomingDatagramStream&&) = default;
-        IncomingDatagramStream& operator=(IncomingDatagramStream&&) = default;
-      };
-
-      class OutgoingDatagramStream : public wit::ResourceImportBase{
-
-        public:
-
-        ~OutgoingDatagramStream();
-        /// Check readiness for sending. This function never blocks.
-        /// 
-        /// Returns the number of datagrams permitted for the next call to `send`,
-        /// or an error. Calling `send` with more datagrams than this function has
-        /// permitted will trap.
-        /// 
-        /// When this function returns ok(0), the `subscribe` pollable will
-        /// become ready when this function will report at least ok(1), or an
-        /// error.
-        /// 
-        /// Never returns `would-block`.
-        std::expected<uint64_t, network::ErrorCode> CheckSend() const;
-        /// Send messages on the socket.
-        /// 
-        /// This function attempts to send all provided `datagrams` on the socket without blocking and
-        /// returns how many messages were actually sent (or queued for sending). This function never
-        /// returns `error(would-block)`. If none of the datagrams were able to be sent, `ok(0)` is returned.
-        /// 
-        /// This function semantically behaves the same as iterating the `datagrams` list and sequentially
-        /// sending each individual datagram until either the end of the list has been reached or the first error occurred.
-        /// If at least one datagram has been sent successfully, this function never returns an error.
-        /// 
-        /// If the input list is empty, the function returns `ok(0)`.
-        /// 
-        /// Each call to `send` must be permitted by a preceding `check-send`. Implementations must trap if
-        /// either `check-send` was not called or `datagrams` contains more items than `check-send` permitted.
-        /// 
-        /// # Typical errors
-        /// - `invalid-argument`:        The `remote-address` has the wrong address family. (EAFNOSUPPORT)
-        /// - `invalid-argument`:        The IP address in `remote-address` is set to INADDR_ANY (`0.0.0.0` / `::`). (EDESTADDRREQ, EADDRNOTAVAIL)
-        /// - `invalid-argument`:        The port in `remote-address` is set to 0. (EDESTADDRREQ, EADDRNOTAVAIL)
-        /// - `invalid-argument`:        The socket is in "connected" mode and `remote-address` is `some` value that does not match the address passed to `stream`. (EISCONN)
-        /// - `invalid-argument`:        The socket is not "connected" and no value for `remote-address` was provided. (EDESTADDRREQ)
-        /// - `remote-unreachable`:      The remote address is not reachable. (ECONNRESET, ENETRESET on Windows, EHOSTUNREACH, EHOSTDOWN, ENETUNREACH, ENETDOWN, ENONET)
-        /// - `connection-refused`:      The connection was refused. (ECONNREFUSED)
-        /// - `datagram-too-large`:      The datagram is too large. (EMSGSIZE)
-        /// 
-        /// # References
-        /// - <https://pubs.opengroup.org/onlinepubs/9699919799/functions/sendto.html>
-        /// - <https://pubs.opengroup.org/onlinepubs/9699919799/functions/sendmsg.html>
-        /// - <https://man7.org/linux/man-pages/man2/send.2.html>
-        /// - <https://man7.org/linux/man-pages/man2/sendmmsg.2.html>
-        /// - <https://learn.microsoft.com/en-us/windows/win32/api/winsock2/nf-winsock2-send>
-        /// - <https://learn.microsoft.com/en-us/windows/win32/api/winsock2/nf-winsock2-sendto>
-        /// - <https://learn.microsoft.com/en-us/windows/win32/api/winsock2/nf-winsock2-wsasendmsg>
-        /// - <https://man.freebsd.org/cgi/man.cgi?query=send&sektion=2>
-        std::expected<uint64_t, network::ErrorCode> Send(std::span<udp::OutgoingDatagram const> datagrams) const;
-        /// Create a `pollable` which will resolve once the stream is ready to send again.
-        /// 
-        /// Note: this function is here for WASI Preview2 only.
-        /// It's planned to be removed when `future` is natively supported in Preview3.
-        io0_2_0::poll::Pollable Subscribe() const;
-        OutgoingDatagramStream(wit::ResourceImportBase &&);
-        OutgoingDatagramStream(OutgoingDatagramStream&&) = default;
-        OutgoingDatagramStream& operator=(OutgoingDatagramStream&&) = default;
-      };
-
     }
     namespace udp_create_socket {
       using Network = network::Network;
@@ -2761,7 +2729,6 @@ namespace wasi {
       std::expected<udp::UdpSocket, network::ErrorCode> CreateUdpSocket(network::IpAddressFamily address_family);
     }
     namespace tcp {
-      class TcpSocket;
       using InputStream = io0_2_0::streams::InputStream;
       using OutputStream = io0_2_0::streams::OutputStream;
       using Pollable = io0_2_0::poll::Pollable;
@@ -3113,7 +3080,6 @@ namespace wasi {
       std::expected<tcp::TcpSocket, network::ErrorCode> CreateTcpSocket(network::IpAddressFamily address_family);
     }
     namespace ip_name_lookup {
-      class ResolveAddressStream;
       using Pollable = io0_2_0::poll::Pollable;
       using Network = network::Network;
       using ErrorCode = network::ErrorCode;
@@ -3267,7 +3233,6 @@ namespace wasi {
   /// still see A or B
   namespace keyvalue {
     namespace store {
-      class Bucket;
       /// The set of errors which may be raised by functions in this package
       struct Error {
         /// The host does not recognize the store identifier requested.
@@ -3360,7 +3325,6 @@ namespace wasi {
     /// wit. Future version of the interface will instead extend these methods on the base `bucket`
     /// resource.
     namespace atomics {
-      class Cas;
       using Bucket = store::Bucket;
       using Error = store::Error;
       class Cas : public wit::ResourceImportBase{

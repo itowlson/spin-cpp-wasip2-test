@@ -180,6 +180,24 @@ extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
 __attribute__((import_name("[method]fields.clone")))
 int32_t __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5DfieldsX2Eclone(int32_t);
 extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
+__attribute__((import_name("[resource-drop]future-trailers")))
+void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Dfuture_trailers(int32_t);
+extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
+__attribute__((import_name("[method]future-trailers.subscribe")))
+int32_t __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Dfuture_trailersX2Esubscribe(int32_t);
+extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
+__attribute__((import_name("[method]future-trailers.get")))
+void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Dfuture_trailersX2Eget(int32_t, uint8_t *);
+extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
+__attribute__((import_name("[resource-drop]incoming-body")))
+void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Dincoming_body(int32_t);
+extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
+__attribute__((import_name("[method]incoming-body.stream")))
+void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Dincoming_bodyX2Estream(int32_t, uint8_t *);
+extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
+__attribute__((import_name("[static]incoming-body.finish")))
+int32_t __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BstaticX5Dincoming_bodyX2Efinish(int32_t);
+extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
 __attribute__((import_name("[resource-drop]incoming-request")))
 void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Dincoming_request(int32_t);
 extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
@@ -200,6 +218,15 @@ int32_t __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Dincoming_req
 extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
 __attribute__((import_name("[method]incoming-request.consume")))
 void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Dincoming_requestX2Econsume(int32_t, uint8_t *);
+extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
+__attribute__((import_name("[resource-drop]outgoing-body")))
+void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Doutgoing_body(int32_t);
+extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
+__attribute__((import_name("[method]outgoing-body.write")))
+void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Doutgoing_bodyX2Ewrite(int32_t, uint8_t *);
+extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
+__attribute__((import_name("[static]outgoing-body.finish")))
+void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BstaticX5Doutgoing_bodyX2Efinish(int32_t, int32_t, int32_t, uint8_t *);
 extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
 __attribute__((import_name("[resource-drop]outgoing-request")))
 void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Doutgoing_request(int32_t);
@@ -261,42 +288,6 @@ extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
 __attribute__((import_name("[method]request-options.set-between-bytes-timeout")))
 int32_t __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Drequest_optionsX2Eset_between_bytes_timeout(int32_t, int32_t, int64_t);
 extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
-__attribute__((import_name("[resource-drop]response-outparam")))
-void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Dresponse_outparam(int32_t);
-extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
-__attribute__((import_name("[static]response-outparam.set")))
-void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BstaticX5Dresponse_outparamX2Eset(int32_t, int32_t, int32_t, int32_t, int64_t, uint8_t *, uint8_t *, size_t, int32_t);
-extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
-__attribute__((import_name("[resource-drop]incoming-response")))
-void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Dincoming_response(int32_t);
-extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
-__attribute__((import_name("[method]incoming-response.status")))
-int32_t __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Dincoming_responseX2Estatus(int32_t);
-extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
-__attribute__((import_name("[method]incoming-response.headers")))
-int32_t __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Dincoming_responseX2Eheaders(int32_t);
-extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
-__attribute__((import_name("[method]incoming-response.consume")))
-void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Dincoming_responseX2Econsume(int32_t, uint8_t *);
-extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
-__attribute__((import_name("[resource-drop]incoming-body")))
-void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Dincoming_body(int32_t);
-extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
-__attribute__((import_name("[method]incoming-body.stream")))
-void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Dincoming_bodyX2Estream(int32_t, uint8_t *);
-extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
-__attribute__((import_name("[static]incoming-body.finish")))
-int32_t __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BstaticX5Dincoming_bodyX2Efinish(int32_t);
-extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
-__attribute__((import_name("[resource-drop]future-trailers")))
-void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Dfuture_trailers(int32_t);
-extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
-__attribute__((import_name("[method]future-trailers.subscribe")))
-int32_t __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Dfuture_trailersX2Esubscribe(int32_t);
-extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
-__attribute__((import_name("[method]future-trailers.get")))
-void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Dfuture_trailersX2Eget(int32_t, uint8_t *);
-extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
 __attribute__((import_name("[resource-drop]outgoing-response")))
 void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Doutgoing_response(int32_t);
 extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
@@ -315,14 +306,23 @@ extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
 __attribute__((import_name("[method]outgoing-response.body")))
 void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Doutgoing_responseX2Ebody(int32_t, uint8_t *);
 extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
-__attribute__((import_name("[resource-drop]outgoing-body")))
-void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Doutgoing_body(int32_t);
+__attribute__((import_name("[resource-drop]response-outparam")))
+void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Dresponse_outparam(int32_t);
 extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
-__attribute__((import_name("[method]outgoing-body.write")))
-void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Doutgoing_bodyX2Ewrite(int32_t, uint8_t *);
+__attribute__((import_name("[static]response-outparam.set")))
+void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BstaticX5Dresponse_outparamX2Eset(int32_t, int32_t, int32_t, int32_t, int64_t, uint8_t *, uint8_t *, size_t, int32_t);
 extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
-__attribute__((import_name("[static]outgoing-body.finish")))
-void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BstaticX5Doutgoing_bodyX2Efinish(int32_t, int32_t, int32_t, uint8_t *);
+__attribute__((import_name("[resource-drop]incoming-response")))
+void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Dincoming_response(int32_t);
+extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
+__attribute__((import_name("[method]incoming-response.status")))
+int32_t __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Dincoming_responseX2Estatus(int32_t);
+extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
+__attribute__((import_name("[method]incoming-response.headers")))
+int32_t __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Dincoming_responseX2Eheaders(int32_t);
+extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
+__attribute__((import_name("[method]incoming-response.consume")))
+void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Dincoming_responseX2Econsume(int32_t, uint8_t *);
 extern "C" __attribute__((import_module("wasi:http/types@0.2.0")))
 __attribute__((import_name("[resource-drop]future-incoming-response")))
 void __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Dfuture_incoming_response(int32_t);
@@ -486,6 +486,12 @@ extern "C" __attribute__((import_module("wasi:clocks/wall-clock@0.2.0")))
 __attribute__((import_name("resolution")))
 void __wasm_import_wasiX3AclocksX2Fwall_clockX400X2E2X2E0X00resolution(uint8_t *);
 extern "C" __attribute__((import_module("wasi:filesystem/types@0.2.0")))
+__attribute__((import_name("[resource-drop]directory-entry-stream")))
+void __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Ddirectory_entry_stream(int32_t);
+extern "C" __attribute__((import_module("wasi:filesystem/types@0.2.0")))
+__attribute__((import_name("[method]directory-entry-stream.read-directory-entry")))
+void __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5Ddirectory_entry_streamX2Eread_directory_entry(int32_t, uint8_t *);
+extern "C" __attribute__((import_module("wasi:filesystem/types@0.2.0")))
 __attribute__((import_name("[resource-drop]descriptor")))
 void __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Ddescriptor(int32_t);
 extern "C" __attribute__((import_module("wasi:filesystem/types@0.2.0")))
@@ -570,12 +576,6 @@ extern "C" __attribute__((import_module("wasi:filesystem/types@0.2.0")))
 __attribute__((import_name("[method]descriptor.metadata-hash-at")))
 void __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Emetadata_hash_at(int32_t, int32_t, uint8_t *, size_t, uint8_t *);
 extern "C" __attribute__((import_module("wasi:filesystem/types@0.2.0")))
-__attribute__((import_name("[resource-drop]directory-entry-stream")))
-void __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Ddirectory_entry_stream(int32_t);
-extern "C" __attribute__((import_module("wasi:filesystem/types@0.2.0")))
-__attribute__((import_name("[method]directory-entry-stream.read-directory-entry")))
-void __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5Ddirectory_entry_streamX2Eread_directory_entry(int32_t, uint8_t *);
-extern "C" __attribute__((import_module("wasi:filesystem/types@0.2.0")))
 __attribute__((import_name("filesystem-error-code")))
 void __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00filesystem_error_code(int32_t, uint8_t *);
 extern "C" __attribute__((import_module("wasi:filesystem/preopens@0.2.0")))
@@ -587,6 +587,27 @@ void __wasm_import_wasiX3AsocketsX2FnetworkX400X2E2X2E0X00X5Bresource_dropX5Dnet
 extern "C" __attribute__((import_module("wasi:sockets/instance-network@0.2.0")))
 __attribute__((import_name("instance-network")))
 int32_t __wasm_import_wasiX3AsocketsX2Finstance_networkX400X2E2X2E0X00instance_network();
+extern "C" __attribute__((import_module("wasi:sockets/udp@0.2.0")))
+__attribute__((import_name("[resource-drop]incoming-datagram-stream")))
+void __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5Bresource_dropX5Dincoming_datagram_stream(int32_t);
+extern "C" __attribute__((import_module("wasi:sockets/udp@0.2.0")))
+__attribute__((import_name("[method]incoming-datagram-stream.receive")))
+void __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5BmethodX5Dincoming_datagram_streamX2Ereceive(int32_t, int64_t, uint8_t *);
+extern "C" __attribute__((import_module("wasi:sockets/udp@0.2.0")))
+__attribute__((import_name("[method]incoming-datagram-stream.subscribe")))
+int32_t __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5BmethodX5Dincoming_datagram_streamX2Esubscribe(int32_t);
+extern "C" __attribute__((import_module("wasi:sockets/udp@0.2.0")))
+__attribute__((import_name("[resource-drop]outgoing-datagram-stream")))
+void __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5Bresource_dropX5Doutgoing_datagram_stream(int32_t);
+extern "C" __attribute__((import_module("wasi:sockets/udp@0.2.0")))
+__attribute__((import_name("[method]outgoing-datagram-stream.check-send")))
+void __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5BmethodX5Doutgoing_datagram_streamX2Echeck_send(int32_t, uint8_t *);
+extern "C" __attribute__((import_module("wasi:sockets/udp@0.2.0")))
+__attribute__((import_name("[method]outgoing-datagram-stream.send")))
+void __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5BmethodX5Doutgoing_datagram_streamX2Esend(int32_t, uint8_t *, size_t, uint8_t *);
+extern "C" __attribute__((import_module("wasi:sockets/udp@0.2.0")))
+__attribute__((import_name("[method]outgoing-datagram-stream.subscribe")))
+int32_t __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5BmethodX5Doutgoing_datagram_streamX2Esubscribe(int32_t);
 extern "C" __attribute__((import_module("wasi:sockets/udp@0.2.0")))
 __attribute__((import_name("[resource-drop]udp-socket")))
 void __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5Bresource_dropX5Dudp_socket(int32_t);
@@ -629,27 +650,6 @@ void __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5BmethodX5Dudp_socketX2Es
 extern "C" __attribute__((import_module("wasi:sockets/udp@0.2.0")))
 __attribute__((import_name("[method]udp-socket.subscribe")))
 int32_t __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5BmethodX5Dudp_socketX2Esubscribe(int32_t);
-extern "C" __attribute__((import_module("wasi:sockets/udp@0.2.0")))
-__attribute__((import_name("[resource-drop]incoming-datagram-stream")))
-void __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5Bresource_dropX5Dincoming_datagram_stream(int32_t);
-extern "C" __attribute__((import_module("wasi:sockets/udp@0.2.0")))
-__attribute__((import_name("[method]incoming-datagram-stream.receive")))
-void __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5BmethodX5Dincoming_datagram_streamX2Ereceive(int32_t, int64_t, uint8_t *);
-extern "C" __attribute__((import_module("wasi:sockets/udp@0.2.0")))
-__attribute__((import_name("[method]incoming-datagram-stream.subscribe")))
-int32_t __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5BmethodX5Dincoming_datagram_streamX2Esubscribe(int32_t);
-extern "C" __attribute__((import_module("wasi:sockets/udp@0.2.0")))
-__attribute__((import_name("[resource-drop]outgoing-datagram-stream")))
-void __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5Bresource_dropX5Doutgoing_datagram_stream(int32_t);
-extern "C" __attribute__((import_module("wasi:sockets/udp@0.2.0")))
-__attribute__((import_name("[method]outgoing-datagram-stream.check-send")))
-void __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5BmethodX5Doutgoing_datagram_streamX2Echeck_send(int32_t, uint8_t *);
-extern "C" __attribute__((import_module("wasi:sockets/udp@0.2.0")))
-__attribute__((import_name("[method]outgoing-datagram-stream.send")))
-void __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5BmethodX5Doutgoing_datagram_streamX2Esend(int32_t, uint8_t *, size_t, uint8_t *);
-extern "C" __attribute__((import_module("wasi:sockets/udp@0.2.0")))
-__attribute__((import_name("[method]outgoing-datagram-stream.subscribe")))
-int32_t __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5BmethodX5Doutgoing_datagram_streamX2Esubscribe(int32_t);
 extern "C" __attribute__((import_module("wasi:sockets/udp-create-socket@0.2.0")))
 __attribute__((import_name("create-udp-socket")))
 void __wasm_import_wasiX3AsocketsX2Fudp_create_socketX400X2E2X2E0X00create_udp_socket(int32_t, uint8_t *);
@@ -824,11 +824,11 @@ spin::postgres3_0_0::postgres::Connection::~Connection()
 std::expected<spin::postgres3_0_0::postgres::Connection, spin::postgres3_0_0::postgres::Error> spin::postgres3_0_0::postgres::Connection::Open(std::string_view address)
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = address;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = address;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_spinX3ApostgresX2FpostgresX403X2E0X2E0X00X5BstaticX5DconnectionX2Eopen(std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_spinX3ApostgresX2FpostgresX403X2E0X2E0X00X5BstaticX5DconnectionX2Eopen(std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<postgres::Connection, postgres::Error>> result9_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     int32_t l2 = *((int32_t const*)(ptr1 + sizeof(void*)));
@@ -837,30 +837,30 @@ std::expected<spin::postgres3_0_0::postgres::Connection, spin::postgres3_0_0::po
   } else {
     std::optional<postgres::Error> variant8_opt;
     switch ((int32_t) (*((uint8_t*) (ptr1 + sizeof(void*))))) {
-      case 0: { auto len3 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      case 0: { auto _len3 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-      variant8_opt = postgres::Error{{postgres::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len3)}}};
+      variant8_opt = postgres::Error{{postgres::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len3)}}};
     } break;
-    case 1: { auto len4 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+    case 1: { auto _len4 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-    variant8_opt = postgres::Error{{postgres::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len4)}}};
+    variant8_opt = postgres::Error{{postgres::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len4)}}};
   } break;
-  case 2: { auto len5 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+  case 2: { auto _len5 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-  variant8_opt = postgres::Error{{postgres::Error::QueryFailed{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len5)}}};
+  variant8_opt = postgres::Error{{postgres::Error::QueryFailed{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len5)}}};
 } break;
-case 3: { auto len6 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+case 3: { auto _len6 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-variant8_opt = postgres::Error{{postgres::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len6)}}};
+variant8_opt = postgres::Error{{postgres::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len6)}}};
 } break;
-case 4: { auto len7 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+case 4: { auto _len7 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-variant8_opt = postgres::Error{{postgres::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len7)}}};
+variant8_opt = postgres::Error{{postgres::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len7)}}};
 } break;
 }
 postgres::Error variant8 = std::move(*variant8_opt);
@@ -874,195 +874,195 @@ return result10;
 std::expected<spin::postgres3_0_0::postgres::RowSet, spin::postgres3_0_0::postgres::Error> spin::postgres3_0_0::postgres::Connection::Query(std::string_view statement, std::span<postgres::ParameterValue const> params) const
 {
   uintptr_t ret_area[((5*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = statement;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec17 = params;
-  auto ptr17 = (uint8_t*)(vec17.data());
-  auto len17 = (size_t)(vec17.size());
-  for (size_t i = 0; i < len17; ++i) {
-    auto base = ptr17 + i * 24;
-    auto&& iter_elem = vec17[i];
-    switch ((int32_t) (iter_elem).variants.index()) {
+  auto&& _vec0 = statement;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec17 = params;
+  auto _ptr17 = (uint8_t*)(_vec17.data());
+  auto _len17 = (size_t)(_vec17.size());
+  for (size_t i = 0; i < _len17; ++i) {
+    auto _base = _ptr17 + i * 24;
+    auto&& _iter_elem = _vec17[i];
+    switch ((int32_t) (_iter_elem).variants.index()) {
       case 0: {
-        auto& payload1 = std::get<postgres::ParameterValue::Boolean>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(0));
-        *((int8_t*)(base + 8)) = (int32_t(payload1));
+        auto& payload1 = std::get<postgres::ParameterValue::Boolean>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(0));
+        *((int8_t*)(_base + 8)) = (int32_t(payload1));
         break;
       }
       case 1: {
-        auto& payload2 = std::get<postgres::ParameterValue::Int8>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(1));
-        *((int8_t*)(base + 8)) = (int32_t(payload2));
+        auto& payload2 = std::get<postgres::ParameterValue::Int8>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(1));
+        *((int8_t*)(_base + 8)) = (int32_t(payload2));
         break;
       }
       case 2: {
-        auto& payload3 = std::get<postgres::ParameterValue::Int16>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(2));
-        *((int16_t*)(base + 8)) = (int32_t(payload3));
+        auto& payload3 = std::get<postgres::ParameterValue::Int16>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(2));
+        *((int16_t*)(_base + 8)) = (int32_t(payload3));
         break;
       }
       case 3: {
-        auto& payload4 = std::get<postgres::ParameterValue::Int32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(3));
-        *((int32_t*)(base + 8)) = (int32_t(payload4));
+        auto& payload4 = std::get<postgres::ParameterValue::Int32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(3));
+        *((int32_t*)(_base + 8)) = (int32_t(payload4));
         break;
       }
       case 4: {
-        auto& payload5 = std::get<postgres::ParameterValue::Int64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(4));
-        *((int64_t*)(base + 8)) = (int64_t(payload5));
+        auto& payload5 = std::get<postgres::ParameterValue::Int64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(4));
+        *((int64_t*)(_base + 8)) = (int64_t(payload5));
         break;
       }
       case 5: {
-        auto& payload6 = std::get<postgres::ParameterValue::Floating32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(5));
-        *((float*)(base + 8)) = (float(payload6));
+        auto& payload6 = std::get<postgres::ParameterValue::Floating32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(5));
+        *((float*)(_base + 8)) = (float(payload6));
         break;
       }
       case 6: {
-        auto& payload7 = std::get<postgres::ParameterValue::Floating64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(6));
-        *((double*)(base + 8)) = (double(payload7));
+        auto& payload7 = std::get<postgres::ParameterValue::Floating64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(6));
+        *((double*)(_base + 8)) = (double(payload7));
         break;
       }
       case 7: {
-        auto& payload8 = std::get<postgres::ParameterValue::Str>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(7));
-        auto&& vec9 = payload8;
-        auto ptr9 = (uint8_t*)(vec9.data());
-        auto len9 = (size_t)(vec9.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len9;
-        *((uint8_t**)(base + 8)) = ptr9;
+        auto& payload8 = std::get<postgres::ParameterValue::Str>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(7));
+        auto&& _vec9 = payload8;
+        auto _ptr9 = (uint8_t*)(_vec9.data());
+        auto _len9 = (size_t)(_vec9.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len9;
+        *((uint8_t**)(_base + 8)) = _ptr9;
         break;
       }
       case 8: {
-        auto& payload10 = std::get<postgres::ParameterValue::Binary>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(8));
-        auto&& vec11 = payload10;
-        auto ptr11 = (uint8_t*)(vec11.data());
-        auto len11 = (size_t)(vec11.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len11;
-        *((uint8_t**)(base + 8)) = ptr11;
+        auto& payload10 = std::get<postgres::ParameterValue::Binary>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(8));
+        auto&& _vec11 = payload10;
+        auto _ptr11 = (uint8_t*)(_vec11.data());
+        auto _len11 = (size_t)(_vec11.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len11;
+        *((uint8_t**)(_base + 8)) = _ptr11;
         break;
       }
       case 9: {
-        auto& payload12 = std::get<postgres::ParameterValue::Date>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(9));
-        *((int32_t*)(base + 8)) = (int32_t(std::get<0>(payload12)));
-        *((int8_t*)(base + 12)) = (int32_t(std::get<1>(payload12)));
-        *((int8_t*)(base + 13)) = (int32_t(std::get<2>(payload12)));
+        auto& payload12 = std::get<postgres::ParameterValue::Date>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(9));
+        *((int32_t*)(_base + 8)) = (int32_t(std::get<0>(payload12)));
+        *((int8_t*)(_base + 12)) = (int32_t(std::get<1>(payload12)));
+        *((int8_t*)(_base + 13)) = (int32_t(std::get<2>(payload12)));
         break;
       }
       case 10: {
-        auto& payload13 = std::get<postgres::ParameterValue::Time>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(10));
-        *((int8_t*)(base + 8)) = (int32_t(std::get<0>(payload13)));
-        *((int8_t*)(base + 9)) = (int32_t(std::get<1>(payload13)));
-        *((int8_t*)(base + 10)) = (int32_t(std::get<2>(payload13)));
-        *((int32_t*)(base + 12)) = (int32_t(std::get<3>(payload13)));
+        auto& payload13 = std::get<postgres::ParameterValue::Time>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(10));
+        *((int8_t*)(_base + 8)) = (int32_t(std::get<0>(payload13)));
+        *((int8_t*)(_base + 9)) = (int32_t(std::get<1>(payload13)));
+        *((int8_t*)(_base + 10)) = (int32_t(std::get<2>(payload13)));
+        *((int32_t*)(_base + 12)) = (int32_t(std::get<3>(payload13)));
         break;
       }
       case 11: {
-        auto& payload14 = std::get<postgres::ParameterValue::Datetime>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(11));
-        *((int32_t*)(base + 8)) = (int32_t(std::get<0>(payload14)));
-        *((int8_t*)(base + 12)) = (int32_t(std::get<1>(payload14)));
-        *((int8_t*)(base + 13)) = (int32_t(std::get<2>(payload14)));
-        *((int8_t*)(base + 14)) = (int32_t(std::get<3>(payload14)));
-        *((int8_t*)(base + 15)) = (int32_t(std::get<4>(payload14)));
-        *((int8_t*)(base + 16)) = (int32_t(std::get<5>(payload14)));
-        *((int32_t*)(base + 20)) = (int32_t(std::get<6>(payload14)));
+        auto& payload14 = std::get<postgres::ParameterValue::Datetime>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(11));
+        *((int32_t*)(_base + 8)) = (int32_t(std::get<0>(payload14)));
+        *((int8_t*)(_base + 12)) = (int32_t(std::get<1>(payload14)));
+        *((int8_t*)(_base + 13)) = (int32_t(std::get<2>(payload14)));
+        *((int8_t*)(_base + 14)) = (int32_t(std::get<3>(payload14)));
+        *((int8_t*)(_base + 15)) = (int32_t(std::get<4>(payload14)));
+        *((int8_t*)(_base + 16)) = (int32_t(std::get<5>(payload14)));
+        *((int32_t*)(_base + 20)) = (int32_t(std::get<6>(payload14)));
         break;
       }
       case 12: {
-        auto& payload15 = std::get<postgres::ParameterValue::Timestamp>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(12));
-        *((int64_t*)(base + 8)) = (int64_t(payload15));
+        auto& payload15 = std::get<postgres::ParameterValue::Timestamp>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(12));
+        *((int64_t*)(_base + 8)) = (int64_t(payload15));
         break;
       }
       case 13: {
-        *((int8_t*)(base + 0)) = (int32_t(13));
+        *((int8_t*)(_base + 0)) = (int32_t(13));
         break;
       }
     }
 
   }
   uint8_t* ptr18 = (uint8_t*)(&ret_area);
-  __wasm_import_spinX3ApostgresX2FpostgresX403X2E0X2E0X00X5BmethodX5DconnectionX2Equery((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr17), std::move(len17), std::move(ptr18));
+  __wasm_import_spinX3ApostgresX2FpostgresX403X2E0X2E0X00X5BmethodX5DconnectionX2Equery((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(_ptr17), std::move(_len17), std::move(ptr18));
   std::optional<std::expected<postgres::RowSet, postgres::Error>> result40_opt;
   if ((int32_t) (*((uint8_t*) (ptr18 + 0)))==0) {
-    auto base20 = *((uint8_t**) (ptr18 + sizeof(void*)));
-    auto len20 = *((size_t*) (ptr18 + (2*sizeof(void*))));
-    auto result20 = wit::vector<postgres::Column>::allocate(len20);
-    for (unsigned i=0; i<len20; ++i) {
-      auto base = base20 + i * (3*sizeof(void*));
-      auto len19 = *((size_t*) (base + sizeof(void*)));
+    auto _base20 = *((uint8_t**) (ptr18 + sizeof(void*)));
+    auto _len20 = *((size_t*) (ptr18 + (2*sizeof(void*))));
+    auto _result20 = wit::vector<postgres::Column>::allocate(_len20);
+    for (unsigned i=0; i<_len20; ++i) {
+      auto _base = _base20 + i * (3*sizeof(void*));
+      auto _len19 = *((size_t*) (_base + sizeof(void*)));
 
-      auto e20 = postgres::Column{wit::string((char const*)(*((uint8_t**) (base + 0))), len19), (postgres::DbDataType)(int32_t) (*((uint8_t*) (base + (2*sizeof(void*))))), };
-      result20.initialize(i, std::move(e20));
+      auto _e20 = postgres::Column{wit::string((char const*)(*((uint8_t**) (_base + 0))), _len19), (postgres::DbDataType)(int32_t) (*((uint8_t*) (_base + (2*sizeof(void*))))), };
+      _result20.initialize(i, std::move(_e20));
     }
-    auto base33 = *((uint8_t**) (ptr18 + (3*sizeof(void*))));
-    auto len33 = *((size_t*) (ptr18 + (4*sizeof(void*))));
-    auto result33 = wit::vector<wit::vector<postgres::DbValue>>::allocate(len33);
-    for (unsigned i=0; i<len33; ++i) {
-      auto base = base33 + i * (2*sizeof(void*));
-      auto base32 = *((uint8_t**) (base + 0));
-      auto len32 = *((size_t*) (base + sizeof(void*)));
-      auto result32 = wit::vector<postgres::DbValue>::allocate(len32);
-      for (unsigned i=0; i<len32; ++i) {
-        auto base = base32 + i * 24;
+    auto _base33 = *((uint8_t**) (ptr18 + (3*sizeof(void*))));
+    auto _len33 = *((size_t*) (ptr18 + (4*sizeof(void*))));
+    auto _result33 = wit::vector<wit::vector<postgres::DbValue>>::allocate(_len33);
+    for (unsigned i=0; i<_len33; ++i) {
+      auto _base = _base33 + i * (2*sizeof(void*));
+      auto _base32 = *((uint8_t**) (_base + 0));
+      auto _len32 = *((size_t*) (_base + sizeof(void*)));
+      auto _result32 = wit::vector<postgres::DbValue>::allocate(_len32);
+      for (unsigned i=0; i<_len32; ++i) {
+        auto _base = _base32 + i * 24;
         std::optional<postgres::DbValue> variant31_opt;
-        switch ((int32_t) (*((uint8_t*) (base + 0)))) {
+        switch ((int32_t) (*((uint8_t*) (_base + 0)))) {
           case 0: { 
-            variant31_opt = postgres::DbValue{{postgres::DbValue::Boolean{(bool((int32_t) (*((uint8_t*) (base + 8)))))}}};
+            variant31_opt = postgres::DbValue{{postgres::DbValue::Boolean{(bool((int32_t) (*((uint8_t*) (_base + 8)))))}}};
           } break;
           case 1: { 
-            variant31_opt = postgres::DbValue{{postgres::DbValue::Int8{(int8_t((int32_t) (*((int8_t*) (base + 8)))))}}};
+            variant31_opt = postgres::DbValue{{postgres::DbValue::Int8{(int8_t((int32_t) (*((int8_t*) (_base + 8)))))}}};
           } break;
           case 2: { 
-            variant31_opt = postgres::DbValue{{postgres::DbValue::Int16{(int16_t((int32_t) (*((int16_t*) (base + 8)))))}}};
+            variant31_opt = postgres::DbValue{{postgres::DbValue::Int16{(int16_t((int32_t) (*((int16_t*) (_base + 8)))))}}};
           } break;
-          case 3: { int32_t l21 = *((int32_t const*)(base + 8));
+          case 3: { int32_t l21 = *((int32_t const*)(_base + 8));
 
           variant31_opt = postgres::DbValue{{postgres::DbValue::Int32{(int32_t(l21))}}};
         } break;
         case 4: { 
-          variant31_opt = postgres::DbValue{{postgres::DbValue::Int64{(int64_t(*((int64_t*) (base + 8))))}}};
+          variant31_opt = postgres::DbValue{{postgres::DbValue::Int64{(int64_t(*((int64_t*) (_base + 8))))}}};
         } break;
         case 5: { 
-          variant31_opt = postgres::DbValue{{postgres::DbValue::Floating32{(float(*((float*) (base + 8))))}}};
+          variant31_opt = postgres::DbValue{{postgres::DbValue::Floating32{(float(*((float*) (_base + 8))))}}};
         } break;
         case 6: { 
-          variant31_opt = postgres::DbValue{{postgres::DbValue::Floating64{(double(*((double*) (base + 8))))}}};
+          variant31_opt = postgres::DbValue{{postgres::DbValue::Floating64{(double(*((double*) (_base + 8))))}}};
         } break;
-        case 7: { auto len22 = *((size_t*) (base + (8+1*sizeof(void*))));
+        case 7: { auto _len22 = *((size_t*) (_base + (8+1*sizeof(void*))));
 
 
-        variant31_opt = postgres::DbValue{{postgres::DbValue::Str{wit::string((char const*)(*((uint8_t**) (base + 8))), len22)}}};
+        variant31_opt = postgres::DbValue{{postgres::DbValue::Str{wit::string((char const*)(*((uint8_t**) (_base + 8))), _len22)}}};
       } break;
-      case 8: { auto len23 = *((size_t*) (base + (8+1*sizeof(void*))));
+      case 8: { auto _len23 = *((size_t*) (_base + (8+1*sizeof(void*))));
 
-      variant31_opt = postgres::DbValue{{postgres::DbValue::Binary{wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (base + 8))), len23)}}};
+      variant31_opt = postgres::DbValue{{postgres::DbValue::Binary{wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (_base + 8))), _len23)}}};
     } break;
-    case 9: { int32_t l24 = *((int32_t const*)(base + 8));
-    auto tuple25 = std::tuple<int32_t, uint8_t, uint8_t>((int32_t(l24)), (uint8_t((int32_t) (*((uint8_t*) (base + 12))))), (uint8_t((int32_t) (*((uint8_t*) (base + 13))))));
+    case 9: { int32_t l24 = *((int32_t const*)(_base + 8));
+    auto tuple25 = std::tuple<int32_t, uint8_t, uint8_t>((int32_t(l24)), (uint8_t((int32_t) (*((uint8_t*) (_base + 12))))), (uint8_t((int32_t) (*((uint8_t*) (_base + 13))))));
 
     variant31_opt = postgres::DbValue{{postgres::DbValue::Date{std::move(tuple25)}}};
   } break;
-  case 10: { int32_t l26 = *((int32_t const*)(base + 12));
-  auto tuple27 = std::tuple<uint8_t, uint8_t, uint8_t, uint32_t>((uint8_t((int32_t) (*((uint8_t*) (base + 8))))), (uint8_t((int32_t) (*((uint8_t*) (base + 9))))), (uint8_t((int32_t) (*((uint8_t*) (base + 10))))), (uint32_t(l26)));
+  case 10: { int32_t l26 = *((int32_t const*)(_base + 12));
+  auto tuple27 = std::tuple<uint8_t, uint8_t, uint8_t, uint32_t>((uint8_t((int32_t) (*((uint8_t*) (_base + 8))))), (uint8_t((int32_t) (*((uint8_t*) (_base + 9))))), (uint8_t((int32_t) (*((uint8_t*) (_base + 10))))), (uint32_t(l26)));
 
   variant31_opt = postgres::DbValue{{postgres::DbValue::Time{std::move(tuple27)}}};
 } break;
-case 11: { int32_t l28 = *((int32_t const*)(base + 8));
-int32_t l29 = *((int32_t const*)(base + 20));
-auto tuple30 = std::tuple<int32_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint32_t>((int32_t(l28)), (uint8_t((int32_t) (*((uint8_t*) (base + 12))))), (uint8_t((int32_t) (*((uint8_t*) (base + 13))))), (uint8_t((int32_t) (*((uint8_t*) (base + 14))))), (uint8_t((int32_t) (*((uint8_t*) (base + 15))))), (uint8_t((int32_t) (*((uint8_t*) (base + 16))))), (uint32_t(l29)));
+case 11: { int32_t l28 = *((int32_t const*)(_base + 8));
+int32_t l29 = *((int32_t const*)(_base + 20));
+auto tuple30 = std::tuple<int32_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint32_t>((int32_t(l28)), (uint8_t((int32_t) (*((uint8_t*) (_base + 12))))), (uint8_t((int32_t) (*((uint8_t*) (_base + 13))))), (uint8_t((int32_t) (*((uint8_t*) (_base + 14))))), (uint8_t((int32_t) (*((uint8_t*) (_base + 15))))), (uint8_t((int32_t) (*((uint8_t*) (_base + 16))))), (uint32_t(l29)));
 
 variant31_opt = postgres::DbValue{{postgres::DbValue::Datetime{std::move(tuple30)}}};
 } break;
 case 12: { 
-  variant31_opt = postgres::DbValue{{postgres::DbValue::Timestamp{(int64_t(*((int64_t*) (base + 8))))}}};
+  variant31_opt = postgres::DbValue{{postgres::DbValue::Timestamp{(int64_t(*((int64_t*) (_base + 8))))}}};
 } break;
 case 13: { 
   variant31_opt = postgres::DbValue{{postgres::DbValue::DbNull{}}};
@@ -1072,41 +1072,41 @@ case 14: {
 } break;
 }
 postgres::DbValue variant31 = std::move(*variant31_opt);
-auto e32 = std::move(variant31);
-result32.initialize(i, std::move(e32));
+auto _e32 = std::move(variant31);
+_result32.initialize(i, std::move(_e32));
 }
-auto e33 = std::move(result32);
-result33.initialize(i, std::move(e33));
+auto _e33 = std::move(_result32);
+_result33.initialize(i, std::move(_e33));
 }
 
-result40_opt.emplace(std::expected<postgres::RowSet, postgres::Error>(postgres::RowSet{std::move(result20), std::move(result33), }));
+result40_opt.emplace(std::expected<postgres::RowSet, postgres::Error>(postgres::RowSet{std::move(_result20), std::move(_result33), }));
 } else {
 std::optional<postgres::Error> variant39_opt;
 switch ((int32_t) (*((uint8_t*) (ptr18 + sizeof(void*))))) {
-  case 0: { auto len34 = *((size_t*) (ptr18 + (3*sizeof(void*))));
+  case 0: { auto _len34 = *((size_t*) (ptr18 + (3*sizeof(void*))));
 
 
-  variant39_opt = postgres::Error{{postgres::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), len34)}}};
+  variant39_opt = postgres::Error{{postgres::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), _len34)}}};
 } break;
-case 1: { auto len35 = *((size_t*) (ptr18 + (3*sizeof(void*))));
+case 1: { auto _len35 = *((size_t*) (ptr18 + (3*sizeof(void*))));
 
 
-variant39_opt = postgres::Error{{postgres::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), len35)}}};
+variant39_opt = postgres::Error{{postgres::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), _len35)}}};
 } break;
-case 2: { auto len36 = *((size_t*) (ptr18 + (3*sizeof(void*))));
+case 2: { auto _len36 = *((size_t*) (ptr18 + (3*sizeof(void*))));
 
 
-variant39_opt = postgres::Error{{postgres::Error::QueryFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), len36)}}};
+variant39_opt = postgres::Error{{postgres::Error::QueryFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), _len36)}}};
 } break;
-case 3: { auto len37 = *((size_t*) (ptr18 + (3*sizeof(void*))));
+case 3: { auto _len37 = *((size_t*) (ptr18 + (3*sizeof(void*))));
 
 
-variant39_opt = postgres::Error{{postgres::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), len37)}}};
+variant39_opt = postgres::Error{{postgres::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), _len37)}}};
 } break;
-case 4: { auto len38 = *((size_t*) (ptr18 + (3*sizeof(void*))));
+case 4: { auto _len38 = *((size_t*) (ptr18 + (3*sizeof(void*))));
 
 
-variant39_opt = postgres::Error{{postgres::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), len38)}}};
+variant39_opt = postgres::Error{{postgres::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), _len38)}}};
 } break;
 }
 postgres::Error variant39 = std::move(*variant39_opt);
@@ -1120,122 +1120,122 @@ return result41;
 std::expected<uint64_t, spin::postgres3_0_0::postgres::Error> spin::postgres3_0_0::postgres::Connection::Execute(std::string_view statement, std::span<postgres::ParameterValue const> params) const
 {
   uint64_t ret_area[((16+2*sizeof(void*))+sizeof(uint64_t)-1)/sizeof(uint64_t)];
-  auto&& vec0 = statement;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec17 = params;
-  auto ptr17 = (uint8_t*)(vec17.data());
-  auto len17 = (size_t)(vec17.size());
-  for (size_t i = 0; i < len17; ++i) {
-    auto base = ptr17 + i * 24;
-    auto&& iter_elem = vec17[i];
-    switch ((int32_t) (iter_elem).variants.index()) {
+  auto&& _vec0 = statement;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec17 = params;
+  auto _ptr17 = (uint8_t*)(_vec17.data());
+  auto _len17 = (size_t)(_vec17.size());
+  for (size_t i = 0; i < _len17; ++i) {
+    auto _base = _ptr17 + i * 24;
+    auto&& _iter_elem = _vec17[i];
+    switch ((int32_t) (_iter_elem).variants.index()) {
       case 0: {
-        auto& payload1 = std::get<postgres::ParameterValue::Boolean>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(0));
-        *((int8_t*)(base + 8)) = (int32_t(payload1));
+        auto& payload1 = std::get<postgres::ParameterValue::Boolean>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(0));
+        *((int8_t*)(_base + 8)) = (int32_t(payload1));
         break;
       }
       case 1: {
-        auto& payload2 = std::get<postgres::ParameterValue::Int8>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(1));
-        *((int8_t*)(base + 8)) = (int32_t(payload2));
+        auto& payload2 = std::get<postgres::ParameterValue::Int8>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(1));
+        *((int8_t*)(_base + 8)) = (int32_t(payload2));
         break;
       }
       case 2: {
-        auto& payload3 = std::get<postgres::ParameterValue::Int16>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(2));
-        *((int16_t*)(base + 8)) = (int32_t(payload3));
+        auto& payload3 = std::get<postgres::ParameterValue::Int16>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(2));
+        *((int16_t*)(_base + 8)) = (int32_t(payload3));
         break;
       }
       case 3: {
-        auto& payload4 = std::get<postgres::ParameterValue::Int32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(3));
-        *((int32_t*)(base + 8)) = (int32_t(payload4));
+        auto& payload4 = std::get<postgres::ParameterValue::Int32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(3));
+        *((int32_t*)(_base + 8)) = (int32_t(payload4));
         break;
       }
       case 4: {
-        auto& payload5 = std::get<postgres::ParameterValue::Int64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(4));
-        *((int64_t*)(base + 8)) = (int64_t(payload5));
+        auto& payload5 = std::get<postgres::ParameterValue::Int64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(4));
+        *((int64_t*)(_base + 8)) = (int64_t(payload5));
         break;
       }
       case 5: {
-        auto& payload6 = std::get<postgres::ParameterValue::Floating32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(5));
-        *((float*)(base + 8)) = (float(payload6));
+        auto& payload6 = std::get<postgres::ParameterValue::Floating32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(5));
+        *((float*)(_base + 8)) = (float(payload6));
         break;
       }
       case 6: {
-        auto& payload7 = std::get<postgres::ParameterValue::Floating64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(6));
-        *((double*)(base + 8)) = (double(payload7));
+        auto& payload7 = std::get<postgres::ParameterValue::Floating64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(6));
+        *((double*)(_base + 8)) = (double(payload7));
         break;
       }
       case 7: {
-        auto& payload8 = std::get<postgres::ParameterValue::Str>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(7));
-        auto&& vec9 = payload8;
-        auto ptr9 = (uint8_t*)(vec9.data());
-        auto len9 = (size_t)(vec9.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len9;
-        *((uint8_t**)(base + 8)) = ptr9;
+        auto& payload8 = std::get<postgres::ParameterValue::Str>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(7));
+        auto&& _vec9 = payload8;
+        auto _ptr9 = (uint8_t*)(_vec9.data());
+        auto _len9 = (size_t)(_vec9.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len9;
+        *((uint8_t**)(_base + 8)) = _ptr9;
         break;
       }
       case 8: {
-        auto& payload10 = std::get<postgres::ParameterValue::Binary>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(8));
-        auto&& vec11 = payload10;
-        auto ptr11 = (uint8_t*)(vec11.data());
-        auto len11 = (size_t)(vec11.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len11;
-        *((uint8_t**)(base + 8)) = ptr11;
+        auto& payload10 = std::get<postgres::ParameterValue::Binary>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(8));
+        auto&& _vec11 = payload10;
+        auto _ptr11 = (uint8_t*)(_vec11.data());
+        auto _len11 = (size_t)(_vec11.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len11;
+        *((uint8_t**)(_base + 8)) = _ptr11;
         break;
       }
       case 9: {
-        auto& payload12 = std::get<postgres::ParameterValue::Date>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(9));
-        *((int32_t*)(base + 8)) = (int32_t(std::get<0>(payload12)));
-        *((int8_t*)(base + 12)) = (int32_t(std::get<1>(payload12)));
-        *((int8_t*)(base + 13)) = (int32_t(std::get<2>(payload12)));
+        auto& payload12 = std::get<postgres::ParameterValue::Date>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(9));
+        *((int32_t*)(_base + 8)) = (int32_t(std::get<0>(payload12)));
+        *((int8_t*)(_base + 12)) = (int32_t(std::get<1>(payload12)));
+        *((int8_t*)(_base + 13)) = (int32_t(std::get<2>(payload12)));
         break;
       }
       case 10: {
-        auto& payload13 = std::get<postgres::ParameterValue::Time>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(10));
-        *((int8_t*)(base + 8)) = (int32_t(std::get<0>(payload13)));
-        *((int8_t*)(base + 9)) = (int32_t(std::get<1>(payload13)));
-        *((int8_t*)(base + 10)) = (int32_t(std::get<2>(payload13)));
-        *((int32_t*)(base + 12)) = (int32_t(std::get<3>(payload13)));
+        auto& payload13 = std::get<postgres::ParameterValue::Time>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(10));
+        *((int8_t*)(_base + 8)) = (int32_t(std::get<0>(payload13)));
+        *((int8_t*)(_base + 9)) = (int32_t(std::get<1>(payload13)));
+        *((int8_t*)(_base + 10)) = (int32_t(std::get<2>(payload13)));
+        *((int32_t*)(_base + 12)) = (int32_t(std::get<3>(payload13)));
         break;
       }
       case 11: {
-        auto& payload14 = std::get<postgres::ParameterValue::Datetime>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(11));
-        *((int32_t*)(base + 8)) = (int32_t(std::get<0>(payload14)));
-        *((int8_t*)(base + 12)) = (int32_t(std::get<1>(payload14)));
-        *((int8_t*)(base + 13)) = (int32_t(std::get<2>(payload14)));
-        *((int8_t*)(base + 14)) = (int32_t(std::get<3>(payload14)));
-        *((int8_t*)(base + 15)) = (int32_t(std::get<4>(payload14)));
-        *((int8_t*)(base + 16)) = (int32_t(std::get<5>(payload14)));
-        *((int32_t*)(base + 20)) = (int32_t(std::get<6>(payload14)));
+        auto& payload14 = std::get<postgres::ParameterValue::Datetime>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(11));
+        *((int32_t*)(_base + 8)) = (int32_t(std::get<0>(payload14)));
+        *((int8_t*)(_base + 12)) = (int32_t(std::get<1>(payload14)));
+        *((int8_t*)(_base + 13)) = (int32_t(std::get<2>(payload14)));
+        *((int8_t*)(_base + 14)) = (int32_t(std::get<3>(payload14)));
+        *((int8_t*)(_base + 15)) = (int32_t(std::get<4>(payload14)));
+        *((int8_t*)(_base + 16)) = (int32_t(std::get<5>(payload14)));
+        *((int32_t*)(_base + 20)) = (int32_t(std::get<6>(payload14)));
         break;
       }
       case 12: {
-        auto& payload15 = std::get<postgres::ParameterValue::Timestamp>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(12));
-        *((int64_t*)(base + 8)) = (int64_t(payload15));
+        auto& payload15 = std::get<postgres::ParameterValue::Timestamp>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(12));
+        *((int64_t*)(_base + 8)) = (int64_t(payload15));
         break;
       }
       case 13: {
-        *((int8_t*)(base + 0)) = (int32_t(13));
+        *((int8_t*)(_base + 0)) = (int32_t(13));
         break;
       }
     }
 
   }
   uint8_t* ptr18 = (uint8_t*)(&ret_area);
-  __wasm_import_spinX3ApostgresX2FpostgresX403X2E0X2E0X00X5BmethodX5DconnectionX2Eexecute((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr17), std::move(len17), std::move(ptr18));
+  __wasm_import_spinX3ApostgresX2FpostgresX403X2E0X2E0X00X5BmethodX5DconnectionX2Eexecute((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(_ptr17), std::move(_len17), std::move(ptr18));
   std::optional<std::expected<uint64_t, postgres::Error>> result25_opt;
   if ((int32_t) (*((uint8_t*) (ptr18 + 0)))==0) {
     
@@ -1243,30 +1243,30 @@ std::expected<uint64_t, spin::postgres3_0_0::postgres::Error> spin::postgres3_0_
   } else {
     std::optional<postgres::Error> variant24_opt;
     switch ((int32_t) (*((uint8_t*) (ptr18 + 8)))) {
-      case 0: { auto len19 = *((size_t*) (ptr18 + (8+2*sizeof(void*))));
+      case 0: { auto _len19 = *((size_t*) (ptr18 + (8+2*sizeof(void*))));
 
 
-      variant24_opt = postgres::Error{{postgres::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (8+1*sizeof(void*))))), len19)}}};
+      variant24_opt = postgres::Error{{postgres::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (8+1*sizeof(void*))))), _len19)}}};
     } break;
-    case 1: { auto len20 = *((size_t*) (ptr18 + (8+2*sizeof(void*))));
+    case 1: { auto _len20 = *((size_t*) (ptr18 + (8+2*sizeof(void*))));
 
 
-    variant24_opt = postgres::Error{{postgres::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr18 + (8+1*sizeof(void*))))), len20)}}};
+    variant24_opt = postgres::Error{{postgres::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr18 + (8+1*sizeof(void*))))), _len20)}}};
   } break;
-  case 2: { auto len21 = *((size_t*) (ptr18 + (8+2*sizeof(void*))));
+  case 2: { auto _len21 = *((size_t*) (ptr18 + (8+2*sizeof(void*))));
 
 
-  variant24_opt = postgres::Error{{postgres::Error::QueryFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (8+1*sizeof(void*))))), len21)}}};
+  variant24_opt = postgres::Error{{postgres::Error::QueryFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (8+1*sizeof(void*))))), _len21)}}};
 } break;
-case 3: { auto len22 = *((size_t*) (ptr18 + (8+2*sizeof(void*))));
+case 3: { auto _len22 = *((size_t*) (ptr18 + (8+2*sizeof(void*))));
 
 
-variant24_opt = postgres::Error{{postgres::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (8+1*sizeof(void*))))), len22)}}};
+variant24_opt = postgres::Error{{postgres::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (8+1*sizeof(void*))))), _len22)}}};
 } break;
-case 4: { auto len23 = *((size_t*) (ptr18 + (8+2*sizeof(void*))));
+case 4: { auto _len23 = *((size_t*) (ptr18 + (8+2*sizeof(void*))));
 
 
-variant24_opt = postgres::Error{{postgres::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr18 + (8+1*sizeof(void*))))), len23)}}};
+variant24_opt = postgres::Error{{postgres::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr18 + (8+1*sizeof(void*))))), _len23)}}};
 } break;
 }
 postgres::Error variant24 = std::move(*variant24_opt);
@@ -1287,11 +1287,11 @@ spin::postgres4_0_0::postgres::Connection::~Connection()
 std::expected<spin::postgres4_0_0::postgres::Connection, spin::postgres4_0_0::postgres::Error> spin::postgres4_0_0::postgres::Connection::Open(std::string_view address)
 {
   uintptr_t ret_area[((16*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = address;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = address;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_spinX3ApostgresX2FpostgresX404X2E0X2E0X00X5BstaticX5DconnectionX2Eopen(std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_spinX3ApostgresX2FpostgresX404X2E0X2E0X00X5BstaticX5DconnectionX2Eopen(std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<postgres::Connection, postgres::Error>> result20_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     int32_t l2 = *((int32_t const*)(ptr1 + sizeof(void*)));
@@ -1300,68 +1300,68 @@ std::expected<spin::postgres4_0_0::postgres::Connection, spin::postgres4_0_0::po
   } else {
     std::optional<postgres::Error> variant19_opt;
     switch ((int32_t) (*((uint8_t*) (ptr1 + sizeof(void*))))) {
-      case 0: { auto len3 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      case 0: { auto _len3 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-      variant19_opt = postgres::Error{{postgres::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len3)}}};
+      variant19_opt = postgres::Error{{postgres::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len3)}}};
     } break;
-    case 1: { auto len4 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+    case 1: { auto _len4 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-    variant19_opt = postgres::Error{{postgres::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len4)}}};
+    variant19_opt = postgres::Error{{postgres::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len4)}}};
   } break;
   case 2: { std::optional<postgres::QueryError> variant16_opt;
   switch ((int32_t) (*((uint8_t*) (ptr1 + (2*sizeof(void*)))))) {
-    case 0: { auto len5 = *((size_t*) (ptr1 + (4*sizeof(void*))));
+    case 0: { auto _len5 = *((size_t*) (ptr1 + (4*sizeof(void*))));
 
 
-    variant16_opt = postgres::QueryError{{postgres::QueryError::Text{wit::string((char const*)(*((uint8_t**) (ptr1 + (3*sizeof(void*))))), len5)}}};
+    variant16_opt = postgres::QueryError{{postgres::QueryError::Text{wit::string((char const*)(*((uint8_t**) (ptr1 + (3*sizeof(void*))))), _len5)}}};
   } break;
-  case 1: { auto len6 = *((size_t*) (ptr1 + (4*sizeof(void*))));
+  case 1: { auto _len6 = *((size_t*) (ptr1 + (4*sizeof(void*))));
 
-  auto len7 = *((size_t*) (ptr1 + (6*sizeof(void*))));
+  auto _len7 = *((size_t*) (ptr1 + (6*sizeof(void*))));
 
-  auto len8 = *((size_t*) (ptr1 + (8*sizeof(void*))));
+  auto _len8 = *((size_t*) (ptr1 + (8*sizeof(void*))));
 
-  auto len9 = *((size_t*) (ptr1 + (10*sizeof(void*))));
+  auto _len9 = *((size_t*) (ptr1 + (10*sizeof(void*))));
 
   std::optional<wit::string> option11;
   if ((int32_t) (*((uint8_t*) (ptr1 + (11*sizeof(void*)))))) {
-    auto len10 = *((size_t*) (ptr1 + (13*sizeof(void*))));
+    auto _len10 = *((size_t*) (ptr1 + (13*sizeof(void*))));
 
 
-    option11.emplace(wit::string((char const*)(*((uint8_t**) (ptr1 + (12*sizeof(void*))))), len10));
+    option11.emplace(wit::string((char const*)(*((uint8_t**) (ptr1 + (12*sizeof(void*))))), _len10));
   }
-  auto base15 = *((uint8_t**) (ptr1 + (14*sizeof(void*))));
-  auto len15 = *((size_t*) (ptr1 + (15*sizeof(void*))));
-  auto result15 = wit::vector<std::tuple<wit::string, wit::string>>::allocate(len15);
-  for (unsigned i=0; i<len15; ++i) {
-    auto base = base15 + i * (4*sizeof(void*));
-    auto len12 = *((size_t*) (base + sizeof(void*)));
+  auto _base15 = *((uint8_t**) (ptr1 + (14*sizeof(void*))));
+  auto _len15 = *((size_t*) (ptr1 + (15*sizeof(void*))));
+  auto _result15 = wit::vector<std::tuple<wit::string, wit::string>>::allocate(_len15);
+  for (unsigned i=0; i<_len15; ++i) {
+    auto _base = _base15 + i * (4*sizeof(void*));
+    auto _len12 = *((size_t*) (_base + sizeof(void*)));
 
-    auto len13 = *((size_t*) (base + (3*sizeof(void*))));
+    auto _len13 = *((size_t*) (_base + (3*sizeof(void*))));
 
-    auto tuple14 = std::tuple<wit::string, wit::string>(wit::string((char const*)(*((uint8_t**) (base + 0))), len12), wit::string((char const*)(*((uint8_t**) (base + (2*sizeof(void*))))), len13));
-    auto e15 = std::move(tuple14);
-    result15.initialize(i, std::move(e15));
+    auto tuple14 = std::tuple<wit::string, wit::string>(wit::string((char const*)(*((uint8_t**) (_base + 0))), _len12), wit::string((char const*)(*((uint8_t**) (_base + (2*sizeof(void*))))), _len13));
+    auto _e15 = std::move(tuple14);
+    _result15.initialize(i, std::move(_e15));
   }
 
-  variant16_opt = postgres::QueryError{{postgres::QueryError::DbError{postgres::DbError{wit::string((char const*)(*((uint8_t**) (ptr1 + (3*sizeof(void*))))), len6), wit::string((char const*)(*((uint8_t**) (ptr1 + (5*sizeof(void*))))), len7), wit::string((char const*)(*((uint8_t**) (ptr1 + (7*sizeof(void*))))), len8), wit::string((char const*)(*((uint8_t**) (ptr1 + (9*sizeof(void*))))), len9), std::move(option11), std::move(result15), }}}};
+  variant16_opt = postgres::QueryError{{postgres::QueryError::DbError{postgres::DbError{wit::string((char const*)(*((uint8_t**) (ptr1 + (3*sizeof(void*))))), _len6), wit::string((char const*)(*((uint8_t**) (ptr1 + (5*sizeof(void*))))), _len7), wit::string((char const*)(*((uint8_t**) (ptr1 + (7*sizeof(void*))))), _len8), wit::string((char const*)(*((uint8_t**) (ptr1 + (9*sizeof(void*))))), _len9), std::move(option11), std::move(_result15), }}}};
 } break;
 }
 postgres::QueryError variant16 = std::move(*variant16_opt);
 
 variant19_opt = postgres::Error{{postgres::Error::QueryFailed{std::move(variant16)}}};
 } break;
-case 3: { auto len17 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+case 3: { auto _len17 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-variant19_opt = postgres::Error{{postgres::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len17)}}};
+variant19_opt = postgres::Error{{postgres::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len17)}}};
 } break;
-case 4: { auto len18 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+case 4: { auto _len18 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-variant19_opt = postgres::Error{{postgres::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len18)}}};
+variant19_opt = postgres::Error{{postgres::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len18)}}};
 } break;
 }
 postgres::Error variant19 = std::move(*variant19_opt);
@@ -1375,338 +1375,338 @@ return result21;
 std::expected<spin::postgres4_0_0::postgres::RowSet, spin::postgres4_0_0::postgres::Error> spin::postgres4_0_0::postgres::Connection::Query(std::string_view statement, std::span<postgres::ParameterValue const> params) const
 {
   uintptr_t ret_area[((16*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = statement;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec59 = params;
-  auto ptr59 = (uint8_t*)(vec59.data());
-  auto len59 = (size_t)(vec59.size());
-  for (size_t i = 0; i < len59; ++i) {
-    auto base = ptr59 + i * (40+4*sizeof(void*));
-    auto&& iter_elem = vec59[i];
-    switch ((int32_t) (iter_elem).variants.index()) {
+  auto&& _vec0 = statement;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec59 = params;
+  auto _ptr59 = (uint8_t*)(_vec59.data());
+  auto _len59 = (size_t)(_vec59.size());
+  for (size_t i = 0; i < _len59; ++i) {
+    auto _base = _ptr59 + i * (40+4*sizeof(void*));
+    auto&& _iter_elem = _vec59[i];
+    switch ((int32_t) (_iter_elem).variants.index()) {
       case 0: {
-        auto& payload1 = std::get<postgres::ParameterValue::Boolean>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(0));
-        *((int8_t*)(base + 8)) = (int32_t(payload1));
+        auto& payload1 = std::get<postgres::ParameterValue::Boolean>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(0));
+        *((int8_t*)(_base + 8)) = (int32_t(payload1));
         break;
       }
       case 1: {
-        auto& payload2 = std::get<postgres::ParameterValue::Int8>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(1));
-        *((int8_t*)(base + 8)) = (int32_t(payload2));
+        auto& payload2 = std::get<postgres::ParameterValue::Int8>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(1));
+        *((int8_t*)(_base + 8)) = (int32_t(payload2));
         break;
       }
       case 2: {
-        auto& payload3 = std::get<postgres::ParameterValue::Int16>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(2));
-        *((int16_t*)(base + 8)) = (int32_t(payload3));
+        auto& payload3 = std::get<postgres::ParameterValue::Int16>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(2));
+        *((int16_t*)(_base + 8)) = (int32_t(payload3));
         break;
       }
       case 3: {
-        auto& payload4 = std::get<postgres::ParameterValue::Int32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(3));
-        *((int32_t*)(base + 8)) = (int32_t(payload4));
+        auto& payload4 = std::get<postgres::ParameterValue::Int32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(3));
+        *((int32_t*)(_base + 8)) = (int32_t(payload4));
         break;
       }
       case 4: {
-        auto& payload5 = std::get<postgres::ParameterValue::Int64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(4));
-        *((int64_t*)(base + 8)) = (int64_t(payload5));
+        auto& payload5 = std::get<postgres::ParameterValue::Int64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(4));
+        *((int64_t*)(_base + 8)) = (int64_t(payload5));
         break;
       }
       case 5: {
-        auto& payload6 = std::get<postgres::ParameterValue::Floating32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(5));
-        *((float*)(base + 8)) = (float(payload6));
+        auto& payload6 = std::get<postgres::ParameterValue::Floating32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(5));
+        *((float*)(_base + 8)) = (float(payload6));
         break;
       }
       case 6: {
-        auto& payload7 = std::get<postgres::ParameterValue::Floating64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(6));
-        *((double*)(base + 8)) = (double(payload7));
+        auto& payload7 = std::get<postgres::ParameterValue::Floating64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(6));
+        *((double*)(_base + 8)) = (double(payload7));
         break;
       }
       case 7: {
-        auto& payload8 = std::get<postgres::ParameterValue::Str>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(7));
-        auto&& vec9 = payload8;
-        auto ptr9 = (uint8_t*)(vec9.data());
-        auto len9 = (size_t)(vec9.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len9;
-        *((uint8_t**)(base + 8)) = ptr9;
+        auto& payload8 = std::get<postgres::ParameterValue::Str>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(7));
+        auto&& _vec9 = payload8;
+        auto _ptr9 = (uint8_t*)(_vec9.data());
+        auto _len9 = (size_t)(_vec9.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len9;
+        *((uint8_t**)(_base + 8)) = _ptr9;
         break;
       }
       case 8: {
-        auto& payload10 = std::get<postgres::ParameterValue::Binary>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(8));
-        auto&& vec11 = payload10;
-        auto ptr11 = (uint8_t*)(vec11.data());
-        auto len11 = (size_t)(vec11.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len11;
-        *((uint8_t**)(base + 8)) = ptr11;
+        auto& payload10 = std::get<postgres::ParameterValue::Binary>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(8));
+        auto&& _vec11 = payload10;
+        auto _ptr11 = (uint8_t*)(_vec11.data());
+        auto _len11 = (size_t)(_vec11.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len11;
+        *((uint8_t**)(_base + 8)) = _ptr11;
         break;
       }
       case 9: {
-        auto& payload12 = std::get<postgres::ParameterValue::Date>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(9));
-        *((int32_t*)(base + 8)) = (int32_t(std::get<0>(payload12)));
-        *((int8_t*)(base + 12)) = (int32_t(std::get<1>(payload12)));
-        *((int8_t*)(base + 13)) = (int32_t(std::get<2>(payload12)));
+        auto& payload12 = std::get<postgres::ParameterValue::Date>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(9));
+        *((int32_t*)(_base + 8)) = (int32_t(std::get<0>(payload12)));
+        *((int8_t*)(_base + 12)) = (int32_t(std::get<1>(payload12)));
+        *((int8_t*)(_base + 13)) = (int32_t(std::get<2>(payload12)));
         break;
       }
       case 10: {
-        auto& payload13 = std::get<postgres::ParameterValue::Time>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(10));
-        *((int8_t*)(base + 8)) = (int32_t(std::get<0>(payload13)));
-        *((int8_t*)(base + 9)) = (int32_t(std::get<1>(payload13)));
-        *((int8_t*)(base + 10)) = (int32_t(std::get<2>(payload13)));
-        *((int32_t*)(base + 12)) = (int32_t(std::get<3>(payload13)));
+        auto& payload13 = std::get<postgres::ParameterValue::Time>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(10));
+        *((int8_t*)(_base + 8)) = (int32_t(std::get<0>(payload13)));
+        *((int8_t*)(_base + 9)) = (int32_t(std::get<1>(payload13)));
+        *((int8_t*)(_base + 10)) = (int32_t(std::get<2>(payload13)));
+        *((int32_t*)(_base + 12)) = (int32_t(std::get<3>(payload13)));
         break;
       }
       case 11: {
-        auto& payload14 = std::get<postgres::ParameterValue::Datetime>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(11));
-        *((int32_t*)(base + 8)) = (int32_t(std::get<0>(payload14)));
-        *((int8_t*)(base + 12)) = (int32_t(std::get<1>(payload14)));
-        *((int8_t*)(base + 13)) = (int32_t(std::get<2>(payload14)));
-        *((int8_t*)(base + 14)) = (int32_t(std::get<3>(payload14)));
-        *((int8_t*)(base + 15)) = (int32_t(std::get<4>(payload14)));
-        *((int8_t*)(base + 16)) = (int32_t(std::get<5>(payload14)));
-        *((int32_t*)(base + 20)) = (int32_t(std::get<6>(payload14)));
+        auto& payload14 = std::get<postgres::ParameterValue::Datetime>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(11));
+        *((int32_t*)(_base + 8)) = (int32_t(std::get<0>(payload14)));
+        *((int8_t*)(_base + 12)) = (int32_t(std::get<1>(payload14)));
+        *((int8_t*)(_base + 13)) = (int32_t(std::get<2>(payload14)));
+        *((int8_t*)(_base + 14)) = (int32_t(std::get<3>(payload14)));
+        *((int8_t*)(_base + 15)) = (int32_t(std::get<4>(payload14)));
+        *((int8_t*)(_base + 16)) = (int32_t(std::get<5>(payload14)));
+        *((int32_t*)(_base + 20)) = (int32_t(std::get<6>(payload14)));
         break;
       }
       case 12: {
-        auto& payload15 = std::get<postgres::ParameterValue::Timestamp>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(12));
-        *((int64_t*)(base + 8)) = (int64_t(payload15));
+        auto& payload15 = std::get<postgres::ParameterValue::Timestamp>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(12));
+        *((int64_t*)(_base + 8)) = (int64_t(payload15));
         break;
       }
       case 13: {
-        auto& payload16 = std::get<postgres::ParameterValue::Uuid>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(13));
-        auto&& vec17 = payload16;
-        auto ptr17 = (uint8_t*)(vec17.data());
-        auto len17 = (size_t)(vec17.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len17;
-        *((uint8_t**)(base + 8)) = ptr17;
+        auto& payload16 = std::get<postgres::ParameterValue::Uuid>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(13));
+        auto&& _vec17 = payload16;
+        auto _ptr17 = (uint8_t*)(_vec17.data());
+        auto _len17 = (size_t)(_vec17.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len17;
+        *((uint8_t**)(_base + 8)) = _ptr17;
         break;
       }
       case 14: {
-        auto& payload18 = std::get<postgres::ParameterValue::Jsonb>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(14));
-        auto&& vec19 = payload18;
-        auto ptr19 = (uint8_t*)(vec19.data());
-        auto len19 = (size_t)(vec19.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len19;
-        *((uint8_t**)(base + 8)) = ptr19;
+        auto& payload18 = std::get<postgres::ParameterValue::Jsonb>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(14));
+        auto&& _vec19 = payload18;
+        auto _ptr19 = (uint8_t*)(_vec19.data());
+        auto _len19 = (size_t)(_vec19.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len19;
+        *((uint8_t**)(_base + 8)) = _ptr19;
         break;
       }
       case 15: {
-        auto& payload20 = std::get<postgres::ParameterValue::Decimal>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(15));
-        auto&& vec21 = payload20;
-        auto ptr21 = (uint8_t*)(vec21.data());
-        auto len21 = (size_t)(vec21.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len21;
-        *((uint8_t**)(base + 8)) = ptr21;
+        auto& payload20 = std::get<postgres::ParameterValue::Decimal>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(15));
+        auto&& _vec21 = payload20;
+        auto _ptr21 = (uint8_t*)(_vec21.data());
+        auto _len21 = (size_t)(_vec21.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len21;
+        *((uint8_t**)(_base + 8)) = _ptr21;
         break;
       }
       case 16: {
-        auto& payload22 = std::get<postgres::ParameterValue::RangeInt32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(16));
+        auto& payload22 = std::get<postgres::ParameterValue::RangeInt32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(16));
         if ((std::get<0>(payload22)).has_value()) {
           std::tuple<int32_t, postgres::RangeBoundKind> payload24 = (std::move(std::get<0>(payload22))).value();
-          *((int8_t*)(base + 8)) = (int32_t(1));
-          *((int32_t*)(base + 12)) = (int32_t(std::get<0>(payload24)));
-          *((int8_t*)(base + 16)) = int32_t(std::get<1>(payload24));
+          *((int8_t*)(_base + 8)) = (int32_t(1));
+          *((int32_t*)(_base + 12)) = (int32_t(std::get<0>(payload24)));
+          *((int8_t*)(_base + 16)) = int32_t(std::get<1>(payload24));
         } else {
-          *((int8_t*)(base + 8)) = (int32_t(0));
+          *((int8_t*)(_base + 8)) = (int32_t(0));
         }
         if ((std::get<1>(payload22)).has_value()) {
           std::tuple<int32_t, postgres::RangeBoundKind> payload26 = (std::move(std::get<1>(payload22))).value();
-          *((int8_t*)(base + 20)) = (int32_t(1));
-          *((int32_t*)(base + 24)) = (int32_t(std::get<0>(payload26)));
-          *((int8_t*)(base + 28)) = int32_t(std::get<1>(payload26));
+          *((int8_t*)(_base + 20)) = (int32_t(1));
+          *((int32_t*)(_base + 24)) = (int32_t(std::get<0>(payload26)));
+          *((int8_t*)(_base + 28)) = int32_t(std::get<1>(payload26));
         } else {
-          *((int8_t*)(base + 20)) = (int32_t(0));
+          *((int8_t*)(_base + 20)) = (int32_t(0));
         }
         break;
       }
       case 17: {
-        auto& payload27 = std::get<postgres::ParameterValue::RangeInt64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(17));
+        auto& payload27 = std::get<postgres::ParameterValue::RangeInt64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(17));
         if ((std::get<0>(payload27)).has_value()) {
           std::tuple<int64_t, postgres::RangeBoundKind> payload29 = (std::move(std::get<0>(payload27))).value();
-          *((int8_t*)(base + 8)) = (int32_t(1));
-          *((int64_t*)(base + 16)) = (int64_t(std::get<0>(payload29)));
-          *((int8_t*)(base + 24)) = int32_t(std::get<1>(payload29));
+          *((int8_t*)(_base + 8)) = (int32_t(1));
+          *((int64_t*)(_base + 16)) = (int64_t(std::get<0>(payload29)));
+          *((int8_t*)(_base + 24)) = int32_t(std::get<1>(payload29));
         } else {
-          *((int8_t*)(base + 8)) = (int32_t(0));
+          *((int8_t*)(_base + 8)) = (int32_t(0));
         }
         if ((std::get<1>(payload27)).has_value()) {
           std::tuple<int64_t, postgres::RangeBoundKind> payload31 = (std::move(std::get<1>(payload27))).value();
-          *((int8_t*)(base + 32)) = (int32_t(1));
-          *((int64_t*)(base + 40)) = (int64_t(std::get<0>(payload31)));
-          *((int8_t*)(base + 48)) = int32_t(std::get<1>(payload31));
+          *((int8_t*)(_base + 32)) = (int32_t(1));
+          *((int64_t*)(_base + 40)) = (int64_t(std::get<0>(payload31)));
+          *((int8_t*)(_base + 48)) = int32_t(std::get<1>(payload31));
         } else {
-          *((int8_t*)(base + 32)) = (int32_t(0));
+          *((int8_t*)(_base + 32)) = (int32_t(0));
         }
         break;
       }
       case 18: {
-        auto& payload32 = std::get<postgres::ParameterValue::RangeDecimal>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(18));
+        auto& payload32 = std::get<postgres::ParameterValue::RangeDecimal>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(18));
         if ((std::get<0>(payload32)).has_value()) {
-          std::tuple<std::string_view, postgres::RangeBoundKind> payload34 = (std::move(std::get<0>(payload32))).value();
-          *((int8_t*)(base + 8)) = (int32_t(1));
-          auto&& vec35 = std::get<0>(payload34);
-          auto ptr35 = (uint8_t*)(vec35.data());
-          auto len35 = (size_t)(vec35.size());
-          *((size_t*)(base + (8+2*sizeof(void*)))) = len35;
-          *((uint8_t**)(base + (8+1*sizeof(void*)))) = ptr35;
-          *((int8_t*)(base + (8+3*sizeof(void*)))) = int32_t(std::get<1>(payload34));
+          std::tuple<wit::string, postgres::RangeBoundKind> payload34 = (std::move(std::get<0>(payload32))).value();
+          *((int8_t*)(_base + 8)) = (int32_t(1));
+          auto&& _vec35 = std::get<0>(payload34);
+          auto _ptr35 = (uint8_t*)(_vec35.data());
+          auto _len35 = (size_t)(_vec35.size());
+          *((size_t*)(_base + (8+2*sizeof(void*)))) = _len35;
+          *((uint8_t**)(_base + (8+1*sizeof(void*)))) = _ptr35;
+          *((int8_t*)(_base + (8+3*sizeof(void*)))) = int32_t(std::get<1>(payload34));
         } else {
-          *((int8_t*)(base + 8)) = (int32_t(0));
+          *((int8_t*)(_base + 8)) = (int32_t(0));
         }
         if ((std::get<1>(payload32)).has_value()) {
-          std::tuple<std::string_view, postgres::RangeBoundKind> payload37 = (std::move(std::get<1>(payload32))).value();
-          *((int8_t*)(base + (8+4*sizeof(void*)))) = (int32_t(1));
-          auto&& vec38 = std::get<0>(payload37);
-          auto ptr38 = (uint8_t*)(vec38.data());
-          auto len38 = (size_t)(vec38.size());
-          *((size_t*)(base + (8+6*sizeof(void*)))) = len38;
-          *((uint8_t**)(base + (8+5*sizeof(void*)))) = ptr38;
-          *((int8_t*)(base + (8+7*sizeof(void*)))) = int32_t(std::get<1>(payload37));
+          std::tuple<wit::string, postgres::RangeBoundKind> payload37 = (std::move(std::get<1>(payload32))).value();
+          *((int8_t*)(_base + (8+4*sizeof(void*)))) = (int32_t(1));
+          auto&& _vec38 = std::get<0>(payload37);
+          auto _ptr38 = (uint8_t*)(_vec38.data());
+          auto _len38 = (size_t)(_vec38.size());
+          *((size_t*)(_base + (8+6*sizeof(void*)))) = _len38;
+          *((uint8_t**)(_base + (8+5*sizeof(void*)))) = _ptr38;
+          *((int8_t*)(_base + (8+7*sizeof(void*)))) = int32_t(std::get<1>(payload37));
         } else {
-          *((int8_t*)(base + (8+4*sizeof(void*)))) = (int32_t(0));
+          *((int8_t*)(_base + (8+4*sizeof(void*)))) = (int32_t(0));
         }
         break;
       }
       case 19: {
-        auto& payload39 = std::get<postgres::ParameterValue::ArrayInt32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(19));
-        auto&& vec42 = payload39;
-        auto ptr42 = (uint8_t*)(vec42.data());
-        auto len42 = (size_t)(vec42.size());
-        for (size_t i = 0; i < len42; ++i) {
-          auto base = ptr42 + i * 8;
-          auto&& iter_elem = vec42[i];
-          if ((iter_elem).has_value()) {
-            int32_t payload41 = (std::move(iter_elem)).value();
-            *((int8_t*)(base + 0)) = (int32_t(1));
-            *((int32_t*)(base + 4)) = (int32_t(payload41));
+        auto& payload39 = std::get<postgres::ParameterValue::ArrayInt32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(19));
+        auto&& _vec42 = payload39;
+        auto _ptr42 = (uint8_t*)(_vec42.data());
+        auto _len42 = (size_t)(_vec42.size());
+        for (size_t i = 0; i < _len42; ++i) {
+          auto _base = _ptr42 + i * 8;
+          auto&& _iter_elem = _vec42[i];
+          if ((_iter_elem).has_value()) {
+            int32_t payload41 = (std::move(_iter_elem)).value();
+            *((int8_t*)(_base + 0)) = (int32_t(1));
+            *((int32_t*)(_base + 4)) = (int32_t(payload41));
           } else {
-            *((int8_t*)(base + 0)) = (int32_t(0));
+            *((int8_t*)(_base + 0)) = (int32_t(0));
           }
 
         }
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len42;
-        *((uint8_t**)(base + 8)) = ptr42;
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len42;
+        *((uint8_t**)(_base + 8)) = _ptr42;
         break;
       }
       case 20: {
-        auto& payload43 = std::get<postgres::ParameterValue::ArrayInt64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(20));
-        auto&& vec46 = payload43;
-        auto ptr46 = (uint8_t*)(vec46.data());
-        auto len46 = (size_t)(vec46.size());
-        for (size_t i = 0; i < len46; ++i) {
-          auto base = ptr46 + i * 16;
-          auto&& iter_elem = vec46[i];
-          if ((iter_elem).has_value()) {
-            int64_t payload45 = (std::move(iter_elem)).value();
-            *((int8_t*)(base + 0)) = (int32_t(1));
-            *((int64_t*)(base + 8)) = (int64_t(payload45));
+        auto& payload43 = std::get<postgres::ParameterValue::ArrayInt64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(20));
+        auto&& _vec46 = payload43;
+        auto _ptr46 = (uint8_t*)(_vec46.data());
+        auto _len46 = (size_t)(_vec46.size());
+        for (size_t i = 0; i < _len46; ++i) {
+          auto _base = _ptr46 + i * 16;
+          auto&& _iter_elem = _vec46[i];
+          if ((_iter_elem).has_value()) {
+            int64_t payload45 = (std::move(_iter_elem)).value();
+            *((int8_t*)(_base + 0)) = (int32_t(1));
+            *((int64_t*)(_base + 8)) = (int64_t(payload45));
           } else {
-            *((int8_t*)(base + 0)) = (int32_t(0));
+            *((int8_t*)(_base + 0)) = (int32_t(0));
           }
 
         }
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len46;
-        *((uint8_t**)(base + 8)) = ptr46;
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len46;
+        *((uint8_t**)(_base + 8)) = _ptr46;
         break;
       }
       case 21: {
-        auto& payload47 = std::get<postgres::ParameterValue::ArrayDecimal>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(21));
-        auto&& vec51 = payload47;
-        auto ptr51 = (uint8_t*)(vec51.data());
-        auto len51 = (size_t)(vec51.size());
-        for (size_t i = 0; i < len51; ++i) {
-          auto base = ptr51 + i * (3*sizeof(void*));
-          auto&& iter_elem = vec51[i];
-          if ((iter_elem).has_value()) {
-            std::string_view payload49 = (std::move(iter_elem)).value().get_view();
-            *((int8_t*)(base + 0)) = (int32_t(1));
-            auto&& vec50 = payload49;
-            auto ptr50 = (uint8_t*)(vec50.data());
-            auto len50 = (size_t)(vec50.size());
-            *((size_t*)(base + (2*sizeof(void*)))) = len50;
-            *((uint8_t**)(base + sizeof(void*))) = ptr50;
+        auto& payload47 = std::get<postgres::ParameterValue::ArrayDecimal>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(21));
+        auto&& _vec51 = payload47;
+        auto _ptr51 = (uint8_t*)(_vec51.data());
+        auto _len51 = (size_t)(_vec51.size());
+        for (size_t i = 0; i < _len51; ++i) {
+          auto _base = _ptr51 + i * (3*sizeof(void*));
+          auto&& _iter_elem = _vec51[i];
+          if ((_iter_elem).has_value()) {
+            std::string_view payload49 = (std::move(_iter_elem)).value().get_view();
+            *((int8_t*)(_base + 0)) = (int32_t(1));
+            auto&& _vec50 = payload49;
+            auto _ptr50 = (uint8_t*)(_vec50.data());
+            auto _len50 = (size_t)(_vec50.size());
+            *((size_t*)(_base + (2*sizeof(void*)))) = _len50;
+            *((uint8_t**)(_base + sizeof(void*))) = _ptr50;
           } else {
-            *((int8_t*)(base + 0)) = (int32_t(0));
+            *((int8_t*)(_base + 0)) = (int32_t(0));
           }
 
         }
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len51;
-        *((uint8_t**)(base + 8)) = ptr51;
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len51;
+        *((uint8_t**)(_base + 8)) = _ptr51;
         break;
       }
       case 22: {
-        auto& payload52 = std::get<postgres::ParameterValue::ArrayStr>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(22));
-        auto&& vec56 = payload52;
-        auto ptr56 = (uint8_t*)(vec56.data());
-        auto len56 = (size_t)(vec56.size());
-        for (size_t i = 0; i < len56; ++i) {
-          auto base = ptr56 + i * (3*sizeof(void*));
-          auto&& iter_elem = vec56[i];
-          if ((iter_elem).has_value()) {
-            std::string_view payload54 = (std::move(iter_elem)).value().get_view();
-            *((int8_t*)(base + 0)) = (int32_t(1));
-            auto&& vec55 = payload54;
-            auto ptr55 = (uint8_t*)(vec55.data());
-            auto len55 = (size_t)(vec55.size());
-            *((size_t*)(base + (2*sizeof(void*)))) = len55;
-            *((uint8_t**)(base + sizeof(void*))) = ptr55;
+        auto& payload52 = std::get<postgres::ParameterValue::ArrayStr>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(22));
+        auto&& _vec56 = payload52;
+        auto _ptr56 = (uint8_t*)(_vec56.data());
+        auto _len56 = (size_t)(_vec56.size());
+        for (size_t i = 0; i < _len56; ++i) {
+          auto _base = _ptr56 + i * (3*sizeof(void*));
+          auto&& _iter_elem = _vec56[i];
+          if ((_iter_elem).has_value()) {
+            std::string_view payload54 = (std::move(_iter_elem)).value().get_view();
+            *((int8_t*)(_base + 0)) = (int32_t(1));
+            auto&& _vec55 = payload54;
+            auto _ptr55 = (uint8_t*)(_vec55.data());
+            auto _len55 = (size_t)(_vec55.size());
+            *((size_t*)(_base + (2*sizeof(void*)))) = _len55;
+            *((uint8_t**)(_base + sizeof(void*))) = _ptr55;
           } else {
-            *((int8_t*)(base + 0)) = (int32_t(0));
+            *((int8_t*)(_base + 0)) = (int32_t(0));
           }
 
         }
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len56;
-        *((uint8_t**)(base + 8)) = ptr56;
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len56;
+        *((uint8_t**)(_base + 8)) = _ptr56;
         break;
       }
       case 23: {
-        auto& payload57 = std::get<postgres::ParameterValue::Interval>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(23));
-        *((int64_t*)(base + 8)) = (int64_t((payload57).micros));
-        *((int32_t*)(base + 16)) = (int32_t((payload57).days));
-        *((int32_t*)(base + 20)) = (int32_t((payload57).months));
+        auto& payload57 = std::get<postgres::ParameterValue::Interval>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(23));
+        *((int64_t*)(_base + 8)) = (int64_t((payload57).micros));
+        *((int32_t*)(_base + 16)) = (int32_t((payload57).days));
+        *((int32_t*)(_base + 20)) = (int32_t((payload57).months));
         break;
       }
       case 24: {
-        *((int8_t*)(base + 0)) = (int32_t(24));
+        *((int8_t*)(_base + 0)) = (int32_t(24));
         break;
       }
     }
 
   }
   uint8_t* ptr60 = (uint8_t*)(&ret_area);
-  __wasm_import_spinX3ApostgresX2FpostgresX404X2E0X2E0X00X5BmethodX5DconnectionX2Equery((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr59), std::move(len59), std::move(ptr60));
+  __wasm_import_spinX3ApostgresX2FpostgresX404X2E0X2E0X00X5BmethodX5DconnectionX2Equery((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(_ptr59), std::move(_len59), std::move(ptr60));
   std::optional<std::expected<postgres::RowSet, postgres::Error>> result131_opt;
   if ((int32_t) (*((uint8_t*) (ptr60 + 0)))==0) {
-    auto base64 = *((uint8_t**) (ptr60 + sizeof(void*)));
-    auto len64 = *((size_t*) (ptr60 + (2*sizeof(void*))));
-    auto result64 = wit::vector<postgres::Column>::allocate(len64);
-    for (unsigned i=0; i<len64; ++i) {
-      auto base = base64 + i * (5*sizeof(void*));
-      auto len61 = *((size_t*) (base + sizeof(void*)));
+    auto _base64 = *((uint8_t**) (ptr60 + sizeof(void*)));
+    auto _len64 = *((size_t*) (ptr60 + (2*sizeof(void*))));
+    auto _result64 = wit::vector<postgres::Column>::allocate(_len64);
+    for (unsigned i=0; i<_len64; ++i) {
+      auto _base = _base64 + i * (5*sizeof(void*));
+      auto _len61 = *((size_t*) (_base + sizeof(void*)));
 
       std::optional<postgres::DbDataType> variant63_opt;
-      switch ((int32_t) (*((uint8_t*) (base + (2*sizeof(void*)))))) {
+      switch ((int32_t) (*((uint8_t*) (_base + (2*sizeof(void*)))))) {
         case 0: { 
           variant63_opt = postgres::DbDataType{{postgres::DbDataType::Boolean{}}};
         } break;
@@ -1779,103 +1779,103 @@ std::expected<spin::postgres4_0_0::postgres::RowSet, spin::postgres4_0_0::postgr
         case 23: { 
           variant63_opt = postgres::DbDataType{{postgres::DbDataType::Interval{}}};
         } break;
-        case 24: { auto len62 = *((size_t*) (base + (4*sizeof(void*))));
+        case 24: { auto _len62 = *((size_t*) (_base + (4*sizeof(void*))));
 
 
-        variant63_opt = postgres::DbDataType{{postgres::DbDataType::Other{wit::string((char const*)(*((uint8_t**) (base + (3*sizeof(void*))))), len62)}}};
+        variant63_opt = postgres::DbDataType{{postgres::DbDataType::Other{wit::string((char const*)(*((uint8_t**) (_base + (3*sizeof(void*))))), _len62)}}};
       } break;
     }
     postgres::DbDataType variant63 = std::move(*variant63_opt);
-    auto e64 = postgres::Column{wit::string((char const*)(*((uint8_t**) (base + 0))), len61), std::move(variant63), };
-    result64.initialize(i, std::move(e64));
+    auto _e64 = postgres::Column{wit::string((char const*)(*((uint8_t**) (_base + 0))), _len61), std::move(variant63), };
+    _result64.initialize(i, std::move(_e64));
   }
-  auto base113 = *((uint8_t**) (ptr60 + (3*sizeof(void*))));
-  auto len113 = *((size_t*) (ptr60 + (4*sizeof(void*))));
-  auto result113 = wit::vector<wit::vector<postgres::DbValue>>::allocate(len113);
-  for (unsigned i=0; i<len113; ++i) {
-    auto base = base113 + i * (2*sizeof(void*));
-    auto base112 = *((uint8_t**) (base + 0));
-    auto len112 = *((size_t*) (base + sizeof(void*)));
-    auto result112 = wit::vector<postgres::DbValue>::allocate(len112);
-    for (unsigned i=0; i<len112; ++i) {
-      auto base = base112 + i * (40+4*sizeof(void*));
+  auto _base113 = *((uint8_t**) (ptr60 + (3*sizeof(void*))));
+  auto _len113 = *((size_t*) (ptr60 + (4*sizeof(void*))));
+  auto _result113 = wit::vector<wit::vector<postgres::DbValue>>::allocate(_len113);
+  for (unsigned i=0; i<_len113; ++i) {
+    auto _base = _base113 + i * (2*sizeof(void*));
+    auto _base112 = *((uint8_t**) (_base + 0));
+    auto _len112 = *((size_t*) (_base + sizeof(void*)));
+    auto _result112 = wit::vector<postgres::DbValue>::allocate(_len112);
+    for (unsigned i=0; i<_len112; ++i) {
+      auto _base = _base112 + i * (40+4*sizeof(void*));
       std::optional<postgres::DbValue> variant111_opt;
-      switch ((int32_t) (*((uint8_t*) (base + 0)))) {
+      switch ((int32_t) (*((uint8_t*) (_base + 0)))) {
         case 0: { 
-          variant111_opt = postgres::DbValue{{postgres::DbValue::Boolean{(bool((int32_t) (*((uint8_t*) (base + 8)))))}}};
+          variant111_opt = postgres::DbValue{{postgres::DbValue::Boolean{(bool((int32_t) (*((uint8_t*) (_base + 8)))))}}};
         } break;
         case 1: { 
-          variant111_opt = postgres::DbValue{{postgres::DbValue::Int8{(int8_t((int32_t) (*((int8_t*) (base + 8)))))}}};
+          variant111_opt = postgres::DbValue{{postgres::DbValue::Int8{(int8_t((int32_t) (*((int8_t*) (_base + 8)))))}}};
         } break;
         case 2: { 
-          variant111_opt = postgres::DbValue{{postgres::DbValue::Int16{(int16_t((int32_t) (*((int16_t*) (base + 8)))))}}};
+          variant111_opt = postgres::DbValue{{postgres::DbValue::Int16{(int16_t((int32_t) (*((int16_t*) (_base + 8)))))}}};
         } break;
-        case 3: { int32_t l65 = *((int32_t const*)(base + 8));
+        case 3: { int32_t l65 = *((int32_t const*)(_base + 8));
 
         variant111_opt = postgres::DbValue{{postgres::DbValue::Int32{(int32_t(l65))}}};
       } break;
       case 4: { 
-        variant111_opt = postgres::DbValue{{postgres::DbValue::Int64{(int64_t(*((int64_t*) (base + 8))))}}};
+        variant111_opt = postgres::DbValue{{postgres::DbValue::Int64{(int64_t(*((int64_t*) (_base + 8))))}}};
       } break;
       case 5: { 
-        variant111_opt = postgres::DbValue{{postgres::DbValue::Floating32{(float(*((float*) (base + 8))))}}};
+        variant111_opt = postgres::DbValue{{postgres::DbValue::Floating32{(float(*((float*) (_base + 8))))}}};
       } break;
       case 6: { 
-        variant111_opt = postgres::DbValue{{postgres::DbValue::Floating64{(double(*((double*) (base + 8))))}}};
+        variant111_opt = postgres::DbValue{{postgres::DbValue::Floating64{(double(*((double*) (_base + 8))))}}};
       } break;
-      case 7: { auto len66 = *((size_t*) (base + (8+1*sizeof(void*))));
+      case 7: { auto _len66 = *((size_t*) (_base + (8+1*sizeof(void*))));
 
 
-      variant111_opt = postgres::DbValue{{postgres::DbValue::Str{wit::string((char const*)(*((uint8_t**) (base + 8))), len66)}}};
+      variant111_opt = postgres::DbValue{{postgres::DbValue::Str{wit::string((char const*)(*((uint8_t**) (_base + 8))), _len66)}}};
     } break;
-    case 8: { auto len67 = *((size_t*) (base + (8+1*sizeof(void*))));
+    case 8: { auto _len67 = *((size_t*) (_base + (8+1*sizeof(void*))));
 
-    variant111_opt = postgres::DbValue{{postgres::DbValue::Binary{wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (base + 8))), len67)}}};
+    variant111_opt = postgres::DbValue{{postgres::DbValue::Binary{wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (_base + 8))), _len67)}}};
   } break;
-  case 9: { int32_t l68 = *((int32_t const*)(base + 8));
-  auto tuple69 = std::tuple<int32_t, uint8_t, uint8_t>((int32_t(l68)), (uint8_t((int32_t) (*((uint8_t*) (base + 12))))), (uint8_t((int32_t) (*((uint8_t*) (base + 13))))));
+  case 9: { int32_t l68 = *((int32_t const*)(_base + 8));
+  auto tuple69 = std::tuple<int32_t, uint8_t, uint8_t>((int32_t(l68)), (uint8_t((int32_t) (*((uint8_t*) (_base + 12))))), (uint8_t((int32_t) (*((uint8_t*) (_base + 13))))));
 
   variant111_opt = postgres::DbValue{{postgres::DbValue::Date{std::move(tuple69)}}};
 } break;
-case 10: { int32_t l70 = *((int32_t const*)(base + 12));
-auto tuple71 = std::tuple<uint8_t, uint8_t, uint8_t, uint32_t>((uint8_t((int32_t) (*((uint8_t*) (base + 8))))), (uint8_t((int32_t) (*((uint8_t*) (base + 9))))), (uint8_t((int32_t) (*((uint8_t*) (base + 10))))), (uint32_t(l70)));
+case 10: { int32_t l70 = *((int32_t const*)(_base + 12));
+auto tuple71 = std::tuple<uint8_t, uint8_t, uint8_t, uint32_t>((uint8_t((int32_t) (*((uint8_t*) (_base + 8))))), (uint8_t((int32_t) (*((uint8_t*) (_base + 9))))), (uint8_t((int32_t) (*((uint8_t*) (_base + 10))))), (uint32_t(l70)));
 
 variant111_opt = postgres::DbValue{{postgres::DbValue::Time{std::move(tuple71)}}};
 } break;
-case 11: { int32_t l72 = *((int32_t const*)(base + 8));
-int32_t l73 = *((int32_t const*)(base + 20));
-auto tuple74 = std::tuple<int32_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint32_t>((int32_t(l72)), (uint8_t((int32_t) (*((uint8_t*) (base + 12))))), (uint8_t((int32_t) (*((uint8_t*) (base + 13))))), (uint8_t((int32_t) (*((uint8_t*) (base + 14))))), (uint8_t((int32_t) (*((uint8_t*) (base + 15))))), (uint8_t((int32_t) (*((uint8_t*) (base + 16))))), (uint32_t(l73)));
+case 11: { int32_t l72 = *((int32_t const*)(_base + 8));
+int32_t l73 = *((int32_t const*)(_base + 20));
+auto tuple74 = std::tuple<int32_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint32_t>((int32_t(l72)), (uint8_t((int32_t) (*((uint8_t*) (_base + 12))))), (uint8_t((int32_t) (*((uint8_t*) (_base + 13))))), (uint8_t((int32_t) (*((uint8_t*) (_base + 14))))), (uint8_t((int32_t) (*((uint8_t*) (_base + 15))))), (uint8_t((int32_t) (*((uint8_t*) (_base + 16))))), (uint32_t(l73)));
 
 variant111_opt = postgres::DbValue{{postgres::DbValue::Datetime{std::move(tuple74)}}};
 } break;
 case 12: { 
-  variant111_opt = postgres::DbValue{{postgres::DbValue::Timestamp{(int64_t(*((int64_t*) (base + 8))))}}};
+  variant111_opt = postgres::DbValue{{postgres::DbValue::Timestamp{(int64_t(*((int64_t*) (_base + 8))))}}};
 } break;
-case 13: { auto len75 = *((size_t*) (base + (8+1*sizeof(void*))));
+case 13: { auto _len75 = *((size_t*) (_base + (8+1*sizeof(void*))));
 
 
-variant111_opt = postgres::DbValue{{postgres::DbValue::Uuid{wit::string((char const*)(*((uint8_t**) (base + 8))), len75)}}};
+variant111_opt = postgres::DbValue{{postgres::DbValue::Uuid{wit::string((char const*)(*((uint8_t**) (_base + 8))), _len75)}}};
 } break;
-case 14: { auto len76 = *((size_t*) (base + (8+1*sizeof(void*))));
+case 14: { auto _len76 = *((size_t*) (_base + (8+1*sizeof(void*))));
 
-variant111_opt = postgres::DbValue{{postgres::DbValue::Jsonb{wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (base + 8))), len76)}}};
+variant111_opt = postgres::DbValue{{postgres::DbValue::Jsonb{wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (_base + 8))), _len76)}}};
 } break;
-case 15: { auto len77 = *((size_t*) (base + (8+1*sizeof(void*))));
+case 15: { auto _len77 = *((size_t*) (_base + (8+1*sizeof(void*))));
 
 
-variant111_opt = postgres::DbValue{{postgres::DbValue::Decimal{wit::string((char const*)(*((uint8_t**) (base + 8))), len77)}}};
+variant111_opt = postgres::DbValue{{postgres::DbValue::Decimal{wit::string((char const*)(*((uint8_t**) (_base + 8))), _len77)}}};
 } break;
 case 16: { std::optional<std::tuple<int32_t, postgres::RangeBoundKind>> option80;
-if ((int32_t) (*((uint8_t*) (base + 8)))) {
-  int32_t l78 = *((int32_t const*)(base + 12));
-  auto tuple79 = std::tuple<int32_t, postgres::RangeBoundKind>((int32_t(l78)), (postgres::RangeBoundKind)(int32_t) (*((uint8_t*) (base + 16))));
+if ((int32_t) (*((uint8_t*) (_base + 8)))) {
+  int32_t l78 = *((int32_t const*)(_base + 12));
+  auto tuple79 = std::tuple<int32_t, postgres::RangeBoundKind>((int32_t(l78)), (postgres::RangeBoundKind)(int32_t) (*((uint8_t*) (_base + 16))));
 
   option80.emplace(std::move(tuple79));
 }
 std::optional<std::tuple<int32_t, postgres::RangeBoundKind>> option83;
-if ((int32_t) (*((uint8_t*) (base + 20)))) {
-  int32_t l81 = *((int32_t const*)(base + 24));
-  auto tuple82 = std::tuple<int32_t, postgres::RangeBoundKind>((int32_t(l81)), (postgres::RangeBoundKind)(int32_t) (*((uint8_t*) (base + 28))));
+if ((int32_t) (*((uint8_t*) (_base + 20)))) {
+  int32_t l81 = *((int32_t const*)(_base + 24));
+  auto tuple82 = std::tuple<int32_t, postgres::RangeBoundKind>((int32_t(l81)), (postgres::RangeBoundKind)(int32_t) (*((uint8_t*) (_base + 28))));
 
   option83.emplace(std::move(tuple82));
 }
@@ -1884,14 +1884,14 @@ auto tuple84 = std::tuple<std::optional<std::tuple<int32_t, postgres::RangeBound
 variant111_opt = postgres::DbValue{{postgres::DbValue::RangeInt32{std::move(tuple84)}}};
 } break;
 case 17: { std::optional<std::tuple<int64_t, postgres::RangeBoundKind>> option86;
-if ((int32_t) (*((uint8_t*) (base + 8)))) {
-  auto tuple85 = std::tuple<int64_t, postgres::RangeBoundKind>((int64_t(*((int64_t*) (base + 16)))), (postgres::RangeBoundKind)(int32_t) (*((uint8_t*) (base + 24))));
+if ((int32_t) (*((uint8_t*) (_base + 8)))) {
+  auto tuple85 = std::tuple<int64_t, postgres::RangeBoundKind>((int64_t(*((int64_t*) (_base + 16)))), (postgres::RangeBoundKind)(int32_t) (*((uint8_t*) (_base + 24))));
 
   option86.emplace(std::move(tuple85));
 }
 std::optional<std::tuple<int64_t, postgres::RangeBoundKind>> option88;
-if ((int32_t) (*((uint8_t*) (base + 32)))) {
-  auto tuple87 = std::tuple<int64_t, postgres::RangeBoundKind>((int64_t(*((int64_t*) (base + 40)))), (postgres::RangeBoundKind)(int32_t) (*((uint8_t*) (base + 48))));
+if ((int32_t) (*((uint8_t*) (_base + 32)))) {
+  auto tuple87 = std::tuple<int64_t, postgres::RangeBoundKind>((int64_t(*((int64_t*) (_base + 40)))), (postgres::RangeBoundKind)(int32_t) (*((uint8_t*) (_base + 48))));
 
   option88.emplace(std::move(tuple87));
 }
@@ -1900,18 +1900,18 @@ auto tuple89 = std::tuple<std::optional<std::tuple<int64_t, postgres::RangeBound
 variant111_opt = postgres::DbValue{{postgres::DbValue::RangeInt64{std::move(tuple89)}}};
 } break;
 case 18: { std::optional<std::tuple<wit::string, postgres::RangeBoundKind>> option92;
-if ((int32_t) (*((uint8_t*) (base + 8)))) {
-  auto len90 = *((size_t*) (base + (8+2*sizeof(void*))));
+if ((int32_t) (*((uint8_t*) (_base + 8)))) {
+  auto _len90 = *((size_t*) (_base + (8+2*sizeof(void*))));
 
-  auto tuple91 = std::tuple<wit::string, postgres::RangeBoundKind>(wit::string((char const*)(*((uint8_t**) (base + (8+1*sizeof(void*))))), len90), (postgres::RangeBoundKind)(int32_t) (*((uint8_t*) (base + (8+3*sizeof(void*))))));
+  auto tuple91 = std::tuple<wit::string, postgres::RangeBoundKind>(wit::string((char const*)(*((uint8_t**) (_base + (8+1*sizeof(void*))))), _len90), (postgres::RangeBoundKind)(int32_t) (*((uint8_t*) (_base + (8+3*sizeof(void*))))));
 
   option92.emplace(std::move(tuple91));
 }
 std::optional<std::tuple<wit::string, postgres::RangeBoundKind>> option95;
-if ((int32_t) (*((uint8_t*) (base + (8+4*sizeof(void*)))))) {
-  auto len93 = *((size_t*) (base + (8+6*sizeof(void*))));
+if ((int32_t) (*((uint8_t*) (_base + (8+4*sizeof(void*)))))) {
+  auto _len93 = *((size_t*) (_base + (8+6*sizeof(void*))));
 
-  auto tuple94 = std::tuple<wit::string, postgres::RangeBoundKind>(wit::string((char const*)(*((uint8_t**) (base + (8+5*sizeof(void*))))), len93), (postgres::RangeBoundKind)(int32_t) (*((uint8_t*) (base + (8+7*sizeof(void*))))));
+  auto tuple94 = std::tuple<wit::string, postgres::RangeBoundKind>(wit::string((char const*)(*((uint8_t**) (_base + (8+5*sizeof(void*))))), _len93), (postgres::RangeBoundKind)(int32_t) (*((uint8_t*) (_base + (8+7*sizeof(void*))))));
 
   option95.emplace(std::move(tuple94));
 }
@@ -1919,162 +1919,162 @@ auto tuple96 = std::tuple<std::optional<std::tuple<wit::string, postgres::RangeB
 
 variant111_opt = postgres::DbValue{{postgres::DbValue::RangeDecimal{std::move(tuple96)}}};
 } break;
-case 19: { auto base99 = *((uint8_t**) (base + 8));
-auto len99 = *((size_t*) (base + (8+1*sizeof(void*))));
-auto result99 = wit::vector<std::optional<int32_t>>::allocate(len99);
-for (unsigned i=0; i<len99; ++i) {
-  auto base = base99 + i * 8;
+case 19: { auto _base99 = *((uint8_t**) (_base + 8));
+auto _len99 = *((size_t*) (_base + (8+1*sizeof(void*))));
+auto _result99 = wit::vector<std::optional<int32_t>>::allocate(_len99);
+for (unsigned i=0; i<_len99; ++i) {
+  auto _base = _base99 + i * 8;
   std::optional<int32_t> option98;
-  if ((int32_t) (*((uint8_t*) (base + 0)))) {
-    int32_t l97 = *((int32_t const*)(base + 4));
+  if ((int32_t) (*((uint8_t*) (_base + 0)))) {
+    int32_t l97 = *((int32_t const*)(_base + 4));
 
     option98.emplace((int32_t(l97)));
   }
-  auto e99 = std::move(option98);
-  result99.initialize(i, std::move(e99));
+  auto _e99 = std::move(option98);
+  _result99.initialize(i, std::move(_e99));
 }
 
-variant111_opt = postgres::DbValue{{postgres::DbValue::ArrayInt32{std::move(result99)}}};
+variant111_opt = postgres::DbValue{{postgres::DbValue::ArrayInt32{std::move(_result99)}}};
 } break;
-case 20: { auto base101 = *((uint8_t**) (base + 8));
-auto len101 = *((size_t*) (base + (8+1*sizeof(void*))));
-auto result101 = wit::vector<std::optional<int64_t>>::allocate(len101);
-for (unsigned i=0; i<len101; ++i) {
-  auto base = base101 + i * 16;
+case 20: { auto _base101 = *((uint8_t**) (_base + 8));
+auto _len101 = *((size_t*) (_base + (8+1*sizeof(void*))));
+auto _result101 = wit::vector<std::optional<int64_t>>::allocate(_len101);
+for (unsigned i=0; i<_len101; ++i) {
+  auto _base = _base101 + i * 16;
   std::optional<int64_t> option100;
-  if ((int32_t) (*((uint8_t*) (base + 0)))) {
+  if ((int32_t) (*((uint8_t*) (_base + 0)))) {
     
-    option100.emplace((int64_t(*((int64_t*) (base + 8)))));
+    option100.emplace((int64_t(*((int64_t*) (_base + 8)))));
   }
-  auto e101 = std::move(option100);
-  result101.initialize(i, std::move(e101));
+  auto _e101 = std::move(option100);
+  _result101.initialize(i, std::move(_e101));
 }
 
-variant111_opt = postgres::DbValue{{postgres::DbValue::ArrayInt64{std::move(result101)}}};
+variant111_opt = postgres::DbValue{{postgres::DbValue::ArrayInt64{std::move(_result101)}}};
 } break;
-case 21: { auto base104 = *((uint8_t**) (base + 8));
-auto len104 = *((size_t*) (base + (8+1*sizeof(void*))));
-auto result104 = wit::vector<std::optional<wit::string>>::allocate(len104);
-for (unsigned i=0; i<len104; ++i) {
-  auto base = base104 + i * (3*sizeof(void*));
+case 21: { auto _base104 = *((uint8_t**) (_base + 8));
+auto _len104 = *((size_t*) (_base + (8+1*sizeof(void*))));
+auto _result104 = wit::vector<std::optional<wit::string>>::allocate(_len104);
+for (unsigned i=0; i<_len104; ++i) {
+  auto _base = _base104 + i * (3*sizeof(void*));
   std::optional<wit::string> option103;
-  if ((int32_t) (*((uint8_t*) (base + 0)))) {
-    auto len102 = *((size_t*) (base + (2*sizeof(void*))));
+  if ((int32_t) (*((uint8_t*) (_base + 0)))) {
+    auto _len102 = *((size_t*) (_base + (2*sizeof(void*))));
 
 
-    option103.emplace(wit::string((char const*)(*((uint8_t**) (base + sizeof(void*)))), len102));
+    option103.emplace(wit::string((char const*)(*((uint8_t**) (_base + sizeof(void*)))), _len102));
   }
-  auto e104 = std::move(option103);
-  result104.initialize(i, std::move(e104));
+  auto _e104 = std::move(option103);
+  _result104.initialize(i, std::move(_e104));
 }
 
-variant111_opt = postgres::DbValue{{postgres::DbValue::ArrayDecimal{std::move(result104)}}};
+variant111_opt = postgres::DbValue{{postgres::DbValue::ArrayDecimal{std::move(_result104)}}};
 } break;
-case 22: { auto base107 = *((uint8_t**) (base + 8));
-auto len107 = *((size_t*) (base + (8+1*sizeof(void*))));
-auto result107 = wit::vector<std::optional<wit::string>>::allocate(len107);
-for (unsigned i=0; i<len107; ++i) {
-  auto base = base107 + i * (3*sizeof(void*));
+case 22: { auto _base107 = *((uint8_t**) (_base + 8));
+auto _len107 = *((size_t*) (_base + (8+1*sizeof(void*))));
+auto _result107 = wit::vector<std::optional<wit::string>>::allocate(_len107);
+for (unsigned i=0; i<_len107; ++i) {
+  auto _base = _base107 + i * (3*sizeof(void*));
   std::optional<wit::string> option106;
-  if ((int32_t) (*((uint8_t*) (base + 0)))) {
-    auto len105 = *((size_t*) (base + (2*sizeof(void*))));
+  if ((int32_t) (*((uint8_t*) (_base + 0)))) {
+    auto _len105 = *((size_t*) (_base + (2*sizeof(void*))));
 
 
-    option106.emplace(wit::string((char const*)(*((uint8_t**) (base + sizeof(void*)))), len105));
+    option106.emplace(wit::string((char const*)(*((uint8_t**) (_base + sizeof(void*)))), _len105));
   }
-  auto e107 = std::move(option106);
-  result107.initialize(i, std::move(e107));
+  auto _e107 = std::move(option106);
+  _result107.initialize(i, std::move(_e107));
 }
 
-variant111_opt = postgres::DbValue{{postgres::DbValue::ArrayStr{std::move(result107)}}};
+variant111_opt = postgres::DbValue{{postgres::DbValue::ArrayStr{std::move(_result107)}}};
 } break;
-case 23: { int32_t l108 = *((int32_t const*)(base + 16));
-int32_t l109 = *((int32_t const*)(base + 20));
+case 23: { int32_t l108 = *((int32_t const*)(_base + 16));
+int32_t l109 = *((int32_t const*)(_base + 20));
 
-variant111_opt = postgres::DbValue{{postgres::DbValue::Interval{postgres::Interval{(int64_t(*((int64_t*) (base + 8)))), (int32_t(l108)), (int32_t(l109)), }}}};
+variant111_opt = postgres::DbValue{{postgres::DbValue::Interval{postgres::Interval{(int64_t(*((int64_t*) (_base + 8)))), (int32_t(l108)), (int32_t(l109)), }}}};
 } break;
 case 24: { 
   variant111_opt = postgres::DbValue{{postgres::DbValue::DbNull{}}};
 } break;
-case 25: { auto len110 = *((size_t*) (base + (8+1*sizeof(void*))));
+case 25: { auto _len110 = *((size_t*) (_base + (8+1*sizeof(void*))));
 
-variant111_opt = postgres::DbValue{{postgres::DbValue::Unsupported{wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (base + 8))), len110)}}};
+variant111_opt = postgres::DbValue{{postgres::DbValue::Unsupported{wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (_base + 8))), _len110)}}};
 } break;
 }
 postgres::DbValue variant111 = std::move(*variant111_opt);
-auto e112 = std::move(variant111);
-result112.initialize(i, std::move(e112));
+auto _e112 = std::move(variant111);
+_result112.initialize(i, std::move(_e112));
 }
-auto e113 = std::move(result112);
-result113.initialize(i, std::move(e113));
+auto _e113 = std::move(_result112);
+_result113.initialize(i, std::move(_e113));
 }
 
-result131_opt.emplace(std::expected<postgres::RowSet, postgres::Error>(postgres::RowSet{std::move(result64), std::move(result113), }));
+result131_opt.emplace(std::expected<postgres::RowSet, postgres::Error>(postgres::RowSet{std::move(_result64), std::move(_result113), }));
 } else {
 std::optional<postgres::Error> variant130_opt;
 switch ((int32_t) (*((uint8_t*) (ptr60 + sizeof(void*))))) {
-  case 0: { auto len114 = *((size_t*) (ptr60 + (3*sizeof(void*))));
+  case 0: { auto _len114 = *((size_t*) (ptr60 + (3*sizeof(void*))));
 
 
-  variant130_opt = postgres::Error{{postgres::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr60 + (2*sizeof(void*))))), len114)}}};
+  variant130_opt = postgres::Error{{postgres::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr60 + (2*sizeof(void*))))), _len114)}}};
 } break;
-case 1: { auto len115 = *((size_t*) (ptr60 + (3*sizeof(void*))));
+case 1: { auto _len115 = *((size_t*) (ptr60 + (3*sizeof(void*))));
 
 
-variant130_opt = postgres::Error{{postgres::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr60 + (2*sizeof(void*))))), len115)}}};
+variant130_opt = postgres::Error{{postgres::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr60 + (2*sizeof(void*))))), _len115)}}};
 } break;
 case 2: { std::optional<postgres::QueryError> variant127_opt;
 switch ((int32_t) (*((uint8_t*) (ptr60 + (2*sizeof(void*)))))) {
-  case 0: { auto len116 = *((size_t*) (ptr60 + (4*sizeof(void*))));
+  case 0: { auto _len116 = *((size_t*) (ptr60 + (4*sizeof(void*))));
 
 
-  variant127_opt = postgres::QueryError{{postgres::QueryError::Text{wit::string((char const*)(*((uint8_t**) (ptr60 + (3*sizeof(void*))))), len116)}}};
+  variant127_opt = postgres::QueryError{{postgres::QueryError::Text{wit::string((char const*)(*((uint8_t**) (ptr60 + (3*sizeof(void*))))), _len116)}}};
 } break;
-case 1: { auto len117 = *((size_t*) (ptr60 + (4*sizeof(void*))));
+case 1: { auto _len117 = *((size_t*) (ptr60 + (4*sizeof(void*))));
 
-auto len118 = *((size_t*) (ptr60 + (6*sizeof(void*))));
+auto _len118 = *((size_t*) (ptr60 + (6*sizeof(void*))));
 
-auto len119 = *((size_t*) (ptr60 + (8*sizeof(void*))));
+auto _len119 = *((size_t*) (ptr60 + (8*sizeof(void*))));
 
-auto len120 = *((size_t*) (ptr60 + (10*sizeof(void*))));
+auto _len120 = *((size_t*) (ptr60 + (10*sizeof(void*))));
 
 std::optional<wit::string> option122;
 if ((int32_t) (*((uint8_t*) (ptr60 + (11*sizeof(void*)))))) {
-  auto len121 = *((size_t*) (ptr60 + (13*sizeof(void*))));
+  auto _len121 = *((size_t*) (ptr60 + (13*sizeof(void*))));
 
 
-  option122.emplace(wit::string((char const*)(*((uint8_t**) (ptr60 + (12*sizeof(void*))))), len121));
+  option122.emplace(wit::string((char const*)(*((uint8_t**) (ptr60 + (12*sizeof(void*))))), _len121));
 }
-auto base126 = *((uint8_t**) (ptr60 + (14*sizeof(void*))));
-auto len126 = *((size_t*) (ptr60 + (15*sizeof(void*))));
-auto result126 = wit::vector<std::tuple<wit::string, wit::string>>::allocate(len126);
-for (unsigned i=0; i<len126; ++i) {
-  auto base = base126 + i * (4*sizeof(void*));
-  auto len123 = *((size_t*) (base + sizeof(void*)));
+auto _base126 = *((uint8_t**) (ptr60 + (14*sizeof(void*))));
+auto _len126 = *((size_t*) (ptr60 + (15*sizeof(void*))));
+auto _result126 = wit::vector<std::tuple<wit::string, wit::string>>::allocate(_len126);
+for (unsigned i=0; i<_len126; ++i) {
+  auto _base = _base126 + i * (4*sizeof(void*));
+  auto _len123 = *((size_t*) (_base + sizeof(void*)));
 
-  auto len124 = *((size_t*) (base + (3*sizeof(void*))));
+  auto _len124 = *((size_t*) (_base + (3*sizeof(void*))));
 
-  auto tuple125 = std::tuple<wit::string, wit::string>(wit::string((char const*)(*((uint8_t**) (base + 0))), len123), wit::string((char const*)(*((uint8_t**) (base + (2*sizeof(void*))))), len124));
-  auto e126 = std::move(tuple125);
-  result126.initialize(i, std::move(e126));
+  auto tuple125 = std::tuple<wit::string, wit::string>(wit::string((char const*)(*((uint8_t**) (_base + 0))), _len123), wit::string((char const*)(*((uint8_t**) (_base + (2*sizeof(void*))))), _len124));
+  auto _e126 = std::move(tuple125);
+  _result126.initialize(i, std::move(_e126));
 }
 
-variant127_opt = postgres::QueryError{{postgres::QueryError::DbError{postgres::DbError{wit::string((char const*)(*((uint8_t**) (ptr60 + (3*sizeof(void*))))), len117), wit::string((char const*)(*((uint8_t**) (ptr60 + (5*sizeof(void*))))), len118), wit::string((char const*)(*((uint8_t**) (ptr60 + (7*sizeof(void*))))), len119), wit::string((char const*)(*((uint8_t**) (ptr60 + (9*sizeof(void*))))), len120), std::move(option122), std::move(result126), }}}};
+variant127_opt = postgres::QueryError{{postgres::QueryError::DbError{postgres::DbError{wit::string((char const*)(*((uint8_t**) (ptr60 + (3*sizeof(void*))))), _len117), wit::string((char const*)(*((uint8_t**) (ptr60 + (5*sizeof(void*))))), _len118), wit::string((char const*)(*((uint8_t**) (ptr60 + (7*sizeof(void*))))), _len119), wit::string((char const*)(*((uint8_t**) (ptr60 + (9*sizeof(void*))))), _len120), std::move(option122), std::move(_result126), }}}};
 } break;
 }
 postgres::QueryError variant127 = std::move(*variant127_opt);
 
 variant130_opt = postgres::Error{{postgres::Error::QueryFailed{std::move(variant127)}}};
 } break;
-case 3: { auto len128 = *((size_t*) (ptr60 + (3*sizeof(void*))));
+case 3: { auto _len128 = *((size_t*) (ptr60 + (3*sizeof(void*))));
 
 
-variant130_opt = postgres::Error{{postgres::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr60 + (2*sizeof(void*))))), len128)}}};
+variant130_opt = postgres::Error{{postgres::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr60 + (2*sizeof(void*))))), _len128)}}};
 } break;
-case 4: { auto len129 = *((size_t*) (ptr60 + (3*sizeof(void*))));
+case 4: { auto _len129 = *((size_t*) (ptr60 + (3*sizeof(void*))));
 
 
-variant130_opt = postgres::Error{{postgres::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr60 + (2*sizeof(void*))))), len129)}}};
+variant130_opt = postgres::Error{{postgres::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr60 + (2*sizeof(void*))))), _len129)}}};
 } break;
 }
 postgres::Error variant130 = std::move(*variant130_opt);
@@ -2088,327 +2088,327 @@ return result132;
 std::expected<uint64_t, spin::postgres4_0_0::postgres::Error> spin::postgres4_0_0::postgres::Connection::Execute(std::string_view statement, std::span<postgres::ParameterValue const> params) const
 {
   uint64_t ret_area[((16+14*sizeof(void*))+sizeof(uint64_t)-1)/sizeof(uint64_t)];
-  auto&& vec0 = statement;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec59 = params;
-  auto ptr59 = (uint8_t*)(vec59.data());
-  auto len59 = (size_t)(vec59.size());
-  for (size_t i = 0; i < len59; ++i) {
-    auto base = ptr59 + i * (40+4*sizeof(void*));
-    auto&& iter_elem = vec59[i];
-    switch ((int32_t) (iter_elem).variants.index()) {
+  auto&& _vec0 = statement;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec59 = params;
+  auto _ptr59 = (uint8_t*)(_vec59.data());
+  auto _len59 = (size_t)(_vec59.size());
+  for (size_t i = 0; i < _len59; ++i) {
+    auto _base = _ptr59 + i * (40+4*sizeof(void*));
+    auto&& _iter_elem = _vec59[i];
+    switch ((int32_t) (_iter_elem).variants.index()) {
       case 0: {
-        auto& payload1 = std::get<postgres::ParameterValue::Boolean>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(0));
-        *((int8_t*)(base + 8)) = (int32_t(payload1));
+        auto& payload1 = std::get<postgres::ParameterValue::Boolean>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(0));
+        *((int8_t*)(_base + 8)) = (int32_t(payload1));
         break;
       }
       case 1: {
-        auto& payload2 = std::get<postgres::ParameterValue::Int8>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(1));
-        *((int8_t*)(base + 8)) = (int32_t(payload2));
+        auto& payload2 = std::get<postgres::ParameterValue::Int8>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(1));
+        *((int8_t*)(_base + 8)) = (int32_t(payload2));
         break;
       }
       case 2: {
-        auto& payload3 = std::get<postgres::ParameterValue::Int16>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(2));
-        *((int16_t*)(base + 8)) = (int32_t(payload3));
+        auto& payload3 = std::get<postgres::ParameterValue::Int16>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(2));
+        *((int16_t*)(_base + 8)) = (int32_t(payload3));
         break;
       }
       case 3: {
-        auto& payload4 = std::get<postgres::ParameterValue::Int32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(3));
-        *((int32_t*)(base + 8)) = (int32_t(payload4));
+        auto& payload4 = std::get<postgres::ParameterValue::Int32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(3));
+        *((int32_t*)(_base + 8)) = (int32_t(payload4));
         break;
       }
       case 4: {
-        auto& payload5 = std::get<postgres::ParameterValue::Int64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(4));
-        *((int64_t*)(base + 8)) = (int64_t(payload5));
+        auto& payload5 = std::get<postgres::ParameterValue::Int64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(4));
+        *((int64_t*)(_base + 8)) = (int64_t(payload5));
         break;
       }
       case 5: {
-        auto& payload6 = std::get<postgres::ParameterValue::Floating32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(5));
-        *((float*)(base + 8)) = (float(payload6));
+        auto& payload6 = std::get<postgres::ParameterValue::Floating32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(5));
+        *((float*)(_base + 8)) = (float(payload6));
         break;
       }
       case 6: {
-        auto& payload7 = std::get<postgres::ParameterValue::Floating64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(6));
-        *((double*)(base + 8)) = (double(payload7));
+        auto& payload7 = std::get<postgres::ParameterValue::Floating64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(6));
+        *((double*)(_base + 8)) = (double(payload7));
         break;
       }
       case 7: {
-        auto& payload8 = std::get<postgres::ParameterValue::Str>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(7));
-        auto&& vec9 = payload8;
-        auto ptr9 = (uint8_t*)(vec9.data());
-        auto len9 = (size_t)(vec9.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len9;
-        *((uint8_t**)(base + 8)) = ptr9;
+        auto& payload8 = std::get<postgres::ParameterValue::Str>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(7));
+        auto&& _vec9 = payload8;
+        auto _ptr9 = (uint8_t*)(_vec9.data());
+        auto _len9 = (size_t)(_vec9.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len9;
+        *((uint8_t**)(_base + 8)) = _ptr9;
         break;
       }
       case 8: {
-        auto& payload10 = std::get<postgres::ParameterValue::Binary>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(8));
-        auto&& vec11 = payload10;
-        auto ptr11 = (uint8_t*)(vec11.data());
-        auto len11 = (size_t)(vec11.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len11;
-        *((uint8_t**)(base + 8)) = ptr11;
+        auto& payload10 = std::get<postgres::ParameterValue::Binary>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(8));
+        auto&& _vec11 = payload10;
+        auto _ptr11 = (uint8_t*)(_vec11.data());
+        auto _len11 = (size_t)(_vec11.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len11;
+        *((uint8_t**)(_base + 8)) = _ptr11;
         break;
       }
       case 9: {
-        auto& payload12 = std::get<postgres::ParameterValue::Date>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(9));
-        *((int32_t*)(base + 8)) = (int32_t(std::get<0>(payload12)));
-        *((int8_t*)(base + 12)) = (int32_t(std::get<1>(payload12)));
-        *((int8_t*)(base + 13)) = (int32_t(std::get<2>(payload12)));
+        auto& payload12 = std::get<postgres::ParameterValue::Date>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(9));
+        *((int32_t*)(_base + 8)) = (int32_t(std::get<0>(payload12)));
+        *((int8_t*)(_base + 12)) = (int32_t(std::get<1>(payload12)));
+        *((int8_t*)(_base + 13)) = (int32_t(std::get<2>(payload12)));
         break;
       }
       case 10: {
-        auto& payload13 = std::get<postgres::ParameterValue::Time>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(10));
-        *((int8_t*)(base + 8)) = (int32_t(std::get<0>(payload13)));
-        *((int8_t*)(base + 9)) = (int32_t(std::get<1>(payload13)));
-        *((int8_t*)(base + 10)) = (int32_t(std::get<2>(payload13)));
-        *((int32_t*)(base + 12)) = (int32_t(std::get<3>(payload13)));
+        auto& payload13 = std::get<postgres::ParameterValue::Time>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(10));
+        *((int8_t*)(_base + 8)) = (int32_t(std::get<0>(payload13)));
+        *((int8_t*)(_base + 9)) = (int32_t(std::get<1>(payload13)));
+        *((int8_t*)(_base + 10)) = (int32_t(std::get<2>(payload13)));
+        *((int32_t*)(_base + 12)) = (int32_t(std::get<3>(payload13)));
         break;
       }
       case 11: {
-        auto& payload14 = std::get<postgres::ParameterValue::Datetime>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(11));
-        *((int32_t*)(base + 8)) = (int32_t(std::get<0>(payload14)));
-        *((int8_t*)(base + 12)) = (int32_t(std::get<1>(payload14)));
-        *((int8_t*)(base + 13)) = (int32_t(std::get<2>(payload14)));
-        *((int8_t*)(base + 14)) = (int32_t(std::get<3>(payload14)));
-        *((int8_t*)(base + 15)) = (int32_t(std::get<4>(payload14)));
-        *((int8_t*)(base + 16)) = (int32_t(std::get<5>(payload14)));
-        *((int32_t*)(base + 20)) = (int32_t(std::get<6>(payload14)));
+        auto& payload14 = std::get<postgres::ParameterValue::Datetime>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(11));
+        *((int32_t*)(_base + 8)) = (int32_t(std::get<0>(payload14)));
+        *((int8_t*)(_base + 12)) = (int32_t(std::get<1>(payload14)));
+        *((int8_t*)(_base + 13)) = (int32_t(std::get<2>(payload14)));
+        *((int8_t*)(_base + 14)) = (int32_t(std::get<3>(payload14)));
+        *((int8_t*)(_base + 15)) = (int32_t(std::get<4>(payload14)));
+        *((int8_t*)(_base + 16)) = (int32_t(std::get<5>(payload14)));
+        *((int32_t*)(_base + 20)) = (int32_t(std::get<6>(payload14)));
         break;
       }
       case 12: {
-        auto& payload15 = std::get<postgres::ParameterValue::Timestamp>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(12));
-        *((int64_t*)(base + 8)) = (int64_t(payload15));
+        auto& payload15 = std::get<postgres::ParameterValue::Timestamp>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(12));
+        *((int64_t*)(_base + 8)) = (int64_t(payload15));
         break;
       }
       case 13: {
-        auto& payload16 = std::get<postgres::ParameterValue::Uuid>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(13));
-        auto&& vec17 = payload16;
-        auto ptr17 = (uint8_t*)(vec17.data());
-        auto len17 = (size_t)(vec17.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len17;
-        *((uint8_t**)(base + 8)) = ptr17;
+        auto& payload16 = std::get<postgres::ParameterValue::Uuid>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(13));
+        auto&& _vec17 = payload16;
+        auto _ptr17 = (uint8_t*)(_vec17.data());
+        auto _len17 = (size_t)(_vec17.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len17;
+        *((uint8_t**)(_base + 8)) = _ptr17;
         break;
       }
       case 14: {
-        auto& payload18 = std::get<postgres::ParameterValue::Jsonb>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(14));
-        auto&& vec19 = payload18;
-        auto ptr19 = (uint8_t*)(vec19.data());
-        auto len19 = (size_t)(vec19.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len19;
-        *((uint8_t**)(base + 8)) = ptr19;
+        auto& payload18 = std::get<postgres::ParameterValue::Jsonb>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(14));
+        auto&& _vec19 = payload18;
+        auto _ptr19 = (uint8_t*)(_vec19.data());
+        auto _len19 = (size_t)(_vec19.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len19;
+        *((uint8_t**)(_base + 8)) = _ptr19;
         break;
       }
       case 15: {
-        auto& payload20 = std::get<postgres::ParameterValue::Decimal>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(15));
-        auto&& vec21 = payload20;
-        auto ptr21 = (uint8_t*)(vec21.data());
-        auto len21 = (size_t)(vec21.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len21;
-        *((uint8_t**)(base + 8)) = ptr21;
+        auto& payload20 = std::get<postgres::ParameterValue::Decimal>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(15));
+        auto&& _vec21 = payload20;
+        auto _ptr21 = (uint8_t*)(_vec21.data());
+        auto _len21 = (size_t)(_vec21.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len21;
+        *((uint8_t**)(_base + 8)) = _ptr21;
         break;
       }
       case 16: {
-        auto& payload22 = std::get<postgres::ParameterValue::RangeInt32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(16));
+        auto& payload22 = std::get<postgres::ParameterValue::RangeInt32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(16));
         if ((std::get<0>(payload22)).has_value()) {
           std::tuple<int32_t, postgres::RangeBoundKind> payload24 = (std::move(std::get<0>(payload22))).value();
-          *((int8_t*)(base + 8)) = (int32_t(1));
-          *((int32_t*)(base + 12)) = (int32_t(std::get<0>(payload24)));
-          *((int8_t*)(base + 16)) = int32_t(std::get<1>(payload24));
+          *((int8_t*)(_base + 8)) = (int32_t(1));
+          *((int32_t*)(_base + 12)) = (int32_t(std::get<0>(payload24)));
+          *((int8_t*)(_base + 16)) = int32_t(std::get<1>(payload24));
         } else {
-          *((int8_t*)(base + 8)) = (int32_t(0));
+          *((int8_t*)(_base + 8)) = (int32_t(0));
         }
         if ((std::get<1>(payload22)).has_value()) {
           std::tuple<int32_t, postgres::RangeBoundKind> payload26 = (std::move(std::get<1>(payload22))).value();
-          *((int8_t*)(base + 20)) = (int32_t(1));
-          *((int32_t*)(base + 24)) = (int32_t(std::get<0>(payload26)));
-          *((int8_t*)(base + 28)) = int32_t(std::get<1>(payload26));
+          *((int8_t*)(_base + 20)) = (int32_t(1));
+          *((int32_t*)(_base + 24)) = (int32_t(std::get<0>(payload26)));
+          *((int8_t*)(_base + 28)) = int32_t(std::get<1>(payload26));
         } else {
-          *((int8_t*)(base + 20)) = (int32_t(0));
+          *((int8_t*)(_base + 20)) = (int32_t(0));
         }
         break;
       }
       case 17: {
-        auto& payload27 = std::get<postgres::ParameterValue::RangeInt64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(17));
+        auto& payload27 = std::get<postgres::ParameterValue::RangeInt64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(17));
         if ((std::get<0>(payload27)).has_value()) {
           std::tuple<int64_t, postgres::RangeBoundKind> payload29 = (std::move(std::get<0>(payload27))).value();
-          *((int8_t*)(base + 8)) = (int32_t(1));
-          *((int64_t*)(base + 16)) = (int64_t(std::get<0>(payload29)));
-          *((int8_t*)(base + 24)) = int32_t(std::get<1>(payload29));
+          *((int8_t*)(_base + 8)) = (int32_t(1));
+          *((int64_t*)(_base + 16)) = (int64_t(std::get<0>(payload29)));
+          *((int8_t*)(_base + 24)) = int32_t(std::get<1>(payload29));
         } else {
-          *((int8_t*)(base + 8)) = (int32_t(0));
+          *((int8_t*)(_base + 8)) = (int32_t(0));
         }
         if ((std::get<1>(payload27)).has_value()) {
           std::tuple<int64_t, postgres::RangeBoundKind> payload31 = (std::move(std::get<1>(payload27))).value();
-          *((int8_t*)(base + 32)) = (int32_t(1));
-          *((int64_t*)(base + 40)) = (int64_t(std::get<0>(payload31)));
-          *((int8_t*)(base + 48)) = int32_t(std::get<1>(payload31));
+          *((int8_t*)(_base + 32)) = (int32_t(1));
+          *((int64_t*)(_base + 40)) = (int64_t(std::get<0>(payload31)));
+          *((int8_t*)(_base + 48)) = int32_t(std::get<1>(payload31));
         } else {
-          *((int8_t*)(base + 32)) = (int32_t(0));
+          *((int8_t*)(_base + 32)) = (int32_t(0));
         }
         break;
       }
       case 18: {
-        auto& payload32 = std::get<postgres::ParameterValue::RangeDecimal>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(18));
+        auto& payload32 = std::get<postgres::ParameterValue::RangeDecimal>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(18));
         if ((std::get<0>(payload32)).has_value()) {
-          std::tuple<std::string_view, postgres::RangeBoundKind> payload34 = (std::move(std::get<0>(payload32))).value();
-          *((int8_t*)(base + 8)) = (int32_t(1));
-          auto&& vec35 = std::get<0>(payload34);
-          auto ptr35 = (uint8_t*)(vec35.data());
-          auto len35 = (size_t)(vec35.size());
-          *((size_t*)(base + (8+2*sizeof(void*)))) = len35;
-          *((uint8_t**)(base + (8+1*sizeof(void*)))) = ptr35;
-          *((int8_t*)(base + (8+3*sizeof(void*)))) = int32_t(std::get<1>(payload34));
+          std::tuple<wit::string, postgres::RangeBoundKind> payload34 = (std::move(std::get<0>(payload32))).value();
+          *((int8_t*)(_base + 8)) = (int32_t(1));
+          auto&& _vec35 = std::get<0>(payload34);
+          auto _ptr35 = (uint8_t*)(_vec35.data());
+          auto _len35 = (size_t)(_vec35.size());
+          *((size_t*)(_base + (8+2*sizeof(void*)))) = _len35;
+          *((uint8_t**)(_base + (8+1*sizeof(void*)))) = _ptr35;
+          *((int8_t*)(_base + (8+3*sizeof(void*)))) = int32_t(std::get<1>(payload34));
         } else {
-          *((int8_t*)(base + 8)) = (int32_t(0));
+          *((int8_t*)(_base + 8)) = (int32_t(0));
         }
         if ((std::get<1>(payload32)).has_value()) {
-          std::tuple<std::string_view, postgres::RangeBoundKind> payload37 = (std::move(std::get<1>(payload32))).value();
-          *((int8_t*)(base + (8+4*sizeof(void*)))) = (int32_t(1));
-          auto&& vec38 = std::get<0>(payload37);
-          auto ptr38 = (uint8_t*)(vec38.data());
-          auto len38 = (size_t)(vec38.size());
-          *((size_t*)(base + (8+6*sizeof(void*)))) = len38;
-          *((uint8_t**)(base + (8+5*sizeof(void*)))) = ptr38;
-          *((int8_t*)(base + (8+7*sizeof(void*)))) = int32_t(std::get<1>(payload37));
+          std::tuple<wit::string, postgres::RangeBoundKind> payload37 = (std::move(std::get<1>(payload32))).value();
+          *((int8_t*)(_base + (8+4*sizeof(void*)))) = (int32_t(1));
+          auto&& _vec38 = std::get<0>(payload37);
+          auto _ptr38 = (uint8_t*)(_vec38.data());
+          auto _len38 = (size_t)(_vec38.size());
+          *((size_t*)(_base + (8+6*sizeof(void*)))) = _len38;
+          *((uint8_t**)(_base + (8+5*sizeof(void*)))) = _ptr38;
+          *((int8_t*)(_base + (8+7*sizeof(void*)))) = int32_t(std::get<1>(payload37));
         } else {
-          *((int8_t*)(base + (8+4*sizeof(void*)))) = (int32_t(0));
+          *((int8_t*)(_base + (8+4*sizeof(void*)))) = (int32_t(0));
         }
         break;
       }
       case 19: {
-        auto& payload39 = std::get<postgres::ParameterValue::ArrayInt32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(19));
-        auto&& vec42 = payload39;
-        auto ptr42 = (uint8_t*)(vec42.data());
-        auto len42 = (size_t)(vec42.size());
-        for (size_t i = 0; i < len42; ++i) {
-          auto base = ptr42 + i * 8;
-          auto&& iter_elem = vec42[i];
-          if ((iter_elem).has_value()) {
-            int32_t payload41 = (std::move(iter_elem)).value();
-            *((int8_t*)(base + 0)) = (int32_t(1));
-            *((int32_t*)(base + 4)) = (int32_t(payload41));
+        auto& payload39 = std::get<postgres::ParameterValue::ArrayInt32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(19));
+        auto&& _vec42 = payload39;
+        auto _ptr42 = (uint8_t*)(_vec42.data());
+        auto _len42 = (size_t)(_vec42.size());
+        for (size_t i = 0; i < _len42; ++i) {
+          auto _base = _ptr42 + i * 8;
+          auto&& _iter_elem = _vec42[i];
+          if ((_iter_elem).has_value()) {
+            int32_t payload41 = (std::move(_iter_elem)).value();
+            *((int8_t*)(_base + 0)) = (int32_t(1));
+            *((int32_t*)(_base + 4)) = (int32_t(payload41));
           } else {
-            *((int8_t*)(base + 0)) = (int32_t(0));
+            *((int8_t*)(_base + 0)) = (int32_t(0));
           }
 
         }
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len42;
-        *((uint8_t**)(base + 8)) = ptr42;
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len42;
+        *((uint8_t**)(_base + 8)) = _ptr42;
         break;
       }
       case 20: {
-        auto& payload43 = std::get<postgres::ParameterValue::ArrayInt64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(20));
-        auto&& vec46 = payload43;
-        auto ptr46 = (uint8_t*)(vec46.data());
-        auto len46 = (size_t)(vec46.size());
-        for (size_t i = 0; i < len46; ++i) {
-          auto base = ptr46 + i * 16;
-          auto&& iter_elem = vec46[i];
-          if ((iter_elem).has_value()) {
-            int64_t payload45 = (std::move(iter_elem)).value();
-            *((int8_t*)(base + 0)) = (int32_t(1));
-            *((int64_t*)(base + 8)) = (int64_t(payload45));
+        auto& payload43 = std::get<postgres::ParameterValue::ArrayInt64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(20));
+        auto&& _vec46 = payload43;
+        auto _ptr46 = (uint8_t*)(_vec46.data());
+        auto _len46 = (size_t)(_vec46.size());
+        for (size_t i = 0; i < _len46; ++i) {
+          auto _base = _ptr46 + i * 16;
+          auto&& _iter_elem = _vec46[i];
+          if ((_iter_elem).has_value()) {
+            int64_t payload45 = (std::move(_iter_elem)).value();
+            *((int8_t*)(_base + 0)) = (int32_t(1));
+            *((int64_t*)(_base + 8)) = (int64_t(payload45));
           } else {
-            *((int8_t*)(base + 0)) = (int32_t(0));
+            *((int8_t*)(_base + 0)) = (int32_t(0));
           }
 
         }
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len46;
-        *((uint8_t**)(base + 8)) = ptr46;
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len46;
+        *((uint8_t**)(_base + 8)) = _ptr46;
         break;
       }
       case 21: {
-        auto& payload47 = std::get<postgres::ParameterValue::ArrayDecimal>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(21));
-        auto&& vec51 = payload47;
-        auto ptr51 = (uint8_t*)(vec51.data());
-        auto len51 = (size_t)(vec51.size());
-        for (size_t i = 0; i < len51; ++i) {
-          auto base = ptr51 + i * (3*sizeof(void*));
-          auto&& iter_elem = vec51[i];
-          if ((iter_elem).has_value()) {
-            std::string_view payload49 = (std::move(iter_elem)).value().get_view();
-            *((int8_t*)(base + 0)) = (int32_t(1));
-            auto&& vec50 = payload49;
-            auto ptr50 = (uint8_t*)(vec50.data());
-            auto len50 = (size_t)(vec50.size());
-            *((size_t*)(base + (2*sizeof(void*)))) = len50;
-            *((uint8_t**)(base + sizeof(void*))) = ptr50;
+        auto& payload47 = std::get<postgres::ParameterValue::ArrayDecimal>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(21));
+        auto&& _vec51 = payload47;
+        auto _ptr51 = (uint8_t*)(_vec51.data());
+        auto _len51 = (size_t)(_vec51.size());
+        for (size_t i = 0; i < _len51; ++i) {
+          auto _base = _ptr51 + i * (3*sizeof(void*));
+          auto&& _iter_elem = _vec51[i];
+          if ((_iter_elem).has_value()) {
+            std::string_view payload49 = (std::move(_iter_elem)).value().get_view();
+            *((int8_t*)(_base + 0)) = (int32_t(1));
+            auto&& _vec50 = payload49;
+            auto _ptr50 = (uint8_t*)(_vec50.data());
+            auto _len50 = (size_t)(_vec50.size());
+            *((size_t*)(_base + (2*sizeof(void*)))) = _len50;
+            *((uint8_t**)(_base + sizeof(void*))) = _ptr50;
           } else {
-            *((int8_t*)(base + 0)) = (int32_t(0));
+            *((int8_t*)(_base + 0)) = (int32_t(0));
           }
 
         }
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len51;
-        *((uint8_t**)(base + 8)) = ptr51;
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len51;
+        *((uint8_t**)(_base + 8)) = _ptr51;
         break;
       }
       case 22: {
-        auto& payload52 = std::get<postgres::ParameterValue::ArrayStr>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(22));
-        auto&& vec56 = payload52;
-        auto ptr56 = (uint8_t*)(vec56.data());
-        auto len56 = (size_t)(vec56.size());
-        for (size_t i = 0; i < len56; ++i) {
-          auto base = ptr56 + i * (3*sizeof(void*));
-          auto&& iter_elem = vec56[i];
-          if ((iter_elem).has_value()) {
-            std::string_view payload54 = (std::move(iter_elem)).value().get_view();
-            *((int8_t*)(base + 0)) = (int32_t(1));
-            auto&& vec55 = payload54;
-            auto ptr55 = (uint8_t*)(vec55.data());
-            auto len55 = (size_t)(vec55.size());
-            *((size_t*)(base + (2*sizeof(void*)))) = len55;
-            *((uint8_t**)(base + sizeof(void*))) = ptr55;
+        auto& payload52 = std::get<postgres::ParameterValue::ArrayStr>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(22));
+        auto&& _vec56 = payload52;
+        auto _ptr56 = (uint8_t*)(_vec56.data());
+        auto _len56 = (size_t)(_vec56.size());
+        for (size_t i = 0; i < _len56; ++i) {
+          auto _base = _ptr56 + i * (3*sizeof(void*));
+          auto&& _iter_elem = _vec56[i];
+          if ((_iter_elem).has_value()) {
+            std::string_view payload54 = (std::move(_iter_elem)).value().get_view();
+            *((int8_t*)(_base + 0)) = (int32_t(1));
+            auto&& _vec55 = payload54;
+            auto _ptr55 = (uint8_t*)(_vec55.data());
+            auto _len55 = (size_t)(_vec55.size());
+            *((size_t*)(_base + (2*sizeof(void*)))) = _len55;
+            *((uint8_t**)(_base + sizeof(void*))) = _ptr55;
           } else {
-            *((int8_t*)(base + 0)) = (int32_t(0));
+            *((int8_t*)(_base + 0)) = (int32_t(0));
           }
 
         }
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len56;
-        *((uint8_t**)(base + 8)) = ptr56;
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len56;
+        *((uint8_t**)(_base + 8)) = _ptr56;
         break;
       }
       case 23: {
-        auto& payload57 = std::get<postgres::ParameterValue::Interval>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(23));
-        *((int64_t*)(base + 8)) = (int64_t((payload57).micros));
-        *((int32_t*)(base + 16)) = (int32_t((payload57).days));
-        *((int32_t*)(base + 20)) = (int32_t((payload57).months));
+        auto& payload57 = std::get<postgres::ParameterValue::Interval>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(23));
+        *((int64_t*)(_base + 8)) = (int64_t((payload57).micros));
+        *((int32_t*)(_base + 16)) = (int32_t((payload57).days));
+        *((int32_t*)(_base + 20)) = (int32_t((payload57).months));
         break;
       }
       case 24: {
-        *((int8_t*)(base + 0)) = (int32_t(24));
+        *((int8_t*)(_base + 0)) = (int32_t(24));
         break;
       }
     }
 
   }
   uint8_t* ptr60 = (uint8_t*)(&ret_area);
-  __wasm_import_spinX3ApostgresX2FpostgresX404X2E0X2E0X00X5BmethodX5DconnectionX2Eexecute((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr59), std::move(len59), std::move(ptr60));
+  __wasm_import_spinX3ApostgresX2FpostgresX404X2E0X2E0X00X5BmethodX5DconnectionX2Eexecute((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(_ptr59), std::move(_len59), std::move(ptr60));
   std::optional<std::expected<uint64_t, postgres::Error>> result78_opt;
   if ((int32_t) (*((uint8_t*) (ptr60 + 0)))==0) {
     
@@ -2416,68 +2416,68 @@ std::expected<uint64_t, spin::postgres4_0_0::postgres::Error> spin::postgres4_0_
   } else {
     std::optional<postgres::Error> variant77_opt;
     switch ((int32_t) (*((uint8_t*) (ptr60 + 8)))) {
-      case 0: { auto len61 = *((size_t*) (ptr60 + (8+2*sizeof(void*))));
+      case 0: { auto _len61 = *((size_t*) (ptr60 + (8+2*sizeof(void*))));
 
 
-      variant77_opt = postgres::Error{{postgres::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr60 + (8+1*sizeof(void*))))), len61)}}};
+      variant77_opt = postgres::Error{{postgres::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr60 + (8+1*sizeof(void*))))), _len61)}}};
     } break;
-    case 1: { auto len62 = *((size_t*) (ptr60 + (8+2*sizeof(void*))));
+    case 1: { auto _len62 = *((size_t*) (ptr60 + (8+2*sizeof(void*))));
 
 
-    variant77_opt = postgres::Error{{postgres::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr60 + (8+1*sizeof(void*))))), len62)}}};
+    variant77_opt = postgres::Error{{postgres::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr60 + (8+1*sizeof(void*))))), _len62)}}};
   } break;
   case 2: { std::optional<postgres::QueryError> variant74_opt;
   switch ((int32_t) (*((uint8_t*) (ptr60 + (8+1*sizeof(void*)))))) {
-    case 0: { auto len63 = *((size_t*) (ptr60 + (8+3*sizeof(void*))));
+    case 0: { auto _len63 = *((size_t*) (ptr60 + (8+3*sizeof(void*))));
 
 
-    variant74_opt = postgres::QueryError{{postgres::QueryError::Text{wit::string((char const*)(*((uint8_t**) (ptr60 + (8+2*sizeof(void*))))), len63)}}};
+    variant74_opt = postgres::QueryError{{postgres::QueryError::Text{wit::string((char const*)(*((uint8_t**) (ptr60 + (8+2*sizeof(void*))))), _len63)}}};
   } break;
-  case 1: { auto len64 = *((size_t*) (ptr60 + (8+3*sizeof(void*))));
+  case 1: { auto _len64 = *((size_t*) (ptr60 + (8+3*sizeof(void*))));
 
-  auto len65 = *((size_t*) (ptr60 + (8+5*sizeof(void*))));
+  auto _len65 = *((size_t*) (ptr60 + (8+5*sizeof(void*))));
 
-  auto len66 = *((size_t*) (ptr60 + (8+7*sizeof(void*))));
+  auto _len66 = *((size_t*) (ptr60 + (8+7*sizeof(void*))));
 
-  auto len67 = *((size_t*) (ptr60 + (8+9*sizeof(void*))));
+  auto _len67 = *((size_t*) (ptr60 + (8+9*sizeof(void*))));
 
   std::optional<wit::string> option69;
   if ((int32_t) (*((uint8_t*) (ptr60 + (8+10*sizeof(void*)))))) {
-    auto len68 = *((size_t*) (ptr60 + (8+12*sizeof(void*))));
+    auto _len68 = *((size_t*) (ptr60 + (8+12*sizeof(void*))));
 
 
-    option69.emplace(wit::string((char const*)(*((uint8_t**) (ptr60 + (8+11*sizeof(void*))))), len68));
+    option69.emplace(wit::string((char const*)(*((uint8_t**) (ptr60 + (8+11*sizeof(void*))))), _len68));
   }
-  auto base73 = *((uint8_t**) (ptr60 + (8+13*sizeof(void*))));
-  auto len73 = *((size_t*) (ptr60 + (8+14*sizeof(void*))));
-  auto result73 = wit::vector<std::tuple<wit::string, wit::string>>::allocate(len73);
-  for (unsigned i=0; i<len73; ++i) {
-    auto base = base73 + i * (4*sizeof(void*));
-    auto len70 = *((size_t*) (base + sizeof(void*)));
+  auto _base73 = *((uint8_t**) (ptr60 + (8+13*sizeof(void*))));
+  auto _len73 = *((size_t*) (ptr60 + (8+14*sizeof(void*))));
+  auto _result73 = wit::vector<std::tuple<wit::string, wit::string>>::allocate(_len73);
+  for (unsigned i=0; i<_len73; ++i) {
+    auto _base = _base73 + i * (4*sizeof(void*));
+    auto _len70 = *((size_t*) (_base + sizeof(void*)));
 
-    auto len71 = *((size_t*) (base + (3*sizeof(void*))));
+    auto _len71 = *((size_t*) (_base + (3*sizeof(void*))));
 
-    auto tuple72 = std::tuple<wit::string, wit::string>(wit::string((char const*)(*((uint8_t**) (base + 0))), len70), wit::string((char const*)(*((uint8_t**) (base + (2*sizeof(void*))))), len71));
-    auto e73 = std::move(tuple72);
-    result73.initialize(i, std::move(e73));
+    auto tuple72 = std::tuple<wit::string, wit::string>(wit::string((char const*)(*((uint8_t**) (_base + 0))), _len70), wit::string((char const*)(*((uint8_t**) (_base + (2*sizeof(void*))))), _len71));
+    auto _e73 = std::move(tuple72);
+    _result73.initialize(i, std::move(_e73));
   }
 
-  variant74_opt = postgres::QueryError{{postgres::QueryError::DbError{postgres::DbError{wit::string((char const*)(*((uint8_t**) (ptr60 + (8+2*sizeof(void*))))), len64), wit::string((char const*)(*((uint8_t**) (ptr60 + (8+4*sizeof(void*))))), len65), wit::string((char const*)(*((uint8_t**) (ptr60 + (8+6*sizeof(void*))))), len66), wit::string((char const*)(*((uint8_t**) (ptr60 + (8+8*sizeof(void*))))), len67), std::move(option69), std::move(result73), }}}};
+  variant74_opt = postgres::QueryError{{postgres::QueryError::DbError{postgres::DbError{wit::string((char const*)(*((uint8_t**) (ptr60 + (8+2*sizeof(void*))))), _len64), wit::string((char const*)(*((uint8_t**) (ptr60 + (8+4*sizeof(void*))))), _len65), wit::string((char const*)(*((uint8_t**) (ptr60 + (8+6*sizeof(void*))))), _len66), wit::string((char const*)(*((uint8_t**) (ptr60 + (8+8*sizeof(void*))))), _len67), std::move(option69), std::move(_result73), }}}};
 } break;
 }
 postgres::QueryError variant74 = std::move(*variant74_opt);
 
 variant77_opt = postgres::Error{{postgres::Error::QueryFailed{std::move(variant74)}}};
 } break;
-case 3: { auto len75 = *((size_t*) (ptr60 + (8+2*sizeof(void*))));
+case 3: { auto _len75 = *((size_t*) (ptr60 + (8+2*sizeof(void*))));
 
 
-variant77_opt = postgres::Error{{postgres::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr60 + (8+1*sizeof(void*))))), len75)}}};
+variant77_opt = postgres::Error{{postgres::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr60 + (8+1*sizeof(void*))))), _len75)}}};
 } break;
-case 4: { auto len76 = *((size_t*) (ptr60 + (8+2*sizeof(void*))));
+case 4: { auto _len76 = *((size_t*) (ptr60 + (8+2*sizeof(void*))));
 
 
-variant77_opt = postgres::Error{{postgres::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr60 + (8+1*sizeof(void*))))), len76)}}};
+variant77_opt = postgres::Error{{postgres::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr60 + (8+1*sizeof(void*))))), _len76)}}};
 } break;
 }
 postgres::Error variant77 = std::move(*variant77_opt);
@@ -2498,11 +2498,11 @@ spin::sqlite::sqlite::Connection::~Connection()
 std::expected<spin::sqlite::sqlite::Connection, spin::sqlite::sqlite::Error> spin::sqlite::sqlite::Connection::Open(std::string_view database)
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = database;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = database;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_spinX3AsqliteX2FsqliteX403X2E0X2E0X00X5BstaticX5DconnectionX2Eopen(std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_spinX3AsqliteX2FsqliteX403X2E0X2E0X00X5BstaticX5DconnectionX2Eopen(std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<sqlite::Connection, sqlite::Error>> result5_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     int32_t l2 = *((int32_t const*)(ptr1 + sizeof(void*)));
@@ -2523,10 +2523,10 @@ std::expected<spin::sqlite::sqlite::Connection, spin::sqlite::sqlite::Error> spi
       case 3: { 
         variant4_opt = sqlite::Error{{sqlite::Error::DatabaseFull{}}};
       } break;
-      case 4: { auto len3 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      case 4: { auto _len3 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-      variant4_opt = sqlite::Error{{sqlite::Error::Io{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len3)}}};
+      variant4_opt = sqlite::Error{{sqlite::Error::Io{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len3)}}};
     } break;
   }
   sqlite::Error variant4 = std::move(*variant4_opt);
@@ -2540,109 +2540,109 @@ return result6;
 std::expected<spin::sqlite::sqlite::QueryResult, spin::sqlite::sqlite::Error> spin::sqlite::sqlite::Connection::Execute(std::string_view statement, std::span<sqlite::Value const> parameters) const
 {
   uintptr_t ret_area[((5*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = statement;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec8 = parameters;
-  auto ptr8 = (uint8_t*)(vec8.data());
-  auto len8 = (size_t)(vec8.size());
-  for (size_t i = 0; i < len8; ++i) {
-    auto base = ptr8 + i * (8+2*sizeof(void*));
-    auto&& iter_elem = vec8[i];
-    switch ((int32_t) (iter_elem).variants.index()) {
+  auto&& _vec0 = statement;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec8 = parameters;
+  auto _ptr8 = (uint8_t*)(_vec8.data());
+  auto _len8 = (size_t)(_vec8.size());
+  for (size_t i = 0; i < _len8; ++i) {
+    auto _base = _ptr8 + i * (8+2*sizeof(void*));
+    auto&& _iter_elem = _vec8[i];
+    switch ((int32_t) (_iter_elem).variants.index()) {
       case 0: {
-        auto& payload1 = std::get<sqlite::Value::Integer>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(0));
-        *((int64_t*)(base + 8)) = (int64_t(payload1));
+        auto& payload1 = std::get<sqlite::Value::Integer>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(0));
+        *((int64_t*)(_base + 8)) = (int64_t(payload1));
         break;
       }
       case 1: {
-        auto& payload2 = std::get<sqlite::Value::Real>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(1));
-        *((double*)(base + 8)) = (double(payload2));
+        auto& payload2 = std::get<sqlite::Value::Real>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(1));
+        *((double*)(_base + 8)) = (double(payload2));
         break;
       }
       case 2: {
-        auto& payload3 = std::get<sqlite::Value::Text>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(2));
-        auto&& vec4 = payload3;
-        auto ptr4 = (uint8_t*)(vec4.data());
-        auto len4 = (size_t)(vec4.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len4;
-        *((uint8_t**)(base + 8)) = ptr4;
+        auto& payload3 = std::get<sqlite::Value::Text>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(2));
+        auto&& _vec4 = payload3;
+        auto _ptr4 = (uint8_t*)(_vec4.data());
+        auto _len4 = (size_t)(_vec4.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len4;
+        *((uint8_t**)(_base + 8)) = _ptr4;
         break;
       }
       case 3: {
-        auto& payload5 = std::get<sqlite::Value::Blob>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(3));
-        auto&& vec6 = payload5;
-        auto ptr6 = (uint8_t*)(vec6.data());
-        auto len6 = (size_t)(vec6.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len6;
-        *((uint8_t**)(base + 8)) = ptr6;
+        auto& payload5 = std::get<sqlite::Value::Blob>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(3));
+        auto&& _vec6 = payload5;
+        auto _ptr6 = (uint8_t*)(_vec6.data());
+        auto _len6 = (size_t)(_vec6.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len6;
+        *((uint8_t**)(_base + 8)) = _ptr6;
         break;
       }
       case 4: {
-        *((int8_t*)(base + 0)) = (int32_t(4));
+        *((int8_t*)(_base + 0)) = (int32_t(4));
         break;
       }
     }
 
   }
   uint8_t* ptr9 = (uint8_t*)(&ret_area);
-  __wasm_import_spinX3AsqliteX2FsqliteX403X2E0X2E0X00X5BmethodX5DconnectionX2Eexecute((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr8), std::move(len8), std::move(ptr9));
+  __wasm_import_spinX3AsqliteX2FsqliteX403X2E0X2E0X00X5BmethodX5DconnectionX2Eexecute((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(_ptr8), std::move(_len8), std::move(ptr9));
   std::optional<std::expected<sqlite::QueryResult, sqlite::Error>> result19_opt;
   if ((int32_t) (*((uint8_t*) (ptr9 + 0)))==0) {
-    auto base11 = *((uint8_t**) (ptr9 + sizeof(void*)));
-    auto len11 = *((size_t*) (ptr9 + (2*sizeof(void*))));
-    auto result11 = wit::vector<wit::string>::allocate(len11);
-    for (unsigned i=0; i<len11; ++i) {
-      auto base = base11 + i * (2*sizeof(void*));
-      auto len10 = *((size_t*) (base + sizeof(void*)));
+    auto _base11 = *((uint8_t**) (ptr9 + sizeof(void*)));
+    auto _len11 = *((size_t*) (ptr9 + (2*sizeof(void*))));
+    auto _result11 = wit::vector<wit::string>::allocate(_len11);
+    for (unsigned i=0; i<_len11; ++i) {
+      auto _base = _base11 + i * (2*sizeof(void*));
+      auto _len10 = *((size_t*) (_base + sizeof(void*)));
 
-      auto e11 = wit::string((char const*)(*((uint8_t**) (base + 0))), len10);
-      result11.initialize(i, std::move(e11));
+      auto _e11 = wit::string((char const*)(*((uint8_t**) (_base + 0))), _len10);
+      _result11.initialize(i, std::move(_e11));
     }
-    auto base16 = *((uint8_t**) (ptr9 + (3*sizeof(void*))));
-    auto len16 = *((size_t*) (ptr9 + (4*sizeof(void*))));
-    auto result16 = wit::vector<sqlite::RowResult>::allocate(len16);
-    for (unsigned i=0; i<len16; ++i) {
-      auto base = base16 + i * (2*sizeof(void*));
-      auto base15 = *((uint8_t**) (base + 0));
-      auto len15 = *((size_t*) (base + sizeof(void*)));
-      auto result15 = wit::vector<sqlite::Value>::allocate(len15);
-      for (unsigned i=0; i<len15; ++i) {
-        auto base = base15 + i * (8+2*sizeof(void*));
+    auto _base16 = *((uint8_t**) (ptr9 + (3*sizeof(void*))));
+    auto _len16 = *((size_t*) (ptr9 + (4*sizeof(void*))));
+    auto _result16 = wit::vector<sqlite::RowResult>::allocate(_len16);
+    for (unsigned i=0; i<_len16; ++i) {
+      auto _base = _base16 + i * (2*sizeof(void*));
+      auto _base15 = *((uint8_t**) (_base + 0));
+      auto _len15 = *((size_t*) (_base + sizeof(void*)));
+      auto _result15 = wit::vector<sqlite::Value>::allocate(_len15);
+      for (unsigned i=0; i<_len15; ++i) {
+        auto _base = _base15 + i * (8+2*sizeof(void*));
         std::optional<sqlite::Value> variant14_opt;
-        switch ((int32_t) (*((uint8_t*) (base + 0)))) {
+        switch ((int32_t) (*((uint8_t*) (_base + 0)))) {
           case 0: { 
-            variant14_opt = sqlite::Value{{sqlite::Value::Integer{(int64_t(*((int64_t*) (base + 8))))}}};
+            variant14_opt = sqlite::Value{{sqlite::Value::Integer{(int64_t(*((int64_t*) (_base + 8))))}}};
           } break;
           case 1: { 
-            variant14_opt = sqlite::Value{{sqlite::Value::Real{(double(*((double*) (base + 8))))}}};
+            variant14_opt = sqlite::Value{{sqlite::Value::Real{(double(*((double*) (_base + 8))))}}};
           } break;
-          case 2: { auto len12 = *((size_t*) (base + (8+1*sizeof(void*))));
+          case 2: { auto _len12 = *((size_t*) (_base + (8+1*sizeof(void*))));
 
 
-          variant14_opt = sqlite::Value{{sqlite::Value::Text{wit::string((char const*)(*((uint8_t**) (base + 8))), len12)}}};
+          variant14_opt = sqlite::Value{{sqlite::Value::Text{wit::string((char const*)(*((uint8_t**) (_base + 8))), _len12)}}};
         } break;
-        case 3: { auto len13 = *((size_t*) (base + (8+1*sizeof(void*))));
+        case 3: { auto _len13 = *((size_t*) (_base + (8+1*sizeof(void*))));
 
-        variant14_opt = sqlite::Value{{sqlite::Value::Blob{wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (base + 8))), len13)}}};
+        variant14_opt = sqlite::Value{{sqlite::Value::Blob{wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (_base + 8))), _len13)}}};
       } break;
       case 4: { 
         variant14_opt = sqlite::Value{{sqlite::Value::Null{}}};
       } break;
     }
     sqlite::Value variant14 = std::move(*variant14_opt);
-    auto e15 = std::move(variant14);
-    result15.initialize(i, std::move(e15));
+    auto _e15 = std::move(variant14);
+    _result15.initialize(i, std::move(_e15));
   }
-  auto e16 = sqlite::RowResult{std::move(result15), };
-  result16.initialize(i, std::move(e16));
+  auto _e16 = sqlite::RowResult{std::move(_result15), };
+  _result16.initialize(i, std::move(_e16));
 }
 
-result19_opt.emplace(std::expected<sqlite::QueryResult, sqlite::Error>(sqlite::QueryResult{std::move(result11), std::move(result16), }));
+result19_opt.emplace(std::expected<sqlite::QueryResult, sqlite::Error>(sqlite::QueryResult{std::move(_result11), std::move(_result16), }));
 } else {
 std::optional<sqlite::Error> variant18_opt;
 switch ((int32_t) (*((uint8_t*) (ptr9 + sizeof(void*))))) {
@@ -2658,10 +2658,10 @@ switch ((int32_t) (*((uint8_t*) (ptr9 + sizeof(void*))))) {
   case 3: { 
     variant18_opt = sqlite::Error{{sqlite::Error::DatabaseFull{}}};
   } break;
-  case 4: { auto len17 = *((size_t*) (ptr9 + (3*sizeof(void*))));
+  case 4: { auto _len17 = *((size_t*) (ptr9 + (3*sizeof(void*))));
 
 
-  variant18_opt = sqlite::Error{{sqlite::Error::Io{wit::string((char const*)(*((uint8_t**) (ptr9 + (2*sizeof(void*))))), len17)}}};
+  variant18_opt = sqlite::Error{{sqlite::Error::Io{wit::string((char const*)(*((uint8_t**) (ptr9 + (2*sizeof(void*))))), _len17)}}};
 } break;
 }
 sqlite::Error variant18 = std::move(*variant18_opt);
@@ -2686,34 +2686,34 @@ spin::sqlite::sqlite::Connection::Connection(wit::ResourceImportBase&&b) : wit::
 std::expected<std::optional<wit::string>, wasi::config::store::Error> wasi::config::store::Get(std::string_view key)
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = key;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = key;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AconfigX2FstoreX400X2E2X2E0_draft_2024_09_27X00get(std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_wasiX3AconfigX2FstoreX400X2E2X2E0_draft_2024_09_27X00get(std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<std::optional<wit::string>, Error>> result7_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     std::optional<wit::string> option3;
     if ((int32_t) (*((uint8_t*) (ptr1 + sizeof(void*))))) {
-      auto len2 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      auto _len2 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-      option3.emplace(wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len2));
+      option3.emplace(wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len2));
     }
 
     result7_opt.emplace(std::expected<std::optional<wit::string>, Error>(std::move(option3)));
   } else {
     std::optional<Error> variant6_opt;
     switch ((int32_t) (*((uint8_t*) (ptr1 + sizeof(void*))))) {
-      case 0: { auto len4 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      case 0: { auto _len4 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-      variant6_opt = Error{{Error::Upstream{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len4)}}};
+      variant6_opt = Error{{Error::Upstream{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len4)}}};
     } break;
-    case 1: { auto len5 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+    case 1: { auto _len5 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-    variant6_opt = Error{{Error::Io{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len5)}}};
+    variant6_opt = Error{{Error::Io{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len5)}}};
   } break;
 }
 Error variant6 = std::move(*variant6_opt);
@@ -2731,33 +2731,33 @@ std::expected<wit::vector<std::tuple<wit::string, wit::string>>, wasi::config::s
   __wasm_import_wasiX3AconfigX2FstoreX400X2E2X2E0_draft_2024_09_27X00get_all(std::move(ptr0));
   std::optional<std::expected<wit::vector<std::tuple<wit::string, wit::string>>, Error>> result8_opt;
   if ((int32_t) (*((uint8_t*) (ptr0 + 0)))==0) {
-    auto base4 = *((uint8_t**) (ptr0 + sizeof(void*)));
-    auto len4 = *((size_t*) (ptr0 + (2*sizeof(void*))));
-    auto result4 = wit::vector<std::tuple<wit::string, wit::string>>::allocate(len4);
-    for (unsigned i=0; i<len4; ++i) {
-      auto base = base4 + i * (4*sizeof(void*));
-      auto len1 = *((size_t*) (base + sizeof(void*)));
+    auto _base4 = *((uint8_t**) (ptr0 + sizeof(void*)));
+    auto _len4 = *((size_t*) (ptr0 + (2*sizeof(void*))));
+    auto _result4 = wit::vector<std::tuple<wit::string, wit::string>>::allocate(_len4);
+    for (unsigned i=0; i<_len4; ++i) {
+      auto _base = _base4 + i * (4*sizeof(void*));
+      auto _len1 = *((size_t*) (_base + sizeof(void*)));
 
-      auto len2 = *((size_t*) (base + (3*sizeof(void*))));
+      auto _len2 = *((size_t*) (_base + (3*sizeof(void*))));
 
-      auto tuple3 = std::tuple<wit::string, wit::string>(wit::string((char const*)(*((uint8_t**) (base + 0))), len1), wit::string((char const*)(*((uint8_t**) (base + (2*sizeof(void*))))), len2));
-      auto e4 = std::move(tuple3);
-      result4.initialize(i, std::move(e4));
+      auto tuple3 = std::tuple<wit::string, wit::string>(wit::string((char const*)(*((uint8_t**) (_base + 0))), _len1), wit::string((char const*)(*((uint8_t**) (_base + (2*sizeof(void*))))), _len2));
+      auto _e4 = std::move(tuple3);
+      _result4.initialize(i, std::move(_e4));
     }
 
-    result8_opt.emplace(std::expected<wit::vector<std::tuple<wit::string, wit::string>>, Error>(std::move(result4)));
+    result8_opt.emplace(std::expected<wit::vector<std::tuple<wit::string, wit::string>>, Error>(std::move(_result4)));
   } else {
     std::optional<Error> variant7_opt;
     switch ((int32_t) (*((uint8_t*) (ptr0 + sizeof(void*))))) {
-      case 0: { auto len5 = *((size_t*) (ptr0 + (3*sizeof(void*))));
+      case 0: { auto _len5 = *((size_t*) (ptr0 + (3*sizeof(void*))));
 
 
-      variant7_opt = Error{{Error::Upstream{wit::string((char const*)(*((uint8_t**) (ptr0 + (2*sizeof(void*))))), len5)}}};
+      variant7_opt = Error{{Error::Upstream{wit::string((char const*)(*((uint8_t**) (ptr0 + (2*sizeof(void*))))), _len5)}}};
     } break;
-    case 1: { auto len6 = *((size_t*) (ptr0 + (3*sizeof(void*))));
+    case 1: { auto _len6 = *((size_t*) (ptr0 + (3*sizeof(void*))));
 
 
-    variant7_opt = Error{{Error::Io{wit::string((char const*)(*((uint8_t**) (ptr0 + (2*sizeof(void*))))), len6)}}};
+    variant7_opt = Error{{Error::Io{wit::string((char const*)(*((uint8_t**) (ptr0 + (2*sizeof(void*))))), _len6)}}};
   } break;
 }
 Error variant7 = std::move(*variant7_opt);
@@ -2787,19 +2787,19 @@ wasi::io0_2_0::poll::Pollable::Pollable(wit::ResourceImportBase&&b) : wit::Resou
 wit::vector<uint32_t> wasi::io0_2_0::poll::Poll(std::span<std::reference_wrapper<const Pollable> const> in)
 {
   uintptr_t ret_area[((2*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = in;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  for (size_t i = 0; i < len0; ++i) {
-    auto base = ptr0 + i * 4;
-    auto&& iter_elem = vec0[i];
-    *((int32_t*)(base + 0)) = iter_elem.get().get_handle();
+  auto&& _vec0 = in;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  for (size_t i = 0; i < _len0; ++i) {
+    auto _base = _ptr0 + i * 4;
+    auto&& _iter_elem = _vec0[i];
+    *((int32_t*)(_base + 0)) = _iter_elem.get().get_handle();
 
   }
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AioX2FpollX400X2E2X2E0X00poll(std::move(ptr0), std::move(len0), std::move(ptr1));
-  auto len2 = *((size_t*) (ptr1 + sizeof(void*)));
-  auto result3 = wit::vector<uint32_t>((uint32_t*)(*((uint8_t**) (ptr1 + 0))), len2);
+  __wasm_import_wasiX3AioX2FpollX400X2E2X2E0X00poll(std::move(_ptr0), std::move(_len0), std::move(ptr1));
+  auto _len2 = *((size_t*) (ptr1 + sizeof(void*)));
+  auto result3 = wit::vector<uint32_t>((uint32_t*)(*((uint8_t**) (ptr1 + 0))), _len2);
   return result3;
 }
 uint64_t wasi::clocks0_2_0::monotonic_clock::Now()
@@ -2833,9 +2833,9 @@ wit::string wasi::io0_2_0::error::Error::ToDebugString() const
   uintptr_t ret_area[((2*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
   uint8_t* ptr0 = (uint8_t*)(&ret_area);
   __wasm_import_wasiX3AioX2FerrorX400X2E2X2E0X00X5BmethodX5DerrorX2Eto_debug_string((*this).get_handle(), std::move(ptr0));
-  auto len1 = *((size_t*) (ptr0 + sizeof(void*)));
+  auto _len1 = *((size_t*) (ptr0 + sizeof(void*)));
 
-  auto result2 = wit::string((char const*)(*((uint8_t**) (ptr0 + 0))), len1);
+  auto result2 = wit::string((char const*)(*((uint8_t**) (ptr0 + 0))), _len1);
   return result2;
 }
 wasi::io0_2_0::error::Error::Error(wit::ResourceImportBase&&b) : wit::ResourceImportBase(std::move(b)) {}
@@ -2852,9 +2852,9 @@ std::expected<wit::vector<uint8_t>, wasi::io0_2_0::streams::StreamError> wasi::i
   __wasm_import_wasiX3AioX2FstreamsX400X2E2X2E0X00X5BmethodX5Dinput_streamX2Eread((*this).get_handle(), (int64_t(len)), std::move(ptr0));
   std::optional<std::expected<wit::vector<uint8_t>, streams::StreamError>> result4_opt;
   if ((int32_t) (*((uint8_t*) (ptr0 + 0)))==0) {
-    auto len1 = *((size_t*) (ptr0 + (2*sizeof(void*))));
+    auto _len1 = *((size_t*) (ptr0 + (2*sizeof(void*))));
 
-    result4_opt.emplace(std::expected<wit::vector<uint8_t>, streams::StreamError>(wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (ptr0 + sizeof(void*)))), len1)));
+    result4_opt.emplace(std::expected<wit::vector<uint8_t>, streams::StreamError>(wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (ptr0 + sizeof(void*)))), _len1)));
   } else {
     std::optional<streams::StreamError> variant3_opt;
     switch ((int32_t) (*((uint8_t*) (ptr0 + sizeof(void*))))) {
@@ -2881,9 +2881,9 @@ std::expected<wit::vector<uint8_t>, wasi::io0_2_0::streams::StreamError> wasi::i
   __wasm_import_wasiX3AioX2FstreamsX400X2E2X2E0X00X5BmethodX5Dinput_streamX2Eblocking_read((*this).get_handle(), (int64_t(len)), std::move(ptr0));
   std::optional<std::expected<wit::vector<uint8_t>, streams::StreamError>> result4_opt;
   if ((int32_t) (*((uint8_t*) (ptr0 + 0)))==0) {
-    auto len1 = *((size_t*) (ptr0 + (2*sizeof(void*))));
+    auto _len1 = *((size_t*) (ptr0 + (2*sizeof(void*))));
 
-    result4_opt.emplace(std::expected<wit::vector<uint8_t>, streams::StreamError>(wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (ptr0 + sizeof(void*)))), len1)));
+    result4_opt.emplace(std::expected<wit::vector<uint8_t>, streams::StreamError>(wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (ptr0 + sizeof(void*)))), _len1)));
   } else {
     std::optional<streams::StreamError> variant3_opt;
     switch ((int32_t) (*((uint8_t*) (ptr0 + sizeof(void*))))) {
@@ -3002,11 +3002,11 @@ return result4;
 std::expected<void, wasi::io0_2_0::streams::StreamError> wasi::io0_2_0::streams::OutputStream::Write(std::span<uint8_t const> contents) const
 {
   uint32_t ret_area[(12+sizeof(uint32_t)-1)/sizeof(uint32_t)];
-  auto&& vec0 = contents;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = contents;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AioX2FstreamsX400X2E2X2E0X00X5BmethodX5Doutput_streamX2Ewrite((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_wasiX3AioX2FstreamsX400X2E2X2E0X00X5BmethodX5Doutput_streamX2Ewrite((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<void, streams::StreamError>> result4_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     
@@ -3033,11 +3033,11 @@ return result5;
 std::expected<void, wasi::io0_2_0::streams::StreamError> wasi::io0_2_0::streams::OutputStream::BlockingWriteAndFlush(std::span<uint8_t const> contents) const
 {
   uint32_t ret_area[(12+sizeof(uint32_t)-1)/sizeof(uint32_t)];
-  auto&& vec0 = contents;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = contents;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AioX2FstreamsX400X2E2X2E0X00X5BmethodX5Doutput_streamX2Eblocking_write_and_flush((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_wasiX3AioX2FstreamsX400X2E2X2E0X00X5BmethodX5Doutput_streamX2Eblocking_write_and_flush((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<void, streams::StreamError>> result4_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     
@@ -3249,26 +3249,26 @@ wasi::http0_2_0::types::Fields::Fields()
 std::expected<wasi::http0_2_0::types::Fields, wasi::http0_2_0::types::HeaderError> wasi::http0_2_0::types::Fields::FromList(std::span<std::tuple<std::string_view, std::span<uint8_t const>> const> entries)
 {
   uint32_t ret_area[(8+sizeof(uint32_t)-1)/sizeof(uint32_t)];
-  auto&& vec2 = entries;
-  auto ptr2 = (uint8_t*)(vec2.data());
-  auto len2 = (size_t)(vec2.size());
-  for (size_t i = 0; i < len2; ++i) {
-    auto base = ptr2 + i * (4*sizeof(void*));
-    auto&& iter_elem = vec2[i];
-    auto&& vec0 = std::get<0>(iter_elem);
-    auto ptr0 = (uint8_t*)(vec0.data());
-    auto len0 = (size_t)(vec0.size());
-    *((size_t*)(base + sizeof(void*))) = len0;
-    *((uint8_t**)(base + 0)) = ptr0;
-    auto&& vec1 = std::get<1>(iter_elem);
-    auto ptr1 = (uint8_t*)(vec1.data());
-    auto len1 = (size_t)(vec1.size());
-    *((size_t*)(base + (3*sizeof(void*)))) = len1;
-    *((uint8_t**)(base + (2*sizeof(void*)))) = ptr1;
+  auto&& _vec2 = entries;
+  auto _ptr2 = (uint8_t*)(_vec2.data());
+  auto _len2 = (size_t)(_vec2.size());
+  for (size_t i = 0; i < _len2; ++i) {
+    auto _base = _ptr2 + i * (4*sizeof(void*));
+    auto&& _iter_elem = _vec2[i];
+    auto&& _vec0 = std::get<0>(_iter_elem);
+    auto _ptr0 = (uint8_t*)(_vec0.data());
+    auto _len0 = (size_t)(_vec0.size());
+    *((size_t*)(_base + sizeof(void*))) = _len0;
+    *((uint8_t**)(_base + 0)) = _ptr0;
+    auto&& _vec1 = std::get<1>(_iter_elem);
+    auto _ptr1 = (uint8_t*)(_vec1.data());
+    auto _len1 = (size_t)(_vec1.size());
+    *((size_t*)(_base + (3*sizeof(void*)))) = _len1;
+    *((uint8_t**)(_base + (2*sizeof(void*)))) = _ptr1;
 
   }
   uint8_t* ptr3 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BstaticX5DfieldsX2Efrom_list(std::move(ptr2), std::move(len2), std::move(ptr3));
+  __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BstaticX5DfieldsX2Efrom_list(std::move(_ptr2), std::move(_len2), std::move(ptr3));
   std::optional<std::expected<types::Fields, types::HeaderError>> result6_opt;
   if ((int32_t) (*((uint8_t*) (ptr3 + 0)))==0) {
     int32_t l4 = *((int32_t const*)(ptr3 + 4));
@@ -3298,52 +3298,52 @@ std::expected<wasi::http0_2_0::types::Fields, wasi::http0_2_0::types::HeaderErro
 wit::vector<wit::vector<uint8_t>> wasi::http0_2_0::types::Fields::Get(std::string_view name) const
 {
   uintptr_t ret_area[((2*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = name;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = name;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5DfieldsX2Eget((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1));
-  auto base3 = *((uint8_t**) (ptr1 + 0));
-  auto len3 = *((size_t*) (ptr1 + sizeof(void*)));
-  auto result3 = wit::vector<wit::vector<uint8_t>>::allocate(len3);
-  for (unsigned i=0; i<len3; ++i) {
-    auto base = base3 + i * (2*sizeof(void*));
-    auto len2 = *((size_t*) (base + sizeof(void*)));
-    auto e3 = wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (base + 0))), len2);
-    result3.initialize(i, std::move(e3));
+  __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5DfieldsX2Eget((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(ptr1));
+  auto _base3 = *((uint8_t**) (ptr1 + 0));
+  auto _len3 = *((size_t*) (ptr1 + sizeof(void*)));
+  auto _result3 = wit::vector<wit::vector<uint8_t>>::allocate(_len3);
+  for (unsigned i=0; i<_len3; ++i) {
+    auto _base = _base3 + i * (2*sizeof(void*));
+    auto _len2 = *((size_t*) (_base + sizeof(void*)));
+    auto _e3 = wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (_base + 0))), _len2);
+    _result3.initialize(i, std::move(_e3));
   }
-  auto result4 = std::move(result3);
+  auto result4 = std::move(_result3);
   return result4;
 }
 bool wasi::http0_2_0::types::Fields::Has(std::string_view name) const
 {
-  auto&& vec0 = name;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto ret = __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5DfieldsX2Ehas((*this).get_handle(), std::move(ptr0), std::move(len0));
+  auto&& _vec0 = name;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto ret = __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5DfieldsX2Ehas((*this).get_handle(), std::move(_ptr0), std::move(_len0));
   return (bool(ret));
 }
 std::expected<void, wasi::http0_2_0::types::HeaderError> wasi::http0_2_0::types::Fields::Set(std::string_view name, std::span<std::span<uint8_t const> const> value) const
 {
   uint8_t ret_area[(2+sizeof(uint8_t)-1)/sizeof(uint8_t)];
-  auto&& vec0 = name;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec2 = value;
-  auto ptr2 = (uint8_t*)(vec2.data());
-  auto len2 = (size_t)(vec2.size());
-  for (size_t i = 0; i < len2; ++i) {
-    auto base = ptr2 + i * (2*sizeof(void*));
-    auto&& iter_elem = vec2[i];
-    auto&& vec1 = iter_elem;
-    auto ptr1 = (uint8_t*)(vec1.data());
-    auto len1 = (size_t)(vec1.size());
-    *((size_t*)(base + sizeof(void*))) = len1;
-    *((uint8_t**)(base + 0)) = ptr1;
+  auto&& _vec0 = name;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec2 = value;
+  auto _ptr2 = (uint8_t*)(_vec2.data());
+  auto _len2 = (size_t)(_vec2.size());
+  for (size_t i = 0; i < _len2; ++i) {
+    auto _base = _ptr2 + i * (2*sizeof(void*));
+    auto&& _iter_elem = _vec2[i];
+    auto&& _vec1 = _iter_elem;
+    auto _ptr1 = (uint8_t*)(_vec1.data());
+    auto _len1 = (size_t)(_vec1.size());
+    *((size_t*)(_base + sizeof(void*))) = _len1;
+    *((uint8_t**)(_base + 0)) = _ptr1;
 
   }
   uint8_t* ptr3 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5DfieldsX2Eset((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr2), std::move(len2), std::move(ptr3));
+  __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5DfieldsX2Eset((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(_ptr2), std::move(_len2), std::move(ptr3));
   std::optional<std::expected<void, types::HeaderError>> result5_opt;
   if ((int32_t) (*((uint8_t*) (ptr3 + 0)))==0) {
     
@@ -3372,11 +3372,11 @@ std::expected<void, wasi::http0_2_0::types::HeaderError> wasi::http0_2_0::types:
 std::expected<void, wasi::http0_2_0::types::HeaderError> wasi::http0_2_0::types::Fields::Delete(std::string_view name) const
 {
   uint8_t ret_area[(2+sizeof(uint8_t)-1)/sizeof(uint8_t)];
-  auto&& vec0 = name;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = name;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5DfieldsX2Edelete((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5DfieldsX2Edelete((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<void, types::HeaderError>> result3_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     
@@ -3405,14 +3405,14 @@ std::expected<void, wasi::http0_2_0::types::HeaderError> wasi::http0_2_0::types:
 std::expected<void, wasi::http0_2_0::types::HeaderError> wasi::http0_2_0::types::Fields::Append(std::string_view name, std::span<uint8_t const> value) const
 {
   uint8_t ret_area[(2+sizeof(uint8_t)-1)/sizeof(uint8_t)];
-  auto&& vec0 = name;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec1 = value;
-  auto ptr1 = (uint8_t*)(vec1.data());
-  auto len1 = (size_t)(vec1.size());
+  auto&& _vec0 = name;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec1 = value;
+  auto _ptr1 = (uint8_t*)(_vec1.data());
+  auto _len1 = (size_t)(_vec1.size());
   uint8_t* ptr2 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5DfieldsX2Eappend((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1), std::move(len1), std::move(ptr2));
+  __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5DfieldsX2Eappend((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(_ptr1), std::move(_len1), std::move(ptr2));
   std::optional<std::expected<void, types::HeaderError>> result4_opt;
   if ((int32_t) (*((uint8_t*) (ptr2 + 0)))==0) {
     
@@ -3443,19 +3443,19 @@ wit::vector<std::tuple<wit::string, wit::vector<uint8_t>>> wasi::http0_2_0::type
   uintptr_t ret_area[((2*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
   uint8_t* ptr0 = (uint8_t*)(&ret_area);
   __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5DfieldsX2Eentries((*this).get_handle(), std::move(ptr0));
-  auto base4 = *((uint8_t**) (ptr0 + 0));
-  auto len4 = *((size_t*) (ptr0 + sizeof(void*)));
-  auto result4 = wit::vector<std::tuple<wit::string, wit::vector<uint8_t>>>::allocate(len4);
-  for (unsigned i=0; i<len4; ++i) {
-    auto base = base4 + i * (4*sizeof(void*));
-    auto len1 = *((size_t*) (base + sizeof(void*)));
+  auto _base4 = *((uint8_t**) (ptr0 + 0));
+  auto _len4 = *((size_t*) (ptr0 + sizeof(void*)));
+  auto _result4 = wit::vector<std::tuple<wit::string, wit::vector<uint8_t>>>::allocate(_len4);
+  for (unsigned i=0; i<_len4; ++i) {
+    auto _base = _base4 + i * (4*sizeof(void*));
+    auto _len1 = *((size_t*) (_base + sizeof(void*)));
 
-    auto len2 = *((size_t*) (base + (3*sizeof(void*))));
-    auto tuple3 = std::tuple<wit::string, wit::vector<uint8_t>>(wit::string((char const*)(*((uint8_t**) (base + 0))), len1), wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (base + (2*sizeof(void*))))), len2));
-    auto e4 = std::move(tuple3);
-    result4.initialize(i, std::move(e4));
+    auto _len2 = *((size_t*) (_base + (3*sizeof(void*))));
+    auto tuple3 = std::tuple<wit::string, wit::vector<uint8_t>>(wit::string((char const*)(*((uint8_t**) (_base + 0))), _len1), wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (_base + (2*sizeof(void*))))), _len2));
+    auto _e4 = std::move(tuple3);
+    _result4.initialize(i, std::move(_e4));
   }
-  auto result5 = std::move(result4);
+  auto result5 = std::move(_result4);
   return result5;
 }
 wasi::http0_2_0::types::Fields wasi::http0_2_0::types::Fields::Clone() const
@@ -3464,6 +3464,342 @@ wasi::http0_2_0::types::Fields wasi::http0_2_0::types::Fields::Clone() const
   return wit::ResourceImportBase{ret};
 }
 wasi::http0_2_0::types::Fields::Fields(wit::ResourceImportBase&&b) : wit::ResourceImportBase(std::move(b)) {}
+wasi::http0_2_0::types::FutureTrailers::~FutureTrailers()
+{
+  if (handle>=0) {
+    __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Dfuture_trailers(handle);
+  }
+}
+wasi::io0_2_0::poll::Pollable wasi::http0_2_0::types::FutureTrailers::Subscribe() const
+{
+  auto ret = __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Dfuture_trailersX2Esubscribe((*this).get_handle());
+  return wit::ResourceImportBase{ret};
+}
+std::optional<std::expected<std::expected<std::optional<wasi::http0_2_0::types::Fields>, wasi::http0_2_0::types::ErrorCode>, wit::Void>> wasi::http0_2_0::types::FutureTrailers::Get() const
+{
+  uint64_t ret_area[((40+4*sizeof(void*))+sizeof(uint64_t)-1)/sizeof(uint64_t)];
+  uint8_t* ptr0 = (uint8_t*)(&ret_area);
+  __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Dfuture_trailersX2Eget((*this).get_handle(), std::move(ptr0));
+  std::optional<std::expected<std::expected<std::optional<types::Fields>, types::ErrorCode>, wit::Void>> option45;
+  if ((int32_t) (*((uint8_t*) (ptr0 + 0)))) {
+    std::optional<std::expected<std::expected<std::optional<types::Fields>, types::ErrorCode>, wit::Void>> result44_opt;
+    if ((int32_t) (*((uint8_t*) (ptr0 + 8)))==0) {
+      std::optional<std::expected<std::optional<types::Fields>, types::ErrorCode>> result43_opt;
+      if ((int32_t) (*((uint8_t*) (ptr0 + 16)))==0) {
+        std::optional<types::Fields> option2;
+        if ((int32_t) (*((uint8_t*) (ptr0 + 24)))) {
+          int32_t l1 = *((int32_t const*)(ptr0 + 28));
+
+          option2.emplace(wit::ResourceImportBase{l1});
+        }
+
+        result43_opt.emplace(std::expected<std::optional<types::Fields>, types::ErrorCode>(std::move(option2)));
+      } else {
+        std::optional<types::ErrorCode> variant42_opt;
+        switch ((int32_t) (*((uint8_t*) (ptr0 + 24)))) {
+          case 0: { 
+            variant42_opt = types::ErrorCode{{types::ErrorCode::DnsTimeout{}}};
+          } break;
+          case 1: { std::optional<wit::string> option4;
+          if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
+            auto _len3 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
+
+
+            option4.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), _len3));
+          }
+          std::optional<uint16_t> option5;
+          if ((int32_t) (*((uint8_t*) (ptr0 + (32+3*sizeof(void*)))))) {
+            
+            option5.emplace((uint16_t((int32_t) (*((uint16_t*) (ptr0 + (34+3*sizeof(void*))))))));
+          }
+
+          variant42_opt = types::ErrorCode{{types::ErrorCode::DnsError{types::DnsErrorPayload{std::move(option4), std::move(option5), }}}};
+        } break;
+        case 2: { 
+          variant42_opt = types::ErrorCode{{types::ErrorCode::DestinationNotFound{}}};
+        } break;
+        case 3: { 
+          variant42_opt = types::ErrorCode{{types::ErrorCode::DestinationUnavailable{}}};
+        } break;
+        case 4: { 
+          variant42_opt = types::ErrorCode{{types::ErrorCode::DestinationIpProhibited{}}};
+        } break;
+        case 5: { 
+          variant42_opt = types::ErrorCode{{types::ErrorCode::DestinationIpUnroutable{}}};
+        } break;
+        case 6: { 
+          variant42_opt = types::ErrorCode{{types::ErrorCode::ConnectionRefused{}}};
+        } break;
+        case 7: { 
+          variant42_opt = types::ErrorCode{{types::ErrorCode::ConnectionTerminated{}}};
+        } break;
+        case 8: { 
+          variant42_opt = types::ErrorCode{{types::ErrorCode::ConnectionTimeout{}}};
+        } break;
+        case 9: { 
+          variant42_opt = types::ErrorCode{{types::ErrorCode::ConnectionReadTimeout{}}};
+        } break;
+        case 10: { 
+          variant42_opt = types::ErrorCode{{types::ErrorCode::ConnectionWriteTimeout{}}};
+        } break;
+        case 11: { 
+          variant42_opt = types::ErrorCode{{types::ErrorCode::ConnectionLimitReached{}}};
+        } break;
+        case 12: { 
+          variant42_opt = types::ErrorCode{{types::ErrorCode::TlsProtocolError{}}};
+        } break;
+        case 13: { 
+          variant42_opt = types::ErrorCode{{types::ErrorCode::TlsCertificateError{}}};
+        } break;
+        case 14: { std::optional<uint8_t> option6;
+        if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
+          
+          option6.emplace((uint8_t((int32_t) (*((uint8_t*) (ptr0 + 33))))));
+        }
+        std::optional<wit::string> option8;
+        if ((int32_t) (*((uint8_t*) (ptr0 + (32+1*sizeof(void*)))))) {
+          auto _len7 = *((size_t*) (ptr0 + (32+3*sizeof(void*))));
+
+
+          option8.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+2*sizeof(void*))))), _len7));
+        }
+
+        variant42_opt = types::ErrorCode{{types::ErrorCode::TlsAlertReceived{types::TlsAlertReceivedPayload{std::move(option6), std::move(option8), }}}};
+      } break;
+      case 15: { 
+        variant42_opt = types::ErrorCode{{types::ErrorCode::HttpRequestDenied{}}};
+      } break;
+      case 16: { 
+        variant42_opt = types::ErrorCode{{types::ErrorCode::HttpRequestLengthRequired{}}};
+      } break;
+      case 17: { std::optional<uint64_t> option9;
+      if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
+        
+        option9.emplace((uint64_t(*((int64_t*) (ptr0 + 40)))));
+      }
+
+      variant42_opt = types::ErrorCode{{types::ErrorCode::HttpRequestBodySize{std::move(option9)}}};
+    } break;
+    case 18: { 
+      variant42_opt = types::ErrorCode{{types::ErrorCode::HttpRequestMethodInvalid{}}};
+    } break;
+    case 19: { 
+      variant42_opt = types::ErrorCode{{types::ErrorCode::HttpRequestUriInvalid{}}};
+    } break;
+    case 20: { 
+      variant42_opt = types::ErrorCode{{types::ErrorCode::HttpRequestUriTooLong{}}};
+    } break;
+    case 21: { std::optional<uint32_t> option11;
+    if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
+      int32_t l10 = *((int32_t const*)(ptr0 + 36));
+
+      option11.emplace((uint32_t(l10)));
+    }
+
+    variant42_opt = types::ErrorCode{{types::ErrorCode::HttpRequestHeaderSectionSize{std::move(option11)}}};
+  } break;
+  case 22: { std::optional<types::FieldSizePayload> option16;
+  if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
+    std::optional<wit::string> option13;
+    if ((int32_t) (*((uint8_t*) (ptr0 + (32+1*sizeof(void*)))))) {
+      auto _len12 = *((size_t*) (ptr0 + (32+3*sizeof(void*))));
+
+
+      option13.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+2*sizeof(void*))))), _len12));
+    }
+    std::optional<uint32_t> option15;
+    if ((int32_t) (*((uint8_t*) (ptr0 + (32+4*sizeof(void*)))))) {
+      int32_t l14 = *((int32_t const*)(ptr0 + (36+4*sizeof(void*))));
+
+      option15.emplace((uint32_t(l14)));
+    }
+
+    option16.emplace(types::FieldSizePayload{std::move(option13), std::move(option15), });
+  }
+
+  variant42_opt = types::ErrorCode{{types::ErrorCode::HttpRequestHeaderSize{std::move(option16)}}};
+} break;
+case 23: { std::optional<uint32_t> option18;
+if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
+  int32_t l17 = *((int32_t const*)(ptr0 + 36));
+
+  option18.emplace((uint32_t(l17)));
+}
+
+variant42_opt = types::ErrorCode{{types::ErrorCode::HttpRequestTrailerSectionSize{std::move(option18)}}};
+} break;
+case 24: { std::optional<wit::string> option20;
+if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
+  auto _len19 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
+
+
+  option20.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), _len19));
+}
+std::optional<uint32_t> option22;
+if ((int32_t) (*((uint8_t*) (ptr0 + (32+3*sizeof(void*)))))) {
+  int32_t l21 = *((int32_t const*)(ptr0 + (36+3*sizeof(void*))));
+
+  option22.emplace((uint32_t(l21)));
+}
+
+variant42_opt = types::ErrorCode{{types::ErrorCode::HttpRequestTrailerSize{types::FieldSizePayload{std::move(option20), std::move(option22), }}}};
+} break;
+case 25: { 
+  variant42_opt = types::ErrorCode{{types::ErrorCode::HttpResponseIncomplete{}}};
+} break;
+case 26: { std::optional<uint32_t> option24;
+if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
+  int32_t l23 = *((int32_t const*)(ptr0 + 36));
+
+  option24.emplace((uint32_t(l23)));
+}
+
+variant42_opt = types::ErrorCode{{types::ErrorCode::HttpResponseHeaderSectionSize{std::move(option24)}}};
+} break;
+case 27: { std::optional<wit::string> option26;
+if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
+  auto _len25 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
+
+
+  option26.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), _len25));
+}
+std::optional<uint32_t> option28;
+if ((int32_t) (*((uint8_t*) (ptr0 + (32+3*sizeof(void*)))))) {
+  int32_t l27 = *((int32_t const*)(ptr0 + (36+3*sizeof(void*))));
+
+  option28.emplace((uint32_t(l27)));
+}
+
+variant42_opt = types::ErrorCode{{types::ErrorCode::HttpResponseHeaderSize{types::FieldSizePayload{std::move(option26), std::move(option28), }}}};
+} break;
+case 28: { std::optional<uint64_t> option29;
+if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
+  
+  option29.emplace((uint64_t(*((int64_t*) (ptr0 + 40)))));
+}
+
+variant42_opt = types::ErrorCode{{types::ErrorCode::HttpResponseBodySize{std::move(option29)}}};
+} break;
+case 29: { std::optional<uint32_t> option31;
+if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
+  int32_t l30 = *((int32_t const*)(ptr0 + 36));
+
+  option31.emplace((uint32_t(l30)));
+}
+
+variant42_opt = types::ErrorCode{{types::ErrorCode::HttpResponseTrailerSectionSize{std::move(option31)}}};
+} break;
+case 30: { std::optional<wit::string> option33;
+if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
+  auto _len32 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
+
+
+  option33.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), _len32));
+}
+std::optional<uint32_t> option35;
+if ((int32_t) (*((uint8_t*) (ptr0 + (32+3*sizeof(void*)))))) {
+  int32_t l34 = *((int32_t const*)(ptr0 + (36+3*sizeof(void*))));
+
+  option35.emplace((uint32_t(l34)));
+}
+
+variant42_opt = types::ErrorCode{{types::ErrorCode::HttpResponseTrailerSize{types::FieldSizePayload{std::move(option33), std::move(option35), }}}};
+} break;
+case 31: { std::optional<wit::string> option37;
+if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
+  auto _len36 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
+
+
+  option37.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), _len36));
+}
+
+variant42_opt = types::ErrorCode{{types::ErrorCode::HttpResponseTransferCoding{std::move(option37)}}};
+} break;
+case 32: { std::optional<wit::string> option39;
+if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
+  auto _len38 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
+
+
+  option39.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), _len38));
+}
+
+variant42_opt = types::ErrorCode{{types::ErrorCode::HttpResponseContentCoding{std::move(option39)}}};
+} break;
+case 33: { 
+  variant42_opt = types::ErrorCode{{types::ErrorCode::HttpResponseTimeout{}}};
+} break;
+case 34: { 
+  variant42_opt = types::ErrorCode{{types::ErrorCode::HttpUpgradeFailed{}}};
+} break;
+case 35: { 
+  variant42_opt = types::ErrorCode{{types::ErrorCode::HttpProtocolError{}}};
+} break;
+case 36: { 
+  variant42_opt = types::ErrorCode{{types::ErrorCode::LoopDetected{}}};
+} break;
+case 37: { 
+  variant42_opt = types::ErrorCode{{types::ErrorCode::ConfigurationError{}}};
+} break;
+case 38: { std::optional<wit::string> option41;
+if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
+  auto _len40 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
+
+
+  option41.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), _len40));
+}
+
+variant42_opt = types::ErrorCode{{types::ErrorCode::InternalError{std::move(option41)}}};
+} break;
+}
+types::ErrorCode variant42 = std::move(*variant42_opt);
+
+result43_opt.emplace(std::unexpected{std::move(variant42)});
+}
+std::expected<std::optional<types::Fields>, types::ErrorCode> result43 = std::move(*result43_opt);
+
+result44_opt.emplace(std::expected<std::expected<std::optional<types::Fields>, types::ErrorCode>, wit::Void>(std::move(result43)));
+} else {
+
+result44_opt.emplace(std::unexpected{wit::Void{}});
+}
+std::expected<std::expected<std::optional<types::Fields>, types::ErrorCode>, wit::Void> result44 = std::move(*result44_opt);
+
+option45.emplace(std::move(result44));
+}
+auto result46 = std::move(option45);
+return result46;
+}
+wasi::http0_2_0::types::FutureTrailers::FutureTrailers(wit::ResourceImportBase&&b) : wit::ResourceImportBase(std::move(b)) {}
+wasi::http0_2_0::types::IncomingBody::~IncomingBody()
+{
+  if (handle>=0) {
+    __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Dincoming_body(handle);
+  }
+}
+std::expected<wasi::io0_2_0::streams::InputStream, wit::Void> wasi::http0_2_0::types::IncomingBody::Stream() const
+{
+  uint32_t ret_area[(8+sizeof(uint32_t)-1)/sizeof(uint32_t)];
+  uint8_t* ptr0 = (uint8_t*)(&ret_area);
+  __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Dincoming_bodyX2Estream((*this).get_handle(), std::move(ptr0));
+  std::optional<std::expected<io0_2_0::streams::InputStream, wit::Void>> result2_opt;
+  if ((int32_t) (*((uint8_t*) (ptr0 + 0)))==0) {
+    int32_t l1 = *((int32_t const*)(ptr0 + 4));
+
+    result2_opt.emplace(std::expected<io0_2_0::streams::InputStream, wit::Void>(wit::ResourceImportBase{l1}));
+  } else {
+    
+    result2_opt.emplace(std::unexpected{wit::Void{}});
+  }
+  std::expected<io0_2_0::streams::InputStream, wit::Void> result2 = std::move(*result2_opt);
+  auto result3 = std::move(result2);
+  return result3;
+}
+wasi::http0_2_0::types::FutureTrailers wasi::http0_2_0::types::IncomingBody::Finish(types::IncomingBody&& this_)
+{
+  auto ret = __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BstaticX5Dincoming_bodyX2Efinish(this_.into_handle());
+  return wit::ResourceImportBase{ret};
+}
+wasi::http0_2_0::types::IncomingBody::IncomingBody(wit::ResourceImportBase&&b) : wit::ResourceImportBase(std::move(b)) {}
 wasi::http0_2_0::types::IncomingRequest::~IncomingRequest()
 {
   if (handle>=0) {
@@ -3504,10 +3840,10 @@ wasi::http0_2_0::types::Method wasi::http0_2_0::types::IncomingRequest::Method()
     case 8: { 
       variant2_opt = types::Method{{types::Method::Patch{}}};
     } break;
-    case 9: { auto len1 = *((size_t*) (ptr0 + (2*sizeof(void*))));
+    case 9: { auto _len1 = *((size_t*) (ptr0 + (2*sizeof(void*))));
 
 
-    variant2_opt = types::Method{{types::Method::Other{wit::string((char const*)(*((uint8_t**) (ptr0 + sizeof(void*)))), len1)}}};
+    variant2_opt = types::Method{{types::Method::Other{wit::string((char const*)(*((uint8_t**) (ptr0 + sizeof(void*)))), _len1)}}};
   } break;
 }
 types::Method variant2 = std::move(*variant2_opt);
@@ -3521,10 +3857,10 @@ std::optional<wit::string> wasi::http0_2_0::types::IncomingRequest::PathWithQuer
   __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Dincoming_requestX2Epath_with_query((*this).get_handle(), std::move(ptr0));
   std::optional<wit::string> option2;
   if ((int32_t) (*((uint8_t*) (ptr0 + 0)))) {
-    auto len1 = *((size_t*) (ptr0 + (2*sizeof(void*))));
+    auto _len1 = *((size_t*) (ptr0 + (2*sizeof(void*))));
 
 
-    option2.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + sizeof(void*)))), len1));
+    option2.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + sizeof(void*)))), _len1));
   }
   auto result3 = std::move(option2);
   return result3;
@@ -3544,10 +3880,10 @@ std::optional<wasi::http0_2_0::types::Scheme> wasi::http0_2_0::types::IncomingRe
       case 1: { 
         variant2_opt = types::Scheme{{types::Scheme::Https{}}};
       } break;
-      case 2: { auto len1 = *((size_t*) (ptr0 + (3*sizeof(void*))));
+      case 2: { auto _len1 = *((size_t*) (ptr0 + (3*sizeof(void*))));
 
 
-      variant2_opt = types::Scheme{{types::Scheme::Other{wit::string((char const*)(*((uint8_t**) (ptr0 + (2*sizeof(void*))))), len1)}}};
+      variant2_opt = types::Scheme{{types::Scheme::Other{wit::string((char const*)(*((uint8_t**) (ptr0 + (2*sizeof(void*))))), _len1)}}};
     } break;
   }
   types::Scheme variant2 = std::move(*variant2_opt);
@@ -3564,10 +3900,10 @@ std::optional<wit::string> wasi::http0_2_0::types::IncomingRequest::Authority() 
   __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Dincoming_requestX2Eauthority((*this).get_handle(), std::move(ptr0));
   std::optional<wit::string> option2;
   if ((int32_t) (*((uint8_t*) (ptr0 + 0)))) {
-    auto len1 = *((size_t*) (ptr0 + (2*sizeof(void*))));
+    auto _len1 = *((size_t*) (ptr0 + (2*sizeof(void*))));
 
 
-    option2.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + sizeof(void*)))), len1));
+    option2.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + sizeof(void*)))), _len1));
   }
   auto result3 = std::move(option2);
   return result3;
@@ -3596,6 +3932,315 @@ std::expected<wasi::http0_2_0::types::IncomingBody, wit::Void> wasi::http0_2_0::
   return result3;
 }
 wasi::http0_2_0::types::IncomingRequest::IncomingRequest(wit::ResourceImportBase&&b) : wit::ResourceImportBase(std::move(b)) {}
+wasi::http0_2_0::types::OutgoingBody::~OutgoingBody()
+{
+  if (handle>=0) {
+    __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Doutgoing_body(handle);
+  }
+}
+std::expected<wasi::io0_2_0::streams::OutputStream, wit::Void> wasi::http0_2_0::types::OutgoingBody::Write() const
+{
+  uint32_t ret_area[(8+sizeof(uint32_t)-1)/sizeof(uint32_t)];
+  uint8_t* ptr0 = (uint8_t*)(&ret_area);
+  __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Doutgoing_bodyX2Ewrite((*this).get_handle(), std::move(ptr0));
+  std::optional<std::expected<io0_2_0::streams::OutputStream, wit::Void>> result2_opt;
+  if ((int32_t) (*((uint8_t*) (ptr0 + 0)))==0) {
+    int32_t l1 = *((int32_t const*)(ptr0 + 4));
+
+    result2_opt.emplace(std::expected<io0_2_0::streams::OutputStream, wit::Void>(wit::ResourceImportBase{l1}));
+  } else {
+    
+    result2_opt.emplace(std::unexpected{wit::Void{}});
+  }
+  std::expected<io0_2_0::streams::OutputStream, wit::Void> result2 = std::move(*result2_opt);
+  auto result3 = std::move(result2);
+  return result3;
+}
+std::expected<void, wasi::http0_2_0::types::ErrorCode> wasi::http0_2_0::types::OutgoingBody::Finish(types::OutgoingBody&& this_, std::optional<types::Fields> trailers)
+{
+  uint64_t ret_area[((24+4*sizeof(void*))+sizeof(uint64_t)-1)/sizeof(uint64_t)];
+  int32_t option2;
+  int32_t option3;
+  if ((trailers).has_value()) {
+    types::Fields payload1 = (std::move(trailers)).value();
+    option2 = (int32_t(1));
+    option3 = payload1.into_handle();
+  } else {
+    option2 = (int32_t(0));
+    option3 = int32_t(0);
+  }
+  uint8_t* ptr4 = (uint8_t*)(&ret_area);
+  __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BstaticX5Doutgoing_bodyX2Efinish(this_.into_handle(), std::move(option2), std::move(option3), std::move(ptr4));
+  std::optional<std::expected<void, types::ErrorCode>> result45_opt;
+  if ((int32_t) (*((uint8_t*) (ptr4 + 0)))==0) {
+    
+    result45_opt.emplace(std::expected<void, types::ErrorCode>());
+  } else {
+    std::optional<types::ErrorCode> variant44_opt;
+    switch ((int32_t) (*((uint8_t*) (ptr4 + 8)))) {
+      case 0: { 
+        variant44_opt = types::ErrorCode{{types::ErrorCode::DnsTimeout{}}};
+      } break;
+      case 1: { std::optional<wit::string> option6;
+      if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
+        auto _len5 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
+
+
+        option6.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), _len5));
+      }
+      std::optional<uint16_t> option7;
+      if ((int32_t) (*((uint8_t*) (ptr4 + (16+3*sizeof(void*)))))) {
+        
+        option7.emplace((uint16_t((int32_t) (*((uint16_t*) (ptr4 + (18+3*sizeof(void*))))))));
+      }
+
+      variant44_opt = types::ErrorCode{{types::ErrorCode::DnsError{types::DnsErrorPayload{std::move(option6), std::move(option7), }}}};
+    } break;
+    case 2: { 
+      variant44_opt = types::ErrorCode{{types::ErrorCode::DestinationNotFound{}}};
+    } break;
+    case 3: { 
+      variant44_opt = types::ErrorCode{{types::ErrorCode::DestinationUnavailable{}}};
+    } break;
+    case 4: { 
+      variant44_opt = types::ErrorCode{{types::ErrorCode::DestinationIpProhibited{}}};
+    } break;
+    case 5: { 
+      variant44_opt = types::ErrorCode{{types::ErrorCode::DestinationIpUnroutable{}}};
+    } break;
+    case 6: { 
+      variant44_opt = types::ErrorCode{{types::ErrorCode::ConnectionRefused{}}};
+    } break;
+    case 7: { 
+      variant44_opt = types::ErrorCode{{types::ErrorCode::ConnectionTerminated{}}};
+    } break;
+    case 8: { 
+      variant44_opt = types::ErrorCode{{types::ErrorCode::ConnectionTimeout{}}};
+    } break;
+    case 9: { 
+      variant44_opt = types::ErrorCode{{types::ErrorCode::ConnectionReadTimeout{}}};
+    } break;
+    case 10: { 
+      variant44_opt = types::ErrorCode{{types::ErrorCode::ConnectionWriteTimeout{}}};
+    } break;
+    case 11: { 
+      variant44_opt = types::ErrorCode{{types::ErrorCode::ConnectionLimitReached{}}};
+    } break;
+    case 12: { 
+      variant44_opt = types::ErrorCode{{types::ErrorCode::TlsProtocolError{}}};
+    } break;
+    case 13: { 
+      variant44_opt = types::ErrorCode{{types::ErrorCode::TlsCertificateError{}}};
+    } break;
+    case 14: { std::optional<uint8_t> option8;
+    if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
+      
+      option8.emplace((uint8_t((int32_t) (*((uint8_t*) (ptr4 + 17))))));
+    }
+    std::optional<wit::string> option10;
+    if ((int32_t) (*((uint8_t*) (ptr4 + (16+1*sizeof(void*)))))) {
+      auto _len9 = *((size_t*) (ptr4 + (16+3*sizeof(void*))));
+
+
+      option10.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+2*sizeof(void*))))), _len9));
+    }
+
+    variant44_opt = types::ErrorCode{{types::ErrorCode::TlsAlertReceived{types::TlsAlertReceivedPayload{std::move(option8), std::move(option10), }}}};
+  } break;
+  case 15: { 
+    variant44_opt = types::ErrorCode{{types::ErrorCode::HttpRequestDenied{}}};
+  } break;
+  case 16: { 
+    variant44_opt = types::ErrorCode{{types::ErrorCode::HttpRequestLengthRequired{}}};
+  } break;
+  case 17: { std::optional<uint64_t> option11;
+  if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
+    
+    option11.emplace((uint64_t(*((int64_t*) (ptr4 + 24)))));
+  }
+
+  variant44_opt = types::ErrorCode{{types::ErrorCode::HttpRequestBodySize{std::move(option11)}}};
+} break;
+case 18: { 
+  variant44_opt = types::ErrorCode{{types::ErrorCode::HttpRequestMethodInvalid{}}};
+} break;
+case 19: { 
+  variant44_opt = types::ErrorCode{{types::ErrorCode::HttpRequestUriInvalid{}}};
+} break;
+case 20: { 
+  variant44_opt = types::ErrorCode{{types::ErrorCode::HttpRequestUriTooLong{}}};
+} break;
+case 21: { std::optional<uint32_t> option13;
+if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
+  int32_t l12 = *((int32_t const*)(ptr4 + 20));
+
+  option13.emplace((uint32_t(l12)));
+}
+
+variant44_opt = types::ErrorCode{{types::ErrorCode::HttpRequestHeaderSectionSize{std::move(option13)}}};
+} break;
+case 22: { std::optional<types::FieldSizePayload> option18;
+if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
+  std::optional<wit::string> option15;
+  if ((int32_t) (*((uint8_t*) (ptr4 + (16+1*sizeof(void*)))))) {
+    auto _len14 = *((size_t*) (ptr4 + (16+3*sizeof(void*))));
+
+
+    option15.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+2*sizeof(void*))))), _len14));
+  }
+  std::optional<uint32_t> option17;
+  if ((int32_t) (*((uint8_t*) (ptr4 + (16+4*sizeof(void*)))))) {
+    int32_t l16 = *((int32_t const*)(ptr4 + (20+4*sizeof(void*))));
+
+    option17.emplace((uint32_t(l16)));
+  }
+
+  option18.emplace(types::FieldSizePayload{std::move(option15), std::move(option17), });
+}
+
+variant44_opt = types::ErrorCode{{types::ErrorCode::HttpRequestHeaderSize{std::move(option18)}}};
+} break;
+case 23: { std::optional<uint32_t> option20;
+if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
+  int32_t l19 = *((int32_t const*)(ptr4 + 20));
+
+  option20.emplace((uint32_t(l19)));
+}
+
+variant44_opt = types::ErrorCode{{types::ErrorCode::HttpRequestTrailerSectionSize{std::move(option20)}}};
+} break;
+case 24: { std::optional<wit::string> option22;
+if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
+  auto _len21 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
+
+
+  option22.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), _len21));
+}
+std::optional<uint32_t> option24;
+if ((int32_t) (*((uint8_t*) (ptr4 + (16+3*sizeof(void*)))))) {
+  int32_t l23 = *((int32_t const*)(ptr4 + (20+3*sizeof(void*))));
+
+  option24.emplace((uint32_t(l23)));
+}
+
+variant44_opt = types::ErrorCode{{types::ErrorCode::HttpRequestTrailerSize{types::FieldSizePayload{std::move(option22), std::move(option24), }}}};
+} break;
+case 25: { 
+  variant44_opt = types::ErrorCode{{types::ErrorCode::HttpResponseIncomplete{}}};
+} break;
+case 26: { std::optional<uint32_t> option26;
+if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
+  int32_t l25 = *((int32_t const*)(ptr4 + 20));
+
+  option26.emplace((uint32_t(l25)));
+}
+
+variant44_opt = types::ErrorCode{{types::ErrorCode::HttpResponseHeaderSectionSize{std::move(option26)}}};
+} break;
+case 27: { std::optional<wit::string> option28;
+if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
+  auto _len27 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
+
+
+  option28.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), _len27));
+}
+std::optional<uint32_t> option30;
+if ((int32_t) (*((uint8_t*) (ptr4 + (16+3*sizeof(void*)))))) {
+  int32_t l29 = *((int32_t const*)(ptr4 + (20+3*sizeof(void*))));
+
+  option30.emplace((uint32_t(l29)));
+}
+
+variant44_opt = types::ErrorCode{{types::ErrorCode::HttpResponseHeaderSize{types::FieldSizePayload{std::move(option28), std::move(option30), }}}};
+} break;
+case 28: { std::optional<uint64_t> option31;
+if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
+  
+  option31.emplace((uint64_t(*((int64_t*) (ptr4 + 24)))));
+}
+
+variant44_opt = types::ErrorCode{{types::ErrorCode::HttpResponseBodySize{std::move(option31)}}};
+} break;
+case 29: { std::optional<uint32_t> option33;
+if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
+  int32_t l32 = *((int32_t const*)(ptr4 + 20));
+
+  option33.emplace((uint32_t(l32)));
+}
+
+variant44_opt = types::ErrorCode{{types::ErrorCode::HttpResponseTrailerSectionSize{std::move(option33)}}};
+} break;
+case 30: { std::optional<wit::string> option35;
+if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
+  auto _len34 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
+
+
+  option35.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), _len34));
+}
+std::optional<uint32_t> option37;
+if ((int32_t) (*((uint8_t*) (ptr4 + (16+3*sizeof(void*)))))) {
+  int32_t l36 = *((int32_t const*)(ptr4 + (20+3*sizeof(void*))));
+
+  option37.emplace((uint32_t(l36)));
+}
+
+variant44_opt = types::ErrorCode{{types::ErrorCode::HttpResponseTrailerSize{types::FieldSizePayload{std::move(option35), std::move(option37), }}}};
+} break;
+case 31: { std::optional<wit::string> option39;
+if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
+  auto _len38 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
+
+
+  option39.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), _len38));
+}
+
+variant44_opt = types::ErrorCode{{types::ErrorCode::HttpResponseTransferCoding{std::move(option39)}}};
+} break;
+case 32: { std::optional<wit::string> option41;
+if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
+  auto _len40 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
+
+
+  option41.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), _len40));
+}
+
+variant44_opt = types::ErrorCode{{types::ErrorCode::HttpResponseContentCoding{std::move(option41)}}};
+} break;
+case 33: { 
+  variant44_opt = types::ErrorCode{{types::ErrorCode::HttpResponseTimeout{}}};
+} break;
+case 34: { 
+  variant44_opt = types::ErrorCode{{types::ErrorCode::HttpUpgradeFailed{}}};
+} break;
+case 35: { 
+  variant44_opt = types::ErrorCode{{types::ErrorCode::HttpProtocolError{}}};
+} break;
+case 36: { 
+  variant44_opt = types::ErrorCode{{types::ErrorCode::LoopDetected{}}};
+} break;
+case 37: { 
+  variant44_opt = types::ErrorCode{{types::ErrorCode::ConfigurationError{}}};
+} break;
+case 38: { std::optional<wit::string> option43;
+if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
+  auto _len42 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
+
+
+  option43.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), _len42));
+}
+
+variant44_opt = types::ErrorCode{{types::ErrorCode::InternalError{std::move(option43)}}};
+} break;
+}
+types::ErrorCode variant44 = std::move(*variant44_opt);
+
+result45_opt.emplace(std::unexpected{std::move(variant44)});
+}
+std::expected<void, types::ErrorCode> result45 = std::move(*result45_opt);
+auto result46 = std::move(result45);
+return result46;
+}
+wasi::http0_2_0::types::OutgoingBody::OutgoingBody(wit::ResourceImportBase&&b) : wit::ResourceImportBase(std::move(b)) {}
 wasi::http0_2_0::types::OutgoingRequest::~OutgoingRequest()
 {
   if (handle>=0) {
@@ -3659,10 +4304,10 @@ wasi::http0_2_0::types::Method wasi::http0_2_0::types::OutgoingRequest::Method()
     case 8: { 
       variant2_opt = types::Method{{types::Method::Patch{}}};
     } break;
-    case 9: { auto len1 = *((size_t*) (ptr0 + (2*sizeof(void*))));
+    case 9: { auto _len1 = *((size_t*) (ptr0 + (2*sizeof(void*))));
 
 
-    variant2_opt = types::Method{{types::Method::Other{wit::string((char const*)(*((uint8_t**) (ptr0 + sizeof(void*)))), len1)}}};
+    variant2_opt = types::Method{{types::Method::Other{wit::string((char const*)(*((uint8_t**) (ptr0 + sizeof(void*)))), _len1)}}};
   } break;
 }
 types::Method variant2 = std::move(*variant2_opt);
@@ -3731,12 +4376,12 @@ std::expected<void, wit::Void> wasi::http0_2_0::types::OutgoingRequest::SetMetho
     }
     case 9: {
       auto& payload9 = std::get<types::Method::Other>(method.variants).value;
-      auto&& vec10 = payload9;
-      auto ptr10 = (uint8_t*)(vec10.data());
-      auto len10 = (size_t)(vec10.size());
+      auto&& _vec10 = payload9;
+      auto _ptr10 = (uint8_t*)(_vec10.data());
+      auto _len10 = (size_t)(_vec10.size());
       variant11 = (int32_t(9));
-      variant12 = ptr10;
-      variant13 = len10;
+      variant12 = _ptr10;
+      variant13 = _len10;
       break;
     }
   }
@@ -3759,10 +4404,10 @@ std::optional<wit::string> wasi::http0_2_0::types::OutgoingRequest::PathWithQuer
   __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Doutgoing_requestX2Epath_with_query((*this).get_handle(), std::move(ptr0));
   std::optional<wit::string> option2;
   if ((int32_t) (*((uint8_t*) (ptr0 + 0)))) {
-    auto len1 = *((size_t*) (ptr0 + (2*sizeof(void*))));
+    auto _len1 = *((size_t*) (ptr0 + (2*sizeof(void*))));
 
 
-    option2.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + sizeof(void*)))), len1));
+    option2.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + sizeof(void*)))), _len1));
   }
   auto result3 = std::move(option2);
   return result3;
@@ -3774,12 +4419,12 @@ std::expected<void, wit::Void> wasi::http0_2_0::types::OutgoingRequest::SetPathW
   size_t option5;
   if ((path_with_query).has_value()) {
     std::string_view payload1 = (std::move(path_with_query)).value();
-    auto&& vec2 = payload1;
-    auto ptr2 = (uint8_t*)(vec2.data());
-    auto len2 = (size_t)(vec2.size());
+    auto&& _vec2 = payload1;
+    auto _ptr2 = (uint8_t*)(_vec2.data());
+    auto _len2 = (size_t)(_vec2.size());
     option3 = (int32_t(1));
-    option4 = ptr2;
-    option5 = len2;
+    option4 = _ptr2;
+    option5 = _len2;
   } else {
     option3 = (int32_t(0));
     option4 = nullptr;
@@ -3812,10 +4457,10 @@ std::optional<wasi::http0_2_0::types::Scheme> wasi::http0_2_0::types::OutgoingRe
       case 1: { 
         variant2_opt = types::Scheme{{types::Scheme::Https{}}};
       } break;
-      case 2: { auto len1 = *((size_t*) (ptr0 + (3*sizeof(void*))));
+      case 2: { auto _len1 = *((size_t*) (ptr0 + (3*sizeof(void*))));
 
 
-      variant2_opt = types::Scheme{{types::Scheme::Other{wit::string((char const*)(*((uint8_t**) (ptr0 + (2*sizeof(void*))))), len1)}}};
+      variant2_opt = types::Scheme{{types::Scheme::Other{wit::string((char const*)(*((uint8_t**) (ptr0 + (2*sizeof(void*))))), _len1)}}};
     } break;
   }
   types::Scheme variant2 = std::move(*variant2_opt);
@@ -3851,12 +4496,12 @@ std::expected<void, wit::Void> wasi::http0_2_0::types::OutgoingRequest::SetSchem
       }
       case 2: {
         auto& payload4 = std::get<types::Scheme::Other>(payload1.variants).value;
-        auto&& vec5 = payload4;
-        auto ptr5 = (uint8_t*)(vec5.data());
-        auto len5 = (size_t)(vec5.size());
+        auto&& _vec5 = payload4;
+        auto _ptr5 = (uint8_t*)(_vec5.data());
+        auto _len5 = (size_t)(_vec5.size());
         variant6 = (int32_t(2));
-        variant7 = ptr5;
-        variant8 = len5;
+        variant7 = _ptr5;
+        variant8 = _len5;
         break;
       }
     }
@@ -3889,10 +4534,10 @@ std::optional<wit::string> wasi::http0_2_0::types::OutgoingRequest::Authority() 
   __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Doutgoing_requestX2Eauthority((*this).get_handle(), std::move(ptr0));
   std::optional<wit::string> option2;
   if ((int32_t) (*((uint8_t*) (ptr0 + 0)))) {
-    auto len1 = *((size_t*) (ptr0 + (2*sizeof(void*))));
+    auto _len1 = *((size_t*) (ptr0 + (2*sizeof(void*))));
 
 
-    option2.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + sizeof(void*)))), len1));
+    option2.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + sizeof(void*)))), _len1));
   }
   auto result3 = std::move(option2);
   return result3;
@@ -3904,12 +4549,12 @@ std::expected<void, wit::Void> wasi::http0_2_0::types::OutgoingRequest::SetAutho
   size_t option5;
   if ((authority).has_value()) {
     std::string_view payload1 = (std::move(authority)).value();
-    auto&& vec2 = payload1;
-    auto ptr2 = (uint8_t*)(vec2.data());
-    auto len2 = (size_t)(vec2.size());
+    auto&& _vec2 = payload1;
+    auto _ptr2 = (uint8_t*)(_vec2.data());
+    auto _len2 = (size_t)(_vec2.size());
     option3 = (int32_t(1));
-    option4 = ptr2;
-    option5 = len2;
+    option4 = _ptr2;
+    option5 = _len2;
   } else {
     option3 = (int32_t(0));
     option4 = nullptr;
@@ -4056,6 +4701,60 @@ std::expected<void, wit::Void> wasi::http0_2_0::types::RequestOptions::SetBetwee
   return result4;
 }
 wasi::http0_2_0::types::RequestOptions::RequestOptions(wit::ResourceImportBase&&b) : wit::ResourceImportBase(std::move(b)) {}
+wasi::http0_2_0::types::OutgoingResponse::~OutgoingResponse()
+{
+  if (handle>=0) {
+    __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Doutgoing_response(handle);
+  }
+}
+wasi::http0_2_0::types::OutgoingResponse::OutgoingResponse(types::Fields&& headers)
+{
+  auto ret = __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BconstructorX5Doutgoing_response(headers.into_handle());
+  this->handle = wit::ResourceImportBase{ret}.into_handle();
+}
+uint16_t wasi::http0_2_0::types::OutgoingResponse::StatusCode() const
+{
+  auto ret = __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Doutgoing_responseX2Estatus_code((*this).get_handle());
+  return (uint16_t(ret));
+}
+std::expected<void, wit::Void> wasi::http0_2_0::types::OutgoingResponse::SetStatusCode(uint16_t status_code) const
+{
+  auto ret = __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Doutgoing_responseX2Eset_status_code((*this).get_handle(), (int32_t(status_code)));
+  std::optional<std::expected<void, wit::Void>> result0_opt;
+  if (ret==0) {
+    
+    result0_opt.emplace(std::expected<void, wit::Void>());
+  } else {
+    
+    result0_opt.emplace(std::unexpected{wit::Void{}});
+  }
+  std::expected<void, wit::Void> result0 = std::move(*result0_opt);
+  return result0;
+}
+wasi::http0_2_0::types::Fields wasi::http0_2_0::types::OutgoingResponse::Headers() const
+{
+  auto ret = __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Doutgoing_responseX2Eheaders((*this).get_handle());
+  return wit::ResourceImportBase{ret};
+}
+std::expected<wasi::http0_2_0::types::OutgoingBody, wit::Void> wasi::http0_2_0::types::OutgoingResponse::Body() const
+{
+  uint32_t ret_area[(8+sizeof(uint32_t)-1)/sizeof(uint32_t)];
+  uint8_t* ptr0 = (uint8_t*)(&ret_area);
+  __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Doutgoing_responseX2Ebody((*this).get_handle(), std::move(ptr0));
+  std::optional<std::expected<types::OutgoingBody, wit::Void>> result2_opt;
+  if ((int32_t) (*((uint8_t*) (ptr0 + 0)))==0) {
+    int32_t l1 = *((int32_t const*)(ptr0 + 4));
+
+    result2_opt.emplace(std::expected<types::OutgoingBody, wit::Void>(wit::ResourceImportBase{l1}));
+  } else {
+    
+    result2_opt.emplace(std::unexpected{wit::Void{}});
+  }
+  std::expected<types::OutgoingBody, wit::Void> result2 = std::move(*result2_opt);
+  auto result3 = std::move(result2);
+  return result3;
+}
+wasi::http0_2_0::types::OutgoingResponse::OutgoingResponse(wit::ResourceImportBase&&b) : wit::ResourceImportBase(std::move(b)) {}
 wasi::http0_2_0::types::ResponseOutparam::~ResponseOutparam()
 {
   if (handle>=0) {
@@ -4109,12 +4808,12 @@ void wasi::http0_2_0::types::ResponseOutparam::Set(types::ResponseOutparam&& par
         size_t option9;
         if (((payload3).rcode).has_value()) {
           std::string_view payload5 = (std::move((payload3).rcode)).value().get_view();
-          auto&& vec6 = payload5;
-          auto ptr6 = (uint8_t*)(vec6.data());
-          auto len6 = (size_t)(vec6.size());
+          auto&& _vec6 = payload5;
+          auto _ptr6 = (uint8_t*)(_vec6.data());
+          auto _len6 = (size_t)(_vec6.size());
           option7 = (int32_t(1));
-          option8 = ptr6;
-          option9 = len6;
+          option8 = _ptr6;
+          option9 = _len6;
         } else {
           option7 = (int32_t(0));
           option8 = nullptr;
@@ -4276,12 +4975,12 @@ void wasi::http0_2_0::types::ResponseOutparam::Set(types::ResponseOutparam&& par
         size_t option36;
         if (((payload26).alert_message).has_value()) {
           std::string_view payload32 = (std::move((payload26).alert_message)).value().get_view();
-          auto&& vec33 = payload32;
-          auto ptr33 = (uint8_t*)(vec33.data());
-          auto len33 = (size_t)(vec33.size());
+          auto&& _vec33 = payload32;
+          auto _ptr33 = (uint8_t*)(_vec33.data());
+          auto _len33 = (size_t)(_vec33.size());
           option34 = (int32_t(1));
-          option35 = ptr33;
-          option36 = len33;
+          option35 = _ptr33;
+          option36 = _len33;
         } else {
           option34 = (int32_t(0));
           option35 = nullptr;
@@ -4403,12 +5102,12 @@ void wasi::http0_2_0::types::ResponseOutparam::Set(types::ResponseOutparam&& par
           size_t option60;
           if (((payload54).field_name).has_value()) {
             std::string_view payload56 = (std::move((payload54).field_name)).value().get_view();
-            auto&& vec57 = payload56;
-            auto ptr57 = (uint8_t*)(vec57.data());
-            auto len57 = (size_t)(vec57.size());
+            auto&& _vec57 = payload56;
+            auto _ptr57 = (uint8_t*)(_vec57.data());
+            auto _len57 = (size_t)(_vec57.size());
             option58 = (int32_t(1));
-            option59 = ptr57;
-            option60 = len57;
+            option59 = _ptr57;
+            option60 = _len57;
           } else {
             option58 = (int32_t(0));
             option59 = nullptr;
@@ -4475,12 +5174,12 @@ void wasi::http0_2_0::types::ResponseOutparam::Set(types::ResponseOutparam&& par
         size_t option82;
         if (((payload76).field_name).has_value()) {
           std::string_view payload78 = (std::move((payload76).field_name)).value().get_view();
-          auto&& vec79 = payload78;
-          auto ptr79 = (uint8_t*)(vec79.data());
-          auto len79 = (size_t)(vec79.size());
+          auto&& _vec79 = payload78;
+          auto _ptr79 = (uint8_t*)(_vec79.data());
+          auto _len79 = (size_t)(_vec79.size());
           option80 = (int32_t(1));
-          option81 = ptr79;
-          option82 = len79;
+          option81 = _ptr79;
+          option82 = _len79;
         } else {
           option80 = (int32_t(0));
           option81 = nullptr;
@@ -4543,12 +5242,12 @@ void wasi::http0_2_0::types::ResponseOutparam::Set(types::ResponseOutparam&& par
         size_t option99;
         if (((payload93).field_name).has_value()) {
           std::string_view payload95 = (std::move((payload93).field_name)).value().get_view();
-          auto&& vec96 = payload95;
-          auto ptr96 = (uint8_t*)(vec96.data());
-          auto len96 = (size_t)(vec96.size());
+          auto&& _vec96 = payload95;
+          auto _ptr96 = (uint8_t*)(_vec96.data());
+          auto _len96 = (size_t)(_vec96.size());
           option97 = (int32_t(1));
-          option98 = ptr96;
-          option99 = len96;
+          option98 = _ptr96;
+          option99 = _len96;
         } else {
           option97 = (int32_t(0));
           option98 = nullptr;
@@ -4622,12 +5321,12 @@ void wasi::http0_2_0::types::ResponseOutparam::Set(types::ResponseOutparam&& par
         size_t option120;
         if (((payload114).field_name).has_value()) {
           std::string_view payload116 = (std::move((payload114).field_name)).value().get_view();
-          auto&& vec117 = payload116;
-          auto ptr117 = (uint8_t*)(vec117.data());
-          auto len117 = (size_t)(vec117.size());
+          auto&& _vec117 = payload116;
+          auto _ptr117 = (uint8_t*)(_vec117.data());
+          auto _len117 = (size_t)(_vec117.size());
           option118 = (int32_t(1));
-          option119 = ptr117;
-          option120 = len117;
+          option119 = _ptr117;
+          option120 = _len117;
         } else {
           option118 = (int32_t(0));
           option119 = nullptr;
@@ -4659,12 +5358,12 @@ void wasi::http0_2_0::types::ResponseOutparam::Set(types::ResponseOutparam&& par
         size_t option131;
         if ((payload125).has_value()) {
           std::string_view payload127 = (std::move(payload125)).value().get_view();
-          auto&& vec128 = payload127;
-          auto ptr128 = (uint8_t*)(vec128.data());
-          auto len128 = (size_t)(vec128.size());
+          auto&& _vec128 = payload127;
+          auto _ptr128 = (uint8_t*)(_vec128.data());
+          auto _len128 = (size_t)(_vec128.size());
           option129 = (int32_t(1));
-          option130 = ptr128;
-          option131 = len128;
+          option130 = _ptr128;
+          option131 = _len128;
         } else {
           option129 = (int32_t(0));
           option130 = nullptr;
@@ -4686,12 +5385,12 @@ void wasi::http0_2_0::types::ResponseOutparam::Set(types::ResponseOutparam&& par
         size_t option138;
         if ((payload132).has_value()) {
           std::string_view payload134 = (std::move(payload132)).value().get_view();
-          auto&& vec135 = payload134;
-          auto ptr135 = (uint8_t*)(vec135.data());
-          auto len135 = (size_t)(vec135.size());
+          auto&& _vec135 = payload134;
+          auto _ptr135 = (uint8_t*)(_vec135.data());
+          auto _len135 = (size_t)(_vec135.size());
           option136 = (int32_t(1));
-          option137 = ptr135;
-          option138 = len135;
+          option137 = _ptr135;
+          option138 = _len135;
         } else {
           option136 = (int32_t(0));
           option137 = nullptr;
@@ -4763,12 +5462,12 @@ void wasi::http0_2_0::types::ResponseOutparam::Set(types::ResponseOutparam&& par
         size_t option150;
         if ((payload144).has_value()) {
           std::string_view payload146 = (std::move(payload144)).value().get_view();
-          auto&& vec147 = payload146;
-          auto ptr147 = (uint8_t*)(vec147.data());
-          auto len147 = (size_t)(vec147.size());
+          auto&& _vec147 = payload146;
+          auto _ptr147 = (uint8_t*)(_vec147.data());
+          auto _len147 = (size_t)(_vec147.size());
           option148 = (int32_t(1));
-          option149 = ptr147;
-          option150 = len147;
+          option149 = _ptr147;
+          option150 = _len147;
         } else {
           option148 = (int32_t(0));
           option149 = nullptr;
@@ -4831,705 +5530,6 @@ std::expected<wasi::http0_2_0::types::IncomingBody, wit::Void> wasi::http0_2_0::
   return result3;
 }
 wasi::http0_2_0::types::IncomingResponse::IncomingResponse(wit::ResourceImportBase&&b) : wit::ResourceImportBase(std::move(b)) {}
-wasi::http0_2_0::types::IncomingBody::~IncomingBody()
-{
-  if (handle>=0) {
-    __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Dincoming_body(handle);
-  }
-}
-std::expected<wasi::io0_2_0::streams::InputStream, wit::Void> wasi::http0_2_0::types::IncomingBody::Stream() const
-{
-  uint32_t ret_area[(8+sizeof(uint32_t)-1)/sizeof(uint32_t)];
-  uint8_t* ptr0 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Dincoming_bodyX2Estream((*this).get_handle(), std::move(ptr0));
-  std::optional<std::expected<io0_2_0::streams::InputStream, wit::Void>> result2_opt;
-  if ((int32_t) (*((uint8_t*) (ptr0 + 0)))==0) {
-    int32_t l1 = *((int32_t const*)(ptr0 + 4));
-
-    result2_opt.emplace(std::expected<io0_2_0::streams::InputStream, wit::Void>(wit::ResourceImportBase{l1}));
-  } else {
-    
-    result2_opt.emplace(std::unexpected{wit::Void{}});
-  }
-  std::expected<io0_2_0::streams::InputStream, wit::Void> result2 = std::move(*result2_opt);
-  auto result3 = std::move(result2);
-  return result3;
-}
-wasi::http0_2_0::types::FutureTrailers wasi::http0_2_0::types::IncomingBody::Finish(types::IncomingBody&& this_)
-{
-  auto ret = __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BstaticX5Dincoming_bodyX2Efinish(this_.into_handle());
-  return wit::ResourceImportBase{ret};
-}
-wasi::http0_2_0::types::IncomingBody::IncomingBody(wit::ResourceImportBase&&b) : wit::ResourceImportBase(std::move(b)) {}
-wasi::http0_2_0::types::FutureTrailers::~FutureTrailers()
-{
-  if (handle>=0) {
-    __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Dfuture_trailers(handle);
-  }
-}
-wasi::io0_2_0::poll::Pollable wasi::http0_2_0::types::FutureTrailers::Subscribe() const
-{
-  auto ret = __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Dfuture_trailersX2Esubscribe((*this).get_handle());
-  return wit::ResourceImportBase{ret};
-}
-std::optional<std::expected<std::expected<std::optional<wasi::http0_2_0::types::Fields>, wasi::http0_2_0::types::ErrorCode>, wit::Void>> wasi::http0_2_0::types::FutureTrailers::Get() const
-{
-  uint64_t ret_area[((40+4*sizeof(void*))+sizeof(uint64_t)-1)/sizeof(uint64_t)];
-  uint8_t* ptr0 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Dfuture_trailersX2Eget((*this).get_handle(), std::move(ptr0));
-  std::optional<std::expected<std::expected<std::optional<types::Fields>, types::ErrorCode>, wit::Void>> option45;
-  if ((int32_t) (*((uint8_t*) (ptr0 + 0)))) {
-    std::optional<std::expected<std::expected<std::optional<types::Fields>, types::ErrorCode>, wit::Void>> result44_opt;
-    if ((int32_t) (*((uint8_t*) (ptr0 + 8)))==0) {
-      std::optional<std::expected<std::optional<types::Fields>, types::ErrorCode>> result43_opt;
-      if ((int32_t) (*((uint8_t*) (ptr0 + 16)))==0) {
-        std::optional<types::Fields> option2;
-        if ((int32_t) (*((uint8_t*) (ptr0 + 24)))) {
-          int32_t l1 = *((int32_t const*)(ptr0 + 28));
-
-          option2.emplace(wit::ResourceImportBase{l1});
-        }
-
-        result43_opt.emplace(std::expected<std::optional<types::Fields>, types::ErrorCode>(std::move(option2)));
-      } else {
-        std::optional<types::ErrorCode> variant42_opt;
-        switch ((int32_t) (*((uint8_t*) (ptr0 + 24)))) {
-          case 0: { 
-            variant42_opt = types::ErrorCode{{types::ErrorCode::DnsTimeout{}}};
-          } break;
-          case 1: { std::optional<wit::string> option4;
-          if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
-            auto len3 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
-
-
-            option4.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), len3));
-          }
-          std::optional<uint16_t> option5;
-          if ((int32_t) (*((uint8_t*) (ptr0 + (32+3*sizeof(void*)))))) {
-            
-            option5.emplace((uint16_t((int32_t) (*((uint16_t*) (ptr0 + (34+3*sizeof(void*))))))));
-          }
-
-          variant42_opt = types::ErrorCode{{types::ErrorCode::DnsError{types::DnsErrorPayload{std::move(option4), std::move(option5), }}}};
-        } break;
-        case 2: { 
-          variant42_opt = types::ErrorCode{{types::ErrorCode::DestinationNotFound{}}};
-        } break;
-        case 3: { 
-          variant42_opt = types::ErrorCode{{types::ErrorCode::DestinationUnavailable{}}};
-        } break;
-        case 4: { 
-          variant42_opt = types::ErrorCode{{types::ErrorCode::DestinationIpProhibited{}}};
-        } break;
-        case 5: { 
-          variant42_opt = types::ErrorCode{{types::ErrorCode::DestinationIpUnroutable{}}};
-        } break;
-        case 6: { 
-          variant42_opt = types::ErrorCode{{types::ErrorCode::ConnectionRefused{}}};
-        } break;
-        case 7: { 
-          variant42_opt = types::ErrorCode{{types::ErrorCode::ConnectionTerminated{}}};
-        } break;
-        case 8: { 
-          variant42_opt = types::ErrorCode{{types::ErrorCode::ConnectionTimeout{}}};
-        } break;
-        case 9: { 
-          variant42_opt = types::ErrorCode{{types::ErrorCode::ConnectionReadTimeout{}}};
-        } break;
-        case 10: { 
-          variant42_opt = types::ErrorCode{{types::ErrorCode::ConnectionWriteTimeout{}}};
-        } break;
-        case 11: { 
-          variant42_opt = types::ErrorCode{{types::ErrorCode::ConnectionLimitReached{}}};
-        } break;
-        case 12: { 
-          variant42_opt = types::ErrorCode{{types::ErrorCode::TlsProtocolError{}}};
-        } break;
-        case 13: { 
-          variant42_opt = types::ErrorCode{{types::ErrorCode::TlsCertificateError{}}};
-        } break;
-        case 14: { std::optional<uint8_t> option6;
-        if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
-          
-          option6.emplace((uint8_t((int32_t) (*((uint8_t*) (ptr0 + 33))))));
-        }
-        std::optional<wit::string> option8;
-        if ((int32_t) (*((uint8_t*) (ptr0 + (32+1*sizeof(void*)))))) {
-          auto len7 = *((size_t*) (ptr0 + (32+3*sizeof(void*))));
-
-
-          option8.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+2*sizeof(void*))))), len7));
-        }
-
-        variant42_opt = types::ErrorCode{{types::ErrorCode::TlsAlertReceived{types::TlsAlertReceivedPayload{std::move(option6), std::move(option8), }}}};
-      } break;
-      case 15: { 
-        variant42_opt = types::ErrorCode{{types::ErrorCode::HttpRequestDenied{}}};
-      } break;
-      case 16: { 
-        variant42_opt = types::ErrorCode{{types::ErrorCode::HttpRequestLengthRequired{}}};
-      } break;
-      case 17: { std::optional<uint64_t> option9;
-      if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
-        
-        option9.emplace((uint64_t(*((int64_t*) (ptr0 + 40)))));
-      }
-
-      variant42_opt = types::ErrorCode{{types::ErrorCode::HttpRequestBodySize{std::move(option9)}}};
-    } break;
-    case 18: { 
-      variant42_opt = types::ErrorCode{{types::ErrorCode::HttpRequestMethodInvalid{}}};
-    } break;
-    case 19: { 
-      variant42_opt = types::ErrorCode{{types::ErrorCode::HttpRequestUriInvalid{}}};
-    } break;
-    case 20: { 
-      variant42_opt = types::ErrorCode{{types::ErrorCode::HttpRequestUriTooLong{}}};
-    } break;
-    case 21: { std::optional<uint32_t> option11;
-    if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
-      int32_t l10 = *((int32_t const*)(ptr0 + 36));
-
-      option11.emplace((uint32_t(l10)));
-    }
-
-    variant42_opt = types::ErrorCode{{types::ErrorCode::HttpRequestHeaderSectionSize{std::move(option11)}}};
-  } break;
-  case 22: { std::optional<types::FieldSizePayload> option16;
-  if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
-    std::optional<wit::string> option13;
-    if ((int32_t) (*((uint8_t*) (ptr0 + (32+1*sizeof(void*)))))) {
-      auto len12 = *((size_t*) (ptr0 + (32+3*sizeof(void*))));
-
-
-      option13.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+2*sizeof(void*))))), len12));
-    }
-    std::optional<uint32_t> option15;
-    if ((int32_t) (*((uint8_t*) (ptr0 + (32+4*sizeof(void*)))))) {
-      int32_t l14 = *((int32_t const*)(ptr0 + (36+4*sizeof(void*))));
-
-      option15.emplace((uint32_t(l14)));
-    }
-
-    option16.emplace(types::FieldSizePayload{std::move(option13), std::move(option15), });
-  }
-
-  variant42_opt = types::ErrorCode{{types::ErrorCode::HttpRequestHeaderSize{std::move(option16)}}};
-} break;
-case 23: { std::optional<uint32_t> option18;
-if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
-  int32_t l17 = *((int32_t const*)(ptr0 + 36));
-
-  option18.emplace((uint32_t(l17)));
-}
-
-variant42_opt = types::ErrorCode{{types::ErrorCode::HttpRequestTrailerSectionSize{std::move(option18)}}};
-} break;
-case 24: { std::optional<wit::string> option20;
-if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
-  auto len19 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
-
-
-  option20.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), len19));
-}
-std::optional<uint32_t> option22;
-if ((int32_t) (*((uint8_t*) (ptr0 + (32+3*sizeof(void*)))))) {
-  int32_t l21 = *((int32_t const*)(ptr0 + (36+3*sizeof(void*))));
-
-  option22.emplace((uint32_t(l21)));
-}
-
-variant42_opt = types::ErrorCode{{types::ErrorCode::HttpRequestTrailerSize{types::FieldSizePayload{std::move(option20), std::move(option22), }}}};
-} break;
-case 25: { 
-  variant42_opt = types::ErrorCode{{types::ErrorCode::HttpResponseIncomplete{}}};
-} break;
-case 26: { std::optional<uint32_t> option24;
-if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
-  int32_t l23 = *((int32_t const*)(ptr0 + 36));
-
-  option24.emplace((uint32_t(l23)));
-}
-
-variant42_opt = types::ErrorCode{{types::ErrorCode::HttpResponseHeaderSectionSize{std::move(option24)}}};
-} break;
-case 27: { std::optional<wit::string> option26;
-if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
-  auto len25 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
-
-
-  option26.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), len25));
-}
-std::optional<uint32_t> option28;
-if ((int32_t) (*((uint8_t*) (ptr0 + (32+3*sizeof(void*)))))) {
-  int32_t l27 = *((int32_t const*)(ptr0 + (36+3*sizeof(void*))));
-
-  option28.emplace((uint32_t(l27)));
-}
-
-variant42_opt = types::ErrorCode{{types::ErrorCode::HttpResponseHeaderSize{types::FieldSizePayload{std::move(option26), std::move(option28), }}}};
-} break;
-case 28: { std::optional<uint64_t> option29;
-if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
-  
-  option29.emplace((uint64_t(*((int64_t*) (ptr0 + 40)))));
-}
-
-variant42_opt = types::ErrorCode{{types::ErrorCode::HttpResponseBodySize{std::move(option29)}}};
-} break;
-case 29: { std::optional<uint32_t> option31;
-if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
-  int32_t l30 = *((int32_t const*)(ptr0 + 36));
-
-  option31.emplace((uint32_t(l30)));
-}
-
-variant42_opt = types::ErrorCode{{types::ErrorCode::HttpResponseTrailerSectionSize{std::move(option31)}}};
-} break;
-case 30: { std::optional<wit::string> option33;
-if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
-  auto len32 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
-
-
-  option33.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), len32));
-}
-std::optional<uint32_t> option35;
-if ((int32_t) (*((uint8_t*) (ptr0 + (32+3*sizeof(void*)))))) {
-  int32_t l34 = *((int32_t const*)(ptr0 + (36+3*sizeof(void*))));
-
-  option35.emplace((uint32_t(l34)));
-}
-
-variant42_opt = types::ErrorCode{{types::ErrorCode::HttpResponseTrailerSize{types::FieldSizePayload{std::move(option33), std::move(option35), }}}};
-} break;
-case 31: { std::optional<wit::string> option37;
-if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
-  auto len36 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
-
-
-  option37.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), len36));
-}
-
-variant42_opt = types::ErrorCode{{types::ErrorCode::HttpResponseTransferCoding{std::move(option37)}}};
-} break;
-case 32: { std::optional<wit::string> option39;
-if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
-  auto len38 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
-
-
-  option39.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), len38));
-}
-
-variant42_opt = types::ErrorCode{{types::ErrorCode::HttpResponseContentCoding{std::move(option39)}}};
-} break;
-case 33: { 
-  variant42_opt = types::ErrorCode{{types::ErrorCode::HttpResponseTimeout{}}};
-} break;
-case 34: { 
-  variant42_opt = types::ErrorCode{{types::ErrorCode::HttpUpgradeFailed{}}};
-} break;
-case 35: { 
-  variant42_opt = types::ErrorCode{{types::ErrorCode::HttpProtocolError{}}};
-} break;
-case 36: { 
-  variant42_opt = types::ErrorCode{{types::ErrorCode::LoopDetected{}}};
-} break;
-case 37: { 
-  variant42_opt = types::ErrorCode{{types::ErrorCode::ConfigurationError{}}};
-} break;
-case 38: { std::optional<wit::string> option41;
-if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
-  auto len40 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
-
-
-  option41.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), len40));
-}
-
-variant42_opt = types::ErrorCode{{types::ErrorCode::InternalError{std::move(option41)}}};
-} break;
-}
-types::ErrorCode variant42 = std::move(*variant42_opt);
-
-result43_opt.emplace(std::unexpected{std::move(variant42)});
-}
-std::expected<std::optional<types::Fields>, types::ErrorCode> result43 = std::move(*result43_opt);
-
-result44_opt.emplace(std::expected<std::expected<std::optional<types::Fields>, types::ErrorCode>, wit::Void>(std::move(result43)));
-} else {
-
-result44_opt.emplace(std::unexpected{wit::Void{}});
-}
-std::expected<std::expected<std::optional<types::Fields>, types::ErrorCode>, wit::Void> result44 = std::move(*result44_opt);
-
-option45.emplace(std::move(result44));
-}
-auto result46 = std::move(option45);
-return result46;
-}
-wasi::http0_2_0::types::FutureTrailers::FutureTrailers(wit::ResourceImportBase&&b) : wit::ResourceImportBase(std::move(b)) {}
-wasi::http0_2_0::types::OutgoingResponse::~OutgoingResponse()
-{
-  if (handle>=0) {
-    __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Doutgoing_response(handle);
-  }
-}
-wasi::http0_2_0::types::OutgoingResponse::OutgoingResponse(types::Fields&& headers)
-{
-  auto ret = __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BconstructorX5Doutgoing_response(headers.into_handle());
-  this->handle = wit::ResourceImportBase{ret}.into_handle();
-}
-uint16_t wasi::http0_2_0::types::OutgoingResponse::StatusCode() const
-{
-  auto ret = __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Doutgoing_responseX2Estatus_code((*this).get_handle());
-  return (uint16_t(ret));
-}
-std::expected<void, wit::Void> wasi::http0_2_0::types::OutgoingResponse::SetStatusCode(uint16_t status_code) const
-{
-  auto ret = __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Doutgoing_responseX2Eset_status_code((*this).get_handle(), (int32_t(status_code)));
-  std::optional<std::expected<void, wit::Void>> result0_opt;
-  if (ret==0) {
-    
-    result0_opt.emplace(std::expected<void, wit::Void>());
-  } else {
-    
-    result0_opt.emplace(std::unexpected{wit::Void{}});
-  }
-  std::expected<void, wit::Void> result0 = std::move(*result0_opt);
-  return result0;
-}
-wasi::http0_2_0::types::Fields wasi::http0_2_0::types::OutgoingResponse::Headers() const
-{
-  auto ret = __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Doutgoing_responseX2Eheaders((*this).get_handle());
-  return wit::ResourceImportBase{ret};
-}
-std::expected<wasi::http0_2_0::types::OutgoingBody, wit::Void> wasi::http0_2_0::types::OutgoingResponse::Body() const
-{
-  uint32_t ret_area[(8+sizeof(uint32_t)-1)/sizeof(uint32_t)];
-  uint8_t* ptr0 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Doutgoing_responseX2Ebody((*this).get_handle(), std::move(ptr0));
-  std::optional<std::expected<types::OutgoingBody, wit::Void>> result2_opt;
-  if ((int32_t) (*((uint8_t*) (ptr0 + 0)))==0) {
-    int32_t l1 = *((int32_t const*)(ptr0 + 4));
-
-    result2_opt.emplace(std::expected<types::OutgoingBody, wit::Void>(wit::ResourceImportBase{l1}));
-  } else {
-    
-    result2_opt.emplace(std::unexpected{wit::Void{}});
-  }
-  std::expected<types::OutgoingBody, wit::Void> result2 = std::move(*result2_opt);
-  auto result3 = std::move(result2);
-  return result3;
-}
-wasi::http0_2_0::types::OutgoingResponse::OutgoingResponse(wit::ResourceImportBase&&b) : wit::ResourceImportBase(std::move(b)) {}
-wasi::http0_2_0::types::OutgoingBody::~OutgoingBody()
-{
-  if (handle>=0) {
-    __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Doutgoing_body(handle);
-  }
-}
-std::expected<wasi::io0_2_0::streams::OutputStream, wit::Void> wasi::http0_2_0::types::OutgoingBody::Write() const
-{
-  uint32_t ret_area[(8+sizeof(uint32_t)-1)/sizeof(uint32_t)];
-  uint8_t* ptr0 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BmethodX5Doutgoing_bodyX2Ewrite((*this).get_handle(), std::move(ptr0));
-  std::optional<std::expected<io0_2_0::streams::OutputStream, wit::Void>> result2_opt;
-  if ((int32_t) (*((uint8_t*) (ptr0 + 0)))==0) {
-    int32_t l1 = *((int32_t const*)(ptr0 + 4));
-
-    result2_opt.emplace(std::expected<io0_2_0::streams::OutputStream, wit::Void>(wit::ResourceImportBase{l1}));
-  } else {
-    
-    result2_opt.emplace(std::unexpected{wit::Void{}});
-  }
-  std::expected<io0_2_0::streams::OutputStream, wit::Void> result2 = std::move(*result2_opt);
-  auto result3 = std::move(result2);
-  return result3;
-}
-std::expected<void, wasi::http0_2_0::types::ErrorCode> wasi::http0_2_0::types::OutgoingBody::Finish(types::OutgoingBody&& this_, std::optional<types::Fields> trailers)
-{
-  uint64_t ret_area[((24+4*sizeof(void*))+sizeof(uint64_t)-1)/sizeof(uint64_t)];
-  int32_t option2;
-  int32_t option3;
-  if ((trailers).has_value()) {
-    types::Fields payload1 = (std::move(trailers)).value();
-    option2 = (int32_t(1));
-    option3 = payload1.into_handle();
-  } else {
-    option2 = (int32_t(0));
-    option3 = int32_t(0);
-  }
-  uint8_t* ptr4 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AhttpX2FtypesX400X2E2X2E0X00X5BstaticX5Doutgoing_bodyX2Efinish(this_.into_handle(), std::move(option2), std::move(option3), std::move(ptr4));
-  std::optional<std::expected<void, types::ErrorCode>> result45_opt;
-  if ((int32_t) (*((uint8_t*) (ptr4 + 0)))==0) {
-    
-    result45_opt.emplace(std::expected<void, types::ErrorCode>());
-  } else {
-    std::optional<types::ErrorCode> variant44_opt;
-    switch ((int32_t) (*((uint8_t*) (ptr4 + 8)))) {
-      case 0: { 
-        variant44_opt = types::ErrorCode{{types::ErrorCode::DnsTimeout{}}};
-      } break;
-      case 1: { std::optional<wit::string> option6;
-      if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
-        auto len5 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
-
-
-        option6.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), len5));
-      }
-      std::optional<uint16_t> option7;
-      if ((int32_t) (*((uint8_t*) (ptr4 + (16+3*sizeof(void*)))))) {
-        
-        option7.emplace((uint16_t((int32_t) (*((uint16_t*) (ptr4 + (18+3*sizeof(void*))))))));
-      }
-
-      variant44_opt = types::ErrorCode{{types::ErrorCode::DnsError{types::DnsErrorPayload{std::move(option6), std::move(option7), }}}};
-    } break;
-    case 2: { 
-      variant44_opt = types::ErrorCode{{types::ErrorCode::DestinationNotFound{}}};
-    } break;
-    case 3: { 
-      variant44_opt = types::ErrorCode{{types::ErrorCode::DestinationUnavailable{}}};
-    } break;
-    case 4: { 
-      variant44_opt = types::ErrorCode{{types::ErrorCode::DestinationIpProhibited{}}};
-    } break;
-    case 5: { 
-      variant44_opt = types::ErrorCode{{types::ErrorCode::DestinationIpUnroutable{}}};
-    } break;
-    case 6: { 
-      variant44_opt = types::ErrorCode{{types::ErrorCode::ConnectionRefused{}}};
-    } break;
-    case 7: { 
-      variant44_opt = types::ErrorCode{{types::ErrorCode::ConnectionTerminated{}}};
-    } break;
-    case 8: { 
-      variant44_opt = types::ErrorCode{{types::ErrorCode::ConnectionTimeout{}}};
-    } break;
-    case 9: { 
-      variant44_opt = types::ErrorCode{{types::ErrorCode::ConnectionReadTimeout{}}};
-    } break;
-    case 10: { 
-      variant44_opt = types::ErrorCode{{types::ErrorCode::ConnectionWriteTimeout{}}};
-    } break;
-    case 11: { 
-      variant44_opt = types::ErrorCode{{types::ErrorCode::ConnectionLimitReached{}}};
-    } break;
-    case 12: { 
-      variant44_opt = types::ErrorCode{{types::ErrorCode::TlsProtocolError{}}};
-    } break;
-    case 13: { 
-      variant44_opt = types::ErrorCode{{types::ErrorCode::TlsCertificateError{}}};
-    } break;
-    case 14: { std::optional<uint8_t> option8;
-    if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
-      
-      option8.emplace((uint8_t((int32_t) (*((uint8_t*) (ptr4 + 17))))));
-    }
-    std::optional<wit::string> option10;
-    if ((int32_t) (*((uint8_t*) (ptr4 + (16+1*sizeof(void*)))))) {
-      auto len9 = *((size_t*) (ptr4 + (16+3*sizeof(void*))));
-
-
-      option10.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+2*sizeof(void*))))), len9));
-    }
-
-    variant44_opt = types::ErrorCode{{types::ErrorCode::TlsAlertReceived{types::TlsAlertReceivedPayload{std::move(option8), std::move(option10), }}}};
-  } break;
-  case 15: { 
-    variant44_opt = types::ErrorCode{{types::ErrorCode::HttpRequestDenied{}}};
-  } break;
-  case 16: { 
-    variant44_opt = types::ErrorCode{{types::ErrorCode::HttpRequestLengthRequired{}}};
-  } break;
-  case 17: { std::optional<uint64_t> option11;
-  if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
-    
-    option11.emplace((uint64_t(*((int64_t*) (ptr4 + 24)))));
-  }
-
-  variant44_opt = types::ErrorCode{{types::ErrorCode::HttpRequestBodySize{std::move(option11)}}};
-} break;
-case 18: { 
-  variant44_opt = types::ErrorCode{{types::ErrorCode::HttpRequestMethodInvalid{}}};
-} break;
-case 19: { 
-  variant44_opt = types::ErrorCode{{types::ErrorCode::HttpRequestUriInvalid{}}};
-} break;
-case 20: { 
-  variant44_opt = types::ErrorCode{{types::ErrorCode::HttpRequestUriTooLong{}}};
-} break;
-case 21: { std::optional<uint32_t> option13;
-if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
-  int32_t l12 = *((int32_t const*)(ptr4 + 20));
-
-  option13.emplace((uint32_t(l12)));
-}
-
-variant44_opt = types::ErrorCode{{types::ErrorCode::HttpRequestHeaderSectionSize{std::move(option13)}}};
-} break;
-case 22: { std::optional<types::FieldSizePayload> option18;
-if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
-  std::optional<wit::string> option15;
-  if ((int32_t) (*((uint8_t*) (ptr4 + (16+1*sizeof(void*)))))) {
-    auto len14 = *((size_t*) (ptr4 + (16+3*sizeof(void*))));
-
-
-    option15.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+2*sizeof(void*))))), len14));
-  }
-  std::optional<uint32_t> option17;
-  if ((int32_t) (*((uint8_t*) (ptr4 + (16+4*sizeof(void*)))))) {
-    int32_t l16 = *((int32_t const*)(ptr4 + (20+4*sizeof(void*))));
-
-    option17.emplace((uint32_t(l16)));
-  }
-
-  option18.emplace(types::FieldSizePayload{std::move(option15), std::move(option17), });
-}
-
-variant44_opt = types::ErrorCode{{types::ErrorCode::HttpRequestHeaderSize{std::move(option18)}}};
-} break;
-case 23: { std::optional<uint32_t> option20;
-if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
-  int32_t l19 = *((int32_t const*)(ptr4 + 20));
-
-  option20.emplace((uint32_t(l19)));
-}
-
-variant44_opt = types::ErrorCode{{types::ErrorCode::HttpRequestTrailerSectionSize{std::move(option20)}}};
-} break;
-case 24: { std::optional<wit::string> option22;
-if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
-  auto len21 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
-
-
-  option22.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), len21));
-}
-std::optional<uint32_t> option24;
-if ((int32_t) (*((uint8_t*) (ptr4 + (16+3*sizeof(void*)))))) {
-  int32_t l23 = *((int32_t const*)(ptr4 + (20+3*sizeof(void*))));
-
-  option24.emplace((uint32_t(l23)));
-}
-
-variant44_opt = types::ErrorCode{{types::ErrorCode::HttpRequestTrailerSize{types::FieldSizePayload{std::move(option22), std::move(option24), }}}};
-} break;
-case 25: { 
-  variant44_opt = types::ErrorCode{{types::ErrorCode::HttpResponseIncomplete{}}};
-} break;
-case 26: { std::optional<uint32_t> option26;
-if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
-  int32_t l25 = *((int32_t const*)(ptr4 + 20));
-
-  option26.emplace((uint32_t(l25)));
-}
-
-variant44_opt = types::ErrorCode{{types::ErrorCode::HttpResponseHeaderSectionSize{std::move(option26)}}};
-} break;
-case 27: { std::optional<wit::string> option28;
-if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
-  auto len27 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
-
-
-  option28.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), len27));
-}
-std::optional<uint32_t> option30;
-if ((int32_t) (*((uint8_t*) (ptr4 + (16+3*sizeof(void*)))))) {
-  int32_t l29 = *((int32_t const*)(ptr4 + (20+3*sizeof(void*))));
-
-  option30.emplace((uint32_t(l29)));
-}
-
-variant44_opt = types::ErrorCode{{types::ErrorCode::HttpResponseHeaderSize{types::FieldSizePayload{std::move(option28), std::move(option30), }}}};
-} break;
-case 28: { std::optional<uint64_t> option31;
-if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
-  
-  option31.emplace((uint64_t(*((int64_t*) (ptr4 + 24)))));
-}
-
-variant44_opt = types::ErrorCode{{types::ErrorCode::HttpResponseBodySize{std::move(option31)}}};
-} break;
-case 29: { std::optional<uint32_t> option33;
-if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
-  int32_t l32 = *((int32_t const*)(ptr4 + 20));
-
-  option33.emplace((uint32_t(l32)));
-}
-
-variant44_opt = types::ErrorCode{{types::ErrorCode::HttpResponseTrailerSectionSize{std::move(option33)}}};
-} break;
-case 30: { std::optional<wit::string> option35;
-if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
-  auto len34 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
-
-
-  option35.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), len34));
-}
-std::optional<uint32_t> option37;
-if ((int32_t) (*((uint8_t*) (ptr4 + (16+3*sizeof(void*)))))) {
-  int32_t l36 = *((int32_t const*)(ptr4 + (20+3*sizeof(void*))));
-
-  option37.emplace((uint32_t(l36)));
-}
-
-variant44_opt = types::ErrorCode{{types::ErrorCode::HttpResponseTrailerSize{types::FieldSizePayload{std::move(option35), std::move(option37), }}}};
-} break;
-case 31: { std::optional<wit::string> option39;
-if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
-  auto len38 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
-
-
-  option39.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), len38));
-}
-
-variant44_opt = types::ErrorCode{{types::ErrorCode::HttpResponseTransferCoding{std::move(option39)}}};
-} break;
-case 32: { std::optional<wit::string> option41;
-if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
-  auto len40 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
-
-
-  option41.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), len40));
-}
-
-variant44_opt = types::ErrorCode{{types::ErrorCode::HttpResponseContentCoding{std::move(option41)}}};
-} break;
-case 33: { 
-  variant44_opt = types::ErrorCode{{types::ErrorCode::HttpResponseTimeout{}}};
-} break;
-case 34: { 
-  variant44_opt = types::ErrorCode{{types::ErrorCode::HttpUpgradeFailed{}}};
-} break;
-case 35: { 
-  variant44_opt = types::ErrorCode{{types::ErrorCode::HttpProtocolError{}}};
-} break;
-case 36: { 
-  variant44_opt = types::ErrorCode{{types::ErrorCode::LoopDetected{}}};
-} break;
-case 37: { 
-  variant44_opt = types::ErrorCode{{types::ErrorCode::ConfigurationError{}}};
-} break;
-case 38: { std::optional<wit::string> option43;
-if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
-  auto len42 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
-
-
-  option43.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), len42));
-}
-
-variant44_opt = types::ErrorCode{{types::ErrorCode::InternalError{std::move(option43)}}};
-} break;
-}
-types::ErrorCode variant44 = std::move(*variant44_opt);
-
-result45_opt.emplace(std::unexpected{std::move(variant44)});
-}
-std::expected<void, types::ErrorCode> result45 = std::move(*result45_opt);
-auto result46 = std::move(result45);
-return result46;
-}
-wasi::http0_2_0::types::OutgoingBody::OutgoingBody(wit::ResourceImportBase&&b) : wit::ResourceImportBase(std::move(b)) {}
 wasi::http0_2_0::types::FutureIncomingResponse::~FutureIncomingResponse()
 {
   if (handle>=0) {
@@ -5563,10 +5563,10 @@ std::optional<std::expected<std::expected<wasi::http0_2_0::types::IncomingRespon
           } break;
           case 1: { std::optional<wit::string> option3;
           if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
-            auto len2 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
+            auto _len2 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
 
 
-            option3.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), len2));
+            option3.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), _len2));
           }
           std::optional<uint16_t> option4;
           if ((int32_t) (*((uint8_t*) (ptr0 + (32+3*sizeof(void*)))))) {
@@ -5619,10 +5619,10 @@ std::optional<std::expected<std::expected<wasi::http0_2_0::types::IncomingRespon
         }
         std::optional<wit::string> option7;
         if ((int32_t) (*((uint8_t*) (ptr0 + (32+1*sizeof(void*)))))) {
-          auto len6 = *((size_t*) (ptr0 + (32+3*sizeof(void*))));
+          auto _len6 = *((size_t*) (ptr0 + (32+3*sizeof(void*))));
 
 
-          option7.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+2*sizeof(void*))))), len6));
+          option7.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+2*sizeof(void*))))), _len6));
         }
 
         variant41_opt = types::ErrorCode{{types::ErrorCode::TlsAlertReceived{types::TlsAlertReceivedPayload{std::move(option5), std::move(option7), }}}};
@@ -5663,10 +5663,10 @@ std::optional<std::expected<std::expected<wasi::http0_2_0::types::IncomingRespon
   if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
     std::optional<wit::string> option12;
     if ((int32_t) (*((uint8_t*) (ptr0 + (32+1*sizeof(void*)))))) {
-      auto len11 = *((size_t*) (ptr0 + (32+3*sizeof(void*))));
+      auto _len11 = *((size_t*) (ptr0 + (32+3*sizeof(void*))));
 
 
-      option12.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+2*sizeof(void*))))), len11));
+      option12.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+2*sizeof(void*))))), _len11));
     }
     std::optional<uint32_t> option14;
     if ((int32_t) (*((uint8_t*) (ptr0 + (32+4*sizeof(void*)))))) {
@@ -5691,10 +5691,10 @@ variant41_opt = types::ErrorCode{{types::ErrorCode::HttpRequestTrailerSectionSiz
 } break;
 case 24: { std::optional<wit::string> option19;
 if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
-  auto len18 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
+  auto _len18 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
 
 
-  option19.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), len18));
+  option19.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), _len18));
 }
 std::optional<uint32_t> option21;
 if ((int32_t) (*((uint8_t*) (ptr0 + (32+3*sizeof(void*)))))) {
@@ -5719,10 +5719,10 @@ variant41_opt = types::ErrorCode{{types::ErrorCode::HttpResponseHeaderSectionSiz
 } break;
 case 27: { std::optional<wit::string> option25;
 if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
-  auto len24 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
+  auto _len24 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
 
 
-  option25.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), len24));
+  option25.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), _len24));
 }
 std::optional<uint32_t> option27;
 if ((int32_t) (*((uint8_t*) (ptr0 + (32+3*sizeof(void*)))))) {
@@ -5752,10 +5752,10 @@ variant41_opt = types::ErrorCode{{types::ErrorCode::HttpResponseTrailerSectionSi
 } break;
 case 30: { std::optional<wit::string> option32;
 if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
-  auto len31 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
+  auto _len31 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
 
 
-  option32.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), len31));
+  option32.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), _len31));
 }
 std::optional<uint32_t> option34;
 if ((int32_t) (*((uint8_t*) (ptr0 + (32+3*sizeof(void*)))))) {
@@ -5768,20 +5768,20 @@ variant41_opt = types::ErrorCode{{types::ErrorCode::HttpResponseTrailerSize{type
 } break;
 case 31: { std::optional<wit::string> option36;
 if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
-  auto len35 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
+  auto _len35 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
 
 
-  option36.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), len35));
+  option36.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), _len35));
 }
 
 variant41_opt = types::ErrorCode{{types::ErrorCode::HttpResponseTransferCoding{std::move(option36)}}};
 } break;
 case 32: { std::optional<wit::string> option38;
 if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
-  auto len37 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
+  auto _len37 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
 
 
-  option38.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), len37));
+  option38.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), _len37));
 }
 
 variant41_opt = types::ErrorCode{{types::ErrorCode::HttpResponseContentCoding{std::move(option38)}}};
@@ -5803,10 +5803,10 @@ case 37: {
 } break;
 case 38: { std::optional<wit::string> option40;
 if ((int32_t) (*((uint8_t*) (ptr0 + 32)))) {
-  auto len39 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
+  auto _len39 = *((size_t*) (ptr0 + (32+2*sizeof(void*))));
 
 
-  option40.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), len39));
+  option40.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (32+1*sizeof(void*))))), _len39));
 }
 
 variant41_opt = types::ErrorCode{{types::ErrorCode::InternalError{std::move(option40)}}};
@@ -5845,10 +5845,10 @@ std::optional<wasi::http0_2_0::types::ErrorCode> wasi::http0_2_0::types::HttpErr
       } break;
       case 1: { std::optional<wit::string> option2;
       if ((int32_t) (*((uint8_t*) (ptr0 + 16)))) {
-        auto len1 = *((size_t*) (ptr0 + (16+2*sizeof(void*))));
+        auto _len1 = *((size_t*) (ptr0 + (16+2*sizeof(void*))));
 
 
-        option2.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (16+1*sizeof(void*))))), len1));
+        option2.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (16+1*sizeof(void*))))), _len1));
       }
       std::optional<uint16_t> option3;
       if ((int32_t) (*((uint8_t*) (ptr0 + (16+3*sizeof(void*)))))) {
@@ -5901,10 +5901,10 @@ std::optional<wasi::http0_2_0::types::ErrorCode> wasi::http0_2_0::types::HttpErr
     }
     std::optional<wit::string> option6;
     if ((int32_t) (*((uint8_t*) (ptr0 + (16+1*sizeof(void*)))))) {
-      auto len5 = *((size_t*) (ptr0 + (16+3*sizeof(void*))));
+      auto _len5 = *((size_t*) (ptr0 + (16+3*sizeof(void*))));
 
 
-      option6.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (16+2*sizeof(void*))))), len5));
+      option6.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (16+2*sizeof(void*))))), _len5));
     }
 
     variant40_opt = ErrorCode{{ErrorCode::TlsAlertReceived{TlsAlertReceivedPayload{std::move(option4), std::move(option6), }}}};
@@ -5945,10 +5945,10 @@ case 22: { std::optional<FieldSizePayload> option14;
 if ((int32_t) (*((uint8_t*) (ptr0 + 16)))) {
   std::optional<wit::string> option11;
   if ((int32_t) (*((uint8_t*) (ptr0 + (16+1*sizeof(void*)))))) {
-    auto len10 = *((size_t*) (ptr0 + (16+3*sizeof(void*))));
+    auto _len10 = *((size_t*) (ptr0 + (16+3*sizeof(void*))));
 
 
-    option11.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (16+2*sizeof(void*))))), len10));
+    option11.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (16+2*sizeof(void*))))), _len10));
   }
   std::optional<uint32_t> option13;
   if ((int32_t) (*((uint8_t*) (ptr0 + (16+4*sizeof(void*)))))) {
@@ -5973,10 +5973,10 @@ variant40_opt = ErrorCode{{ErrorCode::HttpRequestTrailerSectionSize{std::move(op
 } break;
 case 24: { std::optional<wit::string> option18;
 if ((int32_t) (*((uint8_t*) (ptr0 + 16)))) {
-  auto len17 = *((size_t*) (ptr0 + (16+2*sizeof(void*))));
+  auto _len17 = *((size_t*) (ptr0 + (16+2*sizeof(void*))));
 
 
-  option18.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (16+1*sizeof(void*))))), len17));
+  option18.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (16+1*sizeof(void*))))), _len17));
 }
 std::optional<uint32_t> option20;
 if ((int32_t) (*((uint8_t*) (ptr0 + (16+3*sizeof(void*)))))) {
@@ -6001,10 +6001,10 @@ variant40_opt = ErrorCode{{ErrorCode::HttpResponseHeaderSectionSize{std::move(op
 } break;
 case 27: { std::optional<wit::string> option24;
 if ((int32_t) (*((uint8_t*) (ptr0 + 16)))) {
-  auto len23 = *((size_t*) (ptr0 + (16+2*sizeof(void*))));
+  auto _len23 = *((size_t*) (ptr0 + (16+2*sizeof(void*))));
 
 
-  option24.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (16+1*sizeof(void*))))), len23));
+  option24.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (16+1*sizeof(void*))))), _len23));
 }
 std::optional<uint32_t> option26;
 if ((int32_t) (*((uint8_t*) (ptr0 + (16+3*sizeof(void*)))))) {
@@ -6034,10 +6034,10 @@ variant40_opt = ErrorCode{{ErrorCode::HttpResponseTrailerSectionSize{std::move(o
 } break;
 case 30: { std::optional<wit::string> option31;
 if ((int32_t) (*((uint8_t*) (ptr0 + 16)))) {
-  auto len30 = *((size_t*) (ptr0 + (16+2*sizeof(void*))));
+  auto _len30 = *((size_t*) (ptr0 + (16+2*sizeof(void*))));
 
 
-  option31.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (16+1*sizeof(void*))))), len30));
+  option31.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (16+1*sizeof(void*))))), _len30));
 }
 std::optional<uint32_t> option33;
 if ((int32_t) (*((uint8_t*) (ptr0 + (16+3*sizeof(void*)))))) {
@@ -6050,20 +6050,20 @@ variant40_opt = ErrorCode{{ErrorCode::HttpResponseTrailerSize{FieldSizePayload{s
 } break;
 case 31: { std::optional<wit::string> option35;
 if ((int32_t) (*((uint8_t*) (ptr0 + 16)))) {
-  auto len34 = *((size_t*) (ptr0 + (16+2*sizeof(void*))));
+  auto _len34 = *((size_t*) (ptr0 + (16+2*sizeof(void*))));
 
 
-  option35.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (16+1*sizeof(void*))))), len34));
+  option35.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (16+1*sizeof(void*))))), _len34));
 }
 
 variant40_opt = ErrorCode{{ErrorCode::HttpResponseTransferCoding{std::move(option35)}}};
 } break;
 case 32: { std::optional<wit::string> option37;
 if ((int32_t) (*((uint8_t*) (ptr0 + 16)))) {
-  auto len36 = *((size_t*) (ptr0 + (16+2*sizeof(void*))));
+  auto _len36 = *((size_t*) (ptr0 + (16+2*sizeof(void*))));
 
 
-  option37.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (16+1*sizeof(void*))))), len36));
+  option37.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (16+1*sizeof(void*))))), _len36));
 }
 
 variant40_opt = ErrorCode{{ErrorCode::HttpResponseContentCoding{std::move(option37)}}};
@@ -6085,10 +6085,10 @@ case 37: {
 } break;
 case 38: { std::optional<wit::string> option39;
 if ((int32_t) (*((uint8_t*) (ptr0 + 16)))) {
-  auto len38 = *((size_t*) (ptr0 + (16+2*sizeof(void*))));
+  auto _len38 = *((size_t*) (ptr0 + (16+2*sizeof(void*))));
 
 
-  option39.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (16+1*sizeof(void*))))), len38));
+  option39.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + (16+1*sizeof(void*))))), _len38));
 }
 
 variant40_opt = ErrorCode{{ErrorCode::InternalError{std::move(option39)}}};
@@ -6129,10 +6129,10 @@ std::expected<wasi::http0_2_0::types::FutureIncomingResponse, wasi::http0_2_0::t
       } break;
       case 1: { std::optional<wit::string> option7;
       if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
-        auto len6 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
+        auto _len6 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
 
 
-        option7.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), len6));
+        option7.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), _len6));
       }
       std::optional<uint16_t> option8;
       if ((int32_t) (*((uint8_t*) (ptr4 + (16+3*sizeof(void*)))))) {
@@ -6185,10 +6185,10 @@ std::expected<wasi::http0_2_0::types::FutureIncomingResponse, wasi::http0_2_0::t
     }
     std::optional<wit::string> option11;
     if ((int32_t) (*((uint8_t*) (ptr4 + (16+1*sizeof(void*)))))) {
-      auto len10 = *((size_t*) (ptr4 + (16+3*sizeof(void*))));
+      auto _len10 = *((size_t*) (ptr4 + (16+3*sizeof(void*))));
 
 
-      option11.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+2*sizeof(void*))))), len10));
+      option11.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+2*sizeof(void*))))), _len10));
     }
 
     variant45_opt = types::ErrorCode{{types::ErrorCode::TlsAlertReceived{types::TlsAlertReceivedPayload{std::move(option9), std::move(option11), }}}};
@@ -6229,10 +6229,10 @@ case 22: { std::optional<types::FieldSizePayload> option19;
 if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
   std::optional<wit::string> option16;
   if ((int32_t) (*((uint8_t*) (ptr4 + (16+1*sizeof(void*)))))) {
-    auto len15 = *((size_t*) (ptr4 + (16+3*sizeof(void*))));
+    auto _len15 = *((size_t*) (ptr4 + (16+3*sizeof(void*))));
 
 
-    option16.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+2*sizeof(void*))))), len15));
+    option16.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+2*sizeof(void*))))), _len15));
   }
   std::optional<uint32_t> option18;
   if ((int32_t) (*((uint8_t*) (ptr4 + (16+4*sizeof(void*)))))) {
@@ -6257,10 +6257,10 @@ variant45_opt = types::ErrorCode{{types::ErrorCode::HttpRequestTrailerSectionSiz
 } break;
 case 24: { std::optional<wit::string> option23;
 if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
-  auto len22 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
+  auto _len22 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
 
 
-  option23.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), len22));
+  option23.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), _len22));
 }
 std::optional<uint32_t> option25;
 if ((int32_t) (*((uint8_t*) (ptr4 + (16+3*sizeof(void*)))))) {
@@ -6285,10 +6285,10 @@ variant45_opt = types::ErrorCode{{types::ErrorCode::HttpResponseHeaderSectionSiz
 } break;
 case 27: { std::optional<wit::string> option29;
 if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
-  auto len28 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
+  auto _len28 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
 
 
-  option29.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), len28));
+  option29.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), _len28));
 }
 std::optional<uint32_t> option31;
 if ((int32_t) (*((uint8_t*) (ptr4 + (16+3*sizeof(void*)))))) {
@@ -6318,10 +6318,10 @@ variant45_opt = types::ErrorCode{{types::ErrorCode::HttpResponseTrailerSectionSi
 } break;
 case 30: { std::optional<wit::string> option36;
 if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
-  auto len35 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
+  auto _len35 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
 
 
-  option36.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), len35));
+  option36.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), _len35));
 }
 std::optional<uint32_t> option38;
 if ((int32_t) (*((uint8_t*) (ptr4 + (16+3*sizeof(void*)))))) {
@@ -6334,20 +6334,20 @@ variant45_opt = types::ErrorCode{{types::ErrorCode::HttpResponseTrailerSize{type
 } break;
 case 31: { std::optional<wit::string> option40;
 if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
-  auto len39 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
+  auto _len39 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
 
 
-  option40.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), len39));
+  option40.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), _len39));
 }
 
 variant45_opt = types::ErrorCode{{types::ErrorCode::HttpResponseTransferCoding{std::move(option40)}}};
 } break;
 case 32: { std::optional<wit::string> option42;
 if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
-  auto len41 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
+  auto _len41 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
 
 
-  option42.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), len41));
+  option42.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), _len41));
 }
 
 variant45_opt = types::ErrorCode{{types::ErrorCode::HttpResponseContentCoding{std::move(option42)}}};
@@ -6369,10 +6369,10 @@ case 37: {
 } break;
 case 38: { std::optional<wit::string> option44;
 if ((int32_t) (*((uint8_t*) (ptr4 + 16)))) {
-  auto len43 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
+  auto _len43 = *((size_t*) (ptr4 + (16+2*sizeof(void*))));
 
 
-  option44.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), len43));
+  option44.emplace(wit::string((char const*)(*((uint8_t**) (ptr4 + (16+1*sizeof(void*))))), _len43));
 }
 
 variant45_opt = types::ErrorCode{{types::ErrorCode::InternalError{std::move(option44)}}};
@@ -6389,12 +6389,12 @@ return result47;
 std::expected<fermyon::spin2_0_0::llm::InferencingResult, fermyon::spin2_0_0::llm::Error> fermyon::spin2_0_0::llm::Infer(std::string_view model, std::string_view prompt, std::optional<InferencingParams> params)
 {
   uintptr_t ret_area[((8+3*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = model;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec1 = prompt;
-  auto ptr1 = (uint8_t*)(vec1.data());
-  auto len1 = (size_t)(vec1.size());
+  auto&& _vec0 = model;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec1 = prompt;
+  auto _ptr1 = (uint8_t*)(_vec1.data());
+  auto _len1 = (size_t)(_vec1.size());
   int32_t option4;
   int32_t option5;
   float option6;
@@ -6421,30 +6421,30 @@ std::expected<fermyon::spin2_0_0::llm::InferencingResult, fermyon::spin2_0_0::ll
     option10 = 0.0f;
   }
   uint8_t* ptr11 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2FllmX402X2E0X2E0X00infer(std::move(ptr0), std::move(len0), std::move(ptr1), std::move(len1), std::move(option4), std::move(option5), std::move(option6), std::move(option7), std::move(option8), std::move(option9), std::move(option10), std::move(ptr11));
+  __wasm_import_fermyonX3AspinX2FllmX402X2E0X2E0X00infer(std::move(_ptr0), std::move(_len0), std::move(_ptr1), std::move(_len1), std::move(option4), std::move(option5), std::move(option6), std::move(option7), std::move(option8), std::move(option9), std::move(option10), std::move(ptr11));
   std::optional<std::expected<InferencingResult, Error>> result18_opt;
   if ((int32_t) (*((uint8_t*) (ptr11 + 0)))==0) {
-    auto len12 = *((size_t*) (ptr11 + (2*sizeof(void*))));
+    auto _len12 = *((size_t*) (ptr11 + (2*sizeof(void*))));
 
     int32_t l13 = *((int32_t const*)(ptr11 + (3*sizeof(void*))));
     int32_t l14 = *((int32_t const*)(ptr11 + (4+3*sizeof(void*))));
 
-    result18_opt.emplace(std::expected<InferencingResult, Error>(InferencingResult{wit::string((char const*)(*((uint8_t**) (ptr11 + sizeof(void*)))), len12), InferencingUsage{(uint32_t(l13)), (uint32_t(l14)), }, }));
+    result18_opt.emplace(std::expected<InferencingResult, Error>(InferencingResult{wit::string((char const*)(*((uint8_t**) (ptr11 + sizeof(void*)))), _len12), InferencingUsage{(uint32_t(l13)), (uint32_t(l14)), }, }));
   } else {
     std::optional<Error> variant17_opt;
     switch ((int32_t) (*((uint8_t*) (ptr11 + sizeof(void*))))) {
       case 0: { 
         variant17_opt = Error{{Error::ModelNotSupported{}}};
       } break;
-      case 1: { auto len15 = *((size_t*) (ptr11 + (3*sizeof(void*))));
+      case 1: { auto _len15 = *((size_t*) (ptr11 + (3*sizeof(void*))));
 
 
-      variant17_opt = Error{{Error::RuntimeError{wit::string((char const*)(*((uint8_t**) (ptr11 + (2*sizeof(void*))))), len15)}}};
+      variant17_opt = Error{{Error::RuntimeError{wit::string((char const*)(*((uint8_t**) (ptr11 + (2*sizeof(void*))))), _len15)}}};
     } break;
-    case 2: { auto len16 = *((size_t*) (ptr11 + (3*sizeof(void*))));
+    case 2: { auto _len16 = *((size_t*) (ptr11 + (3*sizeof(void*))));
 
 
-    variant17_opt = Error{{Error::InvalidInput{wit::string((char const*)(*((uint8_t**) (ptr11 + (2*sizeof(void*))))), len16)}}};
+    variant17_opt = Error{{Error::InvalidInput{wit::string((char const*)(*((uint8_t**) (ptr11 + (2*sizeof(void*))))), _len16)}}};
   } break;
 }
 Error variant17 = std::move(*variant17_opt);
@@ -6458,53 +6458,53 @@ return result19;
 std::expected<fermyon::spin2_0_0::llm::EmbeddingsResult, fermyon::spin2_0_0::llm::Error> fermyon::spin2_0_0::llm::GenerateEmbeddings(std::string_view model, std::span<std::string_view const> text)
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = model;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec2 = text;
-  auto ptr2 = (uint8_t*)(vec2.data());
-  auto len2 = (size_t)(vec2.size());
-  for (size_t i = 0; i < len2; ++i) {
-    auto base = ptr2 + i * (2*sizeof(void*));
-    auto&& iter_elem = vec2[i];
-    auto&& vec1 = iter_elem;
-    auto ptr1 = (uint8_t*)(vec1.data());
-    auto len1 = (size_t)(vec1.size());
-    *((size_t*)(base + sizeof(void*))) = len1;
-    *((uint8_t**)(base + 0)) = ptr1;
+  auto&& _vec0 = model;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec2 = text;
+  auto _ptr2 = (uint8_t*)(_vec2.data());
+  auto _len2 = (size_t)(_vec2.size());
+  for (size_t i = 0; i < _len2; ++i) {
+    auto _base = _ptr2 + i * (2*sizeof(void*));
+    auto&& _iter_elem = _vec2[i];
+    auto&& _vec1 = _iter_elem;
+    auto _ptr1 = (uint8_t*)(_vec1.data());
+    auto _len1 = (size_t)(_vec1.size());
+    *((size_t*)(_base + sizeof(void*))) = _len1;
+    *((uint8_t**)(_base + 0)) = _ptr1;
 
   }
   uint8_t* ptr3 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2FllmX402X2E0X2E0X00generate_embeddings(std::move(ptr0), std::move(len0), std::move(ptr2), std::move(len2), std::move(ptr3));
+  __wasm_import_fermyonX3AspinX2FllmX402X2E0X2E0X00generate_embeddings(std::move(_ptr0), std::move(_len0), std::move(_ptr2), std::move(_len2), std::move(ptr3));
   std::optional<std::expected<EmbeddingsResult, Error>> result10_opt;
   if ((int32_t) (*((uint8_t*) (ptr3 + 0)))==0) {
-    auto base5 = *((uint8_t**) (ptr3 + sizeof(void*)));
-    auto len5 = *((size_t*) (ptr3 + (2*sizeof(void*))));
-    auto result5 = wit::vector<wit::vector<float>>::allocate(len5);
-    for (unsigned i=0; i<len5; ++i) {
-      auto base = base5 + i * (2*sizeof(void*));
-      auto len4 = *((size_t*) (base + sizeof(void*)));
-      auto e5 = wit::vector<float>((float*)(*((uint8_t**) (base + 0))), len4);
-      result5.initialize(i, std::move(e5));
+    auto _base5 = *((uint8_t**) (ptr3 + sizeof(void*)));
+    auto _len5 = *((size_t*) (ptr3 + (2*sizeof(void*))));
+    auto _result5 = wit::vector<wit::vector<float>>::allocate(_len5);
+    for (unsigned i=0; i<_len5; ++i) {
+      auto _base = _base5 + i * (2*sizeof(void*));
+      auto _len4 = *((size_t*) (_base + sizeof(void*)));
+      auto _e5 = wit::vector<float>((float*)(*((uint8_t**) (_base + 0))), _len4);
+      _result5.initialize(i, std::move(_e5));
     }
     int32_t l6 = *((int32_t const*)(ptr3 + (3*sizeof(void*))));
 
-    result10_opt.emplace(std::expected<EmbeddingsResult, Error>(EmbeddingsResult{std::move(result5), EmbeddingsUsage{(uint32_t(l6)), }, }));
+    result10_opt.emplace(std::expected<EmbeddingsResult, Error>(EmbeddingsResult{std::move(_result5), EmbeddingsUsage{(uint32_t(l6)), }, }));
   } else {
     std::optional<Error> variant9_opt;
     switch ((int32_t) (*((uint8_t*) (ptr3 + sizeof(void*))))) {
       case 0: { 
         variant9_opt = Error{{Error::ModelNotSupported{}}};
       } break;
-      case 1: { auto len7 = *((size_t*) (ptr3 + (3*sizeof(void*))));
+      case 1: { auto _len7 = *((size_t*) (ptr3 + (3*sizeof(void*))));
 
 
-      variant9_opt = Error{{Error::RuntimeError{wit::string((char const*)(*((uint8_t**) (ptr3 + (2*sizeof(void*))))), len7)}}};
+      variant9_opt = Error{{Error::RuntimeError{wit::string((char const*)(*((uint8_t**) (ptr3 + (2*sizeof(void*))))), _len7)}}};
     } break;
-    case 2: { auto len8 = *((size_t*) (ptr3 + (3*sizeof(void*))));
+    case 2: { auto _len8 = *((size_t*) (ptr3 + (3*sizeof(void*))));
 
 
-    variant9_opt = Error{{Error::InvalidInput{wit::string((char const*)(*((uint8_t**) (ptr3 + (2*sizeof(void*))))), len8)}}};
+    variant9_opt = Error{{Error::InvalidInput{wit::string((char const*)(*((uint8_t**) (ptr3 + (2*sizeof(void*))))), _len8)}}};
   } break;
 }
 Error variant9 = std::move(*variant9_opt);
@@ -6524,11 +6524,11 @@ fermyon::spin2_0_0::redis::Connection::~Connection()
 std::expected<fermyon::spin2_0_0::redis::Connection, fermyon::spin2_0_0::redis::Error> fermyon::spin2_0_0::redis::Connection::Open(std::string_view address)
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = address;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = address;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2FredisX402X2E0X2E0X00X5BstaticX5DconnectionX2Eopen(std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_fermyonX3AspinX2FredisX402X2E0X2E0X00X5BstaticX5DconnectionX2Eopen(std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<redis::Connection, redis::Error>> result5_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     int32_t l2 = *((int32_t const*)(ptr1 + sizeof(void*)));
@@ -6546,10 +6546,10 @@ std::expected<fermyon::spin2_0_0::redis::Connection, fermyon::spin2_0_0::redis::
       case 2: { 
         variant4_opt = redis::Error{{redis::Error::TypeError{}}};
       } break;
-      case 3: { auto len3 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      case 3: { auto _len3 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-      variant4_opt = redis::Error{{redis::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len3)}}};
+      variant4_opt = redis::Error{{redis::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len3)}}};
     } break;
   }
   redis::Error variant4 = std::move(*variant4_opt);
@@ -6563,14 +6563,14 @@ return result6;
 std::expected<void, fermyon::spin2_0_0::redis::Error> fermyon::spin2_0_0::redis::Connection::Publish(std::string_view channel, std::span<uint8_t const> payload) const
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = channel;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec1 = payload;
-  auto ptr1 = (uint8_t*)(vec1.data());
-  auto len1 = (size_t)(vec1.size());
+  auto&& _vec0 = channel;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec1 = payload;
+  auto _ptr1 = (uint8_t*)(_vec1.data());
+  auto _len1 = (size_t)(_vec1.size());
   uint8_t* ptr2 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2FredisX402X2E0X2E0X00X5BmethodX5DconnectionX2Epublish((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1), std::move(len1), std::move(ptr2));
+  __wasm_import_fermyonX3AspinX2FredisX402X2E0X2E0X00X5BmethodX5DconnectionX2Epublish((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(_ptr1), std::move(_len1), std::move(ptr2));
   std::optional<std::expected<void, redis::Error>> result5_opt;
   if ((int32_t) (*((uint8_t*) (ptr2 + 0)))==0) {
     
@@ -6587,10 +6587,10 @@ std::expected<void, fermyon::spin2_0_0::redis::Error> fermyon::spin2_0_0::redis:
       case 2: { 
         variant4_opt = redis::Error{{redis::Error::TypeError{}}};
       } break;
-      case 3: { auto len3 = *((size_t*) (ptr2 + (3*sizeof(void*))));
+      case 3: { auto _len3 = *((size_t*) (ptr2 + (3*sizeof(void*))));
 
 
-      variant4_opt = redis::Error{{redis::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr2 + (2*sizeof(void*))))), len3)}}};
+      variant4_opt = redis::Error{{redis::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr2 + (2*sizeof(void*))))), _len3)}}};
     } break;
   }
   redis::Error variant4 = std::move(*variant4_opt);
@@ -6604,18 +6604,18 @@ return result6;
 std::expected<std::optional<wit::vector<uint8_t>>, fermyon::spin2_0_0::redis::Error> fermyon::spin2_0_0::redis::Connection::Get(std::string_view key) const
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = key;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = key;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2FredisX402X2E0X2E0X00X5BmethodX5DconnectionX2Eget((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_fermyonX3AspinX2FredisX402X2E0X2E0X00X5BmethodX5DconnectionX2Eget((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<std::optional<wit::vector<uint8_t>>, redis::Error>> result6_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     std::optional<wit::vector<uint8_t>> option3;
     if ((int32_t) (*((uint8_t*) (ptr1 + sizeof(void*))))) {
-      auto len2 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      auto _len2 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
-      option3.emplace(wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len2));
+      option3.emplace(wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len2));
     }
 
     result6_opt.emplace(std::expected<std::optional<wit::vector<uint8_t>>, redis::Error>(std::move(option3)));
@@ -6631,10 +6631,10 @@ std::expected<std::optional<wit::vector<uint8_t>>, fermyon::spin2_0_0::redis::Er
       case 2: { 
         variant5_opt = redis::Error{{redis::Error::TypeError{}}};
       } break;
-      case 3: { auto len4 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      case 3: { auto _len4 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-      variant5_opt = redis::Error{{redis::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len4)}}};
+      variant5_opt = redis::Error{{redis::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len4)}}};
     } break;
   }
   redis::Error variant5 = std::move(*variant5_opt);
@@ -6648,14 +6648,14 @@ return result7;
 std::expected<void, fermyon::spin2_0_0::redis::Error> fermyon::spin2_0_0::redis::Connection::Set(std::string_view key, std::span<uint8_t const> value) const
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = key;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec1 = value;
-  auto ptr1 = (uint8_t*)(vec1.data());
-  auto len1 = (size_t)(vec1.size());
+  auto&& _vec0 = key;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec1 = value;
+  auto _ptr1 = (uint8_t*)(_vec1.data());
+  auto _len1 = (size_t)(_vec1.size());
   uint8_t* ptr2 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2FredisX402X2E0X2E0X00X5BmethodX5DconnectionX2Eset((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1), std::move(len1), std::move(ptr2));
+  __wasm_import_fermyonX3AspinX2FredisX402X2E0X2E0X00X5BmethodX5DconnectionX2Eset((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(_ptr1), std::move(_len1), std::move(ptr2));
   std::optional<std::expected<void, redis::Error>> result5_opt;
   if ((int32_t) (*((uint8_t*) (ptr2 + 0)))==0) {
     
@@ -6672,10 +6672,10 @@ std::expected<void, fermyon::spin2_0_0::redis::Error> fermyon::spin2_0_0::redis:
       case 2: { 
         variant4_opt = redis::Error{{redis::Error::TypeError{}}};
       } break;
-      case 3: { auto len3 = *((size_t*) (ptr2 + (3*sizeof(void*))));
+      case 3: { auto _len3 = *((size_t*) (ptr2 + (3*sizeof(void*))));
 
 
-      variant4_opt = redis::Error{{redis::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr2 + (2*sizeof(void*))))), len3)}}};
+      variant4_opt = redis::Error{{redis::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr2 + (2*sizeof(void*))))), _len3)}}};
     } break;
   }
   redis::Error variant4 = std::move(*variant4_opt);
@@ -6689,11 +6689,11 @@ return result6;
 std::expected<int64_t, fermyon::spin2_0_0::redis::Error> fermyon::spin2_0_0::redis::Connection::Incr(std::string_view key) const
 {
   uint64_t ret_area[((16+2*sizeof(void*))+sizeof(uint64_t)-1)/sizeof(uint64_t)];
-  auto&& vec0 = key;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = key;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2FredisX402X2E0X2E0X00X5BmethodX5DconnectionX2Eincr((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_fermyonX3AspinX2FredisX402X2E0X2E0X00X5BmethodX5DconnectionX2Eincr((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<int64_t, redis::Error>> result4_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     
@@ -6710,10 +6710,10 @@ std::expected<int64_t, fermyon::spin2_0_0::redis::Error> fermyon::spin2_0_0::red
       case 2: { 
         variant3_opt = redis::Error{{redis::Error::TypeError{}}};
       } break;
-      case 3: { auto len2 = *((size_t*) (ptr1 + (8+2*sizeof(void*))));
+      case 3: { auto _len2 = *((size_t*) (ptr1 + (8+2*sizeof(void*))));
 
 
-      variant3_opt = redis::Error{{redis::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (8+1*sizeof(void*))))), len2)}}};
+      variant3_opt = redis::Error{{redis::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (8+1*sizeof(void*))))), _len2)}}};
     } break;
   }
   redis::Error variant3 = std::move(*variant3_opt);
@@ -6727,21 +6727,21 @@ return result5;
 std::expected<uint32_t, fermyon::spin2_0_0::redis::Error> fermyon::spin2_0_0::redis::Connection::Del(std::span<std::string_view const> keys) const
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec1 = keys;
-  auto ptr1 = (uint8_t*)(vec1.data());
-  auto len1 = (size_t)(vec1.size());
-  for (size_t i = 0; i < len1; ++i) {
-    auto base = ptr1 + i * (2*sizeof(void*));
-    auto&& iter_elem = vec1[i];
-    auto&& vec0 = iter_elem;
-    auto ptr0 = (uint8_t*)(vec0.data());
-    auto len0 = (size_t)(vec0.size());
-    *((size_t*)(base + sizeof(void*))) = len0;
-    *((uint8_t**)(base + 0)) = ptr0;
+  auto&& _vec1 = keys;
+  auto _ptr1 = (uint8_t*)(_vec1.data());
+  auto _len1 = (size_t)(_vec1.size());
+  for (size_t i = 0; i < _len1; ++i) {
+    auto _base = _ptr1 + i * (2*sizeof(void*));
+    auto&& _iter_elem = _vec1[i];
+    auto&& _vec0 = _iter_elem;
+    auto _ptr0 = (uint8_t*)(_vec0.data());
+    auto _len0 = (size_t)(_vec0.size());
+    *((size_t*)(_base + sizeof(void*))) = _len0;
+    *((uint8_t**)(_base + 0)) = _ptr0;
 
   }
   uint8_t* ptr2 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2FredisX402X2E0X2E0X00X5BmethodX5DconnectionX2Edel((*this).get_handle(), std::move(ptr1), std::move(len1), std::move(ptr2));
+  __wasm_import_fermyonX3AspinX2FredisX402X2E0X2E0X00X5BmethodX5DconnectionX2Edel((*this).get_handle(), std::move(_ptr1), std::move(_len1), std::move(ptr2));
   std::optional<std::expected<uint32_t, redis::Error>> result6_opt;
   if ((int32_t) (*((uint8_t*) (ptr2 + 0)))==0) {
     int32_t l3 = *((int32_t const*)(ptr2 + sizeof(void*)));
@@ -6759,10 +6759,10 @@ std::expected<uint32_t, fermyon::spin2_0_0::redis::Error> fermyon::spin2_0_0::re
       case 2: { 
         variant5_opt = redis::Error{{redis::Error::TypeError{}}};
       } break;
-      case 3: { auto len4 = *((size_t*) (ptr2 + (3*sizeof(void*))));
+      case 3: { auto _len4 = *((size_t*) (ptr2 + (3*sizeof(void*))));
 
 
-      variant5_opt = redis::Error{{redis::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr2 + (2*sizeof(void*))))), len4)}}};
+      variant5_opt = redis::Error{{redis::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr2 + (2*sizeof(void*))))), _len4)}}};
     } break;
   }
   redis::Error variant5 = std::move(*variant5_opt);
@@ -6776,24 +6776,24 @@ return result7;
 std::expected<uint32_t, fermyon::spin2_0_0::redis::Error> fermyon::spin2_0_0::redis::Connection::Sadd(std::string_view key, std::span<std::string_view const> values) const
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = key;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec2 = values;
-  auto ptr2 = (uint8_t*)(vec2.data());
-  auto len2 = (size_t)(vec2.size());
-  for (size_t i = 0; i < len2; ++i) {
-    auto base = ptr2 + i * (2*sizeof(void*));
-    auto&& iter_elem = vec2[i];
-    auto&& vec1 = iter_elem;
-    auto ptr1 = (uint8_t*)(vec1.data());
-    auto len1 = (size_t)(vec1.size());
-    *((size_t*)(base + sizeof(void*))) = len1;
-    *((uint8_t**)(base + 0)) = ptr1;
+  auto&& _vec0 = key;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec2 = values;
+  auto _ptr2 = (uint8_t*)(_vec2.data());
+  auto _len2 = (size_t)(_vec2.size());
+  for (size_t i = 0; i < _len2; ++i) {
+    auto _base = _ptr2 + i * (2*sizeof(void*));
+    auto&& _iter_elem = _vec2[i];
+    auto&& _vec1 = _iter_elem;
+    auto _ptr1 = (uint8_t*)(_vec1.data());
+    auto _len1 = (size_t)(_vec1.size());
+    *((size_t*)(_base + sizeof(void*))) = _len1;
+    *((uint8_t**)(_base + 0)) = _ptr1;
 
   }
   uint8_t* ptr3 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2FredisX402X2E0X2E0X00X5BmethodX5DconnectionX2Esadd((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr2), std::move(len2), std::move(ptr3));
+  __wasm_import_fermyonX3AspinX2FredisX402X2E0X2E0X00X5BmethodX5DconnectionX2Esadd((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(_ptr2), std::move(_len2), std::move(ptr3));
   std::optional<std::expected<uint32_t, redis::Error>> result7_opt;
   if ((int32_t) (*((uint8_t*) (ptr3 + 0)))==0) {
     int32_t l4 = *((int32_t const*)(ptr3 + sizeof(void*)));
@@ -6811,10 +6811,10 @@ std::expected<uint32_t, fermyon::spin2_0_0::redis::Error> fermyon::spin2_0_0::re
       case 2: { 
         variant6_opt = redis::Error{{redis::Error::TypeError{}}};
       } break;
-      case 3: { auto len5 = *((size_t*) (ptr3 + (3*sizeof(void*))));
+      case 3: { auto _len5 = *((size_t*) (ptr3 + (3*sizeof(void*))));
 
 
-      variant6_opt = redis::Error{{redis::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr3 + (2*sizeof(void*))))), len5)}}};
+      variant6_opt = redis::Error{{redis::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr3 + (2*sizeof(void*))))), _len5)}}};
     } break;
   }
   redis::Error variant6 = std::move(*variant6_opt);
@@ -6828,25 +6828,25 @@ return result8;
 std::expected<wit::vector<wit::string>, fermyon::spin2_0_0::redis::Error> fermyon::spin2_0_0::redis::Connection::Smembers(std::string_view key) const
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = key;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = key;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2FredisX402X2E0X2E0X00X5BmethodX5DconnectionX2Esmembers((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_fermyonX3AspinX2FredisX402X2E0X2E0X00X5BmethodX5DconnectionX2Esmembers((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<wit::vector<wit::string>, redis::Error>> result6_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
-    auto base3 = *((uint8_t**) (ptr1 + sizeof(void*)));
-    auto len3 = *((size_t*) (ptr1 + (2*sizeof(void*))));
-    auto result3 = wit::vector<wit::string>::allocate(len3);
-    for (unsigned i=0; i<len3; ++i) {
-      auto base = base3 + i * (2*sizeof(void*));
-      auto len2 = *((size_t*) (base + sizeof(void*)));
+    auto _base3 = *((uint8_t**) (ptr1 + sizeof(void*)));
+    auto _len3 = *((size_t*) (ptr1 + (2*sizeof(void*))));
+    auto _result3 = wit::vector<wit::string>::allocate(_len3);
+    for (unsigned i=0; i<_len3; ++i) {
+      auto _base = _base3 + i * (2*sizeof(void*));
+      auto _len2 = *((size_t*) (_base + sizeof(void*)));
 
-      auto e3 = wit::string((char const*)(*((uint8_t**) (base + 0))), len2);
-      result3.initialize(i, std::move(e3));
+      auto _e3 = wit::string((char const*)(*((uint8_t**) (_base + 0))), _len2);
+      _result3.initialize(i, std::move(_e3));
     }
 
-    result6_opt.emplace(std::expected<wit::vector<wit::string>, redis::Error>(std::move(result3)));
+    result6_opt.emplace(std::expected<wit::vector<wit::string>, redis::Error>(std::move(_result3)));
   } else {
     std::optional<redis::Error> variant5_opt;
     switch ((int32_t) (*((uint8_t*) (ptr1 + sizeof(void*))))) {
@@ -6859,10 +6859,10 @@ std::expected<wit::vector<wit::string>, fermyon::spin2_0_0::redis::Error> fermyo
       case 2: { 
         variant5_opt = redis::Error{{redis::Error::TypeError{}}};
       } break;
-      case 3: { auto len4 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      case 3: { auto _len4 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-      variant5_opt = redis::Error{{redis::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len4)}}};
+      variant5_opt = redis::Error{{redis::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len4)}}};
     } break;
   }
   redis::Error variant5 = std::move(*variant5_opt);
@@ -6876,24 +6876,24 @@ return result7;
 std::expected<uint32_t, fermyon::spin2_0_0::redis::Error> fermyon::spin2_0_0::redis::Connection::Srem(std::string_view key, std::span<std::string_view const> values) const
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = key;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec2 = values;
-  auto ptr2 = (uint8_t*)(vec2.data());
-  auto len2 = (size_t)(vec2.size());
-  for (size_t i = 0; i < len2; ++i) {
-    auto base = ptr2 + i * (2*sizeof(void*));
-    auto&& iter_elem = vec2[i];
-    auto&& vec1 = iter_elem;
-    auto ptr1 = (uint8_t*)(vec1.data());
-    auto len1 = (size_t)(vec1.size());
-    *((size_t*)(base + sizeof(void*))) = len1;
-    *((uint8_t**)(base + 0)) = ptr1;
+  auto&& _vec0 = key;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec2 = values;
+  auto _ptr2 = (uint8_t*)(_vec2.data());
+  auto _len2 = (size_t)(_vec2.size());
+  for (size_t i = 0; i < _len2; ++i) {
+    auto _base = _ptr2 + i * (2*sizeof(void*));
+    auto&& _iter_elem = _vec2[i];
+    auto&& _vec1 = _iter_elem;
+    auto _ptr1 = (uint8_t*)(_vec1.data());
+    auto _len1 = (size_t)(_vec1.size());
+    *((size_t*)(_base + sizeof(void*))) = _len1;
+    *((uint8_t**)(_base + 0)) = _ptr1;
 
   }
   uint8_t* ptr3 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2FredisX402X2E0X2E0X00X5BmethodX5DconnectionX2Esrem((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr2), std::move(len2), std::move(ptr3));
+  __wasm_import_fermyonX3AspinX2FredisX402X2E0X2E0X00X5BmethodX5DconnectionX2Esrem((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(_ptr2), std::move(_len2), std::move(ptr3));
   std::optional<std::expected<uint32_t, redis::Error>> result7_opt;
   if ((int32_t) (*((uint8_t*) (ptr3 + 0)))==0) {
     int32_t l4 = *((int32_t const*)(ptr3 + sizeof(void*)));
@@ -6911,10 +6911,10 @@ std::expected<uint32_t, fermyon::spin2_0_0::redis::Error> fermyon::spin2_0_0::re
       case 2: { 
         variant6_opt = redis::Error{{redis::Error::TypeError{}}};
       } break;
-      case 3: { auto len5 = *((size_t*) (ptr3 + (3*sizeof(void*))));
+      case 3: { auto _len5 = *((size_t*) (ptr3 + (3*sizeof(void*))));
 
 
-      variant6_opt = redis::Error{{redis::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr3 + (2*sizeof(void*))))), len5)}}};
+      variant6_opt = redis::Error{{redis::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr3 + (2*sizeof(void*))))), _len5)}}};
     } break;
   }
   redis::Error variant6 = std::move(*variant6_opt);
@@ -6928,68 +6928,68 @@ return result8;
 std::expected<wit::vector<fermyon::spin2_0_0::redis::RedisResult>, fermyon::spin2_0_0::redis::Error> fermyon::spin2_0_0::redis::Connection::Execute(std::string_view command, std::span<redis::RedisParameter const> arguments) const
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = command;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec4 = arguments;
-  auto ptr4 = (uint8_t*)(vec4.data());
-  auto len4 = (size_t)(vec4.size());
-  for (size_t i = 0; i < len4; ++i) {
-    auto base = ptr4 + i * (8+2*sizeof(void*));
-    auto&& iter_elem = vec4[i];
-    switch ((int32_t) (iter_elem).variants.index()) {
+  auto&& _vec0 = command;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec4 = arguments;
+  auto _ptr4 = (uint8_t*)(_vec4.data());
+  auto _len4 = (size_t)(_vec4.size());
+  for (size_t i = 0; i < _len4; ++i) {
+    auto _base = _ptr4 + i * (8+2*sizeof(void*));
+    auto&& _iter_elem = _vec4[i];
+    switch ((int32_t) (_iter_elem).variants.index()) {
       case 0: {
-        auto& payload1 = std::get<redis::RedisParameter::Int64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(0));
-        *((int64_t*)(base + 8)) = (int64_t(payload1));
+        auto& payload1 = std::get<redis::RedisParameter::Int64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(0));
+        *((int64_t*)(_base + 8)) = (int64_t(payload1));
         break;
       }
       case 1: {
-        auto& payload2 = std::get<redis::RedisParameter::Binary>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(1));
-        auto&& vec3 = payload2;
-        auto ptr3 = (uint8_t*)(vec3.data());
-        auto len3 = (size_t)(vec3.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len3;
-        *((uint8_t**)(base + 8)) = ptr3;
+        auto& payload2 = std::get<redis::RedisParameter::Binary>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(1));
+        auto&& _vec3 = payload2;
+        auto _ptr3 = (uint8_t*)(_vec3.data());
+        auto _len3 = (size_t)(_vec3.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len3;
+        *((uint8_t**)(_base + 8)) = _ptr3;
         break;
       }
     }
 
   }
   uint8_t* ptr5 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2FredisX402X2E0X2E0X00X5BmethodX5DconnectionX2Eexecute((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr4), std::move(len4), std::move(ptr5));
+  __wasm_import_fermyonX3AspinX2FredisX402X2E0X2E0X00X5BmethodX5DconnectionX2Eexecute((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(_ptr4), std::move(_len4), std::move(ptr5));
   std::optional<std::expected<wit::vector<redis::RedisResult>, redis::Error>> result12_opt;
   if ((int32_t) (*((uint8_t*) (ptr5 + 0)))==0) {
-    auto base9 = *((uint8_t**) (ptr5 + sizeof(void*)));
-    auto len9 = *((size_t*) (ptr5 + (2*sizeof(void*))));
-    auto result9 = wit::vector<redis::RedisResult>::allocate(len9);
-    for (unsigned i=0; i<len9; ++i) {
-      auto base = base9 + i * (8+2*sizeof(void*));
+    auto _base9 = *((uint8_t**) (ptr5 + sizeof(void*)));
+    auto _len9 = *((size_t*) (ptr5 + (2*sizeof(void*))));
+    auto _result9 = wit::vector<redis::RedisResult>::allocate(_len9);
+    for (unsigned i=0; i<_len9; ++i) {
+      auto _base = _base9 + i * (8+2*sizeof(void*));
       std::optional<redis::RedisResult> variant8_opt;
-      switch ((int32_t) (*((uint8_t*) (base + 0)))) {
+      switch ((int32_t) (*((uint8_t*) (_base + 0)))) {
         case 0: { 
           variant8_opt = redis::RedisResult{{redis::RedisResult::Nil{}}};
         } break;
-        case 1: { auto len6 = *((size_t*) (base + (8+1*sizeof(void*))));
+        case 1: { auto _len6 = *((size_t*) (_base + (8+1*sizeof(void*))));
 
 
-        variant8_opt = redis::RedisResult{{redis::RedisResult::Status{wit::string((char const*)(*((uint8_t**) (base + 8))), len6)}}};
+        variant8_opt = redis::RedisResult{{redis::RedisResult::Status{wit::string((char const*)(*((uint8_t**) (_base + 8))), _len6)}}};
       } break;
       case 2: { 
-        variant8_opt = redis::RedisResult{{redis::RedisResult::Int64{(int64_t(*((int64_t*) (base + 8))))}}};
+        variant8_opt = redis::RedisResult{{redis::RedisResult::Int64{(int64_t(*((int64_t*) (_base + 8))))}}};
       } break;
-      case 3: { auto len7 = *((size_t*) (base + (8+1*sizeof(void*))));
+      case 3: { auto _len7 = *((size_t*) (_base + (8+1*sizeof(void*))));
 
-      variant8_opt = redis::RedisResult{{redis::RedisResult::Binary{wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (base + 8))), len7)}}};
+      variant8_opt = redis::RedisResult{{redis::RedisResult::Binary{wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (_base + 8))), _len7)}}};
     } break;
   }
   redis::RedisResult variant8 = std::move(*variant8_opt);
-  auto e9 = std::move(variant8);
-  result9.initialize(i, std::move(e9));
+  auto _e9 = std::move(variant8);
+  _result9.initialize(i, std::move(_e9));
 }
 
-result12_opt.emplace(std::expected<wit::vector<redis::RedisResult>, redis::Error>(std::move(result9)));
+result12_opt.emplace(std::expected<wit::vector<redis::RedisResult>, redis::Error>(std::move(_result9)));
 } else {
 std::optional<redis::Error> variant11_opt;
 switch ((int32_t) (*((uint8_t*) (ptr5 + sizeof(void*))))) {
@@ -7002,10 +7002,10 @@ switch ((int32_t) (*((uint8_t*) (ptr5 + sizeof(void*))))) {
   case 2: { 
     variant11_opt = redis::Error{{redis::Error::TypeError{}}};
   } break;
-  case 3: { auto len10 = *((size_t*) (ptr5 + (3*sizeof(void*))));
+  case 3: { auto _len10 = *((size_t*) (ptr5 + (3*sizeof(void*))));
 
 
-  variant11_opt = redis::Error{{redis::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr5 + (2*sizeof(void*))))), len10)}}};
+  variant11_opt = redis::Error{{redis::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr5 + (2*sizeof(void*))))), _len10)}}};
 } break;
 }
 redis::Error variant11 = std::move(*variant11_opt);
@@ -7026,17 +7026,17 @@ fermyon::spin2_0_0::mqtt::Connection::~Connection()
 std::expected<fermyon::spin2_0_0::mqtt::Connection, fermyon::spin2_0_0::mqtt::Error> fermyon::spin2_0_0::mqtt::Connection::Open(std::string_view address, std::string_view username, std::string_view password, uint64_t keep_alive_interval_in_secs)
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = address;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec1 = username;
-  auto ptr1 = (uint8_t*)(vec1.data());
-  auto len1 = (size_t)(vec1.size());
-  auto&& vec2 = password;
-  auto ptr2 = (uint8_t*)(vec2.data());
-  auto len2 = (size_t)(vec2.size());
+  auto&& _vec0 = address;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec1 = username;
+  auto _ptr1 = (uint8_t*)(_vec1.data());
+  auto _len1 = (size_t)(_vec1.size());
+  auto&& _vec2 = password;
+  auto _ptr2 = (uint8_t*)(_vec2.data());
+  auto _len2 = (size_t)(_vec2.size());
   uint8_t* ptr3 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2FmqttX402X2E0X2E0X00X5BstaticX5DconnectionX2Eopen(std::move(ptr0), std::move(len0), std::move(ptr1), std::move(len1), std::move(ptr2), std::move(len2), (int64_t(keep_alive_interval_in_secs)), std::move(ptr3));
+  __wasm_import_fermyonX3AspinX2FmqttX402X2E0X2E0X00X5BstaticX5DconnectionX2Eopen(std::move(_ptr0), std::move(_len0), std::move(_ptr1), std::move(_len1), std::move(_ptr2), std::move(_len2), (int64_t(keep_alive_interval_in_secs)), std::move(ptr3));
   std::optional<std::expected<mqtt::Connection, mqtt::Error>> result8_opt;
   if ((int32_t) (*((uint8_t*) (ptr3 + 0)))==0) {
     int32_t l4 = *((int32_t const*)(ptr3 + sizeof(void*)));
@@ -7051,15 +7051,15 @@ std::expected<fermyon::spin2_0_0::mqtt::Connection, fermyon::spin2_0_0::mqtt::Er
       case 1: { 
         variant7_opt = mqtt::Error{{mqtt::Error::TooManyConnections{}}};
       } break;
-      case 2: { auto len5 = *((size_t*) (ptr3 + (3*sizeof(void*))));
+      case 2: { auto _len5 = *((size_t*) (ptr3 + (3*sizeof(void*))));
 
 
-      variant7_opt = mqtt::Error{{mqtt::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr3 + (2*sizeof(void*))))), len5)}}};
+      variant7_opt = mqtt::Error{{mqtt::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr3 + (2*sizeof(void*))))), _len5)}}};
     } break;
-    case 3: { auto len6 = *((size_t*) (ptr3 + (3*sizeof(void*))));
+    case 3: { auto _len6 = *((size_t*) (ptr3 + (3*sizeof(void*))));
 
 
-    variant7_opt = mqtt::Error{{mqtt::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr3 + (2*sizeof(void*))))), len6)}}};
+    variant7_opt = mqtt::Error{{mqtt::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr3 + (2*sizeof(void*))))), _len6)}}};
   } break;
 }
 mqtt::Error variant7 = std::move(*variant7_opt);
@@ -7073,14 +7073,14 @@ return result9;
 std::expected<void, fermyon::spin2_0_0::mqtt::Error> fermyon::spin2_0_0::mqtt::Connection::Publish(std::string_view topic, std::span<uint8_t const> payload, mqtt::Qos qos) const
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = topic;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec1 = payload;
-  auto ptr1 = (uint8_t*)(vec1.data());
-  auto len1 = (size_t)(vec1.size());
+  auto&& _vec0 = topic;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec1 = payload;
+  auto _ptr1 = (uint8_t*)(_vec1.data());
+  auto _len1 = (size_t)(_vec1.size());
   uint8_t* ptr2 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2FmqttX402X2E0X2E0X00X5BmethodX5DconnectionX2Epublish((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1), std::move(len1), int32_t(qos), std::move(ptr2));
+  __wasm_import_fermyonX3AspinX2FmqttX402X2E0X2E0X00X5BmethodX5DconnectionX2Epublish((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(_ptr1), std::move(_len1), int32_t(qos), std::move(ptr2));
   std::optional<std::expected<void, mqtt::Error>> result6_opt;
   if ((int32_t) (*((uint8_t*) (ptr2 + 0)))==0) {
     
@@ -7094,15 +7094,15 @@ std::expected<void, fermyon::spin2_0_0::mqtt::Error> fermyon::spin2_0_0::mqtt::C
       case 1: { 
         variant5_opt = mqtt::Error{{mqtt::Error::TooManyConnections{}}};
       } break;
-      case 2: { auto len3 = *((size_t*) (ptr2 + (3*sizeof(void*))));
+      case 2: { auto _len3 = *((size_t*) (ptr2 + (3*sizeof(void*))));
 
 
-      variant5_opt = mqtt::Error{{mqtt::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr2 + (2*sizeof(void*))))), len3)}}};
+      variant5_opt = mqtt::Error{{mqtt::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr2 + (2*sizeof(void*))))), _len3)}}};
     } break;
-    case 3: { auto len4 = *((size_t*) (ptr2 + (3*sizeof(void*))));
+    case 3: { auto _len4 = *((size_t*) (ptr2 + (3*sizeof(void*))));
 
 
-    variant5_opt = mqtt::Error{{mqtt::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr2 + (2*sizeof(void*))))), len4)}}};
+    variant5_opt = mqtt::Error{{mqtt::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr2 + (2*sizeof(void*))))), _len4)}}};
   } break;
 }
 mqtt::Error variant5 = std::move(*variant5_opt);
@@ -7123,11 +7123,11 @@ fermyon::spin2_0_0::postgres::Connection::~Connection()
 std::expected<fermyon::spin2_0_0::postgres::Connection, fermyon::spin2_0_0::rdbms_types::Error> fermyon::spin2_0_0::postgres::Connection::Open(std::string_view address)
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = address;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = address;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2FpostgresX402X2E0X2E0X00X5BstaticX5DconnectionX2Eopen(std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_fermyonX3AspinX2FpostgresX402X2E0X2E0X00X5BstaticX5DconnectionX2Eopen(std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<postgres::Connection, rdbms_types::Error>> result9_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     int32_t l2 = *((int32_t const*)(ptr1 + sizeof(void*)));
@@ -7136,30 +7136,30 @@ std::expected<fermyon::spin2_0_0::postgres::Connection, fermyon::spin2_0_0::rdbm
   } else {
     std::optional<rdbms_types::Error> variant8_opt;
     switch ((int32_t) (*((uint8_t*) (ptr1 + sizeof(void*))))) {
-      case 0: { auto len3 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      case 0: { auto _len3 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-      variant8_opt = rdbms_types::Error{{rdbms_types::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len3)}}};
+      variant8_opt = rdbms_types::Error{{rdbms_types::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len3)}}};
     } break;
-    case 1: { auto len4 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+    case 1: { auto _len4 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-    variant8_opt = rdbms_types::Error{{rdbms_types::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len4)}}};
+    variant8_opt = rdbms_types::Error{{rdbms_types::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len4)}}};
   } break;
-  case 2: { auto len5 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+  case 2: { auto _len5 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-  variant8_opt = rdbms_types::Error{{rdbms_types::Error::QueryFailed{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len5)}}};
+  variant8_opt = rdbms_types::Error{{rdbms_types::Error::QueryFailed{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len5)}}};
 } break;
-case 3: { auto len6 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+case 3: { auto _len6 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-variant8_opt = rdbms_types::Error{{rdbms_types::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len6)}}};
+variant8_opt = rdbms_types::Error{{rdbms_types::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len6)}}};
 } break;
-case 4: { auto len7 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+case 4: { auto _len7 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-variant8_opt = rdbms_types::Error{{rdbms_types::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len7)}}};
+variant8_opt = rdbms_types::Error{{rdbms_types::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len7)}}};
 } break;
 }
 rdbms_types::Error variant8 = std::move(*variant8_opt);
@@ -7173,178 +7173,178 @@ return result10;
 std::expected<fermyon::spin2_0_0::rdbms_types::RowSet, fermyon::spin2_0_0::rdbms_types::Error> fermyon::spin2_0_0::postgres::Connection::Query(std::string_view statement, std::span<rdbms_types::ParameterValue const> params) const
 {
   uintptr_t ret_area[((5*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = statement;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec17 = params;
-  auto ptr17 = (uint8_t*)(vec17.data());
-  auto len17 = (size_t)(vec17.size());
-  for (size_t i = 0; i < len17; ++i) {
-    auto base = ptr17 + i * (8+2*sizeof(void*));
-    auto&& iter_elem = vec17[i];
-    switch ((int32_t) (iter_elem).variants.index()) {
+  auto&& _vec0 = statement;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec17 = params;
+  auto _ptr17 = (uint8_t*)(_vec17.data());
+  auto _len17 = (size_t)(_vec17.size());
+  for (size_t i = 0; i < _len17; ++i) {
+    auto _base = _ptr17 + i * (8+2*sizeof(void*));
+    auto&& _iter_elem = _vec17[i];
+    switch ((int32_t) (_iter_elem).variants.index()) {
       case 0: {
-        auto& payload1 = std::get<rdbms_types::ParameterValue::Boolean>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(0));
-        *((int8_t*)(base + 8)) = (int32_t(payload1));
+        auto& payload1 = std::get<rdbms_types::ParameterValue::Boolean>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(0));
+        *((int8_t*)(_base + 8)) = (int32_t(payload1));
         break;
       }
       case 1: {
-        auto& payload2 = std::get<rdbms_types::ParameterValue::Int8>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(1));
-        *((int8_t*)(base + 8)) = (int32_t(payload2));
+        auto& payload2 = std::get<rdbms_types::ParameterValue::Int8>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(1));
+        *((int8_t*)(_base + 8)) = (int32_t(payload2));
         break;
       }
       case 2: {
-        auto& payload3 = std::get<rdbms_types::ParameterValue::Int16>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(2));
-        *((int16_t*)(base + 8)) = (int32_t(payload3));
+        auto& payload3 = std::get<rdbms_types::ParameterValue::Int16>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(2));
+        *((int16_t*)(_base + 8)) = (int32_t(payload3));
         break;
       }
       case 3: {
-        auto& payload4 = std::get<rdbms_types::ParameterValue::Int32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(3));
-        *((int32_t*)(base + 8)) = (int32_t(payload4));
+        auto& payload4 = std::get<rdbms_types::ParameterValue::Int32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(3));
+        *((int32_t*)(_base + 8)) = (int32_t(payload4));
         break;
       }
       case 4: {
-        auto& payload5 = std::get<rdbms_types::ParameterValue::Int64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(4));
-        *((int64_t*)(base + 8)) = (int64_t(payload5));
+        auto& payload5 = std::get<rdbms_types::ParameterValue::Int64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(4));
+        *((int64_t*)(_base + 8)) = (int64_t(payload5));
         break;
       }
       case 5: {
-        auto& payload6 = std::get<rdbms_types::ParameterValue::Uint8>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(5));
-        *((int8_t*)(base + 8)) = (int32_t(payload6));
+        auto& payload6 = std::get<rdbms_types::ParameterValue::Uint8>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(5));
+        *((int8_t*)(_base + 8)) = (int32_t(payload6));
         break;
       }
       case 6: {
-        auto& payload7 = std::get<rdbms_types::ParameterValue::Uint16>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(6));
-        *((int16_t*)(base + 8)) = (int32_t(payload7));
+        auto& payload7 = std::get<rdbms_types::ParameterValue::Uint16>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(6));
+        *((int16_t*)(_base + 8)) = (int32_t(payload7));
         break;
       }
       case 7: {
-        auto& payload8 = std::get<rdbms_types::ParameterValue::Uint32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(7));
-        *((int32_t*)(base + 8)) = (int32_t(payload8));
+        auto& payload8 = std::get<rdbms_types::ParameterValue::Uint32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(7));
+        *((int32_t*)(_base + 8)) = (int32_t(payload8));
         break;
       }
       case 8: {
-        auto& payload9 = std::get<rdbms_types::ParameterValue::Uint64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(8));
-        *((int64_t*)(base + 8)) = (int64_t(payload9));
+        auto& payload9 = std::get<rdbms_types::ParameterValue::Uint64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(8));
+        *((int64_t*)(_base + 8)) = (int64_t(payload9));
         break;
       }
       case 9: {
-        auto& payload10 = std::get<rdbms_types::ParameterValue::Floating32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(9));
-        *((float*)(base + 8)) = (float(payload10));
+        auto& payload10 = std::get<rdbms_types::ParameterValue::Floating32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(9));
+        *((float*)(_base + 8)) = (float(payload10));
         break;
       }
       case 10: {
-        auto& payload11 = std::get<rdbms_types::ParameterValue::Floating64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(10));
-        *((double*)(base + 8)) = (double(payload11));
+        auto& payload11 = std::get<rdbms_types::ParameterValue::Floating64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(10));
+        *((double*)(_base + 8)) = (double(payload11));
         break;
       }
       case 11: {
-        auto& payload12 = std::get<rdbms_types::ParameterValue::Str>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(11));
-        auto&& vec13 = payload12;
-        auto ptr13 = (uint8_t*)(vec13.data());
-        auto len13 = (size_t)(vec13.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len13;
-        *((uint8_t**)(base + 8)) = ptr13;
+        auto& payload12 = std::get<rdbms_types::ParameterValue::Str>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(11));
+        auto&& _vec13 = payload12;
+        auto _ptr13 = (uint8_t*)(_vec13.data());
+        auto _len13 = (size_t)(_vec13.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len13;
+        *((uint8_t**)(_base + 8)) = _ptr13;
         break;
       }
       case 12: {
-        auto& payload14 = std::get<rdbms_types::ParameterValue::Binary>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(12));
-        auto&& vec15 = payload14;
-        auto ptr15 = (uint8_t*)(vec15.data());
-        auto len15 = (size_t)(vec15.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len15;
-        *((uint8_t**)(base + 8)) = ptr15;
+        auto& payload14 = std::get<rdbms_types::ParameterValue::Binary>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(12));
+        auto&& _vec15 = payload14;
+        auto _ptr15 = (uint8_t*)(_vec15.data());
+        auto _len15 = (size_t)(_vec15.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len15;
+        *((uint8_t**)(_base + 8)) = _ptr15;
         break;
       }
       case 13: {
-        *((int8_t*)(base + 0)) = (int32_t(13));
+        *((int8_t*)(_base + 0)) = (int32_t(13));
         break;
       }
     }
 
   }
   uint8_t* ptr18 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2FpostgresX402X2E0X2E0X00X5BmethodX5DconnectionX2Equery((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr17), std::move(len17), std::move(ptr18));
+  __wasm_import_fermyonX3AspinX2FpostgresX402X2E0X2E0X00X5BmethodX5DconnectionX2Equery((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(_ptr17), std::move(_len17), std::move(ptr18));
   std::optional<std::expected<rdbms_types::RowSet, rdbms_types::Error>> result34_opt;
   if ((int32_t) (*((uint8_t*) (ptr18 + 0)))==0) {
-    auto base20 = *((uint8_t**) (ptr18 + sizeof(void*)));
-    auto len20 = *((size_t*) (ptr18 + (2*sizeof(void*))));
-    auto result20 = wit::vector<rdbms_types::Column>::allocate(len20);
-    for (unsigned i=0; i<len20; ++i) {
-      auto base = base20 + i * (3*sizeof(void*));
-      auto len19 = *((size_t*) (base + sizeof(void*)));
+    auto _base20 = *((uint8_t**) (ptr18 + sizeof(void*)));
+    auto _len20 = *((size_t*) (ptr18 + (2*sizeof(void*))));
+    auto _result20 = wit::vector<rdbms_types::Column>::allocate(_len20);
+    for (unsigned i=0; i<_len20; ++i) {
+      auto _base = _base20 + i * (3*sizeof(void*));
+      auto _len19 = *((size_t*) (_base + sizeof(void*)));
 
-      auto e20 = rdbms_types::Column{wit::string((char const*)(*((uint8_t**) (base + 0))), len19), (rdbms_types::DbDataType)(int32_t) (*((uint8_t*) (base + (2*sizeof(void*))))), };
-      result20.initialize(i, std::move(e20));
+      auto _e20 = rdbms_types::Column{wit::string((char const*)(*((uint8_t**) (_base + 0))), _len19), (rdbms_types::DbDataType)(int32_t) (*((uint8_t*) (_base + (2*sizeof(void*))))), };
+      _result20.initialize(i, std::move(_e20));
     }
-    auto base27 = *((uint8_t**) (ptr18 + (3*sizeof(void*))));
-    auto len27 = *((size_t*) (ptr18 + (4*sizeof(void*))));
-    auto result27 = wit::vector<wit::vector<rdbms_types::DbValue>>::allocate(len27);
-    for (unsigned i=0; i<len27; ++i) {
-      auto base = base27 + i * (2*sizeof(void*));
-      auto base26 = *((uint8_t**) (base + 0));
-      auto len26 = *((size_t*) (base + sizeof(void*)));
-      auto result26 = wit::vector<rdbms_types::DbValue>::allocate(len26);
-      for (unsigned i=0; i<len26; ++i) {
-        auto base = base26 + i * (8+2*sizeof(void*));
+    auto _base27 = *((uint8_t**) (ptr18 + (3*sizeof(void*))));
+    auto _len27 = *((size_t*) (ptr18 + (4*sizeof(void*))));
+    auto _result27 = wit::vector<wit::vector<rdbms_types::DbValue>>::allocate(_len27);
+    for (unsigned i=0; i<_len27; ++i) {
+      auto _base = _base27 + i * (2*sizeof(void*));
+      auto _base26 = *((uint8_t**) (_base + 0));
+      auto _len26 = *((size_t*) (_base + sizeof(void*)));
+      auto _result26 = wit::vector<rdbms_types::DbValue>::allocate(_len26);
+      for (unsigned i=0; i<_len26; ++i) {
+        auto _base = _base26 + i * (8+2*sizeof(void*));
         std::optional<rdbms_types::DbValue> variant25_opt;
-        switch ((int32_t) (*((uint8_t*) (base + 0)))) {
+        switch ((int32_t) (*((uint8_t*) (_base + 0)))) {
           case 0: { 
-            variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Boolean{(bool((int32_t) (*((uint8_t*) (base + 8)))))}}};
+            variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Boolean{(bool((int32_t) (*((uint8_t*) (_base + 8)))))}}};
           } break;
           case 1: { 
-            variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Int8{(int8_t((int32_t) (*((int8_t*) (base + 8)))))}}};
+            variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Int8{(int8_t((int32_t) (*((int8_t*) (_base + 8)))))}}};
           } break;
           case 2: { 
-            variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Int16{(int16_t((int32_t) (*((int16_t*) (base + 8)))))}}};
+            variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Int16{(int16_t((int32_t) (*((int16_t*) (_base + 8)))))}}};
           } break;
-          case 3: { int32_t l21 = *((int32_t const*)(base + 8));
+          case 3: { int32_t l21 = *((int32_t const*)(_base + 8));
 
           variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Int32{(int32_t(l21))}}};
         } break;
         case 4: { 
-          variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Int64{(int64_t(*((int64_t*) (base + 8))))}}};
+          variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Int64{(int64_t(*((int64_t*) (_base + 8))))}}};
         } break;
         case 5: { 
-          variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Uint8{(uint8_t((int32_t) (*((uint8_t*) (base + 8)))))}}};
+          variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Uint8{(uint8_t((int32_t) (*((uint8_t*) (_base + 8)))))}}};
         } break;
         case 6: { 
-          variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Uint16{(uint16_t((int32_t) (*((uint16_t*) (base + 8)))))}}};
+          variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Uint16{(uint16_t((int32_t) (*((uint16_t*) (_base + 8)))))}}};
         } break;
-        case 7: { int32_t l22 = *((int32_t const*)(base + 8));
+        case 7: { int32_t l22 = *((int32_t const*)(_base + 8));
 
         variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Uint32{(uint32_t(l22))}}};
       } break;
       case 8: { 
-        variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Uint64{(uint64_t(*((int64_t*) (base + 8))))}}};
+        variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Uint64{(uint64_t(*((int64_t*) (_base + 8))))}}};
       } break;
       case 9: { 
-        variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Floating32{(float(*((float*) (base + 8))))}}};
+        variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Floating32{(float(*((float*) (_base + 8))))}}};
       } break;
       case 10: { 
-        variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Floating64{(double(*((double*) (base + 8))))}}};
+        variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Floating64{(double(*((double*) (_base + 8))))}}};
       } break;
-      case 11: { auto len23 = *((size_t*) (base + (8+1*sizeof(void*))));
+      case 11: { auto _len23 = *((size_t*) (_base + (8+1*sizeof(void*))));
 
 
-      variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Str{wit::string((char const*)(*((uint8_t**) (base + 8))), len23)}}};
+      variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Str{wit::string((char const*)(*((uint8_t**) (_base + 8))), _len23)}}};
     } break;
-    case 12: { auto len24 = *((size_t*) (base + (8+1*sizeof(void*))));
+    case 12: { auto _len24 = *((size_t*) (_base + (8+1*sizeof(void*))));
 
-    variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Binary{wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (base + 8))), len24)}}};
+    variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Binary{wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (_base + 8))), _len24)}}};
   } break;
   case 13: { 
     variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::DbNull{}}};
@@ -7354,41 +7354,41 @@ std::expected<fermyon::spin2_0_0::rdbms_types::RowSet, fermyon::spin2_0_0::rdbms
   } break;
 }
 rdbms_types::DbValue variant25 = std::move(*variant25_opt);
-auto e26 = std::move(variant25);
-result26.initialize(i, std::move(e26));
+auto _e26 = std::move(variant25);
+_result26.initialize(i, std::move(_e26));
 }
-auto e27 = std::move(result26);
-result27.initialize(i, std::move(e27));
+auto _e27 = std::move(_result26);
+_result27.initialize(i, std::move(_e27));
 }
 
-result34_opt.emplace(std::expected<rdbms_types::RowSet, rdbms_types::Error>(rdbms_types::RowSet{std::move(result20), std::move(result27), }));
+result34_opt.emplace(std::expected<rdbms_types::RowSet, rdbms_types::Error>(rdbms_types::RowSet{std::move(_result20), std::move(_result27), }));
 } else {
 std::optional<rdbms_types::Error> variant33_opt;
 switch ((int32_t) (*((uint8_t*) (ptr18 + sizeof(void*))))) {
-  case 0: { auto len28 = *((size_t*) (ptr18 + (3*sizeof(void*))));
+  case 0: { auto _len28 = *((size_t*) (ptr18 + (3*sizeof(void*))));
 
 
-  variant33_opt = rdbms_types::Error{{rdbms_types::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), len28)}}};
+  variant33_opt = rdbms_types::Error{{rdbms_types::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), _len28)}}};
 } break;
-case 1: { auto len29 = *((size_t*) (ptr18 + (3*sizeof(void*))));
+case 1: { auto _len29 = *((size_t*) (ptr18 + (3*sizeof(void*))));
 
 
-variant33_opt = rdbms_types::Error{{rdbms_types::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), len29)}}};
+variant33_opt = rdbms_types::Error{{rdbms_types::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), _len29)}}};
 } break;
-case 2: { auto len30 = *((size_t*) (ptr18 + (3*sizeof(void*))));
+case 2: { auto _len30 = *((size_t*) (ptr18 + (3*sizeof(void*))));
 
 
-variant33_opt = rdbms_types::Error{{rdbms_types::Error::QueryFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), len30)}}};
+variant33_opt = rdbms_types::Error{{rdbms_types::Error::QueryFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), _len30)}}};
 } break;
-case 3: { auto len31 = *((size_t*) (ptr18 + (3*sizeof(void*))));
+case 3: { auto _len31 = *((size_t*) (ptr18 + (3*sizeof(void*))));
 
 
-variant33_opt = rdbms_types::Error{{rdbms_types::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), len31)}}};
+variant33_opt = rdbms_types::Error{{rdbms_types::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), _len31)}}};
 } break;
-case 4: { auto len32 = *((size_t*) (ptr18 + (3*sizeof(void*))));
+case 4: { auto _len32 = *((size_t*) (ptr18 + (3*sizeof(void*))));
 
 
-variant33_opt = rdbms_types::Error{{rdbms_types::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), len32)}}};
+variant33_opt = rdbms_types::Error{{rdbms_types::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), _len32)}}};
 } break;
 }
 rdbms_types::Error variant33 = std::move(*variant33_opt);
@@ -7402,111 +7402,111 @@ return result35;
 std::expected<uint64_t, fermyon::spin2_0_0::rdbms_types::Error> fermyon::spin2_0_0::postgres::Connection::Execute(std::string_view statement, std::span<rdbms_types::ParameterValue const> params) const
 {
   uint64_t ret_area[((16+2*sizeof(void*))+sizeof(uint64_t)-1)/sizeof(uint64_t)];
-  auto&& vec0 = statement;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec17 = params;
-  auto ptr17 = (uint8_t*)(vec17.data());
-  auto len17 = (size_t)(vec17.size());
-  for (size_t i = 0; i < len17; ++i) {
-    auto base = ptr17 + i * (8+2*sizeof(void*));
-    auto&& iter_elem = vec17[i];
-    switch ((int32_t) (iter_elem).variants.index()) {
+  auto&& _vec0 = statement;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec17 = params;
+  auto _ptr17 = (uint8_t*)(_vec17.data());
+  auto _len17 = (size_t)(_vec17.size());
+  for (size_t i = 0; i < _len17; ++i) {
+    auto _base = _ptr17 + i * (8+2*sizeof(void*));
+    auto&& _iter_elem = _vec17[i];
+    switch ((int32_t) (_iter_elem).variants.index()) {
       case 0: {
-        auto& payload1 = std::get<rdbms_types::ParameterValue::Boolean>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(0));
-        *((int8_t*)(base + 8)) = (int32_t(payload1));
+        auto& payload1 = std::get<rdbms_types::ParameterValue::Boolean>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(0));
+        *((int8_t*)(_base + 8)) = (int32_t(payload1));
         break;
       }
       case 1: {
-        auto& payload2 = std::get<rdbms_types::ParameterValue::Int8>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(1));
-        *((int8_t*)(base + 8)) = (int32_t(payload2));
+        auto& payload2 = std::get<rdbms_types::ParameterValue::Int8>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(1));
+        *((int8_t*)(_base + 8)) = (int32_t(payload2));
         break;
       }
       case 2: {
-        auto& payload3 = std::get<rdbms_types::ParameterValue::Int16>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(2));
-        *((int16_t*)(base + 8)) = (int32_t(payload3));
+        auto& payload3 = std::get<rdbms_types::ParameterValue::Int16>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(2));
+        *((int16_t*)(_base + 8)) = (int32_t(payload3));
         break;
       }
       case 3: {
-        auto& payload4 = std::get<rdbms_types::ParameterValue::Int32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(3));
-        *((int32_t*)(base + 8)) = (int32_t(payload4));
+        auto& payload4 = std::get<rdbms_types::ParameterValue::Int32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(3));
+        *((int32_t*)(_base + 8)) = (int32_t(payload4));
         break;
       }
       case 4: {
-        auto& payload5 = std::get<rdbms_types::ParameterValue::Int64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(4));
-        *((int64_t*)(base + 8)) = (int64_t(payload5));
+        auto& payload5 = std::get<rdbms_types::ParameterValue::Int64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(4));
+        *((int64_t*)(_base + 8)) = (int64_t(payload5));
         break;
       }
       case 5: {
-        auto& payload6 = std::get<rdbms_types::ParameterValue::Uint8>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(5));
-        *((int8_t*)(base + 8)) = (int32_t(payload6));
+        auto& payload6 = std::get<rdbms_types::ParameterValue::Uint8>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(5));
+        *((int8_t*)(_base + 8)) = (int32_t(payload6));
         break;
       }
       case 6: {
-        auto& payload7 = std::get<rdbms_types::ParameterValue::Uint16>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(6));
-        *((int16_t*)(base + 8)) = (int32_t(payload7));
+        auto& payload7 = std::get<rdbms_types::ParameterValue::Uint16>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(6));
+        *((int16_t*)(_base + 8)) = (int32_t(payload7));
         break;
       }
       case 7: {
-        auto& payload8 = std::get<rdbms_types::ParameterValue::Uint32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(7));
-        *((int32_t*)(base + 8)) = (int32_t(payload8));
+        auto& payload8 = std::get<rdbms_types::ParameterValue::Uint32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(7));
+        *((int32_t*)(_base + 8)) = (int32_t(payload8));
         break;
       }
       case 8: {
-        auto& payload9 = std::get<rdbms_types::ParameterValue::Uint64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(8));
-        *((int64_t*)(base + 8)) = (int64_t(payload9));
+        auto& payload9 = std::get<rdbms_types::ParameterValue::Uint64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(8));
+        *((int64_t*)(_base + 8)) = (int64_t(payload9));
         break;
       }
       case 9: {
-        auto& payload10 = std::get<rdbms_types::ParameterValue::Floating32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(9));
-        *((float*)(base + 8)) = (float(payload10));
+        auto& payload10 = std::get<rdbms_types::ParameterValue::Floating32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(9));
+        *((float*)(_base + 8)) = (float(payload10));
         break;
       }
       case 10: {
-        auto& payload11 = std::get<rdbms_types::ParameterValue::Floating64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(10));
-        *((double*)(base + 8)) = (double(payload11));
+        auto& payload11 = std::get<rdbms_types::ParameterValue::Floating64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(10));
+        *((double*)(_base + 8)) = (double(payload11));
         break;
       }
       case 11: {
-        auto& payload12 = std::get<rdbms_types::ParameterValue::Str>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(11));
-        auto&& vec13 = payload12;
-        auto ptr13 = (uint8_t*)(vec13.data());
-        auto len13 = (size_t)(vec13.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len13;
-        *((uint8_t**)(base + 8)) = ptr13;
+        auto& payload12 = std::get<rdbms_types::ParameterValue::Str>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(11));
+        auto&& _vec13 = payload12;
+        auto _ptr13 = (uint8_t*)(_vec13.data());
+        auto _len13 = (size_t)(_vec13.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len13;
+        *((uint8_t**)(_base + 8)) = _ptr13;
         break;
       }
       case 12: {
-        auto& payload14 = std::get<rdbms_types::ParameterValue::Binary>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(12));
-        auto&& vec15 = payload14;
-        auto ptr15 = (uint8_t*)(vec15.data());
-        auto len15 = (size_t)(vec15.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len15;
-        *((uint8_t**)(base + 8)) = ptr15;
+        auto& payload14 = std::get<rdbms_types::ParameterValue::Binary>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(12));
+        auto&& _vec15 = payload14;
+        auto _ptr15 = (uint8_t*)(_vec15.data());
+        auto _len15 = (size_t)(_vec15.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len15;
+        *((uint8_t**)(_base + 8)) = _ptr15;
         break;
       }
       case 13: {
-        *((int8_t*)(base + 0)) = (int32_t(13));
+        *((int8_t*)(_base + 0)) = (int32_t(13));
         break;
       }
     }
 
   }
   uint8_t* ptr18 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2FpostgresX402X2E0X2E0X00X5BmethodX5DconnectionX2Eexecute((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr17), std::move(len17), std::move(ptr18));
+  __wasm_import_fermyonX3AspinX2FpostgresX402X2E0X2E0X00X5BmethodX5DconnectionX2Eexecute((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(_ptr17), std::move(_len17), std::move(ptr18));
   std::optional<std::expected<uint64_t, rdbms_types::Error>> result25_opt;
   if ((int32_t) (*((uint8_t*) (ptr18 + 0)))==0) {
     
@@ -7514,30 +7514,30 @@ std::expected<uint64_t, fermyon::spin2_0_0::rdbms_types::Error> fermyon::spin2_0
   } else {
     std::optional<rdbms_types::Error> variant24_opt;
     switch ((int32_t) (*((uint8_t*) (ptr18 + 8)))) {
-      case 0: { auto len19 = *((size_t*) (ptr18 + (8+2*sizeof(void*))));
+      case 0: { auto _len19 = *((size_t*) (ptr18 + (8+2*sizeof(void*))));
 
 
-      variant24_opt = rdbms_types::Error{{rdbms_types::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (8+1*sizeof(void*))))), len19)}}};
+      variant24_opt = rdbms_types::Error{{rdbms_types::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (8+1*sizeof(void*))))), _len19)}}};
     } break;
-    case 1: { auto len20 = *((size_t*) (ptr18 + (8+2*sizeof(void*))));
+    case 1: { auto _len20 = *((size_t*) (ptr18 + (8+2*sizeof(void*))));
 
 
-    variant24_opt = rdbms_types::Error{{rdbms_types::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr18 + (8+1*sizeof(void*))))), len20)}}};
+    variant24_opt = rdbms_types::Error{{rdbms_types::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr18 + (8+1*sizeof(void*))))), _len20)}}};
   } break;
-  case 2: { auto len21 = *((size_t*) (ptr18 + (8+2*sizeof(void*))));
+  case 2: { auto _len21 = *((size_t*) (ptr18 + (8+2*sizeof(void*))));
 
 
-  variant24_opt = rdbms_types::Error{{rdbms_types::Error::QueryFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (8+1*sizeof(void*))))), len21)}}};
+  variant24_opt = rdbms_types::Error{{rdbms_types::Error::QueryFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (8+1*sizeof(void*))))), _len21)}}};
 } break;
-case 3: { auto len22 = *((size_t*) (ptr18 + (8+2*sizeof(void*))));
+case 3: { auto _len22 = *((size_t*) (ptr18 + (8+2*sizeof(void*))));
 
 
-variant24_opt = rdbms_types::Error{{rdbms_types::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (8+1*sizeof(void*))))), len22)}}};
+variant24_opt = rdbms_types::Error{{rdbms_types::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (8+1*sizeof(void*))))), _len22)}}};
 } break;
-case 4: { auto len23 = *((size_t*) (ptr18 + (8+2*sizeof(void*))));
+case 4: { auto _len23 = *((size_t*) (ptr18 + (8+2*sizeof(void*))));
 
 
-variant24_opt = rdbms_types::Error{{rdbms_types::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr18 + (8+1*sizeof(void*))))), len23)}}};
+variant24_opt = rdbms_types::Error{{rdbms_types::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr18 + (8+1*sizeof(void*))))), _len23)}}};
 } break;
 }
 rdbms_types::Error variant24 = std::move(*variant24_opt);
@@ -7558,11 +7558,11 @@ fermyon::spin2_0_0::mysql::Connection::~Connection()
 std::expected<fermyon::spin2_0_0::mysql::Connection, fermyon::spin2_0_0::rdbms_types::Error> fermyon::spin2_0_0::mysql::Connection::Open(std::string_view address)
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = address;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = address;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2FmysqlX402X2E0X2E0X00X5BstaticX5DconnectionX2Eopen(std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_fermyonX3AspinX2FmysqlX402X2E0X2E0X00X5BstaticX5DconnectionX2Eopen(std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<mysql::Connection, rdbms_types::Error>> result9_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     int32_t l2 = *((int32_t const*)(ptr1 + sizeof(void*)));
@@ -7571,30 +7571,30 @@ std::expected<fermyon::spin2_0_0::mysql::Connection, fermyon::spin2_0_0::rdbms_t
   } else {
     std::optional<rdbms_types::Error> variant8_opt;
     switch ((int32_t) (*((uint8_t*) (ptr1 + sizeof(void*))))) {
-      case 0: { auto len3 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      case 0: { auto _len3 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-      variant8_opt = rdbms_types::Error{{rdbms_types::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len3)}}};
+      variant8_opt = rdbms_types::Error{{rdbms_types::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len3)}}};
     } break;
-    case 1: { auto len4 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+    case 1: { auto _len4 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-    variant8_opt = rdbms_types::Error{{rdbms_types::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len4)}}};
+    variant8_opt = rdbms_types::Error{{rdbms_types::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len4)}}};
   } break;
-  case 2: { auto len5 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+  case 2: { auto _len5 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-  variant8_opt = rdbms_types::Error{{rdbms_types::Error::QueryFailed{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len5)}}};
+  variant8_opt = rdbms_types::Error{{rdbms_types::Error::QueryFailed{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len5)}}};
 } break;
-case 3: { auto len6 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+case 3: { auto _len6 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-variant8_opt = rdbms_types::Error{{rdbms_types::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len6)}}};
+variant8_opt = rdbms_types::Error{{rdbms_types::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len6)}}};
 } break;
-case 4: { auto len7 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+case 4: { auto _len7 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-variant8_opt = rdbms_types::Error{{rdbms_types::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len7)}}};
+variant8_opt = rdbms_types::Error{{rdbms_types::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len7)}}};
 } break;
 }
 rdbms_types::Error variant8 = std::move(*variant8_opt);
@@ -7608,178 +7608,178 @@ return result10;
 std::expected<fermyon::spin2_0_0::rdbms_types::RowSet, fermyon::spin2_0_0::rdbms_types::Error> fermyon::spin2_0_0::mysql::Connection::Query(std::string_view statement, std::span<rdbms_types::ParameterValue const> params) const
 {
   uintptr_t ret_area[((5*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = statement;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec17 = params;
-  auto ptr17 = (uint8_t*)(vec17.data());
-  auto len17 = (size_t)(vec17.size());
-  for (size_t i = 0; i < len17; ++i) {
-    auto base = ptr17 + i * (8+2*sizeof(void*));
-    auto&& iter_elem = vec17[i];
-    switch ((int32_t) (iter_elem).variants.index()) {
+  auto&& _vec0 = statement;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec17 = params;
+  auto _ptr17 = (uint8_t*)(_vec17.data());
+  auto _len17 = (size_t)(_vec17.size());
+  for (size_t i = 0; i < _len17; ++i) {
+    auto _base = _ptr17 + i * (8+2*sizeof(void*));
+    auto&& _iter_elem = _vec17[i];
+    switch ((int32_t) (_iter_elem).variants.index()) {
       case 0: {
-        auto& payload1 = std::get<rdbms_types::ParameterValue::Boolean>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(0));
-        *((int8_t*)(base + 8)) = (int32_t(payload1));
+        auto& payload1 = std::get<rdbms_types::ParameterValue::Boolean>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(0));
+        *((int8_t*)(_base + 8)) = (int32_t(payload1));
         break;
       }
       case 1: {
-        auto& payload2 = std::get<rdbms_types::ParameterValue::Int8>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(1));
-        *((int8_t*)(base + 8)) = (int32_t(payload2));
+        auto& payload2 = std::get<rdbms_types::ParameterValue::Int8>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(1));
+        *((int8_t*)(_base + 8)) = (int32_t(payload2));
         break;
       }
       case 2: {
-        auto& payload3 = std::get<rdbms_types::ParameterValue::Int16>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(2));
-        *((int16_t*)(base + 8)) = (int32_t(payload3));
+        auto& payload3 = std::get<rdbms_types::ParameterValue::Int16>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(2));
+        *((int16_t*)(_base + 8)) = (int32_t(payload3));
         break;
       }
       case 3: {
-        auto& payload4 = std::get<rdbms_types::ParameterValue::Int32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(3));
-        *((int32_t*)(base + 8)) = (int32_t(payload4));
+        auto& payload4 = std::get<rdbms_types::ParameterValue::Int32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(3));
+        *((int32_t*)(_base + 8)) = (int32_t(payload4));
         break;
       }
       case 4: {
-        auto& payload5 = std::get<rdbms_types::ParameterValue::Int64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(4));
-        *((int64_t*)(base + 8)) = (int64_t(payload5));
+        auto& payload5 = std::get<rdbms_types::ParameterValue::Int64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(4));
+        *((int64_t*)(_base + 8)) = (int64_t(payload5));
         break;
       }
       case 5: {
-        auto& payload6 = std::get<rdbms_types::ParameterValue::Uint8>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(5));
-        *((int8_t*)(base + 8)) = (int32_t(payload6));
+        auto& payload6 = std::get<rdbms_types::ParameterValue::Uint8>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(5));
+        *((int8_t*)(_base + 8)) = (int32_t(payload6));
         break;
       }
       case 6: {
-        auto& payload7 = std::get<rdbms_types::ParameterValue::Uint16>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(6));
-        *((int16_t*)(base + 8)) = (int32_t(payload7));
+        auto& payload7 = std::get<rdbms_types::ParameterValue::Uint16>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(6));
+        *((int16_t*)(_base + 8)) = (int32_t(payload7));
         break;
       }
       case 7: {
-        auto& payload8 = std::get<rdbms_types::ParameterValue::Uint32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(7));
-        *((int32_t*)(base + 8)) = (int32_t(payload8));
+        auto& payload8 = std::get<rdbms_types::ParameterValue::Uint32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(7));
+        *((int32_t*)(_base + 8)) = (int32_t(payload8));
         break;
       }
       case 8: {
-        auto& payload9 = std::get<rdbms_types::ParameterValue::Uint64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(8));
-        *((int64_t*)(base + 8)) = (int64_t(payload9));
+        auto& payload9 = std::get<rdbms_types::ParameterValue::Uint64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(8));
+        *((int64_t*)(_base + 8)) = (int64_t(payload9));
         break;
       }
       case 9: {
-        auto& payload10 = std::get<rdbms_types::ParameterValue::Floating32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(9));
-        *((float*)(base + 8)) = (float(payload10));
+        auto& payload10 = std::get<rdbms_types::ParameterValue::Floating32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(9));
+        *((float*)(_base + 8)) = (float(payload10));
         break;
       }
       case 10: {
-        auto& payload11 = std::get<rdbms_types::ParameterValue::Floating64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(10));
-        *((double*)(base + 8)) = (double(payload11));
+        auto& payload11 = std::get<rdbms_types::ParameterValue::Floating64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(10));
+        *((double*)(_base + 8)) = (double(payload11));
         break;
       }
       case 11: {
-        auto& payload12 = std::get<rdbms_types::ParameterValue::Str>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(11));
-        auto&& vec13 = payload12;
-        auto ptr13 = (uint8_t*)(vec13.data());
-        auto len13 = (size_t)(vec13.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len13;
-        *((uint8_t**)(base + 8)) = ptr13;
+        auto& payload12 = std::get<rdbms_types::ParameterValue::Str>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(11));
+        auto&& _vec13 = payload12;
+        auto _ptr13 = (uint8_t*)(_vec13.data());
+        auto _len13 = (size_t)(_vec13.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len13;
+        *((uint8_t**)(_base + 8)) = _ptr13;
         break;
       }
       case 12: {
-        auto& payload14 = std::get<rdbms_types::ParameterValue::Binary>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(12));
-        auto&& vec15 = payload14;
-        auto ptr15 = (uint8_t*)(vec15.data());
-        auto len15 = (size_t)(vec15.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len15;
-        *((uint8_t**)(base + 8)) = ptr15;
+        auto& payload14 = std::get<rdbms_types::ParameterValue::Binary>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(12));
+        auto&& _vec15 = payload14;
+        auto _ptr15 = (uint8_t*)(_vec15.data());
+        auto _len15 = (size_t)(_vec15.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len15;
+        *((uint8_t**)(_base + 8)) = _ptr15;
         break;
       }
       case 13: {
-        *((int8_t*)(base + 0)) = (int32_t(13));
+        *((int8_t*)(_base + 0)) = (int32_t(13));
         break;
       }
     }
 
   }
   uint8_t* ptr18 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2FmysqlX402X2E0X2E0X00X5BmethodX5DconnectionX2Equery((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr17), std::move(len17), std::move(ptr18));
+  __wasm_import_fermyonX3AspinX2FmysqlX402X2E0X2E0X00X5BmethodX5DconnectionX2Equery((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(_ptr17), std::move(_len17), std::move(ptr18));
   std::optional<std::expected<rdbms_types::RowSet, rdbms_types::Error>> result34_opt;
   if ((int32_t) (*((uint8_t*) (ptr18 + 0)))==0) {
-    auto base20 = *((uint8_t**) (ptr18 + sizeof(void*)));
-    auto len20 = *((size_t*) (ptr18 + (2*sizeof(void*))));
-    auto result20 = wit::vector<rdbms_types::Column>::allocate(len20);
-    for (unsigned i=0; i<len20; ++i) {
-      auto base = base20 + i * (3*sizeof(void*));
-      auto len19 = *((size_t*) (base + sizeof(void*)));
+    auto _base20 = *((uint8_t**) (ptr18 + sizeof(void*)));
+    auto _len20 = *((size_t*) (ptr18 + (2*sizeof(void*))));
+    auto _result20 = wit::vector<rdbms_types::Column>::allocate(_len20);
+    for (unsigned i=0; i<_len20; ++i) {
+      auto _base = _base20 + i * (3*sizeof(void*));
+      auto _len19 = *((size_t*) (_base + sizeof(void*)));
 
-      auto e20 = rdbms_types::Column{wit::string((char const*)(*((uint8_t**) (base + 0))), len19), (rdbms_types::DbDataType)(int32_t) (*((uint8_t*) (base + (2*sizeof(void*))))), };
-      result20.initialize(i, std::move(e20));
+      auto _e20 = rdbms_types::Column{wit::string((char const*)(*((uint8_t**) (_base + 0))), _len19), (rdbms_types::DbDataType)(int32_t) (*((uint8_t*) (_base + (2*sizeof(void*))))), };
+      _result20.initialize(i, std::move(_e20));
     }
-    auto base27 = *((uint8_t**) (ptr18 + (3*sizeof(void*))));
-    auto len27 = *((size_t*) (ptr18 + (4*sizeof(void*))));
-    auto result27 = wit::vector<wit::vector<rdbms_types::DbValue>>::allocate(len27);
-    for (unsigned i=0; i<len27; ++i) {
-      auto base = base27 + i * (2*sizeof(void*));
-      auto base26 = *((uint8_t**) (base + 0));
-      auto len26 = *((size_t*) (base + sizeof(void*)));
-      auto result26 = wit::vector<rdbms_types::DbValue>::allocate(len26);
-      for (unsigned i=0; i<len26; ++i) {
-        auto base = base26 + i * (8+2*sizeof(void*));
+    auto _base27 = *((uint8_t**) (ptr18 + (3*sizeof(void*))));
+    auto _len27 = *((size_t*) (ptr18 + (4*sizeof(void*))));
+    auto _result27 = wit::vector<wit::vector<rdbms_types::DbValue>>::allocate(_len27);
+    for (unsigned i=0; i<_len27; ++i) {
+      auto _base = _base27 + i * (2*sizeof(void*));
+      auto _base26 = *((uint8_t**) (_base + 0));
+      auto _len26 = *((size_t*) (_base + sizeof(void*)));
+      auto _result26 = wit::vector<rdbms_types::DbValue>::allocate(_len26);
+      for (unsigned i=0; i<_len26; ++i) {
+        auto _base = _base26 + i * (8+2*sizeof(void*));
         std::optional<rdbms_types::DbValue> variant25_opt;
-        switch ((int32_t) (*((uint8_t*) (base + 0)))) {
+        switch ((int32_t) (*((uint8_t*) (_base + 0)))) {
           case 0: { 
-            variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Boolean{(bool((int32_t) (*((uint8_t*) (base + 8)))))}}};
+            variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Boolean{(bool((int32_t) (*((uint8_t*) (_base + 8)))))}}};
           } break;
           case 1: { 
-            variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Int8{(int8_t((int32_t) (*((int8_t*) (base + 8)))))}}};
+            variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Int8{(int8_t((int32_t) (*((int8_t*) (_base + 8)))))}}};
           } break;
           case 2: { 
-            variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Int16{(int16_t((int32_t) (*((int16_t*) (base + 8)))))}}};
+            variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Int16{(int16_t((int32_t) (*((int16_t*) (_base + 8)))))}}};
           } break;
-          case 3: { int32_t l21 = *((int32_t const*)(base + 8));
+          case 3: { int32_t l21 = *((int32_t const*)(_base + 8));
 
           variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Int32{(int32_t(l21))}}};
         } break;
         case 4: { 
-          variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Int64{(int64_t(*((int64_t*) (base + 8))))}}};
+          variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Int64{(int64_t(*((int64_t*) (_base + 8))))}}};
         } break;
         case 5: { 
-          variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Uint8{(uint8_t((int32_t) (*((uint8_t*) (base + 8)))))}}};
+          variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Uint8{(uint8_t((int32_t) (*((uint8_t*) (_base + 8)))))}}};
         } break;
         case 6: { 
-          variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Uint16{(uint16_t((int32_t) (*((uint16_t*) (base + 8)))))}}};
+          variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Uint16{(uint16_t((int32_t) (*((uint16_t*) (_base + 8)))))}}};
         } break;
-        case 7: { int32_t l22 = *((int32_t const*)(base + 8));
+        case 7: { int32_t l22 = *((int32_t const*)(_base + 8));
 
         variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Uint32{(uint32_t(l22))}}};
       } break;
       case 8: { 
-        variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Uint64{(uint64_t(*((int64_t*) (base + 8))))}}};
+        variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Uint64{(uint64_t(*((int64_t*) (_base + 8))))}}};
       } break;
       case 9: { 
-        variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Floating32{(float(*((float*) (base + 8))))}}};
+        variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Floating32{(float(*((float*) (_base + 8))))}}};
       } break;
       case 10: { 
-        variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Floating64{(double(*((double*) (base + 8))))}}};
+        variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Floating64{(double(*((double*) (_base + 8))))}}};
       } break;
-      case 11: { auto len23 = *((size_t*) (base + (8+1*sizeof(void*))));
+      case 11: { auto _len23 = *((size_t*) (_base + (8+1*sizeof(void*))));
 
 
-      variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Str{wit::string((char const*)(*((uint8_t**) (base + 8))), len23)}}};
+      variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Str{wit::string((char const*)(*((uint8_t**) (_base + 8))), _len23)}}};
     } break;
-    case 12: { auto len24 = *((size_t*) (base + (8+1*sizeof(void*))));
+    case 12: { auto _len24 = *((size_t*) (_base + (8+1*sizeof(void*))));
 
-    variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Binary{wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (base + 8))), len24)}}};
+    variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::Binary{wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (_base + 8))), _len24)}}};
   } break;
   case 13: { 
     variant25_opt = rdbms_types::DbValue{{rdbms_types::DbValue::DbNull{}}};
@@ -7789,41 +7789,41 @@ std::expected<fermyon::spin2_0_0::rdbms_types::RowSet, fermyon::spin2_0_0::rdbms
   } break;
 }
 rdbms_types::DbValue variant25 = std::move(*variant25_opt);
-auto e26 = std::move(variant25);
-result26.initialize(i, std::move(e26));
+auto _e26 = std::move(variant25);
+_result26.initialize(i, std::move(_e26));
 }
-auto e27 = std::move(result26);
-result27.initialize(i, std::move(e27));
+auto _e27 = std::move(_result26);
+_result27.initialize(i, std::move(_e27));
 }
 
-result34_opt.emplace(std::expected<rdbms_types::RowSet, rdbms_types::Error>(rdbms_types::RowSet{std::move(result20), std::move(result27), }));
+result34_opt.emplace(std::expected<rdbms_types::RowSet, rdbms_types::Error>(rdbms_types::RowSet{std::move(_result20), std::move(_result27), }));
 } else {
 std::optional<rdbms_types::Error> variant33_opt;
 switch ((int32_t) (*((uint8_t*) (ptr18 + sizeof(void*))))) {
-  case 0: { auto len28 = *((size_t*) (ptr18 + (3*sizeof(void*))));
+  case 0: { auto _len28 = *((size_t*) (ptr18 + (3*sizeof(void*))));
 
 
-  variant33_opt = rdbms_types::Error{{rdbms_types::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), len28)}}};
+  variant33_opt = rdbms_types::Error{{rdbms_types::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), _len28)}}};
 } break;
-case 1: { auto len29 = *((size_t*) (ptr18 + (3*sizeof(void*))));
+case 1: { auto _len29 = *((size_t*) (ptr18 + (3*sizeof(void*))));
 
 
-variant33_opt = rdbms_types::Error{{rdbms_types::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), len29)}}};
+variant33_opt = rdbms_types::Error{{rdbms_types::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), _len29)}}};
 } break;
-case 2: { auto len30 = *((size_t*) (ptr18 + (3*sizeof(void*))));
+case 2: { auto _len30 = *((size_t*) (ptr18 + (3*sizeof(void*))));
 
 
-variant33_opt = rdbms_types::Error{{rdbms_types::Error::QueryFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), len30)}}};
+variant33_opt = rdbms_types::Error{{rdbms_types::Error::QueryFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), _len30)}}};
 } break;
-case 3: { auto len31 = *((size_t*) (ptr18 + (3*sizeof(void*))));
+case 3: { auto _len31 = *((size_t*) (ptr18 + (3*sizeof(void*))));
 
 
-variant33_opt = rdbms_types::Error{{rdbms_types::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), len31)}}};
+variant33_opt = rdbms_types::Error{{rdbms_types::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), _len31)}}};
 } break;
-case 4: { auto len32 = *((size_t*) (ptr18 + (3*sizeof(void*))));
+case 4: { auto _len32 = *((size_t*) (ptr18 + (3*sizeof(void*))));
 
 
-variant33_opt = rdbms_types::Error{{rdbms_types::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), len32)}}};
+variant33_opt = rdbms_types::Error{{rdbms_types::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), _len32)}}};
 } break;
 }
 rdbms_types::Error variant33 = std::move(*variant33_opt);
@@ -7837,111 +7837,111 @@ return result35;
 std::expected<void, fermyon::spin2_0_0::rdbms_types::Error> fermyon::spin2_0_0::mysql::Connection::Execute(std::string_view statement, std::span<rdbms_types::ParameterValue const> params) const
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = statement;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec17 = params;
-  auto ptr17 = (uint8_t*)(vec17.data());
-  auto len17 = (size_t)(vec17.size());
-  for (size_t i = 0; i < len17; ++i) {
-    auto base = ptr17 + i * (8+2*sizeof(void*));
-    auto&& iter_elem = vec17[i];
-    switch ((int32_t) (iter_elem).variants.index()) {
+  auto&& _vec0 = statement;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec17 = params;
+  auto _ptr17 = (uint8_t*)(_vec17.data());
+  auto _len17 = (size_t)(_vec17.size());
+  for (size_t i = 0; i < _len17; ++i) {
+    auto _base = _ptr17 + i * (8+2*sizeof(void*));
+    auto&& _iter_elem = _vec17[i];
+    switch ((int32_t) (_iter_elem).variants.index()) {
       case 0: {
-        auto& payload1 = std::get<rdbms_types::ParameterValue::Boolean>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(0));
-        *((int8_t*)(base + 8)) = (int32_t(payload1));
+        auto& payload1 = std::get<rdbms_types::ParameterValue::Boolean>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(0));
+        *((int8_t*)(_base + 8)) = (int32_t(payload1));
         break;
       }
       case 1: {
-        auto& payload2 = std::get<rdbms_types::ParameterValue::Int8>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(1));
-        *((int8_t*)(base + 8)) = (int32_t(payload2));
+        auto& payload2 = std::get<rdbms_types::ParameterValue::Int8>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(1));
+        *((int8_t*)(_base + 8)) = (int32_t(payload2));
         break;
       }
       case 2: {
-        auto& payload3 = std::get<rdbms_types::ParameterValue::Int16>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(2));
-        *((int16_t*)(base + 8)) = (int32_t(payload3));
+        auto& payload3 = std::get<rdbms_types::ParameterValue::Int16>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(2));
+        *((int16_t*)(_base + 8)) = (int32_t(payload3));
         break;
       }
       case 3: {
-        auto& payload4 = std::get<rdbms_types::ParameterValue::Int32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(3));
-        *((int32_t*)(base + 8)) = (int32_t(payload4));
+        auto& payload4 = std::get<rdbms_types::ParameterValue::Int32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(3));
+        *((int32_t*)(_base + 8)) = (int32_t(payload4));
         break;
       }
       case 4: {
-        auto& payload5 = std::get<rdbms_types::ParameterValue::Int64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(4));
-        *((int64_t*)(base + 8)) = (int64_t(payload5));
+        auto& payload5 = std::get<rdbms_types::ParameterValue::Int64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(4));
+        *((int64_t*)(_base + 8)) = (int64_t(payload5));
         break;
       }
       case 5: {
-        auto& payload6 = std::get<rdbms_types::ParameterValue::Uint8>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(5));
-        *((int8_t*)(base + 8)) = (int32_t(payload6));
+        auto& payload6 = std::get<rdbms_types::ParameterValue::Uint8>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(5));
+        *((int8_t*)(_base + 8)) = (int32_t(payload6));
         break;
       }
       case 6: {
-        auto& payload7 = std::get<rdbms_types::ParameterValue::Uint16>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(6));
-        *((int16_t*)(base + 8)) = (int32_t(payload7));
+        auto& payload7 = std::get<rdbms_types::ParameterValue::Uint16>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(6));
+        *((int16_t*)(_base + 8)) = (int32_t(payload7));
         break;
       }
       case 7: {
-        auto& payload8 = std::get<rdbms_types::ParameterValue::Uint32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(7));
-        *((int32_t*)(base + 8)) = (int32_t(payload8));
+        auto& payload8 = std::get<rdbms_types::ParameterValue::Uint32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(7));
+        *((int32_t*)(_base + 8)) = (int32_t(payload8));
         break;
       }
       case 8: {
-        auto& payload9 = std::get<rdbms_types::ParameterValue::Uint64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(8));
-        *((int64_t*)(base + 8)) = (int64_t(payload9));
+        auto& payload9 = std::get<rdbms_types::ParameterValue::Uint64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(8));
+        *((int64_t*)(_base + 8)) = (int64_t(payload9));
         break;
       }
       case 9: {
-        auto& payload10 = std::get<rdbms_types::ParameterValue::Floating32>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(9));
-        *((float*)(base + 8)) = (float(payload10));
+        auto& payload10 = std::get<rdbms_types::ParameterValue::Floating32>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(9));
+        *((float*)(_base + 8)) = (float(payload10));
         break;
       }
       case 10: {
-        auto& payload11 = std::get<rdbms_types::ParameterValue::Floating64>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(10));
-        *((double*)(base + 8)) = (double(payload11));
+        auto& payload11 = std::get<rdbms_types::ParameterValue::Floating64>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(10));
+        *((double*)(_base + 8)) = (double(payload11));
         break;
       }
       case 11: {
-        auto& payload12 = std::get<rdbms_types::ParameterValue::Str>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(11));
-        auto&& vec13 = payload12;
-        auto ptr13 = (uint8_t*)(vec13.data());
-        auto len13 = (size_t)(vec13.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len13;
-        *((uint8_t**)(base + 8)) = ptr13;
+        auto& payload12 = std::get<rdbms_types::ParameterValue::Str>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(11));
+        auto&& _vec13 = payload12;
+        auto _ptr13 = (uint8_t*)(_vec13.data());
+        auto _len13 = (size_t)(_vec13.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len13;
+        *((uint8_t**)(_base + 8)) = _ptr13;
         break;
       }
       case 12: {
-        auto& payload14 = std::get<rdbms_types::ParameterValue::Binary>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(12));
-        auto&& vec15 = payload14;
-        auto ptr15 = (uint8_t*)(vec15.data());
-        auto len15 = (size_t)(vec15.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len15;
-        *((uint8_t**)(base + 8)) = ptr15;
+        auto& payload14 = std::get<rdbms_types::ParameterValue::Binary>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(12));
+        auto&& _vec15 = payload14;
+        auto _ptr15 = (uint8_t*)(_vec15.data());
+        auto _len15 = (size_t)(_vec15.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len15;
+        *((uint8_t**)(_base + 8)) = _ptr15;
         break;
       }
       case 13: {
-        *((int8_t*)(base + 0)) = (int32_t(13));
+        *((int8_t*)(_base + 0)) = (int32_t(13));
         break;
       }
     }
 
   }
   uint8_t* ptr18 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2FmysqlX402X2E0X2E0X00X5BmethodX5DconnectionX2Eexecute((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr17), std::move(len17), std::move(ptr18));
+  __wasm_import_fermyonX3AspinX2FmysqlX402X2E0X2E0X00X5BmethodX5DconnectionX2Eexecute((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(_ptr17), std::move(_len17), std::move(ptr18));
   std::optional<std::expected<void, rdbms_types::Error>> result25_opt;
   if ((int32_t) (*((uint8_t*) (ptr18 + 0)))==0) {
     
@@ -7949,30 +7949,30 @@ std::expected<void, fermyon::spin2_0_0::rdbms_types::Error> fermyon::spin2_0_0::
   } else {
     std::optional<rdbms_types::Error> variant24_opt;
     switch ((int32_t) (*((uint8_t*) (ptr18 + sizeof(void*))))) {
-      case 0: { auto len19 = *((size_t*) (ptr18 + (3*sizeof(void*))));
+      case 0: { auto _len19 = *((size_t*) (ptr18 + (3*sizeof(void*))));
 
 
-      variant24_opt = rdbms_types::Error{{rdbms_types::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), len19)}}};
+      variant24_opt = rdbms_types::Error{{rdbms_types::Error::ConnectionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), _len19)}}};
     } break;
-    case 1: { auto len20 = *((size_t*) (ptr18 + (3*sizeof(void*))));
+    case 1: { auto _len20 = *((size_t*) (ptr18 + (3*sizeof(void*))));
 
 
-    variant24_opt = rdbms_types::Error{{rdbms_types::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), len20)}}};
+    variant24_opt = rdbms_types::Error{{rdbms_types::Error::BadParameter{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), _len20)}}};
   } break;
-  case 2: { auto len21 = *((size_t*) (ptr18 + (3*sizeof(void*))));
+  case 2: { auto _len21 = *((size_t*) (ptr18 + (3*sizeof(void*))));
 
 
-  variant24_opt = rdbms_types::Error{{rdbms_types::Error::QueryFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), len21)}}};
+  variant24_opt = rdbms_types::Error{{rdbms_types::Error::QueryFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), _len21)}}};
 } break;
-case 3: { auto len22 = *((size_t*) (ptr18 + (3*sizeof(void*))));
+case 3: { auto _len22 = *((size_t*) (ptr18 + (3*sizeof(void*))));
 
 
-variant24_opt = rdbms_types::Error{{rdbms_types::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), len22)}}};
+variant24_opt = rdbms_types::Error{{rdbms_types::Error::ValueConversionFailed{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), _len22)}}};
 } break;
-case 4: { auto len23 = *((size_t*) (ptr18 + (3*sizeof(void*))));
+case 4: { auto _len23 = *((size_t*) (ptr18 + (3*sizeof(void*))));
 
 
-variant24_opt = rdbms_types::Error{{rdbms_types::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), len23)}}};
+variant24_opt = rdbms_types::Error{{rdbms_types::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr18 + (2*sizeof(void*))))), _len23)}}};
 } break;
 }
 rdbms_types::Error variant24 = std::move(*variant24_opt);
@@ -7993,11 +7993,11 @@ fermyon::spin2_0_0::sqlite::Connection::~Connection()
 std::expected<fermyon::spin2_0_0::sqlite::Connection, fermyon::spin2_0_0::sqlite::Error> fermyon::spin2_0_0::sqlite::Connection::Open(std::string_view database)
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = database;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = database;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2FsqliteX402X2E0X2E0X00X5BstaticX5DconnectionX2Eopen(std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_fermyonX3AspinX2FsqliteX402X2E0X2E0X00X5BstaticX5DconnectionX2Eopen(std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<sqlite::Connection, sqlite::Error>> result5_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     int32_t l2 = *((int32_t const*)(ptr1 + sizeof(void*)));
@@ -8018,10 +8018,10 @@ std::expected<fermyon::spin2_0_0::sqlite::Connection, fermyon::spin2_0_0::sqlite
       case 3: { 
         variant4_opt = sqlite::Error{{sqlite::Error::DatabaseFull{}}};
       } break;
-      case 4: { auto len3 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      case 4: { auto _len3 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-      variant4_opt = sqlite::Error{{sqlite::Error::Io{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len3)}}};
+      variant4_opt = sqlite::Error{{sqlite::Error::Io{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len3)}}};
     } break;
   }
   sqlite::Error variant4 = std::move(*variant4_opt);
@@ -8035,109 +8035,109 @@ return result6;
 std::expected<fermyon::spin2_0_0::sqlite::QueryResult, fermyon::spin2_0_0::sqlite::Error> fermyon::spin2_0_0::sqlite::Connection::Execute(std::string_view statement, std::span<sqlite::Value const> parameters) const
 {
   uintptr_t ret_area[((5*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = statement;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec8 = parameters;
-  auto ptr8 = (uint8_t*)(vec8.data());
-  auto len8 = (size_t)(vec8.size());
-  for (size_t i = 0; i < len8; ++i) {
-    auto base = ptr8 + i * (8+2*sizeof(void*));
-    auto&& iter_elem = vec8[i];
-    switch ((int32_t) (iter_elem).variants.index()) {
+  auto&& _vec0 = statement;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec8 = parameters;
+  auto _ptr8 = (uint8_t*)(_vec8.data());
+  auto _len8 = (size_t)(_vec8.size());
+  for (size_t i = 0; i < _len8; ++i) {
+    auto _base = _ptr8 + i * (8+2*sizeof(void*));
+    auto&& _iter_elem = _vec8[i];
+    switch ((int32_t) (_iter_elem).variants.index()) {
       case 0: {
-        auto& payload1 = std::get<sqlite::Value::Integer>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(0));
-        *((int64_t*)(base + 8)) = (int64_t(payload1));
+        auto& payload1 = std::get<sqlite::Value::Integer>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(0));
+        *((int64_t*)(_base + 8)) = (int64_t(payload1));
         break;
       }
       case 1: {
-        auto& payload2 = std::get<sqlite::Value::Real>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(1));
-        *((double*)(base + 8)) = (double(payload2));
+        auto& payload2 = std::get<sqlite::Value::Real>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(1));
+        *((double*)(_base + 8)) = (double(payload2));
         break;
       }
       case 2: {
-        auto& payload3 = std::get<sqlite::Value::Text>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(2));
-        auto&& vec4 = payload3;
-        auto ptr4 = (uint8_t*)(vec4.data());
-        auto len4 = (size_t)(vec4.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len4;
-        *((uint8_t**)(base + 8)) = ptr4;
+        auto& payload3 = std::get<sqlite::Value::Text>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(2));
+        auto&& _vec4 = payload3;
+        auto _ptr4 = (uint8_t*)(_vec4.data());
+        auto _len4 = (size_t)(_vec4.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len4;
+        *((uint8_t**)(_base + 8)) = _ptr4;
         break;
       }
       case 3: {
-        auto& payload5 = std::get<sqlite::Value::Blob>(iter_elem.variants).value;
-        *((int8_t*)(base + 0)) = (int32_t(3));
-        auto&& vec6 = payload5;
-        auto ptr6 = (uint8_t*)(vec6.data());
-        auto len6 = (size_t)(vec6.size());
-        *((size_t*)(base + (8+1*sizeof(void*)))) = len6;
-        *((uint8_t**)(base + 8)) = ptr6;
+        auto& payload5 = std::get<sqlite::Value::Blob>(_iter_elem.variants).value;
+        *((int8_t*)(_base + 0)) = (int32_t(3));
+        auto&& _vec6 = payload5;
+        auto _ptr6 = (uint8_t*)(_vec6.data());
+        auto _len6 = (size_t)(_vec6.size());
+        *((size_t*)(_base + (8+1*sizeof(void*)))) = _len6;
+        *((uint8_t**)(_base + 8)) = _ptr6;
         break;
       }
       case 4: {
-        *((int8_t*)(base + 0)) = (int32_t(4));
+        *((int8_t*)(_base + 0)) = (int32_t(4));
         break;
       }
     }
 
   }
   uint8_t* ptr9 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2FsqliteX402X2E0X2E0X00X5BmethodX5DconnectionX2Eexecute((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr8), std::move(len8), std::move(ptr9));
+  __wasm_import_fermyonX3AspinX2FsqliteX402X2E0X2E0X00X5BmethodX5DconnectionX2Eexecute((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(_ptr8), std::move(_len8), std::move(ptr9));
   std::optional<std::expected<sqlite::QueryResult, sqlite::Error>> result19_opt;
   if ((int32_t) (*((uint8_t*) (ptr9 + 0)))==0) {
-    auto base11 = *((uint8_t**) (ptr9 + sizeof(void*)));
-    auto len11 = *((size_t*) (ptr9 + (2*sizeof(void*))));
-    auto result11 = wit::vector<wit::string>::allocate(len11);
-    for (unsigned i=0; i<len11; ++i) {
-      auto base = base11 + i * (2*sizeof(void*));
-      auto len10 = *((size_t*) (base + sizeof(void*)));
+    auto _base11 = *((uint8_t**) (ptr9 + sizeof(void*)));
+    auto _len11 = *((size_t*) (ptr9 + (2*sizeof(void*))));
+    auto _result11 = wit::vector<wit::string>::allocate(_len11);
+    for (unsigned i=0; i<_len11; ++i) {
+      auto _base = _base11 + i * (2*sizeof(void*));
+      auto _len10 = *((size_t*) (_base + sizeof(void*)));
 
-      auto e11 = wit::string((char const*)(*((uint8_t**) (base + 0))), len10);
-      result11.initialize(i, std::move(e11));
+      auto _e11 = wit::string((char const*)(*((uint8_t**) (_base + 0))), _len10);
+      _result11.initialize(i, std::move(_e11));
     }
-    auto base16 = *((uint8_t**) (ptr9 + (3*sizeof(void*))));
-    auto len16 = *((size_t*) (ptr9 + (4*sizeof(void*))));
-    auto result16 = wit::vector<sqlite::RowResult>::allocate(len16);
-    for (unsigned i=0; i<len16; ++i) {
-      auto base = base16 + i * (2*sizeof(void*));
-      auto base15 = *((uint8_t**) (base + 0));
-      auto len15 = *((size_t*) (base + sizeof(void*)));
-      auto result15 = wit::vector<sqlite::Value>::allocate(len15);
-      for (unsigned i=0; i<len15; ++i) {
-        auto base = base15 + i * (8+2*sizeof(void*));
+    auto _base16 = *((uint8_t**) (ptr9 + (3*sizeof(void*))));
+    auto _len16 = *((size_t*) (ptr9 + (4*sizeof(void*))));
+    auto _result16 = wit::vector<sqlite::RowResult>::allocate(_len16);
+    for (unsigned i=0; i<_len16; ++i) {
+      auto _base = _base16 + i * (2*sizeof(void*));
+      auto _base15 = *((uint8_t**) (_base + 0));
+      auto _len15 = *((size_t*) (_base + sizeof(void*)));
+      auto _result15 = wit::vector<sqlite::Value>::allocate(_len15);
+      for (unsigned i=0; i<_len15; ++i) {
+        auto _base = _base15 + i * (8+2*sizeof(void*));
         std::optional<sqlite::Value> variant14_opt;
-        switch ((int32_t) (*((uint8_t*) (base + 0)))) {
+        switch ((int32_t) (*((uint8_t*) (_base + 0)))) {
           case 0: { 
-            variant14_opt = sqlite::Value{{sqlite::Value::Integer{(int64_t(*((int64_t*) (base + 8))))}}};
+            variant14_opt = sqlite::Value{{sqlite::Value::Integer{(int64_t(*((int64_t*) (_base + 8))))}}};
           } break;
           case 1: { 
-            variant14_opt = sqlite::Value{{sqlite::Value::Real{(double(*((double*) (base + 8))))}}};
+            variant14_opt = sqlite::Value{{sqlite::Value::Real{(double(*((double*) (_base + 8))))}}};
           } break;
-          case 2: { auto len12 = *((size_t*) (base + (8+1*sizeof(void*))));
+          case 2: { auto _len12 = *((size_t*) (_base + (8+1*sizeof(void*))));
 
 
-          variant14_opt = sqlite::Value{{sqlite::Value::Text{wit::string((char const*)(*((uint8_t**) (base + 8))), len12)}}};
+          variant14_opt = sqlite::Value{{sqlite::Value::Text{wit::string((char const*)(*((uint8_t**) (_base + 8))), _len12)}}};
         } break;
-        case 3: { auto len13 = *((size_t*) (base + (8+1*sizeof(void*))));
+        case 3: { auto _len13 = *((size_t*) (_base + (8+1*sizeof(void*))));
 
-        variant14_opt = sqlite::Value{{sqlite::Value::Blob{wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (base + 8))), len13)}}};
+        variant14_opt = sqlite::Value{{sqlite::Value::Blob{wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (_base + 8))), _len13)}}};
       } break;
       case 4: { 
         variant14_opt = sqlite::Value{{sqlite::Value::Null{}}};
       } break;
     }
     sqlite::Value variant14 = std::move(*variant14_opt);
-    auto e15 = std::move(variant14);
-    result15.initialize(i, std::move(e15));
+    auto _e15 = std::move(variant14);
+    _result15.initialize(i, std::move(_e15));
   }
-  auto e16 = sqlite::RowResult{std::move(result15), };
-  result16.initialize(i, std::move(e16));
+  auto _e16 = sqlite::RowResult{std::move(_result15), };
+  _result16.initialize(i, std::move(_e16));
 }
 
-result19_opt.emplace(std::expected<sqlite::QueryResult, sqlite::Error>(sqlite::QueryResult{std::move(result11), std::move(result16), }));
+result19_opt.emplace(std::expected<sqlite::QueryResult, sqlite::Error>(sqlite::QueryResult{std::move(_result11), std::move(_result16), }));
 } else {
 std::optional<sqlite::Error> variant18_opt;
 switch ((int32_t) (*((uint8_t*) (ptr9 + sizeof(void*))))) {
@@ -8153,10 +8153,10 @@ switch ((int32_t) (*((uint8_t*) (ptr9 + sizeof(void*))))) {
   case 3: { 
     variant18_opt = sqlite::Error{{sqlite::Error::DatabaseFull{}}};
   } break;
-  case 4: { auto len17 = *((size_t*) (ptr9 + (3*sizeof(void*))));
+  case 4: { auto _len17 = *((size_t*) (ptr9 + (3*sizeof(void*))));
 
 
-  variant18_opt = sqlite::Error{{sqlite::Error::Io{wit::string((char const*)(*((uint8_t**) (ptr9 + (2*sizeof(void*))))), len17)}}};
+  variant18_opt = sqlite::Error{{sqlite::Error::Io{wit::string((char const*)(*((uint8_t**) (ptr9 + (2*sizeof(void*))))), _len17)}}};
 } break;
 }
 sqlite::Error variant18 = std::move(*variant18_opt);
@@ -8177,11 +8177,11 @@ fermyon::spin2_0_0::key_value::Store::~Store()
 std::expected<fermyon::spin2_0_0::key_value::Store, fermyon::spin2_0_0::key_value::Error> fermyon::spin2_0_0::key_value::Store::Open(std::string_view label)
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = label;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = label;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2Fkey_valueX402X2E0X2E0X00X5BstaticX5DstoreX2Eopen(std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_fermyonX3AspinX2Fkey_valueX402X2E0X2E0X00X5BstaticX5DstoreX2Eopen(std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<key_value::Store, key_value::Error>> result5_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     int32_t l2 = *((int32_t const*)(ptr1 + sizeof(void*)));
@@ -8199,10 +8199,10 @@ std::expected<fermyon::spin2_0_0::key_value::Store, fermyon::spin2_0_0::key_valu
       case 2: { 
         variant4_opt = key_value::Error{{key_value::Error::AccessDenied{}}};
       } break;
-      case 3: { auto len3 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      case 3: { auto _len3 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-      variant4_opt = key_value::Error{{key_value::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len3)}}};
+      variant4_opt = key_value::Error{{key_value::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len3)}}};
     } break;
   }
   key_value::Error variant4 = std::move(*variant4_opt);
@@ -8216,18 +8216,18 @@ return result6;
 std::expected<std::optional<wit::vector<uint8_t>>, fermyon::spin2_0_0::key_value::Error> fermyon::spin2_0_0::key_value::Store::Get(std::string_view key) const
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = key;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = key;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2Fkey_valueX402X2E0X2E0X00X5BmethodX5DstoreX2Eget((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_fermyonX3AspinX2Fkey_valueX402X2E0X2E0X00X5BmethodX5DstoreX2Eget((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<std::optional<wit::vector<uint8_t>>, key_value::Error>> result6_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     std::optional<wit::vector<uint8_t>> option3;
     if ((int32_t) (*((uint8_t*) (ptr1 + sizeof(void*))))) {
-      auto len2 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      auto _len2 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
-      option3.emplace(wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len2));
+      option3.emplace(wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len2));
     }
 
     result6_opt.emplace(std::expected<std::optional<wit::vector<uint8_t>>, key_value::Error>(std::move(option3)));
@@ -8243,10 +8243,10 @@ std::expected<std::optional<wit::vector<uint8_t>>, fermyon::spin2_0_0::key_value
       case 2: { 
         variant5_opt = key_value::Error{{key_value::Error::AccessDenied{}}};
       } break;
-      case 3: { auto len4 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      case 3: { auto _len4 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-      variant5_opt = key_value::Error{{key_value::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len4)}}};
+      variant5_opt = key_value::Error{{key_value::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len4)}}};
     } break;
   }
   key_value::Error variant5 = std::move(*variant5_opt);
@@ -8260,14 +8260,14 @@ return result7;
 std::expected<void, fermyon::spin2_0_0::key_value::Error> fermyon::spin2_0_0::key_value::Store::Set(std::string_view key, std::span<uint8_t const> value) const
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = key;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec1 = value;
-  auto ptr1 = (uint8_t*)(vec1.data());
-  auto len1 = (size_t)(vec1.size());
+  auto&& _vec0 = key;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec1 = value;
+  auto _ptr1 = (uint8_t*)(_vec1.data());
+  auto _len1 = (size_t)(_vec1.size());
   uint8_t* ptr2 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2Fkey_valueX402X2E0X2E0X00X5BmethodX5DstoreX2Eset((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1), std::move(len1), std::move(ptr2));
+  __wasm_import_fermyonX3AspinX2Fkey_valueX402X2E0X2E0X00X5BmethodX5DstoreX2Eset((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(_ptr1), std::move(_len1), std::move(ptr2));
   std::optional<std::expected<void, key_value::Error>> result5_opt;
   if ((int32_t) (*((uint8_t*) (ptr2 + 0)))==0) {
     
@@ -8284,10 +8284,10 @@ std::expected<void, fermyon::spin2_0_0::key_value::Error> fermyon::spin2_0_0::ke
       case 2: { 
         variant4_opt = key_value::Error{{key_value::Error::AccessDenied{}}};
       } break;
-      case 3: { auto len3 = *((size_t*) (ptr2 + (3*sizeof(void*))));
+      case 3: { auto _len3 = *((size_t*) (ptr2 + (3*sizeof(void*))));
 
 
-      variant4_opt = key_value::Error{{key_value::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr2 + (2*sizeof(void*))))), len3)}}};
+      variant4_opt = key_value::Error{{key_value::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr2 + (2*sizeof(void*))))), _len3)}}};
     } break;
   }
   key_value::Error variant4 = std::move(*variant4_opt);
@@ -8301,11 +8301,11 @@ return result6;
 std::expected<void, fermyon::spin2_0_0::key_value::Error> fermyon::spin2_0_0::key_value::Store::Delete(std::string_view key) const
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = key;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = key;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2Fkey_valueX402X2E0X2E0X00X5BmethodX5DstoreX2Edelete((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_fermyonX3AspinX2Fkey_valueX402X2E0X2E0X00X5BmethodX5DstoreX2Edelete((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<void, key_value::Error>> result4_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     
@@ -8322,10 +8322,10 @@ std::expected<void, fermyon::spin2_0_0::key_value::Error> fermyon::spin2_0_0::ke
       case 2: { 
         variant3_opt = key_value::Error{{key_value::Error::AccessDenied{}}};
       } break;
-      case 3: { auto len2 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      case 3: { auto _len2 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-      variant3_opt = key_value::Error{{key_value::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len2)}}};
+      variant3_opt = key_value::Error{{key_value::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len2)}}};
     } break;
   }
   key_value::Error variant3 = std::move(*variant3_opt);
@@ -8339,11 +8339,11 @@ return result5;
 std::expected<bool, fermyon::spin2_0_0::key_value::Error> fermyon::spin2_0_0::key_value::Store::Exists(std::string_view key) const
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = key;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = key;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2Fkey_valueX402X2E0X2E0X00X5BmethodX5DstoreX2Eexists((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_fermyonX3AspinX2Fkey_valueX402X2E0X2E0X00X5BmethodX5DstoreX2Eexists((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<bool, key_value::Error>> result4_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     
@@ -8360,10 +8360,10 @@ std::expected<bool, fermyon::spin2_0_0::key_value::Error> fermyon::spin2_0_0::ke
       case 2: { 
         variant3_opt = key_value::Error{{key_value::Error::AccessDenied{}}};
       } break;
-      case 3: { auto len2 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      case 3: { auto _len2 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-      variant3_opt = key_value::Error{{key_value::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len2)}}};
+      variant3_opt = key_value::Error{{key_value::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len2)}}};
     } break;
   }
   key_value::Error variant3 = std::move(*variant3_opt);
@@ -8381,18 +8381,18 @@ std::expected<wit::vector<wit::string>, fermyon::spin2_0_0::key_value::Error> fe
   __wasm_import_fermyonX3AspinX2Fkey_valueX402X2E0X2E0X00X5BmethodX5DstoreX2Eget_keys((*this).get_handle(), std::move(ptr0));
   std::optional<std::expected<wit::vector<wit::string>, key_value::Error>> result5_opt;
   if ((int32_t) (*((uint8_t*) (ptr0 + 0)))==0) {
-    auto base2 = *((uint8_t**) (ptr0 + sizeof(void*)));
-    auto len2 = *((size_t*) (ptr0 + (2*sizeof(void*))));
-    auto result2 = wit::vector<wit::string>::allocate(len2);
-    for (unsigned i=0; i<len2; ++i) {
-      auto base = base2 + i * (2*sizeof(void*));
-      auto len1 = *((size_t*) (base + sizeof(void*)));
+    auto _base2 = *((uint8_t**) (ptr0 + sizeof(void*)));
+    auto _len2 = *((size_t*) (ptr0 + (2*sizeof(void*))));
+    auto _result2 = wit::vector<wit::string>::allocate(_len2);
+    for (unsigned i=0; i<_len2; ++i) {
+      auto _base = _base2 + i * (2*sizeof(void*));
+      auto _len1 = *((size_t*) (_base + sizeof(void*)));
 
-      auto e2 = wit::string((char const*)(*((uint8_t**) (base + 0))), len1);
-      result2.initialize(i, std::move(e2));
+      auto _e2 = wit::string((char const*)(*((uint8_t**) (_base + 0))), _len1);
+      _result2.initialize(i, std::move(_e2));
     }
 
-    result5_opt.emplace(std::expected<wit::vector<wit::string>, key_value::Error>(std::move(result2)));
+    result5_opt.emplace(std::expected<wit::vector<wit::string>, key_value::Error>(std::move(_result2)));
   } else {
     std::optional<key_value::Error> variant4_opt;
     switch ((int32_t) (*((uint8_t*) (ptr0 + sizeof(void*))))) {
@@ -8405,10 +8405,10 @@ std::expected<wit::vector<wit::string>, fermyon::spin2_0_0::key_value::Error> fe
       case 2: { 
         variant4_opt = key_value::Error{{key_value::Error::AccessDenied{}}};
       } break;
-      case 3: { auto len3 = *((size_t*) (ptr0 + (3*sizeof(void*))));
+      case 3: { auto _len3 = *((size_t*) (ptr0 + (3*sizeof(void*))));
 
 
-      variant4_opt = key_value::Error{{key_value::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr0 + (2*sizeof(void*))))), len3)}}};
+      variant4_opt = key_value::Error{{key_value::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr0 + (2*sizeof(void*))))), _len3)}}};
     } break;
   }
   key_value::Error variant4 = std::move(*variant4_opt);
@@ -8423,39 +8423,39 @@ fermyon::spin2_0_0::key_value::Store::Store(wit::ResourceImportBase&&b) : wit::R
 std::expected<wit::string, fermyon::spin2_0_0::variables::Error> fermyon::spin2_0_0::variables::Get(std::string_view name)
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = name;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = name;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_fermyonX3AspinX2FvariablesX402X2E0X2E0X00get(std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_fermyonX3AspinX2FvariablesX402X2E0X2E0X00get(std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<wit::string, Error>> result8_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
-    auto len2 = *((size_t*) (ptr1 + (2*sizeof(void*))));
+    auto _len2 = *((size_t*) (ptr1 + (2*sizeof(void*))));
 
 
-    result8_opt.emplace(std::expected<wit::string, Error>(wit::string((char const*)(*((uint8_t**) (ptr1 + sizeof(void*)))), len2)));
+    result8_opt.emplace(std::expected<wit::string, Error>(wit::string((char const*)(*((uint8_t**) (ptr1 + sizeof(void*)))), _len2)));
   } else {
     std::optional<Error> variant7_opt;
     switch ((int32_t) (*((uint8_t*) (ptr1 + sizeof(void*))))) {
-      case 0: { auto len3 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      case 0: { auto _len3 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-      variant7_opt = Error{{Error::InvalidName{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len3)}}};
+      variant7_opt = Error{{Error::InvalidName{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len3)}}};
     } break;
-    case 1: { auto len4 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+    case 1: { auto _len4 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-    variant7_opt = Error{{Error::Undefined{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len4)}}};
+    variant7_opt = Error{{Error::Undefined{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len4)}}};
   } break;
-  case 2: { auto len5 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+  case 2: { auto _len5 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-  variant7_opt = Error{{Error::Provider{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len5)}}};
+  variant7_opt = Error{{Error::Provider{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len5)}}};
 } break;
-case 3: { auto len6 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+case 3: { auto _len6 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-variant7_opt = Error{{Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len6)}}};
+variant7_opt = Error{{Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len6)}}};
 } break;
 }
 Error variant7 = std::move(*variant7_opt);
@@ -8471,20 +8471,20 @@ wit::vector<std::tuple<wit::string, wit::string>> wasi::cli0_2_0::environment::G
   uintptr_t ret_area[((2*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
   uint8_t* ptr0 = (uint8_t*)(&ret_area);
   __wasm_import_wasiX3AcliX2FenvironmentX400X2E2X2E0X00get_environment(std::move(ptr0));
-  auto base4 = *((uint8_t**) (ptr0 + 0));
-  auto len4 = *((size_t*) (ptr0 + sizeof(void*)));
-  auto result4 = wit::vector<std::tuple<wit::string, wit::string>>::allocate(len4);
-  for (unsigned i=0; i<len4; ++i) {
-    auto base = base4 + i * (4*sizeof(void*));
-    auto len1 = *((size_t*) (base + sizeof(void*)));
+  auto _base4 = *((uint8_t**) (ptr0 + 0));
+  auto _len4 = *((size_t*) (ptr0 + sizeof(void*)));
+  auto _result4 = wit::vector<std::tuple<wit::string, wit::string>>::allocate(_len4);
+  for (unsigned i=0; i<_len4; ++i) {
+    auto _base = _base4 + i * (4*sizeof(void*));
+    auto _len1 = *((size_t*) (_base + sizeof(void*)));
 
-    auto len2 = *((size_t*) (base + (3*sizeof(void*))));
+    auto _len2 = *((size_t*) (_base + (3*sizeof(void*))));
 
-    auto tuple3 = std::tuple<wit::string, wit::string>(wit::string((char const*)(*((uint8_t**) (base + 0))), len1), wit::string((char const*)(*((uint8_t**) (base + (2*sizeof(void*))))), len2));
-    auto e4 = std::move(tuple3);
-    result4.initialize(i, std::move(e4));
+    auto tuple3 = std::tuple<wit::string, wit::string>(wit::string((char const*)(*((uint8_t**) (_base + 0))), _len1), wit::string((char const*)(*((uint8_t**) (_base + (2*sizeof(void*))))), _len2));
+    auto _e4 = std::move(tuple3);
+    _result4.initialize(i, std::move(_e4));
   }
-  auto result5 = std::move(result4);
+  auto result5 = std::move(_result4);
   return result5;
 }
 wit::vector<wit::string> wasi::cli0_2_0::environment::GetArguments()
@@ -8492,17 +8492,17 @@ wit::vector<wit::string> wasi::cli0_2_0::environment::GetArguments()
   uintptr_t ret_area[((2*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
   uint8_t* ptr0 = (uint8_t*)(&ret_area);
   __wasm_import_wasiX3AcliX2FenvironmentX400X2E2X2E0X00get_arguments(std::move(ptr0));
-  auto base2 = *((uint8_t**) (ptr0 + 0));
-  auto len2 = *((size_t*) (ptr0 + sizeof(void*)));
-  auto result2 = wit::vector<wit::string>::allocate(len2);
-  for (unsigned i=0; i<len2; ++i) {
-    auto base = base2 + i * (2*sizeof(void*));
-    auto len1 = *((size_t*) (base + sizeof(void*)));
+  auto _base2 = *((uint8_t**) (ptr0 + 0));
+  auto _len2 = *((size_t*) (ptr0 + sizeof(void*)));
+  auto _result2 = wit::vector<wit::string>::allocate(_len2);
+  for (unsigned i=0; i<_len2; ++i) {
+    auto _base = _base2 + i * (2*sizeof(void*));
+    auto _len1 = *((size_t*) (_base + sizeof(void*)));
 
-    auto e2 = wit::string((char const*)(*((uint8_t**) (base + 0))), len1);
-    result2.initialize(i, std::move(e2));
+    auto _e2 = wit::string((char const*)(*((uint8_t**) (_base + 0))), _len1);
+    _result2.initialize(i, std::move(_e2));
   }
-  auto result3 = std::move(result2);
+  auto result3 = std::move(_result2);
   return result3;
 }
 std::optional<wit::string> wasi::cli0_2_0::environment::InitialCwd()
@@ -8512,10 +8512,10 @@ std::optional<wit::string> wasi::cli0_2_0::environment::InitialCwd()
   __wasm_import_wasiX3AcliX2FenvironmentX400X2E2X2E0X00initial_cwd(std::move(ptr0));
   std::optional<wit::string> option2;
   if ((int32_t) (*((uint8_t*) (ptr0 + 0)))) {
-    auto len1 = *((size_t*) (ptr0 + (2*sizeof(void*))));
+    auto _len1 = *((size_t*) (ptr0 + (2*sizeof(void*))));
 
 
-    option2.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + sizeof(void*)))), len1));
+    option2.emplace(wit::string((char const*)(*((uint8_t**) (ptr0 + sizeof(void*)))), _len1));
   }
   auto result3 = std::move(option2);
   return result3;
@@ -8621,6 +8621,37 @@ wasi::clocks0_2_0::wall_clock::Datetime wasi::clocks0_2_0::wall_clock::Resolutio
   auto result2 = Datetime{(uint64_t(*((int64_t*) (ptr0 + 0)))), (uint32_t(l1)), };
   return result2;
 }
+wasi::filesystem0_2_0::types::DirectoryEntryStream::~DirectoryEntryStream()
+{
+  if (handle>=0) {
+    __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Ddirectory_entry_stream(handle);
+  }
+}
+std::expected<std::optional<wasi::filesystem0_2_0::types::DirectoryEntry>, wasi::filesystem0_2_0::types::ErrorCode> wasi::filesystem0_2_0::types::DirectoryEntryStream::ReadDirectoryEntry() const
+{
+  uintptr_t ret_area[((5*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
+  uint8_t* ptr0 = (uint8_t*)(&ret_area);
+  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5Ddirectory_entry_streamX2Eread_directory_entry((*this).get_handle(), std::move(ptr0));
+  std::optional<std::expected<std::optional<types::DirectoryEntry>, types::ErrorCode>> result3_opt;
+  if ((int32_t) (*((uint8_t*) (ptr0 + 0)))==0) {
+    std::optional<types::DirectoryEntry> option2;
+    if ((int32_t) (*((uint8_t*) (ptr0 + sizeof(void*))))) {
+      auto _len1 = *((size_t*) (ptr0 + (4*sizeof(void*))));
+
+
+      option2.emplace(types::DirectoryEntry{(types::DescriptorType)(int32_t) (*((uint8_t*) (ptr0 + (2*sizeof(void*))))), wit::string((char const*)(*((uint8_t**) (ptr0 + (3*sizeof(void*))))), _len1), });
+    }
+
+    result3_opt.emplace(std::expected<std::optional<types::DirectoryEntry>, types::ErrorCode>(std::move(option2)));
+  } else {
+    
+    result3_opt.emplace(std::unexpected{(types::ErrorCode)(int32_t) (*((uint8_t*) (ptr0 + sizeof(void*))))});
+  }
+  std::expected<std::optional<types::DirectoryEntry>, types::ErrorCode> result3 = std::move(*result3_opt);
+  auto result4 = std::move(result3);
+  return result4;
+}
+wasi::filesystem0_2_0::types::DirectoryEntryStream::DirectoryEntryStream(wit::ResourceImportBase&&b) : wit::ResourceImportBase(std::move(b)) {}
 wasi::filesystem0_2_0::types::Descriptor::~Descriptor()
 {
   if (handle>=0) {
@@ -8838,8 +8869,8 @@ std::expected<std::tuple<wit::vector<uint8_t>, bool>, wasi::filesystem0_2_0::typ
   __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Eread((*this).get_handle(), (int64_t(length)), (int64_t(offset)), std::move(ptr0));
   std::optional<std::expected<std::tuple<wit::vector<uint8_t>, bool>, types::ErrorCode>> result3_opt;
   if ((int32_t) (*((uint8_t*) (ptr0 + 0)))==0) {
-    auto len1 = *((size_t*) (ptr0 + (2*sizeof(void*))));
-    auto tuple2 = std::tuple<wit::vector<uint8_t>, bool>(wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (ptr0 + sizeof(void*)))), len1), (bool((int32_t) (*((uint8_t*) (ptr0 + (3*sizeof(void*))))))));
+    auto _len1 = *((size_t*) (ptr0 + (2*sizeof(void*))));
+    auto tuple2 = std::tuple<wit::vector<uint8_t>, bool>(wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (ptr0 + sizeof(void*)))), _len1), (bool((int32_t) (*((uint8_t*) (ptr0 + (3*sizeof(void*))))))));
 
     result3_opt.emplace(std::expected<std::tuple<wit::vector<uint8_t>, bool>, types::ErrorCode>(std::move(tuple2)));
   } else {
@@ -8853,11 +8884,11 @@ std::expected<std::tuple<wit::vector<uint8_t>, bool>, wasi::filesystem0_2_0::typ
 std::expected<uint64_t, wasi::filesystem0_2_0::types::ErrorCode> wasi::filesystem0_2_0::types::Descriptor::Write(std::span<uint8_t const> buffer, uint64_t offset) const
 {
   uint64_t ret_area[(16+sizeof(uint64_t)-1)/sizeof(uint64_t)];
-  auto&& vec0 = buffer;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = buffer;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Ewrite((*this).get_handle(), std::move(ptr0), std::move(len0), (int64_t(offset)), std::move(ptr1));
+  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Ewrite((*this).get_handle(), std::move(_ptr0), std::move(_len0), (int64_t(offset)), std::move(ptr1));
   std::optional<std::expected<uint64_t, types::ErrorCode>> result2_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     
@@ -8908,11 +8939,11 @@ std::expected<void, wasi::filesystem0_2_0::types::ErrorCode> wasi::filesystem0_2
 std::expected<void, wasi::filesystem0_2_0::types::ErrorCode> wasi::filesystem0_2_0::types::Descriptor::CreateDirectoryAt(std::string_view path) const
 {
   uint8_t ret_area[(2+sizeof(uint8_t)-1)/sizeof(uint8_t)];
-  auto&& vec0 = path;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = path;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Ecreate_directory_at((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Ecreate_directory_at((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<void, types::ErrorCode>> result2_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     
@@ -8963,11 +8994,11 @@ std::expected<wasi::filesystem0_2_0::types::DescriptorStat, wasi::filesystem0_2_
 std::expected<wasi::filesystem0_2_0::types::DescriptorStat, wasi::filesystem0_2_0::types::ErrorCode> wasi::filesystem0_2_0::types::Descriptor::StatAt(types::PathFlags path_flags, std::string_view path) const
 {
   uint64_t ret_area[(104+sizeof(uint64_t)-1)/sizeof(uint64_t)];
-  auto&& vec0 = path;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = path;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Estat_at((*this).get_handle(), ((int32_t)path_flags), std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Estat_at((*this).get_handle(), ((int32_t)path_flags), std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<types::DescriptorStat, types::ErrorCode>> result8_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     std::optional<clocks0_2_0::wall_clock::Datetime> option3;
@@ -9001,9 +9032,9 @@ std::expected<wasi::filesystem0_2_0::types::DescriptorStat, wasi::filesystem0_2_
 std::expected<void, wasi::filesystem0_2_0::types::ErrorCode> wasi::filesystem0_2_0::types::Descriptor::SetTimesAt(types::PathFlags path_flags, std::string_view path, types::NewTimestamp data_access_timestamp, types::NewTimestamp data_modification_timestamp) const
 {
   uint8_t ret_area[(2+sizeof(uint8_t)-1)/sizeof(uint8_t)];
-  auto&& vec0 = path;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = path;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   int32_t variant4;
   int64_t variant5;
   int32_t variant6;
@@ -9053,7 +9084,7 @@ std::expected<void, wasi::filesystem0_2_0::types::ErrorCode> wasi::filesystem0_2
     }
   }
   uint8_t* ptr13 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Eset_times_at((*this).get_handle(), ((int32_t)path_flags), std::move(ptr0), std::move(len0), std::move(variant4), std::move(variant5), std::move(variant6), std::move(variant10), std::move(variant11), std::move(variant12), std::move(ptr13));
+  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Eset_times_at((*this).get_handle(), ((int32_t)path_flags), std::move(_ptr0), std::move(_len0), std::move(variant4), std::move(variant5), std::move(variant6), std::move(variant10), std::move(variant11), std::move(variant12), std::move(ptr13));
   std::optional<std::expected<void, types::ErrorCode>> result14_opt;
   if ((int32_t) (*((uint8_t*) (ptr13 + 0)))==0) {
     
@@ -9069,14 +9100,14 @@ std::expected<void, wasi::filesystem0_2_0::types::ErrorCode> wasi::filesystem0_2
 std::expected<void, wasi::filesystem0_2_0::types::ErrorCode> wasi::filesystem0_2_0::types::Descriptor::LinkAt(types::PathFlags old_path_flags, std::string_view old_path, std::reference_wrapper<const types::Descriptor> new_descriptor, std::string_view new_path) const
 {
   uint8_t ret_area[(2+sizeof(uint8_t)-1)/sizeof(uint8_t)];
-  auto&& vec0 = old_path;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec1 = new_path;
-  auto ptr1 = (uint8_t*)(vec1.data());
-  auto len1 = (size_t)(vec1.size());
+  auto&& _vec0 = old_path;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec1 = new_path;
+  auto _ptr1 = (uint8_t*)(_vec1.data());
+  auto _len1 = (size_t)(_vec1.size());
   uint8_t* ptr2 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Elink_at((*this).get_handle(), ((int32_t)old_path_flags), std::move(ptr0), std::move(len0), new_descriptor.get().get_handle(), std::move(ptr1), std::move(len1), std::move(ptr2));
+  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Elink_at((*this).get_handle(), ((int32_t)old_path_flags), std::move(_ptr0), std::move(_len0), new_descriptor.get().get_handle(), std::move(_ptr1), std::move(_len1), std::move(ptr2));
   std::optional<std::expected<void, types::ErrorCode>> result3_opt;
   if ((int32_t) (*((uint8_t*) (ptr2 + 0)))==0) {
     
@@ -9092,11 +9123,11 @@ std::expected<void, wasi::filesystem0_2_0::types::ErrorCode> wasi::filesystem0_2
 std::expected<wasi::filesystem0_2_0::types::Descriptor, wasi::filesystem0_2_0::types::ErrorCode> wasi::filesystem0_2_0::types::Descriptor::OpenAt(types::PathFlags path_flags, std::string_view path, types::OpenFlags open_flags, types::DescriptorFlags flags) const
 {
   uint32_t ret_area[(8+sizeof(uint32_t)-1)/sizeof(uint32_t)];
-  auto&& vec0 = path;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = path;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Eopen_at((*this).get_handle(), ((int32_t)path_flags), std::move(ptr0), std::move(len0), ((int32_t)open_flags), ((int32_t)flags), std::move(ptr1));
+  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Eopen_at((*this).get_handle(), ((int32_t)path_flags), std::move(_ptr0), std::move(_len0), ((int32_t)open_flags), ((int32_t)flags), std::move(ptr1));
   std::optional<std::expected<types::Descriptor, types::ErrorCode>> result3_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     int32_t l2 = *((int32_t const*)(ptr1 + 4));
@@ -9113,17 +9144,17 @@ std::expected<wasi::filesystem0_2_0::types::Descriptor, wasi::filesystem0_2_0::t
 std::expected<wit::string, wasi::filesystem0_2_0::types::ErrorCode> wasi::filesystem0_2_0::types::Descriptor::ReadlinkAt(std::string_view path) const
 {
   uintptr_t ret_area[((3*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = path;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = path;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Ereadlink_at((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Ereadlink_at((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<wit::string, types::ErrorCode>> result3_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
-    auto len2 = *((size_t*) (ptr1 + (2*sizeof(void*))));
+    auto _len2 = *((size_t*) (ptr1 + (2*sizeof(void*))));
 
 
-    result3_opt.emplace(std::expected<wit::string, types::ErrorCode>(wit::string((char const*)(*((uint8_t**) (ptr1 + sizeof(void*)))), len2)));
+    result3_opt.emplace(std::expected<wit::string, types::ErrorCode>(wit::string((char const*)(*((uint8_t**) (ptr1 + sizeof(void*)))), _len2)));
   } else {
     
     result3_opt.emplace(std::unexpected{(types::ErrorCode)(int32_t) (*((uint8_t*) (ptr1 + sizeof(void*))))});
@@ -9135,11 +9166,11 @@ std::expected<wit::string, wasi::filesystem0_2_0::types::ErrorCode> wasi::filesy
 std::expected<void, wasi::filesystem0_2_0::types::ErrorCode> wasi::filesystem0_2_0::types::Descriptor::RemoveDirectoryAt(std::string_view path) const
 {
   uint8_t ret_area[(2+sizeof(uint8_t)-1)/sizeof(uint8_t)];
-  auto&& vec0 = path;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = path;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Eremove_directory_at((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Eremove_directory_at((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<void, types::ErrorCode>> result2_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     
@@ -9155,14 +9186,14 @@ std::expected<void, wasi::filesystem0_2_0::types::ErrorCode> wasi::filesystem0_2
 std::expected<void, wasi::filesystem0_2_0::types::ErrorCode> wasi::filesystem0_2_0::types::Descriptor::RenameAt(std::string_view old_path, std::reference_wrapper<const types::Descriptor> new_descriptor, std::string_view new_path) const
 {
   uint8_t ret_area[(2+sizeof(uint8_t)-1)/sizeof(uint8_t)];
-  auto&& vec0 = old_path;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec1 = new_path;
-  auto ptr1 = (uint8_t*)(vec1.data());
-  auto len1 = (size_t)(vec1.size());
+  auto&& _vec0 = old_path;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec1 = new_path;
+  auto _ptr1 = (uint8_t*)(_vec1.data());
+  auto _len1 = (size_t)(_vec1.size());
   uint8_t* ptr2 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Erename_at((*this).get_handle(), std::move(ptr0), std::move(len0), new_descriptor.get().get_handle(), std::move(ptr1), std::move(len1), std::move(ptr2));
+  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Erename_at((*this).get_handle(), std::move(_ptr0), std::move(_len0), new_descriptor.get().get_handle(), std::move(_ptr1), std::move(_len1), std::move(ptr2));
   std::optional<std::expected<void, types::ErrorCode>> result3_opt;
   if ((int32_t) (*((uint8_t*) (ptr2 + 0)))==0) {
     
@@ -9178,14 +9209,14 @@ std::expected<void, wasi::filesystem0_2_0::types::ErrorCode> wasi::filesystem0_2
 std::expected<void, wasi::filesystem0_2_0::types::ErrorCode> wasi::filesystem0_2_0::types::Descriptor::SymlinkAt(std::string_view old_path, std::string_view new_path) const
 {
   uint8_t ret_area[(2+sizeof(uint8_t)-1)/sizeof(uint8_t)];
-  auto&& vec0 = old_path;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec1 = new_path;
-  auto ptr1 = (uint8_t*)(vec1.data());
-  auto len1 = (size_t)(vec1.size());
+  auto&& _vec0 = old_path;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec1 = new_path;
+  auto _ptr1 = (uint8_t*)(_vec1.data());
+  auto _len1 = (size_t)(_vec1.size());
   uint8_t* ptr2 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Esymlink_at((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1), std::move(len1), std::move(ptr2));
+  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Esymlink_at((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(_ptr1), std::move(_len1), std::move(ptr2));
   std::optional<std::expected<void, types::ErrorCode>> result3_opt;
   if ((int32_t) (*((uint8_t*) (ptr2 + 0)))==0) {
     
@@ -9201,11 +9232,11 @@ std::expected<void, wasi::filesystem0_2_0::types::ErrorCode> wasi::filesystem0_2
 std::expected<void, wasi::filesystem0_2_0::types::ErrorCode> wasi::filesystem0_2_0::types::Descriptor::UnlinkFileAt(std::string_view path) const
 {
   uint8_t ret_area[(2+sizeof(uint8_t)-1)/sizeof(uint8_t)];
-  auto&& vec0 = path;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = path;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Eunlink_file_at((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Eunlink_file_at((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<void, types::ErrorCode>> result2_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     
@@ -9243,11 +9274,11 @@ std::expected<wasi::filesystem0_2_0::types::MetadataHashValue, wasi::filesystem0
 std::expected<wasi::filesystem0_2_0::types::MetadataHashValue, wasi::filesystem0_2_0::types::ErrorCode> wasi::filesystem0_2_0::types::Descriptor::MetadataHashAt(types::PathFlags path_flags, std::string_view path) const
 {
   uint64_t ret_area[(24+sizeof(uint64_t)-1)/sizeof(uint64_t)];
-  auto&& vec0 = path;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = path;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Emetadata_hash_at((*this).get_handle(), ((int32_t)path_flags), std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5DdescriptorX2Emetadata_hash_at((*this).get_handle(), ((int32_t)path_flags), std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<types::MetadataHashValue, types::ErrorCode>> result2_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     
@@ -9261,37 +9292,6 @@ std::expected<wasi::filesystem0_2_0::types::MetadataHashValue, wasi::filesystem0
   return result3;
 }
 wasi::filesystem0_2_0::types::Descriptor::Descriptor(wit::ResourceImportBase&&b) : wit::ResourceImportBase(std::move(b)) {}
-wasi::filesystem0_2_0::types::DirectoryEntryStream::~DirectoryEntryStream()
-{
-  if (handle>=0) {
-    __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5Bresource_dropX5Ddirectory_entry_stream(handle);
-  }
-}
-std::expected<std::optional<wasi::filesystem0_2_0::types::DirectoryEntry>, wasi::filesystem0_2_0::types::ErrorCode> wasi::filesystem0_2_0::types::DirectoryEntryStream::ReadDirectoryEntry() const
-{
-  uintptr_t ret_area[((5*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  uint8_t* ptr0 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AfilesystemX2FtypesX400X2E2X2E0X00X5BmethodX5Ddirectory_entry_streamX2Eread_directory_entry((*this).get_handle(), std::move(ptr0));
-  std::optional<std::expected<std::optional<types::DirectoryEntry>, types::ErrorCode>> result3_opt;
-  if ((int32_t) (*((uint8_t*) (ptr0 + 0)))==0) {
-    std::optional<types::DirectoryEntry> option2;
-    if ((int32_t) (*((uint8_t*) (ptr0 + sizeof(void*))))) {
-      auto len1 = *((size_t*) (ptr0 + (4*sizeof(void*))));
-
-
-      option2.emplace(types::DirectoryEntry{(types::DescriptorType)(int32_t) (*((uint8_t*) (ptr0 + (2*sizeof(void*))))), wit::string((char const*)(*((uint8_t**) (ptr0 + (3*sizeof(void*))))), len1), });
-    }
-
-    result3_opt.emplace(std::expected<std::optional<types::DirectoryEntry>, types::ErrorCode>(std::move(option2)));
-  } else {
-    
-    result3_opt.emplace(std::unexpected{(types::ErrorCode)(int32_t) (*((uint8_t*) (ptr0 + sizeof(void*))))});
-  }
-  std::expected<std::optional<types::DirectoryEntry>, types::ErrorCode> result3 = std::move(*result3_opt);
-  auto result4 = std::move(result3);
-  return result4;
-}
-wasi::filesystem0_2_0::types::DirectoryEntryStream::DirectoryEntryStream(wit::ResourceImportBase&&b) : wit::ResourceImportBase(std::move(b)) {}
 std::optional<wasi::filesystem0_2_0::types::ErrorCode> wasi::filesystem0_2_0::types::FilesystemErrorCode(std::reference_wrapper<const io0_2_0::error::Error> err_)
 {
   uint8_t ret_area[(2+sizeof(uint8_t)-1)/sizeof(uint8_t)];
@@ -9310,19 +9310,19 @@ wit::vector<std::tuple<wasi::filesystem0_2_0::types::Descriptor, wit::string>> w
   uintptr_t ret_area[((2*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
   uint8_t* ptr0 = (uint8_t*)(&ret_area);
   __wasm_import_wasiX3AfilesystemX2FpreopensX400X2E2X2E0X00get_directories(std::move(ptr0));
-  auto base4 = *((uint8_t**) (ptr0 + 0));
-  auto len4 = *((size_t*) (ptr0 + sizeof(void*)));
-  auto result4 = wit::vector<std::tuple<types::Descriptor, wit::string>>::allocate(len4);
-  for (unsigned i=0; i<len4; ++i) {
-    auto base = base4 + i * (3*sizeof(void*));
-    int32_t l1 = *((int32_t const*)(base + 0));
-    auto len2 = *((size_t*) (base + (2*sizeof(void*))));
+  auto _base4 = *((uint8_t**) (ptr0 + 0));
+  auto _len4 = *((size_t*) (ptr0 + sizeof(void*)));
+  auto _result4 = wit::vector<std::tuple<types::Descriptor, wit::string>>::allocate(_len4);
+  for (unsigned i=0; i<_len4; ++i) {
+    auto _base = _base4 + i * (3*sizeof(void*));
+    int32_t l1 = *((int32_t const*)(_base + 0));
+    auto _len2 = *((size_t*) (_base + (2*sizeof(void*))));
 
-    auto tuple3 = std::tuple<types::Descriptor, wit::string>(wit::ResourceImportBase{l1}, wit::string((char const*)(*((uint8_t**) (base + sizeof(void*)))), len2));
-    auto e4 = std::move(tuple3);
-    result4.initialize(i, std::move(e4));
+    auto tuple3 = std::tuple<types::Descriptor, wit::string>(wit::ResourceImportBase{l1}, wit::string((char const*)(*((uint8_t**) (_base + sizeof(void*)))), _len2));
+    auto _e4 = std::move(tuple3);
+    _result4.initialize(i, std::move(_e4));
   }
-  auto result5 = std::move(result4);
+  auto result5 = std::move(_result4);
   return result5;
 }
 wasi::sockets0_2_0::network::Network::~Network()
@@ -9337,6 +9337,151 @@ wasi::sockets0_2_0::network::Network wasi::sockets0_2_0::instance_network::Insta
   auto ret = __wasm_import_wasiX3AsocketsX2Finstance_networkX400X2E2X2E0X00instance_network();
   return wit::ResourceImportBase{ret};
 }
+wasi::sockets0_2_0::udp::IncomingDatagramStream::~IncomingDatagramStream()
+{
+  if (handle>=0) {
+    __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5Bresource_dropX5Dincoming_datagram_stream(handle);
+  }
+}
+std::expected<wit::vector<wasi::sockets0_2_0::udp::IncomingDatagram>, wasi::sockets0_2_0::network::ErrorCode> wasi::sockets0_2_0::udp::IncomingDatagramStream::Receive(uint64_t max_results) const
+{
+  uintptr_t ret_area[((3*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
+  uint8_t* ptr0 = (uint8_t*)(&ret_area);
+  __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5BmethodX5Dincoming_datagram_streamX2Ereceive((*this).get_handle(), (int64_t(max_results)), std::move(ptr0));
+  std::optional<std::expected<wit::vector<udp::IncomingDatagram>, network::ErrorCode>> result8_opt;
+  if ((int32_t) (*((uint8_t*) (ptr0 + 0)))==0) {
+    auto _base7 = *((uint8_t**) (ptr0 + sizeof(void*)));
+    auto _len7 = *((size_t*) (ptr0 + (2*sizeof(void*))));
+    auto _result7 = wit::vector<udp::IncomingDatagram>::allocate(_len7);
+    for (unsigned i=0; i<_len7; ++i) {
+      auto _base = _base7 + i * (32+2*sizeof(void*));
+      auto _len1 = *((size_t*) (_base + sizeof(void*)));
+      std::optional<network::IpSocketAddress> variant6_opt;
+      switch ((int32_t) (*((uint8_t*) (_base + (2*sizeof(void*)))))) {
+        case 0: { auto tuple2 = std::tuple<uint8_t, uint8_t, uint8_t, uint8_t>((uint8_t((int32_t) (*((uint8_t*) (_base + (6+2*sizeof(void*))))))), (uint8_t((int32_t) (*((uint8_t*) (_base + (7+2*sizeof(void*))))))), (uint8_t((int32_t) (*((uint8_t*) (_base + (8+2*sizeof(void*))))))), (uint8_t((int32_t) (*((uint8_t*) (_base + (9+2*sizeof(void*))))))));
+
+        variant6_opt = network::IpSocketAddress{{network::IpSocketAddress::Ipv4{network::Ipv4SocketAddress{(uint16_t((int32_t) (*((uint16_t*) (_base + (4+2*sizeof(void*))))))), std::move(tuple2), }}}};
+      } break;
+      case 1: { int32_t l3 = *((int32_t const*)(_base + (8+2*sizeof(void*))));
+      auto tuple4 = std::tuple<uint16_t, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t>((uint16_t((int32_t) (*((uint16_t*) (_base + (12+2*sizeof(void*))))))), (uint16_t((int32_t) (*((uint16_t*) (_base + (14+2*sizeof(void*))))))), (uint16_t((int32_t) (*((uint16_t*) (_base + (16+2*sizeof(void*))))))), (uint16_t((int32_t) (*((uint16_t*) (_base + (18+2*sizeof(void*))))))), (uint16_t((int32_t) (*((uint16_t*) (_base + (20+2*sizeof(void*))))))), (uint16_t((int32_t) (*((uint16_t*) (_base + (22+2*sizeof(void*))))))), (uint16_t((int32_t) (*((uint16_t*) (_base + (24+2*sizeof(void*))))))), (uint16_t((int32_t) (*((uint16_t*) (_base + (26+2*sizeof(void*))))))));
+      int32_t l5 = *((int32_t const*)(_base + (28+2*sizeof(void*))));
+
+      variant6_opt = network::IpSocketAddress{{network::IpSocketAddress::Ipv6{network::Ipv6SocketAddress{(uint16_t((int32_t) (*((uint16_t*) (_base + (4+2*sizeof(void*))))))), (uint32_t(l3)), std::move(tuple4), (uint32_t(l5)), }}}};
+    } break;
+  }
+  network::IpSocketAddress variant6 = std::move(*variant6_opt);
+  auto _e7 = udp::IncomingDatagram{wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (_base + 0))), _len1), std::move(variant6), };
+  _result7.initialize(i, std::move(_e7));
+}
+
+result8_opt.emplace(std::expected<wit::vector<udp::IncomingDatagram>, network::ErrorCode>(std::move(_result7)));
+} else {
+
+result8_opt.emplace(std::unexpected{(network::ErrorCode)(int32_t) (*((uint8_t*) (ptr0 + sizeof(void*))))});
+}
+std::expected<wit::vector<udp::IncomingDatagram>, network::ErrorCode> result8 = std::move(*result8_opt);
+auto result9 = std::move(result8);
+return result9;
+}
+wasi::io0_2_0::poll::Pollable wasi::sockets0_2_0::udp::IncomingDatagramStream::Subscribe() const
+{
+  auto ret = __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5BmethodX5Dincoming_datagram_streamX2Esubscribe((*this).get_handle());
+  return wit::ResourceImportBase{ret};
+}
+wasi::sockets0_2_0::udp::IncomingDatagramStream::IncomingDatagramStream(wit::ResourceImportBase&&b) : wit::ResourceImportBase(std::move(b)) {}
+wasi::sockets0_2_0::udp::OutgoingDatagramStream::~OutgoingDatagramStream()
+{
+  if (handle>=0) {
+    __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5Bresource_dropX5Doutgoing_datagram_stream(handle);
+  }
+}
+std::expected<uint64_t, wasi::sockets0_2_0::network::ErrorCode> wasi::sockets0_2_0::udp::OutgoingDatagramStream::CheckSend() const
+{
+  uint64_t ret_area[(16+sizeof(uint64_t)-1)/sizeof(uint64_t)];
+  uint8_t* ptr0 = (uint8_t*)(&ret_area);
+  __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5BmethodX5Doutgoing_datagram_streamX2Echeck_send((*this).get_handle(), std::move(ptr0));
+  std::optional<std::expected<uint64_t, network::ErrorCode>> result1_opt;
+  if ((int32_t) (*((uint8_t*) (ptr0 + 0)))==0) {
+    
+    result1_opt.emplace(std::expected<uint64_t, network::ErrorCode>((uint64_t(*((int64_t*) (ptr0 + 8))))));
+  } else {
+    
+    result1_opt.emplace(std::unexpected{(network::ErrorCode)(int32_t) (*((uint8_t*) (ptr0 + 8)))});
+  }
+  std::expected<uint64_t, network::ErrorCode> result1 = std::move(*result1_opt);
+  auto result2 = std::move(result1);
+  return result2;
+}
+std::expected<uint64_t, wasi::sockets0_2_0::network::ErrorCode> wasi::sockets0_2_0::udp::OutgoingDatagramStream::Send(std::span<udp::OutgoingDatagram const> datagrams) const
+{
+  uint64_t ret_area[(16+sizeof(uint64_t)-1)/sizeof(uint64_t)];
+  auto&& _vec5 = datagrams;
+  auto _ptr5 = (uint8_t*)(_vec5.data());
+  auto _len5 = (size_t)(_vec5.size());
+  for (size_t i = 0; i < _len5; ++i) {
+    auto _base = _ptr5 + i * (32+3*sizeof(void*));
+    auto&& _iter_elem = _vec5[i];
+    auto&& _vec0 = (_iter_elem).data;
+    auto _ptr0 = (uint8_t*)(_vec0.data());
+    auto _len0 = (size_t)(_vec0.size());
+    *((size_t*)(_base + sizeof(void*))) = _len0;
+    *((uint8_t**)(_base + 0)) = _ptr0;
+    if (((_iter_elem).remote_address).has_value()) {
+      network::IpSocketAddress payload2 = (std::move((_iter_elem).remote_address)).value();
+      *((int8_t*)(_base + (2*sizeof(void*)))) = (int32_t(1));
+      switch ((int32_t) (payload2).variants.index()) {
+        case 0: {
+          auto& payload3 = std::get<network::IpSocketAddress::Ipv4>(payload2.variants).value;
+          *((int8_t*)(_base + (4+2*sizeof(void*)))) = (int32_t(0));
+          *((int16_t*)(_base + (8+2*sizeof(void*)))) = (int32_t((payload3).port));
+          *((int8_t*)(_base + (10+2*sizeof(void*)))) = (int32_t(std::get<0>((payload3).address)));
+          *((int8_t*)(_base + (11+2*sizeof(void*)))) = (int32_t(std::get<1>((payload3).address)));
+          *((int8_t*)(_base + (12+2*sizeof(void*)))) = (int32_t(std::get<2>((payload3).address)));
+          *((int8_t*)(_base + (13+2*sizeof(void*)))) = (int32_t(std::get<3>((payload3).address)));
+          break;
+        }
+        case 1: {
+          auto& payload4 = std::get<network::IpSocketAddress::Ipv6>(payload2.variants).value;
+          *((int8_t*)(_base + (4+2*sizeof(void*)))) = (int32_t(1));
+          *((int16_t*)(_base + (8+2*sizeof(void*)))) = (int32_t((payload4).port));
+          *((int32_t*)(_base + (12+2*sizeof(void*)))) = (int32_t((payload4).flow_info));
+          *((int16_t*)(_base + (16+2*sizeof(void*)))) = (int32_t(std::get<0>((payload4).address)));
+          *((int16_t*)(_base + (18+2*sizeof(void*)))) = (int32_t(std::get<1>((payload4).address)));
+          *((int16_t*)(_base + (20+2*sizeof(void*)))) = (int32_t(std::get<2>((payload4).address)));
+          *((int16_t*)(_base + (22+2*sizeof(void*)))) = (int32_t(std::get<3>((payload4).address)));
+          *((int16_t*)(_base + (24+2*sizeof(void*)))) = (int32_t(std::get<4>((payload4).address)));
+          *((int16_t*)(_base + (26+2*sizeof(void*)))) = (int32_t(std::get<5>((payload4).address)));
+          *((int16_t*)(_base + (28+2*sizeof(void*)))) = (int32_t(std::get<6>((payload4).address)));
+          *((int16_t*)(_base + (30+2*sizeof(void*)))) = (int32_t(std::get<7>((payload4).address)));
+          *((int32_t*)(_base + (32+2*sizeof(void*)))) = (int32_t((payload4).scope_id));
+          break;
+        }
+      }
+    } else {
+      *((int8_t*)(_base + (2*sizeof(void*)))) = (int32_t(0));
+    }
+
+  }
+  uint8_t* ptr6 = (uint8_t*)(&ret_area);
+  __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5BmethodX5Doutgoing_datagram_streamX2Esend((*this).get_handle(), std::move(_ptr5), std::move(_len5), std::move(ptr6));
+  std::optional<std::expected<uint64_t, network::ErrorCode>> result7_opt;
+  if ((int32_t) (*((uint8_t*) (ptr6 + 0)))==0) {
+    
+    result7_opt.emplace(std::expected<uint64_t, network::ErrorCode>((uint64_t(*((int64_t*) (ptr6 + 8))))));
+  } else {
+    
+    result7_opt.emplace(std::unexpected{(network::ErrorCode)(int32_t) (*((uint8_t*) (ptr6 + 8)))});
+  }
+  std::expected<uint64_t, network::ErrorCode> result7 = std::move(*result7_opt);
+  auto result8 = std::move(result7);
+  return result8;
+}
+wasi::io0_2_0::poll::Pollable wasi::sockets0_2_0::udp::OutgoingDatagramStream::Subscribe() const
+{
+  auto ret = __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5BmethodX5Doutgoing_datagram_streamX2Esubscribe((*this).get_handle());
+  return wit::ResourceImportBase{ret};
+}
+wasi::sockets0_2_0::udp::OutgoingDatagramStream::OutgoingDatagramStream(wit::ResourceImportBase&&b) : wit::ResourceImportBase(std::move(b)) {}
 wasi::sockets0_2_0::udp::UdpSocket::~UdpSocket()
 {
   if (handle>=0) {
@@ -9707,151 +9852,6 @@ wasi::io0_2_0::poll::Pollable wasi::sockets0_2_0::udp::UdpSocket::Subscribe() co
   return wit::ResourceImportBase{ret};
 }
 wasi::sockets0_2_0::udp::UdpSocket::UdpSocket(wit::ResourceImportBase&&b) : wit::ResourceImportBase(std::move(b)) {}
-wasi::sockets0_2_0::udp::IncomingDatagramStream::~IncomingDatagramStream()
-{
-  if (handle>=0) {
-    __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5Bresource_dropX5Dincoming_datagram_stream(handle);
-  }
-}
-std::expected<wit::vector<wasi::sockets0_2_0::udp::IncomingDatagram>, wasi::sockets0_2_0::network::ErrorCode> wasi::sockets0_2_0::udp::IncomingDatagramStream::Receive(uint64_t max_results) const
-{
-  uintptr_t ret_area[((3*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  uint8_t* ptr0 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5BmethodX5Dincoming_datagram_streamX2Ereceive((*this).get_handle(), (int64_t(max_results)), std::move(ptr0));
-  std::optional<std::expected<wit::vector<udp::IncomingDatagram>, network::ErrorCode>> result8_opt;
-  if ((int32_t) (*((uint8_t*) (ptr0 + 0)))==0) {
-    auto base7 = *((uint8_t**) (ptr0 + sizeof(void*)));
-    auto len7 = *((size_t*) (ptr0 + (2*sizeof(void*))));
-    auto result7 = wit::vector<udp::IncomingDatagram>::allocate(len7);
-    for (unsigned i=0; i<len7; ++i) {
-      auto base = base7 + i * (32+2*sizeof(void*));
-      auto len1 = *((size_t*) (base + sizeof(void*)));
-      std::optional<network::IpSocketAddress> variant6_opt;
-      switch ((int32_t) (*((uint8_t*) (base + (2*sizeof(void*)))))) {
-        case 0: { auto tuple2 = std::tuple<uint8_t, uint8_t, uint8_t, uint8_t>((uint8_t((int32_t) (*((uint8_t*) (base + (6+2*sizeof(void*))))))), (uint8_t((int32_t) (*((uint8_t*) (base + (7+2*sizeof(void*))))))), (uint8_t((int32_t) (*((uint8_t*) (base + (8+2*sizeof(void*))))))), (uint8_t((int32_t) (*((uint8_t*) (base + (9+2*sizeof(void*))))))));
-
-        variant6_opt = network::IpSocketAddress{{network::IpSocketAddress::Ipv4{network::Ipv4SocketAddress{(uint16_t((int32_t) (*((uint16_t*) (base + (4+2*sizeof(void*))))))), std::move(tuple2), }}}};
-      } break;
-      case 1: { int32_t l3 = *((int32_t const*)(base + (8+2*sizeof(void*))));
-      auto tuple4 = std::tuple<uint16_t, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t>((uint16_t((int32_t) (*((uint16_t*) (base + (12+2*sizeof(void*))))))), (uint16_t((int32_t) (*((uint16_t*) (base + (14+2*sizeof(void*))))))), (uint16_t((int32_t) (*((uint16_t*) (base + (16+2*sizeof(void*))))))), (uint16_t((int32_t) (*((uint16_t*) (base + (18+2*sizeof(void*))))))), (uint16_t((int32_t) (*((uint16_t*) (base + (20+2*sizeof(void*))))))), (uint16_t((int32_t) (*((uint16_t*) (base + (22+2*sizeof(void*))))))), (uint16_t((int32_t) (*((uint16_t*) (base + (24+2*sizeof(void*))))))), (uint16_t((int32_t) (*((uint16_t*) (base + (26+2*sizeof(void*))))))));
-      int32_t l5 = *((int32_t const*)(base + (28+2*sizeof(void*))));
-
-      variant6_opt = network::IpSocketAddress{{network::IpSocketAddress::Ipv6{network::Ipv6SocketAddress{(uint16_t((int32_t) (*((uint16_t*) (base + (4+2*sizeof(void*))))))), (uint32_t(l3)), std::move(tuple4), (uint32_t(l5)), }}}};
-    } break;
-  }
-  network::IpSocketAddress variant6 = std::move(*variant6_opt);
-  auto e7 = udp::IncomingDatagram{wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (base + 0))), len1), std::move(variant6), };
-  result7.initialize(i, std::move(e7));
-}
-
-result8_opt.emplace(std::expected<wit::vector<udp::IncomingDatagram>, network::ErrorCode>(std::move(result7)));
-} else {
-
-result8_opt.emplace(std::unexpected{(network::ErrorCode)(int32_t) (*((uint8_t*) (ptr0 + sizeof(void*))))});
-}
-std::expected<wit::vector<udp::IncomingDatagram>, network::ErrorCode> result8 = std::move(*result8_opt);
-auto result9 = std::move(result8);
-return result9;
-}
-wasi::io0_2_0::poll::Pollable wasi::sockets0_2_0::udp::IncomingDatagramStream::Subscribe() const
-{
-  auto ret = __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5BmethodX5Dincoming_datagram_streamX2Esubscribe((*this).get_handle());
-  return wit::ResourceImportBase{ret};
-}
-wasi::sockets0_2_0::udp::IncomingDatagramStream::IncomingDatagramStream(wit::ResourceImportBase&&b) : wit::ResourceImportBase(std::move(b)) {}
-wasi::sockets0_2_0::udp::OutgoingDatagramStream::~OutgoingDatagramStream()
-{
-  if (handle>=0) {
-    __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5Bresource_dropX5Doutgoing_datagram_stream(handle);
-  }
-}
-std::expected<uint64_t, wasi::sockets0_2_0::network::ErrorCode> wasi::sockets0_2_0::udp::OutgoingDatagramStream::CheckSend() const
-{
-  uint64_t ret_area[(16+sizeof(uint64_t)-1)/sizeof(uint64_t)];
-  uint8_t* ptr0 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5BmethodX5Doutgoing_datagram_streamX2Echeck_send((*this).get_handle(), std::move(ptr0));
-  std::optional<std::expected<uint64_t, network::ErrorCode>> result1_opt;
-  if ((int32_t) (*((uint8_t*) (ptr0 + 0)))==0) {
-    
-    result1_opt.emplace(std::expected<uint64_t, network::ErrorCode>((uint64_t(*((int64_t*) (ptr0 + 8))))));
-  } else {
-    
-    result1_opt.emplace(std::unexpected{(network::ErrorCode)(int32_t) (*((uint8_t*) (ptr0 + 8)))});
-  }
-  std::expected<uint64_t, network::ErrorCode> result1 = std::move(*result1_opt);
-  auto result2 = std::move(result1);
-  return result2;
-}
-std::expected<uint64_t, wasi::sockets0_2_0::network::ErrorCode> wasi::sockets0_2_0::udp::OutgoingDatagramStream::Send(std::span<udp::OutgoingDatagram const> datagrams) const
-{
-  uint64_t ret_area[(16+sizeof(uint64_t)-1)/sizeof(uint64_t)];
-  auto&& vec5 = datagrams;
-  auto ptr5 = (uint8_t*)(vec5.data());
-  auto len5 = (size_t)(vec5.size());
-  for (size_t i = 0; i < len5; ++i) {
-    auto base = ptr5 + i * (32+3*sizeof(void*));
-    auto&& iter_elem = vec5[i];
-    auto&& vec0 = (iter_elem).data;
-    auto ptr0 = (uint8_t*)(vec0.data());
-    auto len0 = (size_t)(vec0.size());
-    *((size_t*)(base + sizeof(void*))) = len0;
-    *((uint8_t**)(base + 0)) = ptr0;
-    if (((iter_elem).remote_address).has_value()) {
-      network::IpSocketAddress payload2 = (std::move((iter_elem).remote_address)).value();
-      *((int8_t*)(base + (2*sizeof(void*)))) = (int32_t(1));
-      switch ((int32_t) (payload2).variants.index()) {
-        case 0: {
-          auto& payload3 = std::get<network::IpSocketAddress::Ipv4>(payload2.variants).value;
-          *((int8_t*)(base + (4+2*sizeof(void*)))) = (int32_t(0));
-          *((int16_t*)(base + (8+2*sizeof(void*)))) = (int32_t((payload3).port));
-          *((int8_t*)(base + (10+2*sizeof(void*)))) = (int32_t(std::get<0>((payload3).address)));
-          *((int8_t*)(base + (11+2*sizeof(void*)))) = (int32_t(std::get<1>((payload3).address)));
-          *((int8_t*)(base + (12+2*sizeof(void*)))) = (int32_t(std::get<2>((payload3).address)));
-          *((int8_t*)(base + (13+2*sizeof(void*)))) = (int32_t(std::get<3>((payload3).address)));
-          break;
-        }
-        case 1: {
-          auto& payload4 = std::get<network::IpSocketAddress::Ipv6>(payload2.variants).value;
-          *((int8_t*)(base + (4+2*sizeof(void*)))) = (int32_t(1));
-          *((int16_t*)(base + (8+2*sizeof(void*)))) = (int32_t((payload4).port));
-          *((int32_t*)(base + (12+2*sizeof(void*)))) = (int32_t((payload4).flow_info));
-          *((int16_t*)(base + (16+2*sizeof(void*)))) = (int32_t(std::get<0>((payload4).address)));
-          *((int16_t*)(base + (18+2*sizeof(void*)))) = (int32_t(std::get<1>((payload4).address)));
-          *((int16_t*)(base + (20+2*sizeof(void*)))) = (int32_t(std::get<2>((payload4).address)));
-          *((int16_t*)(base + (22+2*sizeof(void*)))) = (int32_t(std::get<3>((payload4).address)));
-          *((int16_t*)(base + (24+2*sizeof(void*)))) = (int32_t(std::get<4>((payload4).address)));
-          *((int16_t*)(base + (26+2*sizeof(void*)))) = (int32_t(std::get<5>((payload4).address)));
-          *((int16_t*)(base + (28+2*sizeof(void*)))) = (int32_t(std::get<6>((payload4).address)));
-          *((int16_t*)(base + (30+2*sizeof(void*)))) = (int32_t(std::get<7>((payload4).address)));
-          *((int32_t*)(base + (32+2*sizeof(void*)))) = (int32_t((payload4).scope_id));
-          break;
-        }
-      }
-    } else {
-      *((int8_t*)(base + (2*sizeof(void*)))) = (int32_t(0));
-    }
-
-  }
-  uint8_t* ptr6 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5BmethodX5Doutgoing_datagram_streamX2Esend((*this).get_handle(), std::move(ptr5), std::move(len5), std::move(ptr6));
-  std::optional<std::expected<uint64_t, network::ErrorCode>> result7_opt;
-  if ((int32_t) (*((uint8_t*) (ptr6 + 0)))==0) {
-    
-    result7_opt.emplace(std::expected<uint64_t, network::ErrorCode>((uint64_t(*((int64_t*) (ptr6 + 8))))));
-  } else {
-    
-    result7_opt.emplace(std::unexpected{(network::ErrorCode)(int32_t) (*((uint8_t*) (ptr6 + 8)))});
-  }
-  std::expected<uint64_t, network::ErrorCode> result7 = std::move(*result7_opt);
-  auto result8 = std::move(result7);
-  return result8;
-}
-wasi::io0_2_0::poll::Pollable wasi::sockets0_2_0::udp::OutgoingDatagramStream::Subscribe() const
-{
-  auto ret = __wasm_import_wasiX3AsocketsX2FudpX400X2E2X2E0X00X5BmethodX5Doutgoing_datagram_streamX2Esubscribe((*this).get_handle());
-  return wit::ResourceImportBase{ret};
-}
-wasi::sockets0_2_0::udp::OutgoingDatagramStream::OutgoingDatagramStream(wit::ResourceImportBase&&b) : wit::ResourceImportBase(std::move(b)) {}
 std::expected<wasi::sockets0_2_0::udp::UdpSocket, wasi::sockets0_2_0::network::ErrorCode> wasi::sockets0_2_0::udp_create_socket::CreateUdpSocket(network::IpAddressFamily address_family)
 {
   uint32_t ret_area[(8+sizeof(uint32_t)-1)/sizeof(uint32_t)];
@@ -10512,11 +10512,11 @@ wasi::sockets0_2_0::ip_name_lookup::ResolveAddressStream::ResolveAddressStream(w
 std::expected<wasi::sockets0_2_0::ip_name_lookup::ResolveAddressStream, wasi::sockets0_2_0::network::ErrorCode> wasi::sockets0_2_0::ip_name_lookup::ResolveAddresses(std::reference_wrapper<const network::Network> network, std::string_view name)
 {
   uint32_t ret_area[(8+sizeof(uint32_t)-1)/sizeof(uint32_t)];
-  auto&& vec0 = name;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = name;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AsocketsX2Fip_name_lookupX400X2E2X2E0X00resolve_addresses(network.get().get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_wasiX3AsocketsX2Fip_name_lookupX400X2E2X2E0X00resolve_addresses(network.get().get_handle(), std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<ResolveAddressStream, network::ErrorCode>> result3_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     int32_t l2 = *((int32_t const*)(ptr1 + 4));
@@ -10535,8 +10535,8 @@ wit::vector<uint8_t> wasi::random0_2_0::random::GetRandomBytes(uint64_t len)
   uintptr_t ret_area[((2*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
   uint8_t* ptr0 = (uint8_t*)(&ret_area);
   __wasm_import_wasiX3ArandomX2FrandomX400X2E2X2E0X00get_random_bytes((int64_t(len)), std::move(ptr0));
-  auto len1 = *((size_t*) (ptr0 + sizeof(void*)));
-  auto result2 = wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (ptr0 + 0))), len1);
+  auto _len1 = *((size_t*) (ptr0 + sizeof(void*)));
+  auto result2 = wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (ptr0 + 0))), _len1);
   return result2;
 }
 uint64_t wasi::random0_2_0::random::GetRandomU64()
@@ -10549,8 +10549,8 @@ wit::vector<uint8_t> wasi::random0_2_0::insecure::GetInsecureRandomBytes(uint64_
   uintptr_t ret_area[((2*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
   uint8_t* ptr0 = (uint8_t*)(&ret_area);
   __wasm_import_wasiX3ArandomX2FinsecureX400X2E2X2E0X00get_insecure_random_bytes((int64_t(len)), std::move(ptr0));
-  auto len1 = *((size_t*) (ptr0 + sizeof(void*)));
-  auto result2 = wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (ptr0 + 0))), len1);
+  auto _len1 = *((size_t*) (ptr0 + sizeof(void*)));
+  auto result2 = wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (ptr0 + 0))), _len1);
   return result2;
 }
 uint64_t wasi::random0_2_0::insecure::GetInsecureRandomU64()
@@ -10576,18 +10576,18 @@ wasi::keyvalue::store::Bucket::~Bucket()
 std::expected<std::optional<wit::vector<uint8_t>>, wasi::keyvalue::store::Error> wasi::keyvalue::store::Bucket::Get(std::string_view key) const
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = key;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = key;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AkeyvalueX2FstoreX400X2E2X2E0_draft2X00X5BmethodX5DbucketX2Eget((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_wasiX3AkeyvalueX2FstoreX400X2E2X2E0_draft2X00X5BmethodX5DbucketX2Eget((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<std::optional<wit::vector<uint8_t>>, store::Error>> result6_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     std::optional<wit::vector<uint8_t>> option3;
     if ((int32_t) (*((uint8_t*) (ptr1 + sizeof(void*))))) {
-      auto len2 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      auto _len2 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
-      option3.emplace(wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len2));
+      option3.emplace(wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len2));
     }
 
     result6_opt.emplace(std::expected<std::optional<wit::vector<uint8_t>>, store::Error>(std::move(option3)));
@@ -10600,10 +10600,10 @@ std::expected<std::optional<wit::vector<uint8_t>>, wasi::keyvalue::store::Error>
       case 1: { 
         variant5_opt = store::Error{{store::Error::AccessDenied{}}};
       } break;
-      case 2: { auto len4 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      case 2: { auto _len4 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-      variant5_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len4)}}};
+      variant5_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len4)}}};
     } break;
   }
   store::Error variant5 = std::move(*variant5_opt);
@@ -10617,14 +10617,14 @@ return result7;
 std::expected<void, wasi::keyvalue::store::Error> wasi::keyvalue::store::Bucket::Set(std::string_view key, std::span<uint8_t const> value) const
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = key;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
-  auto&& vec1 = value;
-  auto ptr1 = (uint8_t*)(vec1.data());
-  auto len1 = (size_t)(vec1.size());
+  auto&& _vec0 = key;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
+  auto&& _vec1 = value;
+  auto _ptr1 = (uint8_t*)(_vec1.data());
+  auto _len1 = (size_t)(_vec1.size());
   uint8_t* ptr2 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AkeyvalueX2FstoreX400X2E2X2E0_draft2X00X5BmethodX5DbucketX2Eset((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1), std::move(len1), std::move(ptr2));
+  __wasm_import_wasiX3AkeyvalueX2FstoreX400X2E2X2E0_draft2X00X5BmethodX5DbucketX2Eset((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(_ptr1), std::move(_len1), std::move(ptr2));
   std::optional<std::expected<void, store::Error>> result5_opt;
   if ((int32_t) (*((uint8_t*) (ptr2 + 0)))==0) {
     
@@ -10638,10 +10638,10 @@ std::expected<void, wasi::keyvalue::store::Error> wasi::keyvalue::store::Bucket:
       case 1: { 
         variant4_opt = store::Error{{store::Error::AccessDenied{}}};
       } break;
-      case 2: { auto len3 = *((size_t*) (ptr2 + (3*sizeof(void*))));
+      case 2: { auto _len3 = *((size_t*) (ptr2 + (3*sizeof(void*))));
 
 
-      variant4_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr2 + (2*sizeof(void*))))), len3)}}};
+      variant4_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr2 + (2*sizeof(void*))))), _len3)}}};
     } break;
   }
   store::Error variant4 = std::move(*variant4_opt);
@@ -10655,11 +10655,11 @@ return result6;
 std::expected<void, wasi::keyvalue::store::Error> wasi::keyvalue::store::Bucket::Delete(std::string_view key) const
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = key;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = key;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AkeyvalueX2FstoreX400X2E2X2E0_draft2X00X5BmethodX5DbucketX2Edelete((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_wasiX3AkeyvalueX2FstoreX400X2E2X2E0_draft2X00X5BmethodX5DbucketX2Edelete((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<void, store::Error>> result4_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     
@@ -10673,10 +10673,10 @@ std::expected<void, wasi::keyvalue::store::Error> wasi::keyvalue::store::Bucket:
       case 1: { 
         variant3_opt = store::Error{{store::Error::AccessDenied{}}};
       } break;
-      case 2: { auto len2 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      case 2: { auto _len2 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-      variant3_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len2)}}};
+      variant3_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len2)}}};
     } break;
   }
   store::Error variant3 = std::move(*variant3_opt);
@@ -10690,11 +10690,11 @@ return result5;
 std::expected<bool, wasi::keyvalue::store::Error> wasi::keyvalue::store::Bucket::Exists(std::string_view key) const
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = key;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = key;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AkeyvalueX2FstoreX400X2E2X2E0_draft2X00X5BmethodX5DbucketX2Eexists((*this).get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_wasiX3AkeyvalueX2FstoreX400X2E2X2E0_draft2X00X5BmethodX5DbucketX2Eexists((*this).get_handle(), std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<bool, store::Error>> result4_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     
@@ -10708,10 +10708,10 @@ std::expected<bool, wasi::keyvalue::store::Error> wasi::keyvalue::store::Bucket:
       case 1: { 
         variant3_opt = store::Error{{store::Error::AccessDenied{}}};
       } break;
-      case 2: { auto len2 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      case 2: { auto _len2 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-      variant3_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len2)}}};
+      variant3_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len2)}}};
     } break;
   }
   store::Error variant3 = std::move(*variant3_opt);
@@ -10730,12 +10730,12 @@ std::expected<wasi::keyvalue::store::KeyResponse, wasi::keyvalue::store::Error> 
   size_t option5;
   if ((cursor).has_value()) {
     std::string_view payload1 = (std::move(cursor)).value();
-    auto&& vec2 = payload1;
-    auto ptr2 = (uint8_t*)(vec2.data());
-    auto len2 = (size_t)(vec2.size());
+    auto&& _vec2 = payload1;
+    auto _ptr2 = (uint8_t*)(_vec2.data());
+    auto _len2 = (size_t)(_vec2.size());
     option3 = (int32_t(1));
-    option4 = ptr2;
-    option5 = len2;
+    option4 = _ptr2;
+    option5 = _len2;
   } else {
     option3 = (int32_t(0));
     option4 = nullptr;
@@ -10745,25 +10745,25 @@ std::expected<wasi::keyvalue::store::KeyResponse, wasi::keyvalue::store::Error> 
   __wasm_import_wasiX3AkeyvalueX2FstoreX400X2E2X2E0_draft2X00X5BmethodX5DbucketX2Elist_keys((*this).get_handle(), std::move(option3), std::move(option4), std::move(option5), std::move(ptr6));
   std::optional<std::expected<store::KeyResponse, store::Error>> result13_opt;
   if ((int32_t) (*((uint8_t*) (ptr6 + 0)))==0) {
-    auto base8 = *((uint8_t**) (ptr6 + sizeof(void*)));
-    auto len8 = *((size_t*) (ptr6 + (2*sizeof(void*))));
-    auto result8 = wit::vector<wit::string>::allocate(len8);
-    for (unsigned i=0; i<len8; ++i) {
-      auto base = base8 + i * (2*sizeof(void*));
-      auto len7 = *((size_t*) (base + sizeof(void*)));
+    auto _base8 = *((uint8_t**) (ptr6 + sizeof(void*)));
+    auto _len8 = *((size_t*) (ptr6 + (2*sizeof(void*))));
+    auto _result8 = wit::vector<wit::string>::allocate(_len8);
+    for (unsigned i=0; i<_len8; ++i) {
+      auto _base = _base8 + i * (2*sizeof(void*));
+      auto _len7 = *((size_t*) (_base + sizeof(void*)));
 
-      auto e8 = wit::string((char const*)(*((uint8_t**) (base + 0))), len7);
-      result8.initialize(i, std::move(e8));
+      auto _e8 = wit::string((char const*)(*((uint8_t**) (_base + 0))), _len7);
+      _result8.initialize(i, std::move(_e8));
     }
     std::optional<wit::string> option10;
     if ((int32_t) (*((uint8_t*) (ptr6 + (3*sizeof(void*)))))) {
-      auto len9 = *((size_t*) (ptr6 + (5*sizeof(void*))));
+      auto _len9 = *((size_t*) (ptr6 + (5*sizeof(void*))));
 
 
-      option10.emplace(wit::string((char const*)(*((uint8_t**) (ptr6 + (4*sizeof(void*))))), len9));
+      option10.emplace(wit::string((char const*)(*((uint8_t**) (ptr6 + (4*sizeof(void*))))), _len9));
     }
 
-    result13_opt.emplace(std::expected<store::KeyResponse, store::Error>(store::KeyResponse{std::move(result8), std::move(option10), }));
+    result13_opt.emplace(std::expected<store::KeyResponse, store::Error>(store::KeyResponse{std::move(_result8), std::move(option10), }));
   } else {
     std::optional<store::Error> variant12_opt;
     switch ((int32_t) (*((uint8_t*) (ptr6 + sizeof(void*))))) {
@@ -10773,10 +10773,10 @@ std::expected<wasi::keyvalue::store::KeyResponse, wasi::keyvalue::store::Error> 
       case 1: { 
         variant12_opt = store::Error{{store::Error::AccessDenied{}}};
       } break;
-      case 2: { auto len11 = *((size_t*) (ptr6 + (3*sizeof(void*))));
+      case 2: { auto _len11 = *((size_t*) (ptr6 + (3*sizeof(void*))));
 
 
-      variant12_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr6 + (2*sizeof(void*))))), len11)}}};
+      variant12_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr6 + (2*sizeof(void*))))), _len11)}}};
     } break;
   }
   store::Error variant12 = std::move(*variant12_opt);
@@ -10791,11 +10791,11 @@ wasi::keyvalue::store::Bucket::Bucket(wit::ResourceImportBase&&b) : wit::Resourc
 std::expected<wasi::keyvalue::store::Bucket, wasi::keyvalue::store::Error> wasi::keyvalue::store::Open(std::string_view identifier)
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = identifier;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = identifier;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AkeyvalueX2FstoreX400X2E2X2E0_draft2X00open(std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_wasiX3AkeyvalueX2FstoreX400X2E2X2E0_draft2X00open(std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<Bucket, Error>> result5_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     int32_t l2 = *((int32_t const*)(ptr1 + sizeof(void*)));
@@ -10810,10 +10810,10 @@ std::expected<wasi::keyvalue::store::Bucket, wasi::keyvalue::store::Error> wasi:
       case 1: { 
         variant4_opt = Error{{Error::AccessDenied{}}};
       } break;
-      case 2: { auto len3 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      case 2: { auto _len3 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-      variant4_opt = Error{{Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len3)}}};
+      variant4_opt = Error{{Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len3)}}};
     } break;
   }
   Error variant4 = std::move(*variant4_opt);
@@ -10833,11 +10833,11 @@ wasi::keyvalue::atomics::Cas::~Cas()
 std::expected<wasi::keyvalue::atomics::Cas, wasi::keyvalue::store::Error> wasi::keyvalue::atomics::Cas::New(std::reference_wrapper<const store::Bucket> bucket, std::string_view key)
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = key;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = key;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AkeyvalueX2FatomicsX400X2E2X2E0_draft2X00X5BstaticX5DcasX2Enew(bucket.get().get_handle(), std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_wasiX3AkeyvalueX2FatomicsX400X2E2X2E0_draft2X00X5BstaticX5DcasX2Enew(bucket.get().get_handle(), std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<atomics::Cas, store::Error>> result5_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     int32_t l2 = *((int32_t const*)(ptr1 + sizeof(void*)));
@@ -10852,10 +10852,10 @@ std::expected<wasi::keyvalue::atomics::Cas, wasi::keyvalue::store::Error> wasi::
       case 1: { 
         variant4_opt = store::Error{{store::Error::AccessDenied{}}};
       } break;
-      case 2: { auto len3 = *((size_t*) (ptr1 + (3*sizeof(void*))));
+      case 2: { auto _len3 = *((size_t*) (ptr1 + (3*sizeof(void*))));
 
 
-      variant4_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), len3)}}};
+      variant4_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (2*sizeof(void*))))), _len3)}}};
     } break;
   }
   store::Error variant4 = std::move(*variant4_opt);
@@ -10875,9 +10875,9 @@ std::expected<std::optional<wit::vector<uint8_t>>, wasi::keyvalue::store::Error>
   if ((int32_t) (*((uint8_t*) (ptr0 + 0)))==0) {
     std::optional<wit::vector<uint8_t>> option2;
     if ((int32_t) (*((uint8_t*) (ptr0 + sizeof(void*))))) {
-      auto len1 = *((size_t*) (ptr0 + (3*sizeof(void*))));
+      auto _len1 = *((size_t*) (ptr0 + (3*sizeof(void*))));
 
-      option2.emplace(wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (ptr0 + (2*sizeof(void*))))), len1));
+      option2.emplace(wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (ptr0 + (2*sizeof(void*))))), _len1));
     }
 
     result5_opt.emplace(std::expected<std::optional<wit::vector<uint8_t>>, store::Error>(std::move(option2)));
@@ -10890,10 +10890,10 @@ std::expected<std::optional<wit::vector<uint8_t>>, wasi::keyvalue::store::Error>
       case 1: { 
         variant4_opt = store::Error{{store::Error::AccessDenied{}}};
       } break;
-      case 2: { auto len3 = *((size_t*) (ptr0 + (3*sizeof(void*))));
+      case 2: { auto _len3 = *((size_t*) (ptr0 + (3*sizeof(void*))));
 
 
-      variant4_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr0 + (2*sizeof(void*))))), len3)}}};
+      variant4_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr0 + (2*sizeof(void*))))), _len3)}}};
     } break;
   }
   store::Error variant4 = std::move(*variant4_opt);
@@ -10908,11 +10908,11 @@ wasi::keyvalue::atomics::Cas::Cas(wit::ResourceImportBase&&b) : wit::ResourceImp
 std::expected<int64_t, wasi::keyvalue::store::Error> wasi::keyvalue::atomics::Increment(std::reference_wrapper<const store::Bucket> bucket, std::string_view key, int64_t delta)
 {
   uint64_t ret_area[((16+2*sizeof(void*))+sizeof(uint64_t)-1)/sizeof(uint64_t)];
-  auto&& vec0 = key;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = key;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AkeyvalueX2FatomicsX400X2E2X2E0_draft2X00increment(bucket.get().get_handle(), std::move(ptr0), std::move(len0), (int64_t(delta)), std::move(ptr1));
+  __wasm_import_wasiX3AkeyvalueX2FatomicsX400X2E2X2E0_draft2X00increment(bucket.get().get_handle(), std::move(_ptr0), std::move(_len0), (int64_t(delta)), std::move(ptr1));
   std::optional<std::expected<int64_t, store::Error>> result4_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     
@@ -10926,10 +10926,10 @@ std::expected<int64_t, wasi::keyvalue::store::Error> wasi::keyvalue::atomics::In
       case 1: { 
         variant3_opt = store::Error{{store::Error::AccessDenied{}}};
       } break;
-      case 2: { auto len2 = *((size_t*) (ptr1 + (8+2*sizeof(void*))));
+      case 2: { auto _len2 = *((size_t*) (ptr1 + (8+2*sizeof(void*))));
 
 
-      variant3_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (8+1*sizeof(void*))))), len2)}}};
+      variant3_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (8+1*sizeof(void*))))), _len2)}}};
     } break;
   }
   store::Error variant3 = std::move(*variant3_opt);
@@ -10943,11 +10943,11 @@ return result5;
 std::expected<void, wasi::keyvalue::atomics::CasError> wasi::keyvalue::atomics::Swap(Cas&& cas, std::span<uint8_t const> value)
 {
   uintptr_t ret_area[((5*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec0 = value;
-  auto ptr0 = (uint8_t*)(vec0.data());
-  auto len0 = (size_t)(vec0.size());
+  auto&& _vec0 = value;
+  auto _ptr0 = (uint8_t*)(_vec0.data());
+  auto _len0 = (size_t)(_vec0.size());
   uint8_t* ptr1 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AkeyvalueX2FatomicsX400X2E2X2E0_draft2X00swap(cas.into_handle(), std::move(ptr0), std::move(len0), std::move(ptr1));
+  __wasm_import_wasiX3AkeyvalueX2FatomicsX400X2E2X2E0_draft2X00swap(cas.into_handle(), std::move(_ptr0), std::move(_len0), std::move(ptr1));
   std::optional<std::expected<void, CasError>> result6_opt;
   if ((int32_t) (*((uint8_t*) (ptr1 + 0)))==0) {
     
@@ -10963,10 +10963,10 @@ std::expected<void, wasi::keyvalue::atomics::CasError> wasi::keyvalue::atomics::
         case 1: { 
           variant3_opt = store::Error{{store::Error::AccessDenied{}}};
         } break;
-        case 2: { auto len2 = *((size_t*) (ptr1 + (4*sizeof(void*))));
+        case 2: { auto _len2 = *((size_t*) (ptr1 + (4*sizeof(void*))));
 
 
-        variant3_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (3*sizeof(void*))))), len2)}}};
+        variant3_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr1 + (3*sizeof(void*))))), _len2)}}};
       } break;
     }
     store::Error variant3 = std::move(*variant3_opt);
@@ -10989,42 +10989,42 @@ return result7;
 std::expected<wit::vector<std::tuple<wit::string, std::optional<wit::vector<uint8_t>>>>, wasi::keyvalue::store::Error> wasi::keyvalue::batch::GetMany(std::reference_wrapper<const store::Bucket> bucket, std::span<std::string_view const> keys)
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec1 = keys;
-  auto ptr1 = (uint8_t*)(vec1.data());
-  auto len1 = (size_t)(vec1.size());
-  for (size_t i = 0; i < len1; ++i) {
-    auto base = ptr1 + i * (2*sizeof(void*));
-    auto&& iter_elem = vec1[i];
-    auto&& vec0 = iter_elem;
-    auto ptr0 = (uint8_t*)(vec0.data());
-    auto len0 = (size_t)(vec0.size());
-    *((size_t*)(base + sizeof(void*))) = len0;
-    *((uint8_t**)(base + 0)) = ptr0;
+  auto&& _vec1 = keys;
+  auto _ptr1 = (uint8_t*)(_vec1.data());
+  auto _len1 = (size_t)(_vec1.size());
+  for (size_t i = 0; i < _len1; ++i) {
+    auto _base = _ptr1 + i * (2*sizeof(void*));
+    auto&& _iter_elem = _vec1[i];
+    auto&& _vec0 = _iter_elem;
+    auto _ptr0 = (uint8_t*)(_vec0.data());
+    auto _len0 = (size_t)(_vec0.size());
+    *((size_t*)(_base + sizeof(void*))) = _len0;
+    *((uint8_t**)(_base + 0)) = _ptr0;
 
   }
   uint8_t* ptr2 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AkeyvalueX2FbatchX400X2E2X2E0_draft2X00get_many(bucket.get().get_handle(), std::move(ptr1), std::move(len1), std::move(ptr2));
+  __wasm_import_wasiX3AkeyvalueX2FbatchX400X2E2X2E0_draft2X00get_many(bucket.get().get_handle(), std::move(_ptr1), std::move(_len1), std::move(ptr2));
   std::optional<std::expected<wit::vector<std::tuple<wit::string, std::optional<wit::vector<uint8_t>>>>, store::Error>> result10_opt;
   if ((int32_t) (*((uint8_t*) (ptr2 + 0)))==0) {
-    auto base7 = *((uint8_t**) (ptr2 + sizeof(void*)));
-    auto len7 = *((size_t*) (ptr2 + (2*sizeof(void*))));
-    auto result7 = wit::vector<std::tuple<wit::string, std::optional<wit::vector<uint8_t>>>>::allocate(len7);
-    for (unsigned i=0; i<len7; ++i) {
-      auto base = base7 + i * (5*sizeof(void*));
-      auto len3 = *((size_t*) (base + sizeof(void*)));
+    auto _base7 = *((uint8_t**) (ptr2 + sizeof(void*)));
+    auto _len7 = *((size_t*) (ptr2 + (2*sizeof(void*))));
+    auto _result7 = wit::vector<std::tuple<wit::string, std::optional<wit::vector<uint8_t>>>>::allocate(_len7);
+    for (unsigned i=0; i<_len7; ++i) {
+      auto _base = _base7 + i * (5*sizeof(void*));
+      auto _len3 = *((size_t*) (_base + sizeof(void*)));
 
       std::optional<wit::vector<uint8_t>> option5;
-      if ((int32_t) (*((uint8_t*) (base + (2*sizeof(void*)))))) {
-        auto len4 = *((size_t*) (base + (4*sizeof(void*))));
+      if ((int32_t) (*((uint8_t*) (_base + (2*sizeof(void*)))))) {
+        auto _len4 = *((size_t*) (_base + (4*sizeof(void*))));
 
-        option5.emplace(wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (base + (3*sizeof(void*))))), len4));
+        option5.emplace(wit::vector<uint8_t>((uint8_t*)(*((uint8_t**) (_base + (3*sizeof(void*))))), _len4));
       }
-      auto tuple6 = std::tuple<wit::string, std::optional<wit::vector<uint8_t>>>(wit::string((char const*)(*((uint8_t**) (base + 0))), len3), std::move(option5));
-      auto e7 = std::move(tuple6);
-      result7.initialize(i, std::move(e7));
+      auto tuple6 = std::tuple<wit::string, std::optional<wit::vector<uint8_t>>>(wit::string((char const*)(*((uint8_t**) (_base + 0))), _len3), std::move(option5));
+      auto _e7 = std::move(tuple6);
+      _result7.initialize(i, std::move(_e7));
     }
 
-    result10_opt.emplace(std::expected<wit::vector<std::tuple<wit::string, std::optional<wit::vector<uint8_t>>>>, store::Error>(std::move(result7)));
+    result10_opt.emplace(std::expected<wit::vector<std::tuple<wit::string, std::optional<wit::vector<uint8_t>>>>, store::Error>(std::move(_result7)));
   } else {
     std::optional<store::Error> variant9_opt;
     switch ((int32_t) (*((uint8_t*) (ptr2 + sizeof(void*))))) {
@@ -11034,10 +11034,10 @@ std::expected<wit::vector<std::tuple<wit::string, std::optional<wit::vector<uint
       case 1: { 
         variant9_opt = store::Error{{store::Error::AccessDenied{}}};
       } break;
-      case 2: { auto len8 = *((size_t*) (ptr2 + (3*sizeof(void*))));
+      case 2: { auto _len8 = *((size_t*) (ptr2 + (3*sizeof(void*))));
 
 
-      variant9_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr2 + (2*sizeof(void*))))), len8)}}};
+      variant9_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr2 + (2*sizeof(void*))))), _len8)}}};
     } break;
   }
   store::Error variant9 = std::move(*variant9_opt);
@@ -11051,26 +11051,26 @@ return result11;
 std::expected<void, wasi::keyvalue::store::Error> wasi::keyvalue::batch::SetMany(std::reference_wrapper<const store::Bucket> bucket, std::span<std::tuple<std::string_view, std::span<uint8_t const>> const> key_values)
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec2 = key_values;
-  auto ptr2 = (uint8_t*)(vec2.data());
-  auto len2 = (size_t)(vec2.size());
-  for (size_t i = 0; i < len2; ++i) {
-    auto base = ptr2 + i * (4*sizeof(void*));
-    auto&& iter_elem = vec2[i];
-    auto&& vec0 = std::get<0>(iter_elem);
-    auto ptr0 = (uint8_t*)(vec0.data());
-    auto len0 = (size_t)(vec0.size());
-    *((size_t*)(base + sizeof(void*))) = len0;
-    *((uint8_t**)(base + 0)) = ptr0;
-    auto&& vec1 = std::get<1>(iter_elem);
-    auto ptr1 = (uint8_t*)(vec1.data());
-    auto len1 = (size_t)(vec1.size());
-    *((size_t*)(base + (3*sizeof(void*)))) = len1;
-    *((uint8_t**)(base + (2*sizeof(void*)))) = ptr1;
+  auto&& _vec2 = key_values;
+  auto _ptr2 = (uint8_t*)(_vec2.data());
+  auto _len2 = (size_t)(_vec2.size());
+  for (size_t i = 0; i < _len2; ++i) {
+    auto _base = _ptr2 + i * (4*sizeof(void*));
+    auto&& _iter_elem = _vec2[i];
+    auto&& _vec0 = std::get<0>(_iter_elem);
+    auto _ptr0 = (uint8_t*)(_vec0.data());
+    auto _len0 = (size_t)(_vec0.size());
+    *((size_t*)(_base + sizeof(void*))) = _len0;
+    *((uint8_t**)(_base + 0)) = _ptr0;
+    auto&& _vec1 = std::get<1>(_iter_elem);
+    auto _ptr1 = (uint8_t*)(_vec1.data());
+    auto _len1 = (size_t)(_vec1.size());
+    *((size_t*)(_base + (3*sizeof(void*)))) = _len1;
+    *((uint8_t**)(_base + (2*sizeof(void*)))) = _ptr1;
 
   }
   uint8_t* ptr3 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AkeyvalueX2FbatchX400X2E2X2E0_draft2X00set_many(bucket.get().get_handle(), std::move(ptr2), std::move(len2), std::move(ptr3));
+  __wasm_import_wasiX3AkeyvalueX2FbatchX400X2E2X2E0_draft2X00set_many(bucket.get().get_handle(), std::move(_ptr2), std::move(_len2), std::move(ptr3));
   std::optional<std::expected<void, store::Error>> result6_opt;
   if ((int32_t) (*((uint8_t*) (ptr3 + 0)))==0) {
     
@@ -11084,10 +11084,10 @@ std::expected<void, wasi::keyvalue::store::Error> wasi::keyvalue::batch::SetMany
       case 1: { 
         variant5_opt = store::Error{{store::Error::AccessDenied{}}};
       } break;
-      case 2: { auto len4 = *((size_t*) (ptr3 + (3*sizeof(void*))));
+      case 2: { auto _len4 = *((size_t*) (ptr3 + (3*sizeof(void*))));
 
 
-      variant5_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr3 + (2*sizeof(void*))))), len4)}}};
+      variant5_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr3 + (2*sizeof(void*))))), _len4)}}};
     } break;
   }
   store::Error variant5 = std::move(*variant5_opt);
@@ -11101,21 +11101,21 @@ return result7;
 std::expected<void, wasi::keyvalue::store::Error> wasi::keyvalue::batch::DeleteMany(std::reference_wrapper<const store::Bucket> bucket, std::span<std::string_view const> keys)
 {
   uintptr_t ret_area[((4*sizeof(void*))+sizeof(uintptr_t)-1)/sizeof(uintptr_t)];
-  auto&& vec1 = keys;
-  auto ptr1 = (uint8_t*)(vec1.data());
-  auto len1 = (size_t)(vec1.size());
-  for (size_t i = 0; i < len1; ++i) {
-    auto base = ptr1 + i * (2*sizeof(void*));
-    auto&& iter_elem = vec1[i];
-    auto&& vec0 = iter_elem;
-    auto ptr0 = (uint8_t*)(vec0.data());
-    auto len0 = (size_t)(vec0.size());
-    *((size_t*)(base + sizeof(void*))) = len0;
-    *((uint8_t**)(base + 0)) = ptr0;
+  auto&& _vec1 = keys;
+  auto _ptr1 = (uint8_t*)(_vec1.data());
+  auto _len1 = (size_t)(_vec1.size());
+  for (size_t i = 0; i < _len1; ++i) {
+    auto _base = _ptr1 + i * (2*sizeof(void*));
+    auto&& _iter_elem = _vec1[i];
+    auto&& _vec0 = _iter_elem;
+    auto _ptr0 = (uint8_t*)(_vec0.data());
+    auto _len0 = (size_t)(_vec0.size());
+    *((size_t*)(_base + sizeof(void*))) = _len0;
+    *((uint8_t**)(_base + 0)) = _ptr0;
 
   }
   uint8_t* ptr2 = (uint8_t*)(&ret_area);
-  __wasm_import_wasiX3AkeyvalueX2FbatchX400X2E2X2E0_draft2X00delete_many(bucket.get().get_handle(), std::move(ptr1), std::move(len1), std::move(ptr2));
+  __wasm_import_wasiX3AkeyvalueX2FbatchX400X2E2X2E0_draft2X00delete_many(bucket.get().get_handle(), std::move(_ptr1), std::move(_len1), std::move(ptr2));
   std::optional<std::expected<void, store::Error>> result5_opt;
   if ((int32_t) (*((uint8_t*) (ptr2 + 0)))==0) {
     
@@ -11129,10 +11129,10 @@ std::expected<void, wasi::keyvalue::store::Error> wasi::keyvalue::batch::DeleteM
       case 1: { 
         variant4_opt = store::Error{{store::Error::AccessDenied{}}};
       } break;
-      case 2: { auto len3 = *((size_t*) (ptr2 + (3*sizeof(void*))));
+      case 2: { auto _len3 = *((size_t*) (ptr2 + (3*sizeof(void*))));
 
 
-      variant4_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr2 + (2*sizeof(void*))))), len3)}}};
+      variant4_opt = store::Error{{store::Error::Other{wit::string((char const*)(*((uint8_t**) (ptr2 + (2*sizeof(void*))))), _len3)}}};
     } break;
   }
   store::Error variant4 = std::move(*variant4_opt);
